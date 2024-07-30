@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fff;
+    --foreground: #686868;
+
+    --primary: #F7941E;
+    --primary-foreground: #F7941E;
+
+    --secondary: #1CBBB4;
+    --secondary-foreground: #1CBBB4;
+
+    --destructive: #ED145B;
+    --destructive-foreground: #ED145B;
+
+    --green: #73BE48;
+    --green-foreground: #73BE48;
+
+    --warm: #FFF0E5;
+
+    --cream-foreground: #fff;
+
+    --muted: #000;
+    --muted-foreground: #000;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --default-font-size: 16px;
+    --default-line-height: 160%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: var(--default-font-size);
+    font-family: Nunito;
+    color: var(--muted-foreground);
+    line-height: var(--default-line-height);
+    background-color: var(--background);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Jost;
+  }
+
+  p {
+    color: var(--foreground);
+
+  }
+}
+
+@layer utilities {
+  .stroke-primary {
+    -webkit-text-fill-color: var(--cream-foreground);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #686868;
+  }
+}
+
+@layer components {
+
+  /* ------- card hover image slide up start -------- */
+  .image-layer-hover {
+    background-size: cover;
+    width: 25%;
+    height: 100%;
+    transition: 0.5s;
+  }
+
+  .image-layer-hover:nth-child(1) {
+    background-position: 0;
+    transition-delay: 0;
+  }
+
+  .image-layer-hover:nth-child(2) {
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+
+  .image-layer-hover:nth-child(3) {
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+
+  .image-layer-hover:nth-child(4) {
+    background-position: 100%;
+    transition-delay: 0.3s;
+  }
+
+  .layer-card:hover .image-layer-hover {
+    transform: translateY(-100%);
+  }
+
+  /* ------- card hover image slide up end -------- */
+}
+
+
+/* service swiper pagination */
+.services .swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 0;
+  top: 0;
+  width: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.services .swiper-pagination-bullet {
+  height: 5px;
+  width: 15px;
+  border-radius: 10px;
+  display: block;
+  background-color: #F2F2F2;
+}
+
+.services .swiper-pagination-bullet-active {
+  width: 33px;
+  background-color: var(--secondary);
+}
+
+/* service swiper pagination */
