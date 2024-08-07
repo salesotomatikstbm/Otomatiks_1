@@ -9,7 +9,7 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Ascent - Chindcare & Kids School React.js Template || Portfolio</title>
+        <title>Otomatiks  || Portfolio</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>

@@ -44,40 +44,40 @@ export const menuList = [
     {
         id: 5,
         path: "/portfolio",
-        label: "School Program",
-        dropDownMenu: false
-        // dropDownMenu: [
-        //     {
-        //         id: 1,
-        //         path: "/about-us",
-        //         label: "About Us",
-        //     },
-        //     {
-        //         id: 2,
-        //         path: "/services",
-        //         label: "Service Details",
-        //     },
-        //     {
-        //         id: 3,
-        //         path: "/faq",
-        //         label: "Faq's",
-        //     },
-        //     {
-        //         id: 4,
-        //         path: "/portfolio",
-        //         label: "Portfolio",
-        //     },
-        //     {
-        //         id: 5,
-        //         path: "/contact-us",
-        //         label: "Contact Us",
-        //     },
-        // ]
+        label: "Services",
+        // dropDownMenu: false
+        dropDownMenu: [
+            {
+                id: 1,
+                path: "/about-us",
+                label: "School Program/Robotics Curriculum",
+            },
+            {
+                id: 2,
+                path: "/services",
+                label: "Workshops",
+            },
+            {
+                id: 3,
+                path: "/faq",
+                label: "Robotics/AI lab",
+            },
+            {
+                id: 4,
+                path: "/portfolio",
+                label: "MSME",
+            },
+            {
+                id: 5,
+                path: "/contact-us",
+                label: "CSR",
+            },
+        ]
     },
     {
         id: 4,
         path: "/Blog",
-        label: "Blog",
+        label: "Event",
         dropDownMenu: false
         // dropDownMenu: [
         //     {
@@ -92,11 +92,28 @@ export const menuList = [
         //     },
         // ]
     },
-    
+    {
+        id: 5,
+        path: "/Blog",
+        label: "Partners",
+        dropDownMenu: false
+        // dropDownMenu: [
+        //     {
+        //         id: 1,
+        //         path: "/blog",
+        //         label: "Blog",
+        //     },
+        //     {
+        //         id: 2,
+        //         path: "/blog-details",
+        //         label: "Blog Details",
+        //     },
+        // ]
+    },
     {
         id: 6,
         path: "/contact-us",
-        label: "Contact Us",
+        label: "Blogs",
         dropDownMenu: false
     },
 ]

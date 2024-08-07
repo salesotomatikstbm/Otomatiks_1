@@ -10,7 +10,7 @@ const BlogDetails = () => {
   return (
     <>
       <Helmet>
-        <title>Ascent - Chindcare & Kids School React.js Template  || Blog Details</title>
+        <title>Otomatiks || Blog Details</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>

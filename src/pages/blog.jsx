@@ -12,7 +12,7 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Ascent - Chindcare & Kids School React.js Template  || Blog</title>
+        <title>Otomatiks  || Blog</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>

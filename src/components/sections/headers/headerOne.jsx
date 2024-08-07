@@ -29,10 +29,10 @@ const HeaderOne = () => {
 
                                     <div className="flex items-center gap-6 ">
                                         <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
-                                            <FaMagnifyingGlass className='text-xl' />
+                                            {/* <FaMagnifyingGlass className='text-xl' /> */}
                                         </div>
                                         <Button asChild variant="ghost" className="sm:flex hidden">
-                                            <Link to={"/contact-us"}> Get A Quote <FaArrowRight /></Link>
+                                            <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
                                         </Button>
 
                                         <div className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500" onClick={() => setIsMobleMenuActive(true)}>

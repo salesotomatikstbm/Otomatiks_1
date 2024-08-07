@@ -38,7 +38,7 @@ const DesktopSidebar = ({ active, setActive }) => {
                     </div>
                     <div className="mt-5">
                         <Button asChild className="text-cream-foreground w-full">
-                            <Link to={"/contact-us"}>Get A Quote <FaArrowRight /> </Link>
+                            <Link to={"/contact-us"}>Contact Us <FaArrowRight /> </Link>
                         </Button>
                     </div>
                     <SocalIcons prentClass={"mt-6"} className={"w-11 h-11 text-muted-foreground bg-background hover:text-cream-foreground"} />

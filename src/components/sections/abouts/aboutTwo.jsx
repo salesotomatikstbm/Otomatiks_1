@@ -1,25 +1,35 @@
-import React from 'react'
-import about_bg_2 from "@/assets/images/about/about-2.png"
-import about_bg_3 from "@/assets/images/about/about-3.png"
-import { Button } from '@/components/ui/button'
-import { Link } from 'react-router-dom'
-import SectionName from '@/components/ui/sectionName'
-import Title from '@/components/ui/title'
-import Kindergarden from '@/assets/icons/kindergarden'
-import SectionDescription from '@/components/ui/sectionDescription'
-import SlideUp from '@/lib/animations/slideUp'
-import SlideDown from '@/lib/animations/slideDown'
+import React from 'react';
+import about_bg_2 from "@/assets/images/about/about-2.png";
+import about_bg_3 from "@/assets/images/about/about-3.png";
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import SectionName from '@/components/ui/sectionName';
+import Title from '@/components/ui/title';
+import Kindergarden from '@/assets/icons/kindergarden';
+import SectionDescription from '@/components/ui/sectionDescription';
+import SlideUp from '@/lib/animations/slideUp';
+import SlideDown from '@/lib/animations/slideDown';
 
 const AboutTwo = () => {
     return (
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10">
             <div className="container">
                 <div className="grid xl:grid-cols-[45%_52%] lg:grid-cols-[40%_44%] grid-cols-1 xl:justify-between gap-7.5">
-                    <div className="">
-                        <SectionName>About Us</SectionName>
-                        <Title size={"3.5xl"} className={"lg:max-w-[410px] mt-2.5"}>Invest in education invest in the future</Title>
-                        <SectionDescription className={'mt-5'}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum</SectionDescription>
-                        <SectionDescription className={'mt-5'}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum</SectionDescription>
+                    <div>
+                        <SectionName>Why People Trust Us</SectionName>
+                        <Title size={"3.5xl"} className={"lg:max-w-[410px] mt-2.5"}>Invest in education, invest in the future</Title>
+                        <SectionDescription className="mt-5">
+                            - Experienced educators<br />
+                            - Comprehensive curriculum<br />
+                            - Modern facilities<br />
+                            - Personalized support
+                        </SectionDescription>
+                        <SectionDescription className="mt-5">
+                            - Strong community<br />
+                            - Holistic development<br />
+                            - Proven track record<br />
+                            - Accessible resources
+                        </SectionDescription>
                         <SlideUp delay={3}>
                             <div className="flex gap-8 mt-10">
                                 <Button asChild size="lg" variant="pill" className="bg-primary border-primary hover:text-primary-foreground">
@@ -43,7 +53,6 @@ const AboutTwo = () => {
                             <SlideUp>
                                 <img src={about_bg_2} alt="img-1" />
                             </SlideUp>
-
                         </div>
                         <SlideDown>
                             <div className="hidden md:block">
@@ -54,7 +63,7 @@ const AboutTwo = () => {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default AboutTwo
+export default AboutTwo;
