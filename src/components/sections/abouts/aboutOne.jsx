@@ -39,12 +39,12 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </div>
                             </SlideUp>
                             <div className="flex sm:flex-col gap-8">
-                                <div className="bg-warm max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center">
+                                <div className="bg-warm max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center hidden sm:flex">
                                     <img src={icreement} alt="icreement" />
                                     <h6 className="text-xl font-bold">Otomatiks</h6>
                                     <p>Robotics Academy</p>
                                 </div>
-                                <div className="bg-background max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
+                                <div className="bg-background max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
                                     <h6 className="text-[32px] font-bold text-secondary-foreground">10+</h6>
                                     <p>Our Hubs</p>
                                 </div>

@@ -42,7 +42,7 @@ const AboutTwo = () => {
                         </SlideUp>
                     </div>
                     <div className="flex items-center lg:gap-7.5 gap-5">
-                        <div className="flex flex-col lg:gap-7.5 gap-5 w-full sm:w-auto">
+                        <div className="flex flex-col lg:gap-7.5 gap-5 w-full sm:w-auto ">
                             <div className="bg-warm border-b-4 border-green rounded-tr-[64px] rounded-tl-[64px] md:px-12.5 px-7.5 sm:py-15 py-10 flex items-center justify-center gap-10 wow fadeInLeft" data-wow-delay="0.3s">
                                 <Kindergarden height='60' width='60' />
                                 <div>
@@ -51,11 +51,15 @@ const AboutTwo = () => {
                                 </div>
                             </div>
                             <SlideUp>
-                                <img src={about_bg_2} alt="img-1" />
+                            <div className="flex justify-center sm:justify-start">
+    <img src={about_bg_2} alt="img-1" className="mx-auto sm:mx-0" />
+</div>
+
+
                             </SlideUp>
                         </div>
                         <SlideDown>
-                            <div className="hidden md:block">
+                            <div className="hidden md:block ">
                                 <img src={about_bg_3} alt="img-2" />
                             </div>
                         </SlideDown>
