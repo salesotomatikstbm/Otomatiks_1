@@ -12,7 +12,7 @@ const Testimonial = () => {
             <div className="container">
                 <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:pb-15 pb-10">
                     <div className="lg:max-w-[410px]">
-                        <SectionName>Testimonial</SectionName>
+                        <SectionName>Founder Message</SectionName>
                         <Title size={"3.5xl"}>Lorem Unlocking the Power of  Wonderworks Child</Title>
                     </div>
                     <p className="lg:max-w-[410px]">Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisi Imperdiet massa turpis sit proin loren ipsum</p>

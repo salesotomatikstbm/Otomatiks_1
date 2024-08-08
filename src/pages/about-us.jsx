@@ -9,6 +9,8 @@ import Testimonial from '@/components/sections/testimonial'
 import Partner from '@/components/sections/partner'
 import Teams from '@/components/sections/teams/teams'
 import AboutTwo from '@/components/sections/abouts/aboutTwo'
+import  Video  from '../components/sections/abouts/Video'
+import OurJourney from '@/components/sections/OurJourney'
 
 
 const AboutUs = () => {
@@ -22,14 +24,18 @@ const AboutUs = () => {
       <main>
         <PageTitle pageName={"About Us"} breadcrumbCurrent={"About Us"} />
         <AboutOne gridClass={"lg:grid-cols-2"} isAboutpage={true} />
+
+        <OurJourney />
 <AboutTwo />
 
-
-        <Partner />
-        <Teams />
+{/* 
+        <Partner /> */}
+        <Testimonial />
+        {/* <Teams /> */}
         {/* <Pricing /> */}
         {/* <Testimonial /> */}
         {/* <NewsletterTwo /> */}
+        <Video />
       </main>
       <ScrollRestoration/>
     </>

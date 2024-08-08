@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify-icons/bi": "^1.2.19",
+    "@iconify-icons/mdi": "^1.2.48",
+    "@iconify/react": "^5.0.2",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",

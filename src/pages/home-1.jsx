@@ -42,7 +42,7 @@ const HomeOne = () => {
         <FaqComp />
         <Partner />
         {/* <AgeOne /> */}
-        <Testimonial />
+        {/* <Testimonial /> */}
         {/* <BlogsOne /> */}
         {/* <NewsletterOne /> */}
       </main>
