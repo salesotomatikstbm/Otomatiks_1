@@ -20,14 +20,14 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
   return (
     <div className={`brands-area ${section_padding_bottom} ${section_padding_top}`}>
       <div className="container">
-        <div className="text-center text-black text-2xl font-medium mb-[30px]">
+        <div className="text-black text-2xl font-medium mb-[30px]">
          
         <SectionName>Our Hubs</SectionName>
         <Title size={"3.5xl"}>Lorem Unlocking the Power of Wonderworks Child</Title>
         
         </div>
 
-        <div className="text-center mb-[40px]"> {/* Adjust margin-bottom here */}
+        <div className=" mb-[40px]"> {/* Adjust margin-bottom here */}
           <span className="text-lg text-gray-700">
             {districts.join(' | ')}
           </span>

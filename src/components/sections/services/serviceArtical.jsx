@@ -10,6 +10,9 @@ import Toys from '@/assets/icons/toys'
 import Feeder from '@/assets/icons/feeder'
 import Car from '@/assets/icons/car'
 import SlideUp from '@/lib/animations/slideUp'
+import SectionName from '@/components/ui/sectionName'
+import Title from '@/components/ui/title'
+import SectionDescription from '@/components/ui/sectionDescription'
 
 const ServiceArtical = () => {
     const renderIcon = (icon) => {
@@ -26,12 +29,12 @@ const ServiceArtical = () => {
         }
     }
     return (
-        <section className="lg:pt-15 pt-10">
+        <section className="lg:pt-15 pt-10 pb-20">
             <div className="container">
-                <SlideUp>
+                {/* <SlideUp>
                     <img src={service_details_1} alt="details" />
-                </SlideUp>
-                <SlideUp delay={2}>
+                </SlideUp> */}
+                {/* <SlideUp delay={2}>
                     <div className="lg:pt-7.5 pt-5 ">
                         <h4 className="lg:text-3xl text-2xl lg:leading-[148%] leading-[130%] font-bold  font-nunito">Discover the power of education Knowledge is the key</h4>
                         <p className="lg:pt-7 pt-4">There are many variations passages a This category focariatio of deign Redefining the an the  concept of living This category focuses on the design and construction of bu a arrangement furniture and decorative elements within them focariatio of deign There are many variations passages a This category focariatio of deign Redefining the an the  concept of living This category focuses on the design and construction of bu a arrangement furniture</p>
@@ -72,13 +75,20 @@ const ServiceArtical = () => {
                             })}
                         </div>
                     </div>
-                </SlideUp>
+                </SlideUp> */}
+
+
+
+
                 <div className="pt-10">
                     <SlideUp delay={3}>
                         <div className="max-w-[790px]">
-                            <h4 className="text-2xl font-semibold leading-[140%]">Service all details</h4>
-                            <p className="mt-[18px]">There are many variations passages a This category focariatio of deign Redefining the an the  concept of living This category focuses on the design and construction of bu a arrangement furniture and decorative elements within them focariatio of deign</p>
-                        </div>
+                        <SectionName>Why Robotics for kids</SectionName>
+                <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing </Title>
+                <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
+                            massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
+                            lectus mi ultricies dictum</SectionDescription>
+                           </div>
                     </SlideUp>
                     <SlideUp delay={4}>
                         <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-7.5 lg:pt-7.5 pt-5">
