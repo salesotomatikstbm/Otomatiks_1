@@ -55,7 +55,7 @@ function Students_Talk({ className }) {
                     </div>
 
                     {/* Grid container for video thumbnail and slider */}
-                    <div className="row">
+                    <div className="video-section grid grid-cols-2 gap-16 justify-content-center">
                         {/* Video Thumbnail */}
                         <div className="col-lg-6 d-flex justify-content-center align-items-center">
                             <div className="appie-video-player-item position-relative">
@@ -64,7 +64,7 @@ function Students_Talk({ className }) {
                                         src={videoThumb}
                                         alt="Video Thumbnail"
                                         className="img-fluid rounded"
-                                        style={{ maxWidth: '100%', height: 'auto' }}
+                                        style={{ maxWidth: '100%', height: '200%' }}
                                     />
                                     <div className="video-popup">
                                         <a

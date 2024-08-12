@@ -1,42 +1,26 @@
 import React from 'react';
 
-function Video({ videoSrc, handler }) {
-    /* 
-     //www.youtube.com/embed/EE7NqzhMDms?autoplay=1
-    */
+function PopupVideo({ videoSrc, handler }) {
     return (
-        <div>
-            <div onClick={handler} className="mfp-bg mfp-ready"></div>
-            <div
-                className="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready"
-                tabIndex="-1"
-                style={{ overflow: ' hidden auto' }}
-            >
-                <div className="mfp-container mfp-s-ready mfp-iframe-holder">
-                    <div className="mfp-content">
-                        <div className="mfp-iframe-scaler">
-                            <button
-                                onClick={handler}
-                                title="Close (Esc)"
-                                type="button"
-                                className="mfp-close"
-                            >
-                                ×
-                            </button>
-                            <iframe
-                                title="video"
-                                className="mfp-iframe"
-                                src={videoSrc}
-                                frameBorder="0"
-                                allowFullScreen=""
-                            />
-                        </div>
-                    </div>
-                    <div className="mfp-preloader">Loading...</div>
-                </div>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+            <div className="relative w-full max-w-4xl bg-white rounded-lg">
+                <button
+                    onClick={handler}
+                    className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-800"
+                    aria-label="Close Video"
+                >
+                    &times;
+                </button>
+                <iframe
+                    title="video"
+                    className="w-full h-[60vh] rounded-lg"
+                    src={videoSrc}
+                    frameBorder="0"
+                    allowFullScreen
+                />
             </div>
         </div>
     );
 }
 
-export default Video;
+export default PopupVideo;
