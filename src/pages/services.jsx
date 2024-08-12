@@ -14,6 +14,7 @@ import Students_Talk from '@/components/sections/services/Students_Talk'
 
 
 
+
 const Services = () => {
   return (
     <>
@@ -30,7 +31,7 @@ const Services = () => {
      <Brands />
      <Platform />
      <Students_Talk />
-   \
+
      <FaqComp />
       </main>
       <ScrollRestoration/>

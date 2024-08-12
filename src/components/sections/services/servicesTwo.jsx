@@ -4,6 +4,7 @@ import ServiceCardTwo from './serviceCardTwo'
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
 import SectionDescription from '@/components/ui/sectionDescription'
+import ContactForm1 from '../ContactForm1'
 const ServicesTwo = () => {
     return (
         <div className="lg:pb-15 pb-10">
@@ -18,6 +19,7 @@ const ServicesTwo = () => {
                         {servicesDataTwo.map(({ icon, id, service_details, service_name }) => <ServiceCardTwo key={id} icon={icon} service_name={service_name} service_details={service_details} />)}
                     </div>
                 </div>
+                <ContactForm1 />
             </div>
         </div>
     )
