@@ -11,7 +11,7 @@ import FaqComp from '@/components/sections/faqComp'
 import Feature from '@/components/sections/services/Feature'
 import Platform from '@/components/sections/services/Platform'
 import Students_Talk from '@/components/sections/services/Students_Talk'
-
+import Brands1 from '@/components/sections/abouts/Brands'
 
 
 
@@ -28,7 +28,8 @@ const Services = () => {
       <Feature />
         <ServicesTwo />
         {/* <NewsletterTwo /> */}
-     <Brands />
+        <Brands1 />
+     {/* <Brands /> */}
      <Platform />
      <Students_Talk />
 

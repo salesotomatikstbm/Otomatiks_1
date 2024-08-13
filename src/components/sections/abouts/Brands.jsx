@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SectionName from '../../ui/sectionName'
 import Title from '../../ui/title'
+
 const districts = [
   "Chennai",
   "Kallakurichi",
@@ -21,15 +22,18 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
     <div className={`brands-area ${section_padding_bottom} ${section_padding_top}`}>
       <div className="container">
         <div className="text-black text-2xl font-medium mb-[30px]">
-         
-        <SectionName>Our Hubs</SectionName>
-        <Title size={"3.5xl"}>Lorem Unlocking the Power of Wonderworks Child</Title>
-        
+          <SectionName>Our Hubs</SectionName>
+          <Title size={"3.5xl"}>Lorem Unlocking the Power of Wonderworks Child</Title>
         </div>
 
-        <div className=" mb-[40px]"> {/* Adjust margin-bottom here */}
-          <span className="text-lg text-gray-700">
-            {districts.join(' | ')}
+        <div className="text-center mb-[40px]"> {/* Adjust margin-bottom here */}
+          <span className="text-lg text-gray-700 block sm:inline-block">
+            {districts.map((district, index) => (
+              <span key={district}>
+                {district}
+                {index < districts.length - 1 && <>&nbsp;|&nbsp;</>}
+              </span>
+            ))}
           </span>
         </div>
       </div>

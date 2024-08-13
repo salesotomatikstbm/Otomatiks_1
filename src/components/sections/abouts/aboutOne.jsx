@@ -58,11 +58,11 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
                             massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
                             lectus mi ultricies dictum</SectionDescription>
-                        <div className='lg:mt-10 mt-7'>
+                        {/* <div className='lg:mt-10 mt-7'>
                             <Button asChild variant="outline">
                                 <Link to="/about-us">Get a quote</Link>
                             </Button>
-                        </div>
+                        </div> */}
 
                     </div>
                     {/* <!-- right side end --> */}
