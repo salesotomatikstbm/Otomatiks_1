@@ -40,7 +40,7 @@ const HomeOne = () => {
 
         <Teams />
         <FaqComp />
-        <Partner />
+        {/* <Partner /> */}
         {/* <AgeOne /> */}
         {/* <Testimonial /> */}
         {/* <BlogsOne /> */}

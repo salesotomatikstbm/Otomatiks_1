@@ -4,18 +4,6 @@ export const menuList = [
         path: "/",
         label: "Home",
         dropDownMenu: false
-        // dropDownMenu: [
-        //     {
-        //         id: 1,
-        //         path: "/",
-        //         label: "Home-1",
-        //     },
-        //     {
-        //         id: 2,
-        //         path: "/home-2",
-        //         label: "Home-2",
-        //     },
-        // ]
     },
     {
         id: 2,
@@ -28,24 +16,11 @@ export const menuList = [
         path: "/services",
         label: "Our Courses",
         dropDownMenu: false
-        // dropDownMenu: [
-        //     {
-        //         id: 1,
-        //         path: "/services",
-        //         label: "Services",
-        //     },
-        //     {
-        //         id: 2,
-        //         path: "/service-details",
-        //         label: "Service Details",
-        //     },
-        // ]
     },
     {
-        id: 5,
+        id: 4,
         path: "/portfolio",
         label: "Services",
-        // dropDownMenu: false
         dropDownMenu: [
             {
                 id: 1,
@@ -75,45 +50,21 @@ export const menuList = [
         ]
     },
     {
-        id: 4,
-        path: "/Blog",
+        id: 5,
+        path: "/blog",
         label: "Event",
         dropDownMenu: false
-        // dropDownMenu: [
-        //     {
-        //         id: 1,
-        //         path: "/blog",
-        //         label: "Blog",
-        //     },
-        //     {
-        //         id: 2,
-        //         path: "/blog-details",
-        //         label: "Blog Details",
-        //     },
-        // ]
-    },
-    {
-        id: 5,
-        path: "/Blog",
-        label: "Partners",
-        dropDownMenu: false
-        // dropDownMenu: [
-        //     {
-        //         id: 1,
-        //         path: "/blog",
-        //         label: "Blog",
-        //     },
-        //     {
-        //         id: 2,
-        //         path: "/blog-details",
-        //         label: "Blog Details",
-        //     },
-        // ]
     },
     {
         id: 6,
+        path: "/partners",
+        label: "Partners",
+        dropDownMenu: false
+    },
+    {
+        id: 7,
         path: "/contact-us",
         label: "Blogs",
         dropDownMenu: false
     },
-]
+];

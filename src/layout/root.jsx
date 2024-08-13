@@ -1,7 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import HeaderOne from '@/components/sections/headers/headerOne'
-import FooterOne from '@/components/sections/footers/footerOne'
+
+import FooterTwo from '@/components/sections/footers/footerTwo'
 
 const RootLayout = () => {
 
@@ -9,7 +10,7 @@ const RootLayout = () => {
         <>
             <HeaderOne />
             <Outlet />
-            <FooterOne />
+            <FooterTwo />
         </>
     )
 }
