@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import PropTypes from "prop-types";
-import SectionName from '../../ui/sectionName'
-import Title from '../../ui/title'
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
 
 const districts = [
   "Chennai",
@@ -19,25 +18,53 @@ const districts = [
 
 const Brands = ({ section_padding_bottom, section_padding_top }) => {
   return (
-    <div className={`brands-area ${section_padding_bottom} ${section_padding_top}`}>
-      <div className="container">
-        <div className="text-black text-2xl font-medium mb-[30px]">
-          <SectionName>Our Hubs</SectionName>
-          <Title size={"3.5xl"}>Lorem Unlocking the Power of Wonderworks Child</Title>
-        </div>
+    <>
+      {/* Desktop View */}
+      <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-12 hidden lg:block`}>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-10">
+            <SectionName className="text-gray-700 text-lg font-medium">Our Hubs</SectionName>
+            <Title size="4xl" className="text-gray-900 font-bold mb-4">
+              Explore Our Branches
+            </Title>
+          </div>
 
-        <div className="text-center mb-[40px]"> {/* Adjust margin-bottom here */}
-          <span className="text-lg text-gray-700 block sm:inline-block">
-            {districts.map((district, index) => (
-              <span key={district}>
+          <div className="flex justify-center items-center flex-wrap gap-4">
+            {districts.map((district) => (
+              <span
+                key={district}
+                className="text-xl font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-4 py-2 shadow-md hover:bg-gray-100 transition-colors duration-300"
+              >
                 {district}
-                {index < districts.length - 1 && <>&nbsp;|&nbsp;</>}
               </span>
             ))}
-          </span>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* Mobile View */}
+      <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-8 lg:hidden`}>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <SectionName className="text-gray-700 text-md font-medium">Our Hubs</SectionName>
+            <Title size="2xl" className="text-gray-900 font-bold mb-3">
+              Explore Our Branches
+            </Title>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {districts.map((district) => (
+              <span
+                key={district}
+                className="text-lg font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-3 py-1 shadow-md hover:bg-gray-100 transition-colors duration-300"
+              >
+                {district}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

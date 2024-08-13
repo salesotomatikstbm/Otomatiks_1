@@ -6,6 +6,7 @@ import ContactForm from '@/components/sections/contactForm'
 import GoogleMap from '@/components/sections/googleMap'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import PageTitle from '@/components/sections/pageTitle'
+import BranchesInfo from '@/components/sections/BranchesInfo'
 
 const ContactUs = () => {
   return (
@@ -18,6 +19,8 @@ const ContactUs = () => {
         <PageTitle pageName={"Contact Us"} breadcrumbCurrent={"Contact Us"} />
         <ContactAddress />
         <GoogleMap />
+        <BranchesInfo />
+      
         <ContactForm />
         <NewsletterTwo />
       </main>

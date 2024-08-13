@@ -20,9 +20,9 @@ const SuccessProjectOne = () => {
                         <SectionName className={"text-primary-foreground"}>Number Talks</SectionName>
                         <Title size={"3.5xl"} className={"lg:max-w-[410px] pb-5"}>See Our Achievement in Numbers</Title>
                         <SectionDescription> Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum</SectionDescription>
-                        <Button asChild variant="outline" className="mt-10">
+                        {/* <Button asChild variant="outline" className="mt-10">
                             <Link to={"/contact-us"}>Get a quote</Link>
-                        </Button>
+                        </Button> */}
                     </div>
 
                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
