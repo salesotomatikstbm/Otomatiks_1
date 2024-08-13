@@ -6,7 +6,7 @@ const ExtraInfo = () => {
     return (
         <div className="mt-5">
             <div className="mt-5 mb-6">
-                <a href="" className="bg-primary text-cream-foreground rounded-md flex items-center justify-center sm:justify-start gap-2.5 py-2 px-4 w-full sm:w-auto btn after:bg-green">
+                <a href="/contact-us" className="bg-primary text-cream-foreground rounded-md flex items-center justify-center sm:justify-start gap-2.5 py-2 px-4 w-full sm:w-auto btn after:bg-green">
                     Contact Us 
                     <span>
                         <i className="fa-solid fa-arrow-right"></i>
