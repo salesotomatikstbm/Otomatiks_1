@@ -4,6 +4,12 @@ import { ScrollRestoration } from 'react-router-dom'
 import Gallery from '@/components/sections/gallery/gallery'
 import NewsletterOne from '@/components/sections/newsletters/newsletterOne'
 import PageTitle from '@/components/sections/pageTitle'
+import CallToActionSection from '@/components/sections/partner/CallToActionSection'
+import FranchiseApplicants from '@/components/sections/partner/FranchiseApplicants'
+import UniqueSellingPoints from '@/components/sections/partner/UniqueSellingPoints'
+import Testimonials from '@/components/sections/partner/Testimonials'
+import FAQs from '@/components/sections/partner/FAQs'
+
 
 const Portfolio = () => {
   return (
@@ -14,7 +20,11 @@ const Portfolio = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"Partner"} breadcrumbCurrent={"Partner"} />
-       
+       <CallToActionSection />
+       <FranchiseApplicants />
+       <UniqueSellingPoints />
+       <Testimonials />
+       <FAQs />
       </main>
       <ScrollRestoration/>
     </>
