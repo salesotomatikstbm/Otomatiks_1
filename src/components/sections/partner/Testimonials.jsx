@@ -12,7 +12,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="pt-15 pb-15 relative bg-warm lg:bg-transparent testimonials">
+    <section className="pt-15 pb-15 relative  lg:bg-transparent testimonials">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex lg:flex-row flex-col justify-between lg:items-center">
