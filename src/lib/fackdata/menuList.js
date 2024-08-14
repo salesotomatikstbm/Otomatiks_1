@@ -57,7 +57,7 @@ export const menuList = [
     },
     {
         id: 6,
-        path: "/partners",
+        path: "/portfolio",
         label: "Partners",
         dropDownMenu: false
     },

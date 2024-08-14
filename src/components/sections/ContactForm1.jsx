@@ -41,7 +41,7 @@ const ContactForm1 = () => {
                             </div>
                             <div className="flex justify-end mt-5">
                                 <Button variant="pill" className="bg-primary border-primary hover:text-primary-foreground" type="submit">Submit</Button>
-                                <Button variant="pill" className="ml-3 bg-gray-500 border-gray-500 hover:text-white" onClick={handlePopupClose}>Cancel</Button>
+                                <Button variant="pill" className="ml-3 bg-gray-500 border-gray-500 hover:text-primary-foreground" onClick={handlePopupClose}>Cancel</Button>
                             </div>
                         </form>
                     </div>

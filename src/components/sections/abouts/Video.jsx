@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import playFill from '@iconify-icons/bi/play-fill';
 import SectionName from '../../ui/sectionName'
 import Title from '../../ui/title'
-
+import Brands1 from '@/components/sections/abouts/Brands'
 const Video = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -75,7 +75,7 @@ const Video = () => {
         </div>
       )}
 
-      <Brands />
+      <Brands1 />
     </section>
   );
 };

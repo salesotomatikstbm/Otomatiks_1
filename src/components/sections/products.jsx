@@ -14,17 +14,17 @@ import SlideUp from '@/lib/animations/slideUp'
 const Products = () => {
     return (
         <section className="lg:pb-15 pb-10 relative">
-            <div className="bg-warm lg:pt-[120px] pt-20">
+            <div className=" lg:pt-[120px] pt-20">
                 <div className="container">
                     <div className="flex flex-col justify-center items-center">
-                        <SectionName>Products</SectionName>
+                        <SectionName>Mechatron Robotics & AI Lab</SectionName>
                         <Title size={"3.5xl"} className={"max-w-[458px] mt-2.5 text-center"}>Invest in your future invest in education Where Kids</Title>
                     </div>
                     <div className="lg:mt-15 mt-10">
                         <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5">
                             <div className="lg:max-w-[430px] w-full md:order-0 order-1">
                                 <SlideUp> <h4 className="text-2xl font-semibold leading-[140%]">Empowering Children Through Education Igni Curiosity </h4></SlideUp>
-                                <h3 className="text-destructive-foreground lg:text-[32px] text-2xl font-bold mt-[15px]">29.80$</h3>
+                                {/* <h3 className="text-destructive-foreground lg:text-[32px] text-2xl font-bold mt-[15px]">29.80$</h3> */}
                                 <SectionDescription className={"mt-5"}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat.Lorem ipsum dolor sit amet consectetur. </SectionDescription>
                                 <div className="flex gap-8 lg:mt-10 mt-7">
                                     <Button asChild size="lg" variant="pill">
@@ -43,7 +43,7 @@ const Products = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative z-[1] pt-[120px]">
+                {/* <div className="relative z-[1] pt-[120px]">
                     <img src={object} alt="object" />
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-0 z-[-1] ">
                         <img src={sun} alt="sun" className="animate-up-down" />
@@ -51,7 +51,7 @@ const Products = () => {
                 </div>
             </div>
             <div className="absolute top-15 right-[90px] animate-left-right md:block hidden">
-                <img src={bard} alt="bard" />
+                <img src={bard} alt="bard" /> */}
             </div>
         </section>
     )

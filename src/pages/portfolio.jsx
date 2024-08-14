@@ -9,14 +9,12 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Otomatiks  || Portfolio</title>
+        <title> Otomatiks  || Partner</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>
-        <PageTitle pageName={"Portfolio"} breadcrumbCurrent={"Portfolio"} />
-        <Gallery />
-        <div className='lg:pb-15 pt-10'></div>
-        <NewsletterOne />
+        <PageTitle pageName={"Partner"} breadcrumbCurrent={"Partner"} />
+       
       </main>
       <ScrollRestoration/>
     </>
