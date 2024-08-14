@@ -6,13 +6,14 @@ const FranchiseApplicants = () => {
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <SectionName className="text-gray-700 text-xl mb-2">Who Can Apply for the Robotics Franchise?</SectionName>
-          <Title size={"4xl"} className={"mt-4 text-gray-800"}>
+
+      <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%] py-10">
+            <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
+            <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
             Who Can Apply?
-          </Title>
-        </div>
+            </Title>
+          </div>
+        
 
         {/* Content Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

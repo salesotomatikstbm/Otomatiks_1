@@ -6,11 +6,14 @@ const CallToActionSection = () => {
   return (
     <div className="py-16 bg-white">
       <div className="container mx-auto px-4 text-center">
-        {/* Section Header */}
-        <SectionName className="text-gray-700 text-xl mb-2">Our Value Proposition</SectionName>
-        <Title size={"4xl"} className={"mt-4 text-gray-800"}>
-          What Value Do We Bring?
-        </Title>
+      <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%] py-10">
+            <SectionName>Our Value Proposition</SectionName>
+            <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
+            What Value Do We Bring?
+            </Title>
+          </div>
+
+      
       </div>
 
       <div className="container mx-auto px-4 mt-12">
