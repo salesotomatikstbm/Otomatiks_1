@@ -28,9 +28,9 @@ const Video = () => {
                 )}
 
                 <div className="text-center mb-10">
-                    <SectionName>Meet the Innovators Behind Otomatiks
+                    <SectionName>Our Team
                     </SectionName>
-                    <Title size="3.5xl">Lorem ipsum dolor sit amet, consectetur</Title>
+                    <Title size="3.5xl">Meet the Innovators Behind Otomatiks</Title>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-center justify-between mb-10 relative">

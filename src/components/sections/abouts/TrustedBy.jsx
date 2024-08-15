@@ -71,8 +71,9 @@ const TrustedBy = () => {
         <div className="row align-items-center">
           <div className="col-xl-12">
             <div className="section-heading text-center mb-8 mt-12">
-            <SectionName>Our Valuable Partners</SectionName>
-                                {/* <Title size={"3.5xl"}>Building Trust Through Expertise, Innovation, and Community</Title> */}
+            <SectionName>Our Patrons
+            </SectionName>
+                                <Title size={"3.5xl"}>Trusted School Partners</Title>
                          
             </div>
           </div>

@@ -30,7 +30,7 @@ const AboutUs = () => {
         <AboutOne gridClass={"lg:grid-cols-2"} isAboutpage={true} />
 
         <OurJourney />
-
+        <TrustedBy />
 <AgeOne />
 
 {/* <AboutTwo /> */}
@@ -44,7 +44,7 @@ const AboutUs = () => {
         {/* <NewsletterTwo /> */}
         <Video />
         <Brands1 />
-        <TrustedBy />
+        
       </main>
       <ScrollRestoration/>
     </>

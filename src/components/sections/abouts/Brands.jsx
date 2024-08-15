@@ -4,16 +4,19 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 
 const districts = [
-  "Chennai",
-  "Kallakurichi",
-  "Coimbatore",
-  "Madurai",
+  "Vellore",
+  "Parrys, Chennai",
+  "Annanagar, Chennai",
+  "Tambaram",
   "Salem",
-  "Tiruchirappalli",
-  "Erode",
+  "Attur",
+  "Namakkal",
+  "Gudiyatham",
   "Dindigul",
-  "Tirunelveli",
-  "Vellore"
+  "Madurai",
+  "Theni",
+  "Mumbai",
+  "United Kingdom"
 ];
 
 const Brands = ({ section_padding_bottom, section_padding_top }) => {
@@ -23,9 +26,9 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-12 hidden lg:block`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
-            <SectionName>Innovation and Learning Hubs</SectionName>
-            <Title size="4xl" className="text-gray-900 font-bold mb-4">
-              Explore Our Branches
+            <SectionName className="">Our Hubs</SectionName>
+            <Title size="3.5xl">
+              Innovation and Learning Hubs
             </Title>
           </div>
 
@@ -33,7 +36,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             {districts.map((district) => (
               <span
                 key={district}
-                className="text-xl font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-4 py-2 shadow-md hover:bg-gray-100 transition-colors duration-300"
+                className="text-xl font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-4 py-2 shadow-md transition-colors duration-300 hover:bg-orange-500 hover:text-white"
               >
                 {district}
               </span>
@@ -46,9 +49,9 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-8 lg:hidden`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
-            <SectionName>Innovation and Learning Hubs</SectionName>
-            <Title size="2xl" className="text-gray-900 font-bold mb-3">
-              Explore Our Branches
+            <SectionName className="">Our Hubs</SectionName>
+            <Title size="3.5xl">
+              Innovation and Learning Hubs
             </Title>
           </div>
 
@@ -56,7 +59,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             {districts.map((district) => (
               <span
                 key={district}
-                className="text-lg font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-3 py-1 shadow-md hover:bg-gray-100 transition-colors duration-300"
+                className="text-lg font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-3 py-1 shadow-md transition-colors duration-300 hover:bg-orange-500 hover:text-white"
               >
                 {district}
               </span>

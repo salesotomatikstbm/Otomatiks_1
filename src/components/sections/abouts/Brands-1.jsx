@@ -21,8 +21,8 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
     <div className={`brands-area ${section_padding_bottom} ${section_padding_top}`}>
       <div className="container">
         <div className=" text-black text-2xl font-medium mb-[30px]">
-          <SectionName>Innovation and Learning Hubs</SectionName>
-          <Title size={"3.5xl"}>Explore Our Reach Across Various Locations</Title>
+          <SectionName>Our Hubs</SectionName>
+          <Title size={"3.5xl"}>Innovation and Learning Hubs</Title>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-[40px]">
