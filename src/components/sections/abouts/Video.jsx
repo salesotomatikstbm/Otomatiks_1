@@ -28,7 +28,8 @@ const Video = () => {
                 )}
 
                 <div className="text-center mb-10">
-                    <SectionName>Our Team</SectionName>
+                    <SectionName>Meet the Innovators Behind Otomatiks
+                    </SectionName>
                     <Title size="3.5xl">Lorem ipsum dolor sit amet, consectetur</Title>
                 </div>
 

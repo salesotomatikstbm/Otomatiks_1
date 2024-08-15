@@ -23,7 +23,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-12 hidden lg:block`}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
-            <SectionName className="text-gray-700 text-lg font-medium">Our Hubs</SectionName>
+            <SectionName>Innovation and Learning Hubs</SectionName>
             <Title size="4xl" className="text-gray-900 font-bold mb-4">
               Explore Our Branches
             </Title>
@@ -46,7 +46,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-8 lg:hidden`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
-            <SectionName className="text-gray-700 text-md font-medium">Our Hubs</SectionName>
+            <SectionName>Innovation and Learning Hubs</SectionName>
             <Title size="2xl" className="text-gray-900 font-bold mb-3">
               Explore Our Branches
             </Title>

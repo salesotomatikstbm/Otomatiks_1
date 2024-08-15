@@ -12,6 +12,9 @@ import AboutTwo from '@/components/sections/abouts/aboutTwo'
 import  Video  from '../components/sections/abouts/Video'
 import OurJourney from '@/components/sections/OurJourney'
 import Brands1 from '@/components/sections/abouts/Brands'
+import AgeOne from '@/components/sections/studentsAge/ageOne'
+import TrustedBy from '@/components/sections/abouts/TrustedBy'
+
 
 
 const AboutUs = () => {
@@ -27,7 +30,10 @@ const AboutUs = () => {
         <AboutOne gridClass={"lg:grid-cols-2"} isAboutpage={true} />
 
         <OurJourney />
-<AboutTwo />
+
+<AgeOne />
+
+{/* <AboutTwo /> */}
 
 {/* 
         <Partner /> */}
@@ -38,6 +44,7 @@ const AboutUs = () => {
         {/* <NewsletterTwo /> */}
         <Video />
         <Brands1 />
+        <TrustedBy />
       </main>
       <ScrollRestoration/>
     </>
