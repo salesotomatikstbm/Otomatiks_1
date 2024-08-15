@@ -56,7 +56,7 @@ export const router = createBrowserRouter([
                 element: <BlogDetails />
             },
             {
-                path: "/services",
+                path: "/robotics-coding-courses",
                 element: <Services />
             },
             {
@@ -64,12 +64,12 @@ export const router = createBrowserRouter([
                 element: <ServiceDetails />
             },
             {
-                path: "/portfolio",
+                path: "/partners",
                 element: <Portfolio />
             },
 
             {
-                path: "/faq",
+                path: "/robotics-ai-lab",
                 element: <Faq />
             },
         ]

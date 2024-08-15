@@ -13,7 +13,7 @@ export const menuList = [
     },
     {
         id: 3,
-        path: "/services",
+        path: "/robotics-coding-courses",
         label: "Our Courses",
         dropDownMenu: false
     },
@@ -25,7 +25,7 @@ export const menuList = [
             {
                 id: 1,
                 path: "/about-us",
-                label: "School Program/Robotics Curriculum",
+                label: "School Curriculum",
             },
             {
                 id: 2,
@@ -34,8 +34,8 @@ export const menuList = [
             },
             {
                 id: 3,
-                path: "/faq",
-                label: "Robotics/AI lab",
+                path: "/robotics-ai-lab",
+                label: "Robotics & AI Lab",
             },
             {
                 id: 4,
@@ -57,7 +57,7 @@ export const menuList = [
     },
     {
         id: 6,
-        path: "/portfolio",
+        path: "/partners",
         label: "Partners",
         dropDownMenu: false
     },

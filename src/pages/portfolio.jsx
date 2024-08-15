@@ -15,11 +15,11 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title> Otomatiks  || Partner</title>
+        <title> Partners</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>
-        <PageTitle pageName={"Partner"} breadcrumbCurrent={"Partner"} />
+        <PageTitle pageName={"Partners"} breadcrumbCurrent={"Partners"} />
        <CallToActionSection />
        <FranchiseApplicants />
        <UniqueSellingPoints />

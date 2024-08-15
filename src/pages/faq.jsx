@@ -15,11 +15,11 @@ const Faq = () => {
   return (
     <>
       <Helmet>
-        <title>Otomatiks || Lab</title>
+        <title>robotics-ai-lab</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>
-        <PageTitle pageName={"Robotics/AI lab"} breadcrumbCurrent={"Robotics/AI lab"} />
+        <PageTitle pageName={"Robotics & AI Lab"} breadcrumbCurrent={"Robotics & AI Lab"} />
 
 
   <Products />

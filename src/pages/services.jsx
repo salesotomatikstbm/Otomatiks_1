@@ -19,7 +19,7 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Otomatiks  || Services</title>
+        <title>robotics-coding-courses</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>

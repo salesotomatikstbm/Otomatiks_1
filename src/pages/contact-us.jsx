@@ -12,7 +12,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Otomatiks  || Contact-Us</title>
+        <title>Contact-Us</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>

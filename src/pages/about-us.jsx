@@ -18,7 +18,7 @@ const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>Otomatiks || About-Us</title>
+        <title>About-Us</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>
