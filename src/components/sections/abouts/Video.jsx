@@ -28,8 +28,8 @@ const Video = () => {
                 )}
 
                 <div className="text-center mb-10">
-                    <SectionName>Our Journey</SectionName>
-                    <Title size="3.5xl">Unlocking the Power of Wonderworks Child</Title>
+                    <SectionName>Our Team</SectionName>
+                    <Title size="3.5xl">Lorem ipsum dolor sit amet, consectetur</Title>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-center justify-between mb-10 relative">
