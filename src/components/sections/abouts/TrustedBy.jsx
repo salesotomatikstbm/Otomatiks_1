@@ -78,7 +78,7 @@ const TrustedBy = () => {
             </div>
           </div>
         </div>
-        <div className="row align-items-center mb-12">
+        <div className="row align-items-center mb-6">
           <div className="col-xl-12">
             <Slider {...settings}>
               {partners.map((partner, index) => (

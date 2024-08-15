@@ -17,7 +17,7 @@ const Video = () => {
     };
 
     return (
-        <section className="pt-10 pb-10">
+        <section className="pt-10 pb-10 bg-warm">
             <div className="container">
                 {/* Video Popup */}
                 {showVideo && (

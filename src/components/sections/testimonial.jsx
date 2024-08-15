@@ -13,7 +13,7 @@ const Testimonial = () => {
                 <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:pb-15 pb-10">
                     <div className="lg:max-w-[410px]">
                         <SectionName>Founder Message</SectionName>
-                       <span> <Title size={"3.5xl"}>Note Some Our Founder</Title></span>
+                       <span> <Title size={"3.5xl"}>Note from Our Founder</Title></span>
                     </div>
                        </div>
 
