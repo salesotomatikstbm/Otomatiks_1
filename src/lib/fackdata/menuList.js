@@ -19,17 +19,17 @@ export const menuList = [
     },
     {
         id: 4,
-        path: "/portfolio",
+        path: "/robotics-ai-lab",
         label: "Services",
         dropDownMenu: [
             {
                 id: 1,
-                path: "/about-us",
+                path: "/robotics-ai-lab",
                 label: "School Curriculum",
             },
             {
                 id: 2,
-                path: "/services",
+                path: "/robotics-ai-lab",
                 label: "Workshops",
             },
             {
@@ -39,7 +39,7 @@ export const menuList = [
             },
             {
                 id: 4,
-                path: "/portfolio",
+                path: "/robotics-ai-lab",
                 label: "MSME",
             },
             {
