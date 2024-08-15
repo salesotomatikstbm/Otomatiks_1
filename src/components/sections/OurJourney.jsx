@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionName from '../ui/sectionName';
 import Title from '../ui/title';
-import { testimonialData } from '@/lib/fackdata/testimonialData';
 import { Icon } from '@iconify/react';
 import playIcon from '@iconify-icons/bi/play-fill';
-import Rating from '../ui/rating';
+import PopupVideo from '../sections/services/Video'; // Adjust the path if necessary
 
 const OurJourney = () => {
+    const [showVideo, setShowVideo] = useState(false);
+
     const openModal = () => {
-        // Implement modal open functionality here
-        console.log("Open modal with video");
+        setShowVideo(true);
+    };
+
+    const closeModal = () => {
+        setShowVideo(false);
     };
 
     return (
         <section className="pt-10 pb-10">
             <div className="container">
+                {/* Video Popup */}
+                {showVideo && (
+                    <PopupVideo
+                        handler={closeModal}
+                        videoSrc="https://www.youtube.com/embed/2dogph6uOLo?si=WMFMOhjkdFx9dOnb"
+                    />
+                )}
+
                 <div className="text-center mb-10">
                     <SectionName>Our Journey</SectionName>
-                    <Title size={"3.5xl"}>Unlocking the Power of Wonderworks Child</Title>
+                    <Title size="3.5xl">Unlocking the Power of Wonderworks Child</Title>
                 </div>
+
                 <div className="flex flex-col lg:flex-row items-center justify-between mb-10 relative">
                     <div className="lg:w-1/2 lg:pr-10 relative">
                         <img 
@@ -44,11 +57,13 @@ const OurJourney = () => {
                             </div>
                         </button>
                     </div>
+
                     <div className="lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
                         <p className="text-lg mb-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec nunc gravida vestibulum. Proin fringilla, sapien sit amet vulputate sollicitudin, sapien orci faucibus augue, at consequat libero quam ac mauris.
                         </p>
                         <div className="flex justify-center items-center">
+                            {/* Uncomment and adjust the Rating component if needed */}
                             {/* <Rating star={5} /> */}
                         </div>
                     </div>

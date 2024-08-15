@@ -11,6 +11,7 @@ import Teams from '@/components/sections/teams/teams'
 import AboutTwo from '@/components/sections/abouts/aboutTwo'
 import  Video  from '../components/sections/abouts/Video'
 import OurJourney from '@/components/sections/OurJourney'
+import Brands1 from '@/components/sections/abouts/Brands'
 
 
 const AboutUs = () => {
@@ -36,6 +37,7 @@ const AboutUs = () => {
         {/* <Testimonial /> */}
         {/* <NewsletterTwo /> */}
         <Video />
+        <Brands1 />
       </main>
       <ScrollRestoration/>
     </>
