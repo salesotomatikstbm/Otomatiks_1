@@ -11,13 +11,6 @@ import { cn } from '@/lib/utils'
 import SlideUp from '@/lib/animations/slideUp'
 import SectionDescription from '@/components/ui/sectionDescription'
 
-const CheckmarkIcon = () => (
-    <div className="flex-shrink-0 w-8 h-8 bg-green-400 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 13l4 4L19 7" />
-        </svg>
-    </div>
-);
 
 const AboutOne = ({ gridClass, isAboutpage }) => {
     // 'gridClass' and 'isAboutpage' props come frome about-us and home-1 page
@@ -40,8 +33,8 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                             <img src={customer} alt="customer" />
                                         </div>
                                         <div>
-                                            <h6 className="text-cream-foreground font-bold text-2xl">5,000+</h6>
-                                            <p className="text-cream-foreground">Satisfied Students</p>
+                                            <h6 className="text-cream-foreground font-bold text-2xl">1,00,000+</h6>
+                                            <p className="text-cream-foreground">Students </p>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +46,11 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                     <p>Robotics Academy</p>
                                 </div>
                                 <div className="bg-background max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                                    <h6 className="text-[32px] font-bold text-secondary-foreground">10+</h6>
+                                    <h6 className="text-[32px] font-bold text-secondary-foreground">13+</h6>
+                                    <p>Years Of Exp</p>
+                                </div>
+                                <div className="bg-background max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
+                                    <h6 className="text-[32px] font-bold text-secondary-foreground">13</h6>
                                     <p>Our Hubs</p>
                                 </div>
                             </div>
@@ -70,17 +67,17 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
 
                         <SectionDescription>
                             <div className="flex items-start mb-4">
-                                <CheckmarkIcon />
+                               
                                 <p>At Otomatiks, we believe in the power of curiosity and innovation to shape the future. Our journey began with a passion for robotics and a vision to make cutting-edge technology accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks has grown into a leading provider of Robotics & AI education, empowering students to become tomorrow's innovators.
                                 </p>
                             </div>
                             <div className="flex items-start mb-4">
-                                <CheckmarkIcon />
+                            
                                 <p>We started with a simple idea: to create hands-on learning experiences that ignite a love for science, technology, engineering, and mathematics (STEM). From our first classroom workshop to partnering with schools nationwide, we've been committed to nurturing creativity and critical thinking in students of all ages. 
                                 </p>
                             </div>
                             <div className="flex items-start mb-4">
-                                <CheckmarkIcon />
+                              
                                 <p>Our mission is to inspire the next generation to explore the endless possibilities of robotics and artificial intelligence. Through our programs, we aim to equip students with the skills and knowledge they need to thrive in an increasingly tech-driven world. Join us on this exciting journey as we continue to inspire, educate, and innovate!</p>
                             </div>
                         </SectionDescription>
