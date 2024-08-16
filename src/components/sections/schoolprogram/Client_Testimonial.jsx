@@ -1,8 +1,7 @@
 import React from 'react';
-import { Icon } from '@iconify/react';
-import playIcon from '@iconify-icons/bi/play-fill';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import CourseForm from './CourseForm';
 
 const videos = [
     {
@@ -47,6 +46,7 @@ const Client_Testimonial = () => {
                         </div>
                     ))}
                 </div>
+                <CourseForm />
             </div>
         </section>
     );
