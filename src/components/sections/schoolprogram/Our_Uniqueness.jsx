@@ -33,23 +33,23 @@ const Our_Uniqueness = () => {
                 What Value Do We Bring
               </Title>
             </div>
-            <div className="flex flex-wrap justify-center lg:justify-center lg:flex-row gap-5">
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">80+</p> Mentors
               </div>
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">1 Lakh+</p> Lives Upskilled
               </div>
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">85%</p> Client Retention Rate
               </div>
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">13,000+</p> Students Every Year
               </div>
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">13+</p> Years of Industry Experience
               </div>
-              <div className="bg-white p-3 md:p-5 text-xl w-40 flex flex-col rounded-md border border-gray-300">
+              <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">10+</p> Branches
               </div>
             </div>
@@ -70,7 +70,6 @@ const Our_Uniqueness = () => {
             </div>
             <CourseForm />
           </div>
-         
         </div>
       </div>
     </section>
