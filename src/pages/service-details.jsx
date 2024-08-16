@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import PageTitle from '@/components/sections/pageTitle'
-import ServiceArtical from '@/components/sections/services/serviceArtical'
+import ServiceArtical from '@/components/sections/course/serviceArtical'
 
 const ServiceDetails = () => {
   return (

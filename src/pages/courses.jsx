@@ -2,20 +2,20 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
-import ServicesTwo from '@/components/sections/services/servicesTwo'
+import ServicesTwo from '@/components/sections/course/servicesTwo'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
-import ServiceArtical from '@/components/sections/services/serviceArtical'
+import ServiceArtical from '@/components/sections/course/serviceArtical'
 import Video from '@/components/sections/abouts/Video'
 import Brands from '@/components/sections/abouts/Brands-1'
 import FaqComp from '@/components/sections/faqComp'
-import Feature from '@/components/sections/services/Feature'
-import Platform from '@/components/sections/services/Platform'
-import Students_Talk from '@/components/sections/services/Students_Talk'
+import Feature from '@/components/sections/course/Feature'
+import Platform from '@/components/sections/course/Platform'
+import Students_Talk from '@/components/sections/course/Students_Talk'
 import Brands1 from '@/components/sections/abouts/Brands'
 
 
 
-const Services = () => {
+const Courses = () => {
   return (
     <>
       <Helmet>
@@ -40,4 +40,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Courses

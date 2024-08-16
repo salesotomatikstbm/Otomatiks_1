@@ -11,7 +11,7 @@ import ValueSection from '@/components/sections/lab/ValueSection'
 
 
 
-const Faq = () => {
+const Ai = () => {
   return (
     <>
       <Helmet>
@@ -35,4 +35,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default Ai

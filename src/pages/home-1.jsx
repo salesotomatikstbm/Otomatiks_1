@@ -4,7 +4,7 @@ import { ScrollRestoration } from 'react-router-dom'
 
 import HeroOne from '@/components/sections/heros/heroOne'
 import AboutOne from '@/components/sections/abouts/aboutOne'
-import ServicesOne from '@/components/sections/services/servicesOne'
+import ServicesOne from '@/components/sections/course/servicesOne'
 import Gallery from '@/components/sections/gallery/gallery'
 import Programs from '@/components/sections/programs'
 import FaqComp from '@/components/sections/faqComp'

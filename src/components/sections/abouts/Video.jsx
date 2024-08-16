@@ -3,7 +3,7 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import { Icon } from '@iconify/react';
 import playIcon from '@iconify-icons/bi/play-fill';
-import PopupVideo from '../../sections/services/Video'; // Adjust the path if necessary
+import PopupVideo from '../course/Video'; // Adjust the path if necessary
 
 const Video = () => {
     const [showVideo, setShowVideo] = useState(false);

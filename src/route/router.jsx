@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/root";
-import Portfolio from "../pages/portfolio";
+import Partners from "../pages/partners";
 import Blog from "../pages/blog";
-import BlogDetails from "../pages/blog-details";
+import SchoolProgram  from "../pages/school-program";
 import ContactUs from "@/pages/contact-us";
 import AboutUs from "@/pages/about-us";
-import Services from "@/pages/services";
+import Courses from "@/pages/courses";
 import ServiceDetails from "@/pages/service-details";
-import Faq from "@/pages/faq";
+import Ai from "@/pages/ai-lab";
 import LayoutTwo from "@/layout/layoutTwo";
 import HomeTwo from "@/pages/home-2";
 import HomeOne from "@/pages/home-1";
@@ -52,12 +52,12 @@ export const router = createBrowserRouter([
                 element: <Blog />
             },
             {
-                path: "/blog-details",
-                element: <BlogDetails />
+                path: "/school-program",
+                element: <SchoolProgram  />
             },
             {
                 path: "/robotics-coding-courses",
-                element: <Services />
+                element: <Courses />
             },
             {
                 path: "/service-details",
@@ -65,12 +65,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/partners",
-                element: <Portfolio />
+                element: <Partners />
             },
 
             {
                 path: "/robotics-ai-lab",
-                element: <Faq />
+                element: <Ai />
             },
         ]
     },

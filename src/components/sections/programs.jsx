@@ -2,7 +2,7 @@ import React from 'react'
 import SectionName from '../ui/sectionName'
 import Title from '../ui/title'
 
-import ServiceCardTwo from './services/serviceCardTwo'
+import ServiceCardTwo from './course/serviceCardTwo'
 import pencil_rocket from "@/assets/images/shapes/pencil-rocket.png"
 import { servicesDataTwo } from '@/lib/fackdata/servicesDataTwo'
 

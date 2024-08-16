@@ -11,7 +11,7 @@ import Testimonials from '@/components/sections/partner/Testimonials'
 import FAQs from '@/components/sections/partner/FAQs'
 
 
-const Portfolio = () => {
+const Partners = () => {
   return (
     <>
       <Helmet>
@@ -31,4 +31,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Partners

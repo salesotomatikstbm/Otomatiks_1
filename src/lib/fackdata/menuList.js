@@ -24,7 +24,7 @@ export const menuList = [
         dropDownMenu: [
             {
                 id: 1,
-                path: "/robotics-ai-lab",
+                path: "/school-program",
                 label: "School Curriculum",
             },
             {
