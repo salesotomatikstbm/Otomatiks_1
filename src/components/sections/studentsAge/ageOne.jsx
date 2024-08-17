@@ -10,8 +10,8 @@ import CourseForm from '../abouts/Enquiry_Form'
 
 const AgeOne = () => {
     return (
-        <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
-            <div className="bg-warm lg:py-[120px] py-20 relative z-[1]">
+        <section className="py-12">
+            <div className="bg-warm py-12 relative z-[1]">
                 <div className="container">
                     <div className="grid lg:grid-cols-[37%_auto] grid-cols-1 items-center xl:gap-20 gap-10">
 
@@ -21,9 +21,7 @@ const AgeOne = () => {
                                 <Title size={"3.5xl"}>Building Trust Through Expertise, Innovation, and Community</Title>
                             </div>
                             <SectionDescription className={'pt-5 pb-7.5'}>We combine expertise with personalized support to deliver top-quality education, ensuring our students thrive in a community build on innovation and success. </SectionDescription>
-                           <div className={'pt-5'}>
-                           <CourseForm />
-                           </div>
+                           
                                
                             
                         </div>
@@ -47,6 +45,9 @@ const AgeOne = () => {
                         </div>
                     </div>
                 </div>
+                <div className={'pt-5'}>
+                           <CourseForm />
+                           </div>
                 <div className="absolute 2xl:top-[100px] lg:top-14 top-4 right-[67px] 2xl:w-auto lg:w-48 w-32 animate-left-right">
     <img src={shap_2} alt="animal" />
 </div>

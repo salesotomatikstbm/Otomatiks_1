@@ -18,7 +18,7 @@ const RoboticsAiLabSetup = () => {
             </div>
             <div className="pt-12 text-center">
               <h3 className="text-xl font-semibold mb-2">Share Your Requirement With Us</h3>
-              <p className="text-gray-600">Based on your requirements & budget, we would suggest the best suitable lab for your school or college.</p>
+              <p className="text-white">Based on your requirements & budget, we would suggest the best suitable lab for your school or college.</p>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ const RoboticsAiLabSetup = () => {
             </div>
             <div className="pt-12 text-center">
               <h3 className="text-xl font-semibold mb-2">Order Your Customized Lab</h3>
-              <p className="text-gray-600">Based on the batch size, order the equipment and kits required for your lab.</p>
+              <p className="text-white">Based on the batch size, order the equipment and kits required for your lab.</p>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ const RoboticsAiLabSetup = () => {
             </div>
             <div className="pt-12 text-center">
               <h3 className="text-xl font-semibold mb-2">Setup Lab & Provide Training</h3>
-              <p className="text-gray-600">Once you receive the equipment, our engineers will help your team set up the lab and provide the required training for operating the kits and equipment.</p>
+              <p className="text-white">Once you receive the equipment, our engineers will help your team set up the lab and provide the required training for operating the kits and equipment.</p>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ const RoboticsAiLabSetup = () => {
             </div>
             <div className="pt-12 text-center">
               <h3 className="text-xl font-semibold mb-2">Launch Your Robotics & AI Lab</h3>
-              <p className="text-gray-600">Get started by engaging students in teamwork and creating innovative projects.</p>
+              <p className="text-white">Get started by engaging students in teamwork and creating innovative projects.</p>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const InfrastructureRequirements = () => {
         {/* Content Layout */}
         <div className="flex flex-wrap justify-center gap-8">
           {/* Requirement 1 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-blue">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/spacerequired.svg" 
               alt="Space" 
@@ -30,7 +30,7 @@ const InfrastructureRequirements = () => {
           </div>
 
           {/* Requirement 2 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-blue">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/laptops&desktop.svg" 
               alt="Power Supply" 
@@ -43,7 +43,7 @@ const InfrastructureRequirements = () => {
           </div>
 
           {/* Requirement 3 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-blue">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/internetspeed.svg" 
               alt="Internet Connectivity" 
@@ -56,7 +56,7 @@ const InfrastructureRequirements = () => {
           </div>
 
           {/* Requirement 4 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-green">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/tvProjec.svg" 
               alt="Ventilation" 
@@ -69,7 +69,7 @@ const InfrastructureRequirements = () => {
           </div>
 
           {/* Requirement 5 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-yellow">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/robotParts&Kits.svg" 
               alt="Furniture" 
@@ -82,7 +82,7 @@ const InfrastructureRequirements = () => {
           </div>
 
           {/* Requirement 6 */}
-          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs">
+          <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-500 hover:shadow-xl transition-shadow duration-300 w-full max-w-xs border-bottom-red">
             <img 
               src="https://mechatronrobotics.com/assets/robotics-lab/robotParts&Kits.svg" 
               alt="Safety Equipment" 
