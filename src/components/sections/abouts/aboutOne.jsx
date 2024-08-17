@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Title from '@/components/ui/title'
-import about_img_1 from "@/assets/images/about/about-1.png"
-import icreement from "@/assets/images/about/icreement.png"
-import shap_1 from "@/assets/images/about/shap-1.png"
-import customer from "@/assets/images/about/customer.png"
-import { Button } from '@/components/ui/button'
-import SectionName from '@/components/ui/sectionName'
-import { cn } from '@/lib/utils'
-import SlideUp from '@/lib/animations/slideUp'
-import SectionDescription from '@/components/ui/sectionDescription'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Title from '@/components/ui/title';
+import about_img_1 from "@/assets/images/about/about-1.png";
+import icreement from "@/assets/images/about/icreement.png";
+import shap_1 from "@/assets/images/about/shap-1.png";
+import customer from "@/assets/images/about/customer.png";
+import { Button } from '@/components/ui/button';
+import SectionName from '@/components/ui/sectionName';
+import { cn } from '@/lib/utils';
+import SlideUp from '@/lib/animations/slideUp';
+import SectionDescription from '@/components/ui/sectionDescription';
 
 const AboutOne = ({ gridClass, isAboutpage }) => {
     return (
@@ -79,8 +79,8 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         </SectionDescription>
 
                         {/* New Sections with Borders and Styling */}
-                        <div className="flex gap-10 mt-10">
-                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg">
+                        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-10">
+                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
                                 <SectionName className="text-center">Our Mission</SectionName>
                                 <SectionDescription className="text-center mt-4">
                                     <p>
@@ -89,7 +89,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </SectionDescription>
                             </div>
 
-                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg">
+                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
                                 <SectionName className="text-center">Our Vision</SectionName>
                                 <SectionDescription className="text-center mt-4">
                                     <p>
@@ -98,12 +98,6 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </SectionDescription>
                             </div>
                         </div>
-
-                        {/* <div className='lg:mt-10 mt-7'>
-                            <Button asChild variant="outline">
-                                <Link to="/about-us">Get a quote</Link>
-                            </Button>
-                        </div> */}
                     </div>
                     {/* <!-- right side end --> */}
                 </div>

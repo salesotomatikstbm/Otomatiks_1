@@ -4,9 +4,9 @@ import Title from '../../ui/title';
 
 const CallToActionSection = () => {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-12 bg-white">
       <div className="container mx-auto px-4">
-      <div className="flex-shrink-0 flex-grow-0 basis-auto py-10">
+      <div className="flex-shrink-0 flex-grow-0 basis-auto">
             <SectionName>Our Value Proposition</SectionName>
             <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
             What Value Do We Bring?

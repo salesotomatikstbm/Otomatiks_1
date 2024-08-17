@@ -24,14 +24,14 @@ const TrustedBy = () => {
       logo: 'https://otomatiks.com/wp-content/uploads/2023/08/25.png',
     },
     {
-        logo: 'https://otomatiks.com/wp-content/uploads/2023/08/17.png',
-      },
-      {
-        logo: 'https://otomatiks.com/wp-content/uploads/2023/08/5.png',
-      },
-      {
-        logo: 'https://otomatiks.com/wp-content/uploads/2023/08/25.png',
-      },
+      logo: 'https://otomatiks.com/wp-content/uploads/2023/08/17.png',
+    },
+    {
+      logo: 'https://otomatiks.com/wp-content/uploads/2023/08/5.png',
+    },
+    {
+      logo: 'https://otomatiks.com/wp-content/uploads/2023/08/25.png',
+    },
     // Add more partners as needed
   ];
 
@@ -51,7 +51,7 @@ const TrustedBy = () => {
             <Swiper
               modules={[Autoplay]}
               autoplay={{ delay: 1000, disableOnInteraction: false }}
-              slidesPerView={5} // Default for larger screens
+              slidesPerView={1} // Default for larger screens
               spaceBetween={20}
               breakpoints={{
                 1200: {
@@ -70,6 +70,10 @@ const TrustedBy = () => {
                   slidesPerView: 2, // Show 2 slides on mobile devices
                   spaceBetween: 10, // Reduce space between slides for smaller screens
                 },
+                480: {
+                  slidesPerView: 1, // Show 1 slide on smaller mobile devices
+                  spaceBetween: 10,
+                },
               }}
               loop={true}
               pagination={false} // Remove pagination dots
@@ -81,7 +85,7 @@ const TrustedBy = () => {
                     alt={`Partner ${index + 1}`}
                     className="img-fluid mx-auto"
                     style={{
-                      maxHeight: '120px', // Adjust max height for visibility
+                      maxHeight: '120px', // Default max height for larger screens
                       height: 'auto',
                       width: 'auto',
                       objectFit: 'contain', // Maintain aspect ratio

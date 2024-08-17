@@ -8,7 +8,7 @@ import SectionDescription from '@/components/ui/sectionDescription'
 
 const Platform = () => {
   return (
-    <div className="bg-[url('../images/all-img/section-bg-2.png')] bg-cover bg-no-repeat bg-center section-padding pt-10">
+    <div className="bg-warm bg-cover bg-no-repeat bg-center section-padding py-16">
       <div className="container">
         <div className="lg:grid grid-cols-12 gap-[30px]">
           <div className="xl:col-span-5 lg:col-span-6 col-span-12">

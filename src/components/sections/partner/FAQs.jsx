@@ -32,8 +32,8 @@ const FAQs = () => {
     const [activeTab, setActiveTab] = useState("general");
 
     return (
-        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 faq">
-            <div className=" lg:py-[120px] py-20 relative">
+        <section className=" py-12">
+            <div className=" relative">
                 <div className="container">
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5 items-start">
                         <div className="max-w-[400px] md:max-w-full mx-auto md:order-0 order-1">
@@ -115,7 +115,7 @@ const FAQCard = ({ category }) => {
     return (
         <div>
             {faqContent[category].map((question, index) => (
-                <div key={index} className="mb-4">
+                <div key={index} className="">
                     <h4 className="flex items-center justify-between text-lg font-semibold text-gray-800 cursor-pointer">
                         {question}
                         <FaChevronDown className="text-gray-600" />

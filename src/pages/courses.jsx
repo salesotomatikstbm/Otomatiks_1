@@ -12,6 +12,7 @@ import Feature from '@/components/sections/course/Feature'
 import Platform from '@/components/sections/course/Platform'
 import Students_Talk from '@/components/sections/course/Students_Talk'
 import Brands1 from '@/components/sections/abouts/Brands'
+import Robotics_Course from '@/components/sections/course/Robotics_Course'
 
 
 
@@ -24,9 +25,10 @@ const Courses = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"Our Courses"} breadcrumbCurrent={"Our Courses"} />
-        <ServiceArtical />
+        {/* <ServiceArtical /> */}
       <Feature />
-        <ServicesTwo />
+      <Robotics_Course />
+        {/* <ServicesTwo /> */}
         {/* <NewsletterTwo /> */}
         <Brands1 />
      {/* <Brands /> */}

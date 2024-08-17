@@ -13,7 +13,7 @@ import { faqData } from '@/lib/fackdata/faqData'
 
 const FaqComp = () => {
   return (
-    <section className="lg:pb-15 pb-10">
+    <section className="py-16 bg-warm">
       <div className="container">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-7.5">
           <div className="max-w-[528px] lg:max-w-full mx-auto">

@@ -1,69 +1,35 @@
 import React from "react";
 import { Icon } from '@iconify/react';
-import Title from '@/components/ui/title'
-import SectionName from '@/components/ui/sectionName'
-import SectionDescription from '@/components/ui/sectionDescription'
+import Title from '@/components/ui/title';
+import SectionName from '@/components/ui/sectionName';
+import SectionDescription from '@/components/ui/sectionDescription';
+
 const Feature = () => {
   return (
-    <div className="feature-area bg-[url('../images/all-img/section-bg-1.png')] bg-cover bg-no-repeat bg-center section-padding pb-10">
-      <div className="container">
+    <div className="feature-area py-16">
+      <div className="container mx-auto px-6 lg:px-20">
         <div className="text-center">
-
-        <SectionName>Why Robotics for kids</SectionName>
-                        <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing</Title>
-                       
-
-
-         
-
-
-
+          <SectionName className="">Why Robotics for Kids</SectionName>
+          <Title size={"3.5xl"} className={"text-gray-800 mb-8"}>
+            Discover the Future with Robotics Education
+          </Title>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] pt-10">
-          <div className="bg-warm shadow-box rounded-[8px]  p-10 group hover:bg-primary  transition duration-150 hover:-translate-y-1">
-            <div
-              className="h-[72px] w-[72px] rounded-full flex flex-col items-center justify-center text-secondary bg-green-paste mb-8
-                text-5xl group-hover:bg-black group-hover:bg-opacity-[0.1] group-hover:text-white transition duration-150"
-            >
-              <Icon icon="codicon:globe" />
-            </div>
-            <h4 className=" lg:text-2xl text-[22px] leading-[30px] mb-4 transition duration-150 group-hover:text-white">
-              Learn More Anywhere
-            </h4>
-            <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                            massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
-                            lectus mi ultricies dictum</SectionDescription>
-          </div>
-
-          <div className="bg-warm shadow-box rounded-[8px]  p-10 group hover:bg-primary  transition duration-150 hover:-translate-y-1">
-            <div
-              className="h-[72px] w-[72px] rounded-full flex flex-col items-center justify-center text-secondary bg-green-paste mb-8
-                text-5xl group-hover:bg-black group-hover:bg-opacity-[0.1] group-hover:text-white transition duration-150"
-            >
-              <Icon icon="healthicons:i-training-class-outline" />
-            </div>
-            <h4 className=" lg:text-2xl text-[22px] leading-[30px] mb-4 transition duration-150 group-hover:text-white">
-              Expert Instructor
-            </h4>
-            <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                            massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
-                            lectus mi ultricies dictum</SectionDescription>
-          </div>
-
-          <div className="bg-warm shadow-box rounded-[8px]  p-10 group hover:bg-primary  transition duration-150 hover:-translate-y-1">
-            <div
-              className="h-[72px] w-[72px] rounded-full flex flex-col items-center justify-center text-secondary bg-green-paste mb-8
-                text-5xl group-hover:bg-black group-hover:bg-opacity-[0.1] group-hover:text-white transition duration-150"
-            >
-              <Icon icon="fluent:handshake-32-regular" />
-            </div>
-            <h4 className=" lg:text-2xl text-[22px] leading-[30px] mb-4 transition duration-150 group-hover:text-white">
-              24/7 Strong Support
-            </h4>
-            <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
-                            massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
-                            lectus mi ultricies dictum</SectionDescription>
-          </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
+          <FeatureCard
+            icon="codicon:globe"
+            title="Learn Anywhere, Anytime"
+            description="Access a world of knowledge from the comfort of your home. Our robotics courses are flexible, allowing students to learn at their own pace."
+          />
+          <FeatureCard
+            icon="healthicons:i-training-class-outline"
+            title="Expert Guidance"
+            description="Our instructors are industry leaders with deep expertise in robotics. They are committed to helping students excel through personalized teaching methods."
+          />
+          <FeatureCard
+            icon="fluent:handshake-32-regular"
+            title="24/7 Support"
+            description="We offer dedicated support around the clock to ensure a seamless learning experience. Our team is always ready to assist with any questions."
+          />
         </div>
       </div>
     </div>
@@ -71,3 +37,32 @@ const Feature = () => {
 };
 
 export default Feature;
+
+const FeatureCard = ({ icon, title, description }) => {
+  return (
+    <div className="relative group transform transition-transform duration-500 hover:scale-105">
+      <div className="bg-white shadow-xl rounded-xl overflow-hidden p-8 flex flex-col items-center text-center">
+        <div
+          className="h-20 w-20 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mb-6 text-white text-4xl
+            group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-indigo-600 transition-all duration-300"
+        >
+          <Icon icon={icon} />
+        </div>
+        <h4 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors duration-300">
+          {title}
+        </h4>
+        <SectionDescription className="text-gray-700 mb-6">
+          {description}
+        </SectionDescription>
+        <a
+          href="#"
+          className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300 inline-flex items-center"
+        >
+          Learn More
+          <Icon icon="carbon:arrow-right" className="ml-2" />
+        </a>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
+    </div>
+  );
+};

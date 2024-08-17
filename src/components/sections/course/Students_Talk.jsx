@@ -41,7 +41,7 @@ function Students_Talk({ className }) {
                     />
             )}
             <section className={`appie-video-player-area mt-10 pb-100 ${className || ''}`}>
-                <div className="container">
+                <div className="container py-12">
                     {/* Text content */}
                     <div className="row mb-4">
                         <div className="col-lg-12">
