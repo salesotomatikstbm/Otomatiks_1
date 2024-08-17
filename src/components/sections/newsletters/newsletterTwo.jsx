@@ -3,24 +3,32 @@ import stay_thumb from "@/assets/images/newsletter/stay-thumb.png"
 import stay_shape from "@/assets/images/newsletter/stay-shape.png"
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
-import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import SectionDescription from '@/components/ui/sectionDescription'
+import Input from '@/components/ui/input'
+import { FaArrowRight } from 'react-icons/fa'
 
 const NewsletterTwo = () => {
     return (
-        <section className="lg:pt-15 pt-10 ">
-            <div className=" py-12.5 relative z-[1]">
+        <section className="lg:pt-15 pt-10">
+            <div className="py-12.5 relative z-[1]">
                 <div className="container">
                     <div className="flex md:flex-row flex-col justify-between items-center gap-10">
                         <div className="lg:max-w-[573px] max-w-[400px]">
                             <SectionName className={"text-muted-foreground"}>Stay With Us</SectionName>
-                            <Title size={"3.5xl"} className={"mt-2.5 max-w-[410px]"}>The path to success starts with education</Title>
-                            <SectionDescription className={"mt-5"}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat.</SectionDescription>
+                            <Title size={"3.5xl"} className={"mt-2.5"}>Subscribe to our newsletter for the latest updates</Title>
                             <div className="mt-9">
-                                <Button variant="pill" className="bg-primary border-primary hover:text-primary-foreground" asChild>
-                                    <Link to={"/about-us"} className="btn-rounded-full">Read More</Link>
-                                </Button>
+                                <form action="#" className="relative overflow-hidden">
+                                    <Input 
+                                        type={"email"} 
+                                        placeholder={"Enter Your Email"} 
+                                        className={"rounded-md bg-transparent text-primary placeholder:text-muted-foreground max-h-15 border border-primary"}
+                                    />
+                                    <button 
+                                        type="submit" 
+                                        className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-primary text-primary-foreground rounded-tr-md rounded-br-md"
+                                    >
+                                        <FaArrowRight />
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div className="relative">
