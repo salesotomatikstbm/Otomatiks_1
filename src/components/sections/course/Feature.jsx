@@ -43,12 +43,12 @@ const FeatureCard = ({ icon, title, description }) => {
     <div className="relative group transform transition-transform duration-500 hover:scale-105">
       <div className="bg-white shadow-xl rounded-xl overflow-hidden p-8 flex flex-col items-center text-center">
         <div
-          className="h-20 w-20 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mb-6 text-white text-4xl
-            group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-indigo-600 transition-all duration-300"
+          className="h-20 w-20 flex items-center justify-center bg-red-400 rounded-full mb-6 text-white text-4xl
+            group-hover:bg-secondary-foreground transition-all duration-300"
         >
           <Icon icon={icon} />
         </div>
-        <h4 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-indigo-600 transition-colors duration-300">
+        <h4 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-secondary-foreground transition-colors duration-300">
           {title}
         </h4>
         <SectionDescription className="text-gray-700 mb-6">
@@ -56,13 +56,13 @@ const FeatureCard = ({ icon, title, description }) => {
         </SectionDescription>
         <a
           href="#"
-          className="text-indigo-600 hover:text-indigo-800 transition-colors duration-300 inline-flex items-center"
+          className="text-secondary-foreground hover:text-warm transition-colors duration-300 inline-flex items-center"
         >
           Learn More
           <Icon icon="carbon:arrow-right" className="ml-2" />
         </a>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
+      <div className="absolute inset-0 bg-warm opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
     </div>
   );
 };
