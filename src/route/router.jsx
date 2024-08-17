@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
                 element: <Blog />
             },
             {
-                path: "/school-program",
+                path: "/robotics-coding-school-curriculum",
                 element: <SchoolProgram  />
             },
             {

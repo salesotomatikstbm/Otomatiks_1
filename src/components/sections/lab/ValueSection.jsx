@@ -12,7 +12,7 @@ const ValueSection = () => {
   ];
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 bg-warm">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className=" mb-12">
@@ -26,7 +26,7 @@ const ValueSection = () => {
           {/* Image Section */}
           <div className="order-2 lg:order-1">
             <img 
-              src="https://mechatronrobotics.com/assets/robotics-lab/courses&Kits.svg" // Replace with your icon URL
+              src="https://otomatiks.com/wp-content/uploads/2023/05/8N1A7370.jpg" // Replace with your icon URL
               alt="Comprehensive Training"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -36,7 +36,7 @@ const ValueSection = () => {
           <div className="order-1 lg:order-2 space-y-6">
             {values.map((value, index) => (
               <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="flex-shrink-0 w-12 h-12  bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   {index + 1}
                 </div>
                 <div className="ml-6">

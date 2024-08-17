@@ -6,6 +6,7 @@ import { Button } from '../../ui/button'
 import { Link } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import SectionDescription from '@/components/ui/sectionDescription'
+import CourseForm from '../abouts/Enquiry_Form'
 
 const AgeOne = () => {
     return (
@@ -20,9 +21,11 @@ const AgeOne = () => {
                                 <Title size={"3.5xl"}>Building Trust Through Expertise, Innovation, and Community</Title>
                             </div>
                             <SectionDescription className={'pt-5 pb-7.5'}>We combine expertise with personalized support to deliver top-quality education, ensuring our students thrive in a community build on innovation and success. </SectionDescription>
-                            <Button asChild variant="pill">
-                                <Link to={"/contact-us"}>Contact Us</Link>
-                            </Button>
+                           <div className={'pt-5'}>
+                           <CourseForm />
+                           </div>
+                               
+                            
                         </div>
 
                         <div className="relative flex justify-center flex-wrap sm:flex-nowrap lg:justify-between md:gap-7.5 sm:gap-4 gap-3">

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import SectionName from '../ui/sectionName';
-import Title from '../ui/title';
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
 import { Icon } from '@iconify/react';
 import playIcon from '@iconify-icons/bi/play-fill';
-import PopupVideo from './course/Video';
+import PopupVideo from '../course/Video';
 
 const OurJourney = () => {
     const [showVideo, setShowVideo] = useState(false);

@@ -82,9 +82,9 @@ const ServiceArtical = () => {
 
                 <div className="pt-10">
                     <SlideUp delay={3}>
-                        <div className="max-w-[790px]">
+                        <div className=" text-center">
                         <SectionName>Why Robotics for kids</SectionName>
-                <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing </Title>
+                <Title size={"3.5xl"} className={"pb-8"}>Lorem ipsum dolor sit amet consectetur adipiscing </Title>
                 <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
                             massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. Amet
                             lectus mi ultricies dictum</SectionDescription>

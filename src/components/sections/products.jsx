@@ -18,7 +18,7 @@ const Products = () => {
                 <div className="container">
                     <div className="flex flex-col justify-center items-center">
                         <SectionName>Mechatron Robotics & AI Lab</SectionName>
-                        <Title size={"3.5xl"} className={"max-w-[458px] mt-2.5 text-center"}>Invest in your future invest in education Where Kids</Title>
+                        <Title size={"3.5xl"} className={" mt-2.5 text-center"}>Invest in your future invest in education Where Kids</Title>
                     </div>
                     <div className="lg:mt-15 mt-10">
                         <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5">

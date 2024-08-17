@@ -6,6 +6,8 @@ import Why_otomatiks from '@/components/sections/schoolprogram/Why_otomatiks'
 import Our_Uniqueness from '@/components/sections/schoolprogram/Our_Uniqueness'
 import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
 import Client_Testimonial from '@/components/sections/schoolprogram/Client_Testimonial'
+import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
+
 
 
 
@@ -13,15 +15,16 @@ const SchoolProgram = () => {
   return (
     <>
       <Helmet>
-        <title>School-Program</title>
+        <title>School Curriculum</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
       <main>
-        <PageTitle pageName={"School Program"} breadcrumbCurrent={"School Program"} />
+        <PageTitle pageName={"School Curriculum"} breadcrumbCurrent={"School Curriculum"} />
         <Why_otomatiks />
         <Our_Uniqueness />
         <Our_Patrons />
-        <Client_Testimonial />    
+        <Client_Testimonial />  
+       <NewsletterTwo />
       </main>
       <ScrollRestoration/>
     </>

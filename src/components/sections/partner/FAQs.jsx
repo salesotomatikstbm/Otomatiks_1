@@ -33,7 +33,7 @@ const FAQs = () => {
 
     return (
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 faq">
-            <div className="bg-warm lg:py-[120px] py-20 relative">
+            <div className=" lg:py-[120px] py-20 relative">
                 <div className="container">
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5 items-start">
                         <div className="max-w-[400px] md:max-w-full mx-auto md:order-0 order-1">

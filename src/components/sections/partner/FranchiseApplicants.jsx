@@ -4,7 +4,7 @@ import Title from '../../ui/title';
 
 const FranchiseApplicants = () => {
   return (
-    <div className="py-16">
+    <div className="py-12 bg-warm">
       <div className="container mx-auto px-4">
 
       <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%] py-10">

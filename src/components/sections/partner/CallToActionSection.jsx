@@ -5,8 +5,8 @@ import Title from '../../ui/title';
 const CallToActionSection = () => {
   return (
     <div className="py-16 bg-white">
-      <div className="container mx-auto px-4 text-center">
-      <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%] py-10">
+      <div className="container mx-auto px-4">
+      <div className="flex-shrink-0 flex-grow-0 basis-auto py-10">
             <SectionName>Our Value Proposition</SectionName>
             <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
             What Value Do We Bring?
@@ -37,7 +37,7 @@ const CallToActionSection = () => {
             <div className="space-y-6">
               {/* Content Block */}
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <p className="text-lg text-gray-700">
@@ -47,7 +47,7 @@ const CallToActionSection = () => {
 
               {/* Content Block */}
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <p className="text-lg text-gray-700">
@@ -57,7 +57,7 @@ const CallToActionSection = () => {
 
               {/* Content Block */}
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <p className="text-lg text-gray-700">
@@ -67,7 +67,7 @@ const CallToActionSection = () => {
 
               {/* Content Block */}
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
+              <div className="flex-shrink-0 w-8 h-8 bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <p className="text-lg text-gray-700">
@@ -81,17 +81,7 @@ const CallToActionSection = () => {
               </div>
             </div>
 
-            {/* Call-to-Action Button */}
-            <div className="mt-12 text-center">
-              <a 
-                href="https://mechatronrobotics.com/offerings/roboticsfranchise" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-purple-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-purple-700 transition duration-300"
-              >
-                Learn More
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>

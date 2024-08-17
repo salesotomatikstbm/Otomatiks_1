@@ -1,18 +1,19 @@
 import React from "react";
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import Enquiry_Form from "../abouts/Enquiry_Form";
 
 const RoboticsAiLabSetup = () => {
   return (
     <div className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <SectionName>How to Set Up Robotics & AI Lab</SectionName>
-        <Title size={"3.5xl"} className={" mt-2.5 "}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem</Title>
+        <Title size={"3.5xl"} className={"mt-2.5"}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem</Title>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Step 1 */}
-          <div className="relative bg-warm p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+          <div className="relative bg-secondary-foreground p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold">
               1
             </div>
             <div className="pt-12 text-center">
@@ -22,8 +23,8 @@ const RoboticsAiLabSetup = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="relative bg-warm p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+          <div className="relative bg-secondary-foreground p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold">
               2
             </div>
             <div className="pt-12 text-center">
@@ -33,8 +34,8 @@ const RoboticsAiLabSetup = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="relative bg-warm p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+          <div className="relative bg-secondary-foreground p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold">
               3
             </div>
             <div className="pt-12 text-center">
@@ -44,8 +45,8 @@ const RoboticsAiLabSetup = () => {
           </div>
 
           {/* Step 4 */}
-          <div className="relative bg-warm p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+          <div className="relative bg-secondary-foreground p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold">
               4
             </div>
             <div className="pt-12 text-center">
@@ -53,6 +54,11 @@ const RoboticsAiLabSetup = () => {
               <p className="text-gray-600">Get started by engaging students in teamwork and creating innovative projects.</p>
             </div>
           </div>
+        </div>
+        
+        {/* Adding margin-top to Enquiry_Form */}
+        <div className="mt-12">
+          <Enquiry_Form />
         </div>
       </div>
     </div>

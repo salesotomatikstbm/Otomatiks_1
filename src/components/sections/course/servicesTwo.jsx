@@ -9,7 +9,7 @@ const ServicesTwo = () => {
     return (
         <div className="lg:pb-15 pb-10">
             <div className="container">
-                <div className="lg:pl-11">
+                <div className="lg:pl-11 text-center">
                 <SectionName>Robotics Courses</SectionName>
                 <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing </Title>
                 <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet

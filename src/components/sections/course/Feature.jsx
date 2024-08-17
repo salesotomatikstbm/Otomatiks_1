@@ -7,7 +7,7 @@ const Feature = () => {
   return (
     <div className="feature-area bg-[url('../images/all-img/section-bg-1.png')] bg-cover bg-no-repeat bg-center section-padding pb-10">
       <div className="container">
-        <div className="">
+        <div className="text-center">
 
         <SectionName>Why Robotics for kids</SectionName>
                         <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing</Title>

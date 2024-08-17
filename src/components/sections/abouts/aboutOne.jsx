@@ -11,9 +11,7 @@ import { cn } from '@/lib/utils'
 import SlideUp from '@/lib/animations/slideUp'
 import SectionDescription from '@/components/ui/sectionDescription'
 
-
 const AboutOne = ({ gridClass, isAboutpage }) => {
-    // 'gridClass' and 'isAboutpage' props come frome about-us and home-1 page
     return (
         <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
             <div className="container">
@@ -59,41 +57,53 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                     {/* <!-- right side start --> */}
                     <div className={`${isAboutpage ? "" : "lg:max-w-[439px]"} pt-7.5`}>
                         <SectionName>Our Story</SectionName>
-                        <Title size={"3.5xl"} className={"pb-5"}>Igniting Young Minds with Innovation: The Story of Otomatiks
+                        <Title size={"3.5xl"} className={"pb-5"}>
+                            Igniting Young Minds with Innovation: The Story of Otomatiks
                         </Title>
-
-
-
-
                         <SectionDescription>
                             <div className="flex items-start mb-4">
-                               
-                                <p>At Otomatiks, we believe in the power of curiosity and innovation to shape the future. Our journey began with a passion for robotics and a vision to make cutting-edge technology accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks has grown into a leading provider of Robotics & AI education, empowering students to become tomorrow's innovators.
+                                <p>
+                                    At Otomatiks, we believe in the power of curiosity and innovation to shape the future. Our journey began with a passion for robotics and a vision to make cutting-edge technology accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks has grown into a leading provider of Robotics & AI education, empowering students to become tomorrow's innovators.
                                 </p>
                             </div>
                             <div className="flex items-start mb-4">
-                            
-                                <p>We started with a simple idea: to create hands-on learning experiences that ignite a love for science, technology, engineering, and mathematics (STEM). From our first classroom workshop to partnering with schools nationwide, we've been committed to nurturing creativity and critical thinking in students of all ages. 
+                                <p>
+                                    We started with a simple idea: to create hands-on learning experiences that ignite a love for science, technology, engineering, and mathematics (STEM). From our first classroom workshop to partnering with schools nationwide, we've been committed to nurturing creativity and critical thinking in students of all ages.
                                 </p>
                             </div>
                             <div className="flex items-start mb-4">
-                              
-                                <p>Our mission is to inspire the next generation to explore the endless possibilities of robotics and artificial intelligence. Through our programs, we aim to equip students with the skills and knowledge they need to thrive in an increasingly tech-driven world. Join us on this exciting journey as we continue to inspire, educate, and innovate!</p>
+                                <p>
+                                    Our mission is to inspire the next generation to explore the endless possibilities of robotics and artificial intelligence. Through our programs, we aim to equip students with the skills and knowledge they need to thrive in an increasingly tech-driven world. Join us on this exciting journey as we continue to inspire, educate, and innovate!
+                                </p>
                             </div>
                         </SectionDescription>
 
-                        
-                        
-                        
+                        {/* New Sections with Borders and Styling */}
+                        <div className="flex gap-10 mt-10">
+                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg">
+                                <SectionName className="text-center">Our Mission</SectionName>
+                                <SectionDescription className="text-center mt-4">
+                                    <p>
+                                        To bridge the gap between academics and real-time environments.
+                                    </p>
+                                </SectionDescription>
+                            </div>
 
-
+                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg">
+                                <SectionName className="text-center">Our Vision</SectionName>
+                                <SectionDescription className="text-center mt-4">
+                                    <p>
+                                        To make students globally recognized by changing the way they think.
+                                    </p>
+                                </SectionDescription>
+                            </div>
+                        </div>
 
                         {/* <div className='lg:mt-10 mt-7'>
                             <Button asChild variant="outline">
                                 <Link to="/about-us">Get a quote</Link>
                             </Button>
                         </div> */}
-
                     </div>
                     {/* <!-- right side end --> */}
                 </div>
