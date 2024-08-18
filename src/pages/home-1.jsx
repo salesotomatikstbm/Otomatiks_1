@@ -30,10 +30,10 @@ const HomeOne = () => {
         <HeroOne />
         <SuccessProjectOne />
         <AboutOne isAboutpage={false} />
-        <Programs />
+        {/* <Programs />
        
         <ServicesOne />
-       <AgeTwo />
+       <AgeTwo /> */}
         <ExtraCurricular />
        
         <Gallery />
