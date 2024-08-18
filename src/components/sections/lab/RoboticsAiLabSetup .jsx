@@ -10,7 +10,7 @@ const RoboticsAiLabSetup = () => {
         {/* Section Heading */}
         <div className="text-center">
           <SectionName>How to Set Up Robotics & AI Lab</SectionName>
-          <Title size="3xl" className="mt-4">Step-by-Step Guide to Setting Up Your Lab</Title>
+          <Title size={"3.5xl"}  className="mt-4">Step-by-Step Guide to Setting Up Your Lab</Title>
         </div>
 
         {/* Steps Grid */}
