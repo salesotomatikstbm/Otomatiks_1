@@ -24,7 +24,7 @@ const NewsletterTwo = () => {
                                     />
                                     <button 
                                         type="submit" 
-                                        className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-secondary-foreground text-primary-foreground rounded-tr-md rounded-br-md"
+                                        className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-primary-foreground text-secondary-foreground rounded-tr-md rounded-br-md"
                                     >
                                         <FaArrowRight />
                                     </button>

@@ -4,6 +4,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import Enquiry_Form from './Enquiry_Form';
 
 const Testimonials = () => {
   return (
@@ -170,6 +171,7 @@ const Testimonials = () => {
             </Swiper>
           </div>
         </div>
+        <Enquiry_Form />
       </div>
     </section>
   );

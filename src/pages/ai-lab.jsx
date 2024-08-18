@@ -5,9 +5,10 @@ import { ScrollRestoration } from 'react-router-dom'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import PageTitle from '@/components/sections/pageTitle'
 import Products from '@/components/sections/products'
-import CourseBlock from '@/components/sections/lab/CourseBlock'
+
 import InfrastructureRequirements from '@/components/sections/lab/InfrastructureRequirements'
 import ValueSection from '@/components/sections/lab/ValueSection'
+import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup '
 
 
 
@@ -24,7 +25,7 @@ const Ai = () => {
 
   <Products />
   <InfrastructureRequirements />
-<CourseBlock />
+<RoboticsAiLabSetup />
 <ValueSection />
 {/* 
         <NewsletterTwo /> */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import Enquiry_Form from './Enquiry_Form';
 
 const FranchiseApplicants = () => {
   return (
@@ -74,6 +75,7 @@ const FranchiseApplicants = () => {
             </div>
           </div>
         </div>
+        <Enquiry_Form />
       </div>
     </div>
   );
