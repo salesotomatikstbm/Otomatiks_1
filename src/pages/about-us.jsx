@@ -27,7 +27,7 @@ const AboutUs = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"About Us"} breadcrumbCurrent={"About Us"} />
-        <AboutOne gridClass={"lg:grid-cols-2"} isAboutpage={true} />
+        <AboutOne isAboutpage={false} />
 
         <OurJourney />
         <TrustedBy />

@@ -15,7 +15,7 @@ const ExtraInfo = () => {
             </div>
             <div>
                 <h4 className="text-xl font-bold text-[#385469]">Contact Info</h4>
-                <ul className="mt-5 flex flex-col gap-[15px]">
+                <ul className="mt-5 flex flex-col gap-[15px] mb-6">
                     <li className='flex items-center gap-2'>
                         <FaPhone className="text-primary-foreground" /> 
                         <a href="" className="ml-2.5"> +91 90432 09448</a>

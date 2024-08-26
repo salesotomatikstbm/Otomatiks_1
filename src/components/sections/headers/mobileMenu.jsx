@@ -21,7 +21,7 @@ const MobileMenu = ({ isMobleMenuActive, setIsMobleMenuActive }) => {
                 <div className="flex justify-between items-center">
                     <a href="" className="flex items-center gap-1">
                         <img src={logo} alt="logo" />
-                        <span className="font-bold text-3xl ">otomatiks</span>
+                        {/* <span className="font-bold text-3xl ">otomatiks</span> */}
                     </a>
                     <div className="bg-primary w-10 h-10 text-cream-foreground flex items-center justify-center rounded-[4px] left-4" onClick={() => setIsMobleMenuActive(false)}>
                         <FaXmark className="text-xl" />
