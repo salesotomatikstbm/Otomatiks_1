@@ -17,7 +17,7 @@ const OurJourney = () => {
     };
 
     return (
-        <section className="pt-10 pb-10 bg-warm">
+        <section className="pt-10 pb-10 bg-[#066aab]">
             <div className="container">
                 {/* Video Popup */}
                 {showVideo && (
@@ -27,7 +27,7 @@ const OurJourney = () => {
                     />
                 )}
 
-                <div className="text-center mb-10">
+                <div className="text-center mb-10 text-white">
                     <SectionName>Our Journey</SectionName>
                     <Title size="3.5xl">Our Vision To Reality: The Evolution of Otomatiks</Title>
                 </div>

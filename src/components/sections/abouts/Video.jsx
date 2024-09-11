@@ -17,7 +17,7 @@ const Video = () => {
     };
 
     return (
-        <section className="pt-10 pb-10 bg-warm">
+        <section className="pt-10 pb-10 bg-[#066aab]">
             <div className="container">
                 {/* Video Popup */}
                 {showVideo && (
@@ -60,7 +60,7 @@ const Video = () => {
                     </div>
 
                     <div className="lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
-                        <p className="text-lg mb-4">
+                        <p className="text-lg mb-4 text-white">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec nunc gravida vestibulum. Proin fringilla, sapien sit amet vulputate sollicitudin, sapien orci faucibus augue, at consequat libero quam ac mauris.
                         </p>
                         <div className="flex justify-center items-center">

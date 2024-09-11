@@ -8,17 +8,17 @@ import { FaAngleRight } from 'react-icons/fa6'
 const PageTitle = ({ pageName, breadcrumbLink, breadcrumbCurrent, className }) => {
     return (
         <div className="lg:pb-15 pb-10">
-            <div className="bg-warm lg:py-15 py-10">
+            <div className="bg-[#066aab] lg:py-15 py-10">
                 <div className="container">
                     <div className="flex  md:flex-row flex-col justify-between items-center gap-10">
                         <div className="">
                            
-                            <ul className="lg:pt-5 pt-3 flex items-center lg:gap-5 gap-2">
+                            <ul className="lg:pt-5 pt-3 flex items-center lg:gap-5 gap-2 text-white">
                                 <li><Link to="/" className="lg:text-[28px] text-xl font-bold">Home</Link></li>
                                 <li><FaAngleRight /> </li>
-                                <li><p className="lg:text-[28px] text-xl font-bold text-muted-foreground">{breadcrumbCurrent}</p></li>
+                                <li><p className="lg:text-[28px] text-xl font-bold text-muted-foreground text-white">{breadcrumbCurrent}</p></li>
                             </ul>
-                            <h2 className="xl:text-[70px] lg:text-6xl md:text-5xl text-4xl font-bold leading-[117%]">{pageName}</h2>
+                            <h2 className="xl:text-[70px] lg:text-6xl md:text-5xl text-4xl font-bold leading-[117%] text-white">{pageName}</h2>
                         </div>
                         {/* <div className="relative">
                             <img src={bread_cat} alt="cat-img" className="absolute bottom-5 -left-[30px] animate-up-down" />

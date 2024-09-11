@@ -35,7 +35,7 @@ const Products = () => {
                                     </Button>
                                 </div>
                             </div>
-                            <div className="md:order-1 order-0 relative z-[1] after:absolute after:bottom-0 after:left-0 after:z-[-1] after:w-full after:h-full after:max-h-[259px] after:bg-[linear-gradient(180deg,_rgba(247,148,30,0.00)_0%,_#F7941E_196.39%)] after:rounded-[10px]">
+                            <div className="md:order-1 order-0 relative z-[1] after:absolute bg-[#066aab] after:bottom-0 after:left-0 after:z-[-1] after:w-full after:h-full after:max-h-[259px] after:bg-[#066aab]">
                                 <SlideDown delay={2}>
                                     <img src={car} alt="car-img" />
                                 </SlideDown>

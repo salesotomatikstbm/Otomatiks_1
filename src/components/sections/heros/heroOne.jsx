@@ -13,12 +13,12 @@ import Title from '@/components/ui/title'
 
 const HeroOne = () => {
   return (
-    <section className="bg-warm pt-[78px] lg:mb-15 mb-10 relative">
+    <section className="bg-[#066aab] pt-[78px] lg:mb-15 mb-10 relative">
       <div className="container relative">
         <div className="flex flex-col items-center text-center relative z-10">
           <Title size={"7.5xl"} className={"font-normal max-w-[776px]"}>
-            <span className="relative">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
-            <span className="font-bold">Child’s </span> <span className="font-bold text-destructive-foreground">Future.</span>
+            <span className="relative text-white">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
+            <span className="font-bold text-white">Child’s </span> <span className="font-bold text-destructive-foreground">Future.</span>
           </Title>
 
           <div className="flex absolute right-[87px] top-14 animate-skw">
@@ -27,7 +27,7 @@ const HeroOne = () => {
             <img src={shap} alt="shap-2" className="w-5 h-8 -mt-7" />
           </div>
 
-          <p className="pt-5 max-w-[431px]">Shape Your Child’s Future.
+          <p className="pt-5 max-w-[431px] text-white">Shape Your Child’s Future.
           Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.</p>
           <div className="mt-6">
             <Button asChild variant={"secondary"} >

@@ -12,7 +12,7 @@ import SlideUp from '@/lib/animations/slideUp'
 
 const ExtraCurricular = () => {
     return (
-        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative bg-warm">
+        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative bg-[#066aab]">
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
                     <SectionName>School Program</SectionName>

@@ -5,12 +5,12 @@ import Enquiry_Form from './Enquiry_Form';
 
 const FranchiseApplicants = () => {
   return (
-    <div className="py-12 bg-warm">
+    <div className="py-12 bg-[#066aab]">
       <div className="container mx-auto px-4">
 
       <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%] py-10">
             <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
-            <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
+            <Title size={"3.5xl"} className={"mt-4"}>
             Who Can Apply?
             </Title>
           </div>

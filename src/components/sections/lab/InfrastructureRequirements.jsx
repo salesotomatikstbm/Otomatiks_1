@@ -4,12 +4,12 @@ import Title from '../../ui/title';
 
 const InfrastructureRequirements = () => {
   return (
-    <div className="py-16 bg-warm">
+    <div className="py-16 bg-[#066aab]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
           <SectionName>Infrastructure Requirements for Lab Set-up</SectionName>
-          <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
+          <Title size={"3.5xl"} className={"mt-4"}>
             Essential Infrastructure for an Effective Lab Environment
           </Title>
         </div>

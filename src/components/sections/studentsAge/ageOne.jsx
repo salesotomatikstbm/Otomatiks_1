@@ -11,7 +11,7 @@ import CourseForm from '../abouts/Enquiry_Form'
 const AgeOne = () => {
     return (
         <section className="py-12">
-            <div className="bg-warm py-12 relative z-[1]">
+            <div className="bg-[#066aab] py-12 relative z-[1]">
                 <div className="container">
                     <div className="grid lg:grid-cols-[37%_auto] grid-cols-1 items-center xl:gap-20 gap-10">
 
@@ -20,7 +20,7 @@ const AgeOne = () => {
                                 <SectionName>Why People Trust Us</SectionName>
                                 <Title size={"3.5xl"}>Building Trust Through Expertise, Innovation, and Community</Title>
                             </div>
-                            <SectionDescription className={'pt-5 pb-7.5'}>We combine expertise with personalized support to deliver top-quality education, ensuring our students thrive in a community build on innovation and success. </SectionDescription>
+                            <SectionDescription className={'pt-5 pb-7.5 text-white'} >We combine expertise with personalized support to deliver top-quality education, ensuring our students thrive in a community build on innovation and success. </SectionDescription>
                            
                                
                             

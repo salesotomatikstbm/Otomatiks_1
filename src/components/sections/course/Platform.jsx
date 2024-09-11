@@ -8,15 +8,15 @@ import SectionDescription from '@/components/ui/sectionDescription'
 
 const Platform = () => {
   return (
-    <div className="bg-warm bg-cover bg-no-repeat bg-center section-padding py-16">
+    <div className="bg-[#066aab] bg-cover bg-no-repeat bg-center section-padding py-16">
       <div className="container">
         <div className="lg:grid grid-cols-12 gap-[30px]">
           <div className="xl:col-span-5 lg:col-span-6 col-span-12">
           <SectionName>Online Classes</SectionName>
-          <Title size={"3.5xl"} className={"pb-5"}>Lorem ipsum dolor sit amet consectetur adipiscing</Title>
-          <SectionDescription>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
+          <Title size={"3.5xl"} className={"pb-5 "}>Lorem ipsum dolor sit amet consectetur adipiscing</Title>
+          <SectionDescription className={"text-white"}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet
                             massa turpis sit proin metus volutpat loren ipsum Lorem ipsum dolor sit amet consectetur. </SectionDescription>
-            <ul className=" space-y-2 pt-8">
+            <ul className=" space-y-2 pt-8 text-white">
               <li className="flex flex-wrap">
                 <div className="flex-none mr-3">
                   <div className="">

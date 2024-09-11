@@ -8,13 +8,13 @@ import Enquiry_Form from './Enquiry_Form';
 
 const Testimonials = () => {
   return (
-    <section className="pt-15 pb-15 relative bg-warm">
+    <section className="pt-15 pb-15 relative bg-[#066aab]">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex lg:flex-row flex-col justify-between lg:items-center">
           <div className="flex-shrink-0 flex-grow-0 basis-auto lg:w-[30%]">
             <SectionName>Testimonials of Our Robotics Franchisee</SectionName>
-            <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
+            <Title size={"3.5xl"} className={"mt-4"}>
               Hear From Our Partners
             </Title>
           </div>

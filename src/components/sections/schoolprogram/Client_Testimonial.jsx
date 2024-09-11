@@ -20,7 +20,7 @@ const videos = [
 
 const Client_Testimonial = () => {
     return (
-        <section className="pt-10 pb-10 bg-warm">
+        <section className="pt-10 pb-10 bg-[#066aab]">
             <div className="container">
                 <div className="text-center mb-10">
                     <SectionName>Client Testimonials</SectionName>

@@ -5,7 +5,7 @@ import CourseForm from './CourseForm';
 
 const Our_Uniqueness = () => {
   return (
-    <section className="py-12 bg-warm">
+    <section className="py-12 bg-[#066aab]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-between mb-12">
           {/* Image Section */}
@@ -29,7 +29,7 @@ const Our_Uniqueness = () => {
           <div className="flex flex-col space-y-12 lg:space-y-14 ">
             <div className="text-center ">
               <SectionName className="">Our Uniqueness</SectionName>
-              <Title size="3.5xl" className="mt-4 text-gray-900">
+              <Title size="3.5xl" className="mt-4 ">
                 What Value Do We Bring
               </Title>
             </div>

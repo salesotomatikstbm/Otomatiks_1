@@ -10,11 +10,12 @@ import SectionName from '@/components/ui/sectionName';
 import { cn } from '@/lib/utils';
 import SlideUp from '@/lib/animations/slideUp';
 import SectionDescription from '@/components/ui/sectionDescription';
-
+import bg from "@/assets/images/shape.png";
 const AboutOne = ({ gridClass, isAboutpage }) => {
     return (
-        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
-            <div className="container">
+        // style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10" >
+            <div className="container" >
                 <div className={cn("grid lg:grid-cols-[60%_40%] grid-cols-1 items-center", gridClass)}>
                     <div className="relative">
                         <div className="flex sm:flex-row flex-col sm:items-end gap-6">
@@ -26,7 +27,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                     <div className="ml-9">
                                         <img src={about_img_1} alt="about-bg" className="w-full" />
                                     </div>
-                                    <div className="absolute -bottom-12.5 left-0 bg-primary rounded-[10px] py-4 px-[22px] flex items-center gap-3">
+                                    <div className="absolute -bottom-12.5 left-0 bg-[#066aab] rounded-[10px] py-4 px-[22px] flex items-center gap-3">
                                         <div className="bg-background w-11 h-11 rounded-full flex justify-center items-center">
                                             <img src={customer} alt="customer" />
                                         </div>
@@ -38,16 +39,16 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </div>
                             </SlideUp>
                             <div className="flex sm:flex-col gap-8">
-                                <div className="bg-primary max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center hidden sm:flex">
+                                <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center hidden sm:flex">
                                     <img src={icreement} alt="icreement" />
                                     <h6 className="text-cream-foreground text-xl font-bold">Otomatiks</h6>
                                     <p className="text-cream-foreground">Robotics Academy</p>
                                 </div>
-                                <div className="bg-background bg-primary max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
+                                <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
                                     <h6 className=" text-cream-foreground text-[32px] font-bold ">13+</h6>
                                     <p className="text-cream-foreground">Years Of Exp</p>
                                 </div>
-                                <div className="bg-background bg-primary max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
+                                <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
                                     <h6 className="text-cream-foreground text-[32px] font-bold ">13</h6>
                                     <p className="text-cream-foreground">Our Hubs</p>
                                 </div>
@@ -80,7 +81,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
 
                         {/* New Sections with Borders and Styling */}
                         <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-10">
-                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
+                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
                                 <SectionName className="text-center">Our Mission</SectionName>
                                 <SectionDescription className="text-center mt-4">
                                     <p>
@@ -89,7 +90,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                 </SectionDescription>
                             </div>
 
-                            <div className="flex-1 border-2 border-primary rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
+                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
                                 <SectionName className="text-center">Our Vision</SectionName>
                                 <SectionDescription className="text-center mt-4">
                                     <p>
