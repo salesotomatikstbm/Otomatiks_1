@@ -12,7 +12,8 @@ import LayoutTwo from "@/layout/layoutTwo";
 import HomeTwo from "@/pages/home-2";
 import HomeOne from "@/pages/home-1";
 import LayoutThree from "@/layout/layoutThree";
-
+import Shop from "../pages/shop"
+import Event from "../pages/event"
 
 export const router = createBrowserRouter([
     {
@@ -44,12 +45,16 @@ export const router = createBrowserRouter([
                 element: <AboutUs />
             },
             {
-                path: "/contact-us",
-                element: <ContactUs />
-            },
-            {
                 path: "/blog",
                 element: <Blog />
+            },
+            {
+                path: "/shop",
+                element: <Shop />
+            },
+            {
+                path: "/event",
+                element: <Event />
             },
             {
                 path: "/robotics-coding-school-curriculum",
@@ -71,6 +76,10 @@ export const router = createBrowserRouter([
             {
                 path: "/robotics-ai-lab",
                 element: <Ai />
+            },
+            {
+                path: "/contact-us",
+                element: <ContactUs />
             },
         ]
     },

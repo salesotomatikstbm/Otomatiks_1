@@ -8,13 +8,13 @@ export const menuList = [
     {
         id: 2,
         path: "/about-us",
-        label: "About Us",
+        label: "About_Us",
         dropDownMenu: false
     },
     {
         id: 3,
         path: "/robotics-coding-courses",
-        label: "Our Courses",
+        label: "Our_Courses",
         dropDownMenu: false
     },
     {
@@ -51,19 +51,25 @@ export const menuList = [
     },
     {
         id: 5,
-        path: "/blog",
-        label: "Event",
+        path: "/shop",
+        label: "Shop",
         dropDownMenu: false
     },
     {
         id: 6,
+        path: "/event",
+        label: "Event",
+        dropDownMenu: false
+    },
+    {
+        id: 7,
         path: "/partners",
         label: "Partners",
         dropDownMenu: false
     },
     {
-        id: 7,
-        path: "/contact-us",
+        id: 8,
+        path: "/blog",
         label: "Blogs",
         dropDownMenu: false
     },

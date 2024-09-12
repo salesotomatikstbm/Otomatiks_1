@@ -17,7 +17,10 @@ const Blog = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"Blog"} breadcrumbCurrent={"Blog"} />
-        <div className="lg:pt-15 pt-10">
+
+
+
+        {/* <div className="lg:pt-15 pt-10">
           <div className='container'>
             <div className=" grid xl:grid-cols-[850px_auto] lg:grid-cols-[700px_auto] grid-cols-1 gap-7.5">
               <div className='flex flex-col lg:gap-[60px] gap-10'>
@@ -30,7 +33,9 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <NewsletterTwo />
+        <NewsletterTwo /> */}
+
+
       </main>
       <ScrollRestoration/>
     </>
