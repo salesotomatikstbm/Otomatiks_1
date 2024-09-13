@@ -16,9 +16,9 @@ const TopHeader = () => {
                             <li className='text-cream-foreground flex items-center gap-4'>
                                 <FaEnvelope /> <Link to={"#"}>support@otomatiks.in</Link>
                             </li>
-                            <li className='text-cream-foreground flex items-center gap-4'>
+                            {/* <li className='text-cream-foreground flex items-center gap-4'>
                                 <FaLocationDot /> <span>Vellore-632006</span>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div>
