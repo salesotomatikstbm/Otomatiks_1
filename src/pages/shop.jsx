@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
-import PageTitle from '@/components/sections/pageTitle'
+import PageTitle from '@/components/sections/pageTitle';
+
 const Shop = () => {
   useEffect(() => {
-    const loadShopifyScript = () => {
+    // Use setTimeout to defer the script loading after the page content has loaded
+    setTimeout(() => {
       const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+
+      // Check if the ShopifyBuy object already exists
       if (window.ShopifyBuy) {
         if (window.ShopifyBuy.UI) {
           ShopifyBuyInit();
@@ -14,6 +18,7 @@ const Shop = () => {
         loadScript();
       }
 
+      // Function to load the Shopify Buy Button script
       function loadScript() {
         const script = document.createElement('script');
         script.async = true;
@@ -22,37 +27,46 @@ const Shop = () => {
         script.onload = ShopifyBuyInit;
       }
 
+      // Initialize the Shopify Buy Button
       function ShopifyBuyInit() {
-        const client = window.ShopifyBuy.buildClient({
+        const client = ShopifyBuy.buildClient({
           domain: '56668b-06.myshopify.com',
           storefrontAccessToken: 'c85e3d0b3395d0296a30323fe4582046',
         });
 
-        window.ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('product', {
-            id: '8875331518719',
-            node: document.getElementById('product-component-1726142554035'),
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '439233020159',
+            node: document.getElementById('collection-component-1726202890885'),
             moneyFormat: 'Rs.%20%7B%7Bamount%7D%7D',
             options: {
               product: {
                 styles: {
                   product: {
                     '@media (min-width: 601px)': {
-                      'max-width': 'calc(25% - 20px)',
+                      'max-width': 'calc(33.33% - 20px)', // 3 products per row
                       'margin-left': '20px',
                       'margin-bottom': '50px',
+                      width: 'calc(33.33% - 20px)',
                     },
                   },
                 },
+                buttonDestination: 'modal',
+                contents: {
+                  options: false,
+                },
                 text: {
-                  button: 'Add to cart',
+                  button: 'View product',
                 },
               },
               productSet: {
                 styles: {
                   products: {
+                    display: 'grid', // Use grid to align products
+                    'grid-template-columns': 'repeat(3, 1fr)', // 3 items per row
+                    'grid-gap': '20px', // Space between products
                     '@media (min-width: 601px)': {
-                      'margin-left': '-20px',
+                      'grid-template-columns': 'repeat(3, 1fr)',
                     },
                   },
                 },
@@ -77,27 +91,24 @@ const Shop = () => {
                   button: 'Add to cart',
                 },
               },
-              option: {},
               cart: {
                 text: {
                   total: 'Subtotal',
                   button: 'Checkout',
                 },
               },
-              toggle: {},
             },
           });
         });
       }
-    };
-
-    loadShopifyScript();
+    }, 0); // Delay to ensure page load first
   }, []);
 
   return (
     <div>
-         <PageTitle pageName={"Shop"} breadcrumbCurrent={"Shop"} />
-      <div id="product-component-1726142554035"></div>
+      <PageTitle pageName="Shop" breadcrumbCurrent="Shop" />
+      {/* Shopify collection container */}
+      <div id="collection-component-1726202890885" className="my-8 mx-auto"></div>
     </div>
   );
 };
