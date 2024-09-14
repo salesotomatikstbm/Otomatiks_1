@@ -5,7 +5,7 @@ import SlideUp from '@/lib/animations/slideUp'
 const SectionName = ({ className, children }) => {
   return (
     <SlideUp>
-      <p className={cn("text-secondary-foreground font-bubblegum-sans text-[19px]", className)}>{children}</p>
+      <p className={cn("text-primary-foreground font-bubblegum-sans text-[19px]", className)}>{children}</p>
     </SlideUp>
   )
 }

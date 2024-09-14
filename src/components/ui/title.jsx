@@ -14,7 +14,7 @@ const Title = ({ children, size, className }) => {
     if (size === "7.5xl") {
         return (
             <SlideUp delay={2}>
-                <h1 className={cn(`xl:text-[70px] lg:text-6xl md:text-5xl text-4xl font-bold xl:leading-[128%] lg:leading-[125%] md:leading-[120%] text-white`, className)}>
+                <h1 className={cn(`xl:text-[70px] lg:text-6xl md:text-5xl text-4xl font-bold xl:leading-[128%] lg:leading-[125%] md:leading-[120%] text-secondary-foreground`, className)}>
                     {children}
                 </h1>
             </SlideUp>
@@ -22,13 +22,13 @@ const Title = ({ children, size, className }) => {
     }
     if (size === "2xl") {
         return (
-            <h5 className={cn(`font-extrabold text-muted-foreground lg:text-2xl md:text-xl text-xl md:leading-[140%] text-white`, className)}>{children}</h5>
+            <h5 className={cn(`font-extrabold text-muted-foreground lg:text-2xl md:text-xl text-xl md:leading-[140%] text-secondary-foreground`, className)}>{children}</h5>
         )
     }
     if (size === "3.5xl") {
         return (
             <SlideUp delay={2}>
-                <h2 className={cn(`font-bold lg:text-[32px] md:text-[28px] text-2xl lg:leading-[130%] md:leading-[120%] leading-[110%] text-white`, className)}>
+                <h2 className={cn(`font-bold lg:text-[32px] md:text-[28px] text-2xl lg:leading-[130%] md:leading-[120%] leading-[110%] text-secondary-foreground`, className)}>
                     {children}
                 </h2>
             </SlideUp>

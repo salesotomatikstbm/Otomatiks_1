@@ -8,13 +8,13 @@ export const menuList = [
     {
         id: 2,
         path: "/about-us",
-        label: "About_Us",
+        label: "About",
         dropDownMenu: false
     },
     {
         id: 3,
         path: "/robotics-coding-courses",
-        label: "Our_Courses",
+        label: "Courses",
         dropDownMenu: false
     },
     {

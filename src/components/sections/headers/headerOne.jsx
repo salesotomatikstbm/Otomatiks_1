@@ -31,8 +31,8 @@ const HeaderOne = () => {
                                         <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
                                             {/* <FaMagnifyingGlass className='text-xl' /> */}
                                         </div>
-                                        <Button asChild variant="ghost" className="sm:flex hidden">
-                                            <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
+                                        <Button asChild variant="secondary" className="sm:flex hidden">
+                                            <Link to={"/contact-us"} className='bg-primary-foreground'> Contact Us <FaArrowRight /></Link>
                                         </Button>
 
                                         <div className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500" onClick={() => setIsMobleMenuActive(true)}>

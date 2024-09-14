@@ -18,7 +18,7 @@ const HeroOne = () => {
         <div className="flex flex-col items-center text-center relative z-10">
           <Title size={"7.5xl"} className={"font-normal max-w-[776px]"}>
             <span className="relative text-white">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
-            <span className="font-bold text-white">Child’s </span> <span className="font-bold text-[#ff6347]">Future.</span>
+            <span className="font-bold text-white">Child’s </span> <span className="font-bold text-primary-foreground">Future.</span>
           </Title>
 
           <div className="flex absolute right-[87px] top-14 animate-skw">
@@ -31,7 +31,7 @@ const HeroOne = () => {
           Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.</p>
           <div className="mt-6">
             <Button asChild variant={"secondary"} >
-              <Link to="/about-us">Our Courses</Link>
+              <Link to="/about-us" className='bg-primary-foreground'>Our Courses</Link>
             </Button>
           </div>
         </div>
