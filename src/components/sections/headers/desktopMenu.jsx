@@ -6,7 +6,7 @@ import { menuList } from '@/lib/fackdata/menuList'
 const DesktopMenu = () => {
     return (
         <nav className="xl:block hidden">
-            <ul className="flex items-center gap-[1vw] ">
+            <ul className="flex items-center gap-[3vw] ">
                 {
                     menuList.map(({ dropDownMenu, id, label, path }) => {
                         return (

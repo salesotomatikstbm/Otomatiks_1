@@ -20,7 +20,7 @@ const HeaderOne = () => {
                 <div id="header-container">
                     <TopHeader />
                     <div className="[.header-pinned_&]:shadow-md bg-background transition-all duration-300">
-                        <div className="container py-5 ">
+                        <div className="px-5 py-5 ">
                             <div className="flex justify-between items-center ">
                                 <Logo />
                                 <div className="flex items-center">

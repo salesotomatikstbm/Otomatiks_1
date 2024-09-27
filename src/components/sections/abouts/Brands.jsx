@@ -16,7 +16,8 @@ const districts = [
   "Madurai",
   "Theni",
   "Mumbai",
-  "United Kingdom"
+  "United Kingdom (UK)",
+"United Arab Emirates (UAE)"
 ];
 
 const Brands = ({ section_padding_bottom, section_padding_top }) => {

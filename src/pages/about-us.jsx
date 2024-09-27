@@ -14,6 +14,7 @@ import OurJourney from '@/components/sections/abouts/OurJourney'
 import Brands1 from '@/components/sections/abouts/Brands'
 import AgeOne from '@/components/sections/studentsAge/ageOne'
 import TrustedBy from '@/components/sections/abouts/TrustedBy'
+import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
 
 
 
@@ -28,9 +29,10 @@ const AboutUs = () => {
       <main>
         <PageTitle pageName={"About Us"} breadcrumbCurrent={"About Us"} />
         <AboutOne isAboutpage={false} />
-
-        <OurJourney />
-        <TrustedBy />
+    
+      <OurJourney />
+        {/* <TrustedBy /> */}
+        <Our_Patrons />
 <AgeOne />
 
 {/* <AboutTwo /> */}
