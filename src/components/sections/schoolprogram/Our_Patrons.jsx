@@ -22,7 +22,7 @@ import Img18 from "../../../assets/images/patrons/18.png";
 import Img19 from "../../../assets/images/patrons/19.png";
 import Img20 from "../../../assets/images/patrons/20.png";
 import Img21 from "../../../assets/images/patrons/21.png";
-
+import Img22 from "../../../assets/images/patrons/22.png";
 import Img23 from "../../../assets/images/patrons/23.png";
 import Img24 from "../../../assets/images/patrons/24.png";
 import Img25 from "../../../assets/images/patrons/25.png";
@@ -33,7 +33,11 @@ import Img29 from "../../../assets/images/patrons/29.png";
 import Img30 from "../../../assets/images/patrons/30.png";
 import Img31 from "../../../assets/images/patrons/31.png";
 import Img32 from "../../../assets/images/patrons/32.png";
-
+import Img33 from "../../../assets/images/patrons/33.png";
+import Img34 from "../../../assets/images/patrons/34.png";
+import Img35 from "../../../assets/images/patrons/35.png";
+import Img36 from "../../../assets/images/patrons/36.png";
+import Img37 from "../../../assets/images/patrons/37.png";
 const images = [
   Img1,
   Img2,
@@ -56,7 +60,7 @@ const images = [
   Img19,
   Img20,
   Img21,
-
+  Img22,
   Img23,
   Img24,
   Img25,
@@ -67,6 +71,11 @@ const images = [
   Img30,
   Img31,
   Img32,
+  Img33,
+  Img34,
+  Img35,
+  Img36,
+  Img37,
 ];
 
 const Our_Patrons = () => {
