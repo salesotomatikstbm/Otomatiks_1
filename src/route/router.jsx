@@ -14,6 +14,9 @@ import HomeOne from "@/pages/home-1";
 import LayoutThree from "@/layout/layoutThree";
 import Shop from "../pages/shop"
 import Event from "../pages/event"
+import Robotica2024 from "@/pages/robotica2024";
+import Robotica2023 from "@/pages/robotica2023";
+import Robotica2025 from "@/pages/robotica2025";
 
 export const router = createBrowserRouter([
     {
@@ -48,13 +51,14 @@ export const router = createBrowserRouter([
                 path: "/blog",
                 element: <Blog />
             },
-            {
-                path: "/shop",
-                element: <Shop />
-            },
+            // {
+            //     path: "/shop",
+            //     element: <Shop />
+            // },
             {
                 path: "/event",
-                element: <Event />
+                // element: <Event />
+                element: <Robotica2025 />
             },
             {
                 path: "/robotics-coding-school-curriculum",
@@ -80,6 +84,18 @@ export const router = createBrowserRouter([
             {
                 path: "/contact-us",
                 element: <ContactUs />
+            },
+            {
+                path: "/robotica-2024",
+                element: <Robotica2024 />
+            },
+            {
+                path: "/robotica-2023",
+                element: <Robotica2023 />
+            },
+            {
+                path: "/robotica-2025",
+                element: <Robotica2025 />
             },
         ]
     },

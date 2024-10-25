@@ -51,26 +51,45 @@ export const menuList = [
     },
     {
         id: 5,
-        path: "/shop",
-        label: "Shop",
+        path: "/partners",
+        label: "Partners",
         dropDownMenu: false
     },
     {
         id: 6,
         path: "/event",
         label: "Event",
-        dropDownMenu: false
+        dropDownMenu: [
+            {
+                id: 1,
+                path: "/robotica-2025",
+                label: "Robotica 2025",
+            },
+            {
+                id: 2,
+                path: "/robotica-2024",
+                label: "Robotica 2024",
+            },
+            {
+                id: 3,
+                path: "/robotica-2023",
+                label: "Robotica 2023",
+            },
+           
+        ]
     },
     {
         id: 7,
-        path: "/partners",
-        label: "Partners",
-        dropDownMenu: false
-    },
-    {
-        id: 8,
         path: "/blog",
         label: "Blogs",
         dropDownMenu: false
+        
+    },
+    {
+        id: 8,
+        path: "https://otomatiks.free.nf/?product=product-1",
+        label: "Shop",
+        dropDownMenu: false
+         // path: "/shop",
     },
 ];
