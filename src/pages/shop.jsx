@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
 import Collection1 from '@/components/sections/shop/collection1';
-import Collection2 from '@/components/sections/shop/collection2';
+
 const Shop = () => {
   return (
     <>
@@ -14,7 +14,7 @@ const Shop = () => {
     <main>
       <PageTitle pageName={"Shop"} breadcrumbCurrent={"Shop"} />
      <Collection1 />
-     <Collection2 />
+ 
     </main>
     <ScrollRestoration/>
   </>
