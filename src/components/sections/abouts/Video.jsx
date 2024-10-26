@@ -28,13 +28,12 @@ const Video = () => {
                 )}
 
                 <div className="text-center mb-10">
-                    <SectionName>Our Team
-                    </SectionName>
+                    <SectionName>Our Team</SectionName>
                     <Title size="3.5xl">Meet the Innovators Behind Otomatiks</Title>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center justify-between mb-10 relative">
-                    <div className="lg:w-1/2 lg:pr-10 relative">
+                <div className="w-full mb-10 flex justify-center relative">
+                    <div className="relative" style={{ maxWidth: '800px' }}>
                         <img 
                             src="https://bestwpware.com/react-templates/edumim/static/media/video.28396e783b15dc7b6cba.png" 
                             alt="video thumbnail" 
@@ -58,18 +57,7 @@ const Video = () => {
                             </div>
                         </button>
                     </div>
-
-                    <div className="lg:w-1/2 lg:pl-10 mt-10 lg:mt-0">
-                        <p className="text-lg mb-4 text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna nec nunc gravida vestibulum. Proin fringilla, sapien sit amet vulputate sollicitudin, sapien orci faucibus augue, at consequat libero quam ac mauris.
-                        </p>
-                        <div className="flex justify-center items-center">
-                            {/* Uncomment and adjust the Rating component if needed */}
-                            {/* <Rating star={5} /> */}
-                        </div>
-                    </div>
                 </div>
-                {/* Removed the Swiper slider section */}
             </div>
         </section>
     );

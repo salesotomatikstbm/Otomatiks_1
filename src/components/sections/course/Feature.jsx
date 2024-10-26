@@ -11,26 +11,27 @@ const Feature = () => {
         <div className="text-center">
           <SectionName className="">Why Robotics for Kids</SectionName>
           <Title size={"3.5xl"} className={"text-gray-800 mb-8"}>
-            Discover the Future with Robotics Education
+          Empowering Young Minds through Robotics Education
           </Title>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
           <FeatureCard
             icon="codicon:globe"
-            title="Learn Anywhere, Anytime"
-            description="Access a world of knowledge from the comfort of your home. Our robotics courses are flexible, allowing students to learn at their own pace."
+            title="Boosts Problem Solving Skills"
+            description="Robotics challenges students to think critically, identify problems, and find innovative solutions, strengthening their analytical skills."
           />
           <FeatureCard
             icon="healthicons:i-training-class-outline"
-            title="Expert Guidance"
-            description="Our instructors are industry leaders with deep expertise in robotics. They are committed to helping students excel through personalized teaching methods."
+            title="Encourages Creativity"
+            description="Building and programming robots encourages kids to bring their ideas to life, fostering imagination and creative thinking."
           />
           <FeatureCard
             icon="fluent:handshake-32-regular"
-            title="24/7 Support"
-            description="We offer dedicated support around the clock to ensure a seamless learning experience. Our team is always ready to assist with any questions."
+            title="Prepares for Future Careers"
+            description="Learning robotics equips students with valuable tech skills and knowledge, providing a foundation for future career opportunities in STEM fields."
           />
-        </div>
+</div>
+
       </div>
     </div>
   );
@@ -55,7 +56,7 @@ const FeatureCard = ({ icon, title, description }) => {
           {description}
         </SectionDescription>
         <a
-          href="#"
+          href="/contact-us"
           className="text-secondary-foreground hover:text-warm transition-colors duration-300 inline-flex items-center"
         >
           Learn More

@@ -14,9 +14,9 @@ import bg from "@/assets/images/shape.png";
 const AboutOne = ({ gridClass, isAboutpage }) => {
     return (
         // style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10" >
+        <section className="lg:pt-0 pt-0 lg:pb-15 pb-10" >
             <div className="container" >
-                <div className={cn("grid lg:grid-cols-[60%_40%] grid-cols-1 items-center", gridClass)}>
+                <div className={cn("grid lg:grid-cols-[50%_50%] grid-cols-1 items-center", gridClass)}>
                     <div className="relative">
                         <div className="flex sm:flex-row flex-col sm:items-end gap-6">
                             <SlideUp>
@@ -56,13 +56,13 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         </div>
                     </div>
                     {/* <!-- right side start --> */}
-                    <div className={`${isAboutpage ? "" : "lg:max-w-[439px]"} pt-7.5`}>
+                    <div className={`${isAboutpage ? "" : "lg:max-w-[839px]"} pt-7.5`}>
                         <SectionName>Our Story</SectionName>
                         <Title size={"3.5xl"} className={""}>
                             Igniting Young Minds with Innovation: The Story of Otomatiks
                         </Title>
                         <SectionDescription>
-                            <div className="flex items-start mb-4">
+                            <div className="flex items-start mt-4 mb-4">
                                 <p>
                                     At Otomatiks, we believe in the power of curiosity and innovation to shape the future. Our journey began with a passion for robotics and a vision to make cutting-edge technology accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks has grown into a leading provider of Robotics & AI education, empowering students to become tomorrow's innovators.
                                 </p>
@@ -72,15 +72,15 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                     We started with a simple idea: to create hands-on learning experiences that ignite a love for science, technology, engineering, and mathematics (STEM). From our first classroom workshop to partnering with schools nationwide, we've been committed to nurturing creativity and critical thinking in students of all ages.
                                 </p>
                             </div>
-                            <div className="flex items-start mb-4">
+                            {/* <div className="flex items-start mb-4">
                                 <p>
                                     Our mission is to inspire the next generation to explore the endless possibilities of robotics and artificial intelligence. Through our programs, we aim to equip students with the skills and knowledge they need to thrive in an increasingly tech-driven world. Join us on this exciting journey as we continue to inspire, educate, and innovate!
                                 </p>
-                            </div>
+                            </div> */}
                         </SectionDescription>
 
                         {/* New Sections with Borders and Styling */}
-                        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mt-10">
+                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mt-10">
                             <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-primary transition duration-300">
                                 <SectionName className="text-center">Our Mission</SectionName>
                                 <SectionDescription className="text-center mt-4">

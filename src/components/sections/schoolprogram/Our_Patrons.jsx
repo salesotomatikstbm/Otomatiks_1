@@ -38,6 +38,7 @@ import Img34 from "../../../assets/images/patrons/34.png";
 import Img35 from "../../../assets/images/patrons/35.png";
 import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
+import Img38 from "../../../assets/images/patrons/38.png";
 const images = [
   Img1,
   Img2,
@@ -76,6 +77,7 @@ const images = [
   Img35,
   Img36,
   Img37,
+  Img38,
 ];
 
 const Our_Patrons = () => {
@@ -95,7 +97,7 @@ const Our_Patrons = () => {
               <img
                 alt={`Patron ${index + 1}`}
                 src={src}
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+                className="w-full h-35 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
               />
             </div>
           ))}

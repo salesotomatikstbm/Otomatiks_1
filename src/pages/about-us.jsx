@@ -18,6 +18,7 @@ import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
 
 
 
+
 const AboutUs = () => {
 
   return (
@@ -32,6 +33,7 @@ const AboutUs = () => {
     
       <OurJourney />
         {/* <TrustedBy /> */}
+       
         <Our_Patrons />
 <AgeOne />
 

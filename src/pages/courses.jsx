@@ -13,6 +13,8 @@ import Platform from '@/components/sections/course/Platform'
 import Students_Talk from '@/components/sections/course/Students_Talk'
 import Brands1 from '@/components/sections/abouts/Brands'
 import Robotics_Course from '@/components/sections/course/Robotics_Course'
+import Contact_Form_Course from '@/components/sections/course/Contact_Form_Course'
+
 
 
 
@@ -23,19 +25,20 @@ const Courses = () => {
         <title>robotics-coding-courses</title>
         <meta name="description" content="Ascent - Chindcare & Kids School React.js and Tailwind CSS Template" />
       </Helmet>
-      <main>
+      <main >
         <PageTitle pageName={"Our Courses"} breadcrumbCurrent={"Our Courses"} />
         {/* <ServiceArtical /> */}
       <Feature />
       <Robotics_Course />
         {/* <ServicesTwo /> */}
         {/* <NewsletterTwo /> */}
-        <Brands1 />
+        
      {/* <Brands /> */}
      <Platform />
      <Students_Talk />
-
+     <Brands1 />
      <FaqComp />
+    <Contact_Form_Course />
       </main>
       <ScrollRestoration/>
     </>

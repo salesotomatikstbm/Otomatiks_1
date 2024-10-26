@@ -2,13 +2,13 @@ import React from 'react';
 import contact_2 from "@/assets/images/contact/contact-2.png";
 import contact_1 from "@/assets/images/contact/contact-1.png";
 import winner from "@/assets/images/contact/winner.svg";
-import Input from '../ui/input';
-import { FaEnvelope, FaPhone, FaPaperPlane } from 'react-icons/fa6';
-import { Button } from '../ui/button';
-import SectionName from '../ui/sectionName';
-import Title from '../ui/title';
+import Input from '../../ui/input';
+import { FaEnvelope, FaPhone, FaPaperPlane, FaUser } from 'react-icons/fa6';
+import { Button } from '../../ui/button';
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
 
-const ContactForm = () => {
+const Contact_Form_Course = () => {
     const [message, setMessage] = React.useState('');
 
     const handleSubmit = async (e) => {
@@ -48,26 +48,7 @@ const ContactForm = () => {
                     <Title size={"3.5xl"}>Unlock your potential with education</Title>
                 </div>
                 <div className="mt-15">
-                    <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-7.5">
-                        <div className="relative">
-                            <div className="absolute top-1/2 -translate-y-1/2 h-full flex flex-col justify-between">
-                                <div className="mt-[68px] sm:w-full w-40 animate-up-down">
-                                    <img src={contact_2} alt="two-girls-img" />
-                                </div>
-                                <div className="bg-primary px-5 py-[18px] rounded-[10px] flex items-center gap-5 mb-7.5 animate-left-right">
-                                    <div>
-                                        <img src={winner} alt="img" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-[28px] font-bold text-cream-foreground leading-[148%] font-nunito">2k+</h4>
-                                        <h6 className="text-xl font-bold text-cream-foreground mt-[5px] leading-[130%]">Project Completed</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex lg:justify-end justify-center">
-                                <img src={contact_1} alt="img" />
-                            </div>
-                        </div>
+                    <div className="grid lg:grid-cols-1 grid-cols-1 items-center gap-7.5">
                         <div>
                             <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
                                 <h3 className="text-[28px] font-bold leading-[148%] font-nunito">Send a message</h3>
@@ -75,11 +56,22 @@ const ContactForm = () => {
                                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                         <div className="relative">
                                             <input type="text" name="Name" placeholder="Your Name" id="name" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2  border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" />
-                                            <label htmlFor="name" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
+                                            <label htmlFor="name" className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser /></label>
                                         </div>
                                         <div className="relative">
-                                          <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] rounded-[10px] border-2  placeholder:[#686868] border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            <label htmlFor="email" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone /></label>
+                                            <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] rounded-[10px] border-2 placeholder:[#686868] border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" />
+                                            <label htmlFor="email" className="absolute right-5 top-1/2 -translate-y-1/2"><FaEnvelope /></label>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
+                                        <div className="relative">
+                                            <input type="text" name="Phone" placeholder="Your Phone Number" id="phone" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" />
+                                            <label htmlFor="phone" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone /></label>
+                                        </div>
+                                        <div className="relative">
+                                            <input type="text" name="Course" placeholder="Interested Course" id="course" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" />
+                                            <label htmlFor="course" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
                                         </div>
                                     </div>
 
@@ -99,4 +91,4 @@ const ContactForm = () => {
     );
 }
 
-export default ContactForm;
+export default Contact_Form_Course;
