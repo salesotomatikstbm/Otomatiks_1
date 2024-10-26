@@ -17,6 +17,9 @@ const Platform = () => {
             <SectionDescription className={""}>
               Dive into robotics education with our comprehensive online classes. Designed for students of all ages, our courses make learning about robotics engaging and accessible.
             </SectionDescription>
+            <SectionDescription>
+              Join a community of learners, connect with instructors in real-time, and gain practical skills that prepare you for a future in STEM.
+            </SectionDescription>
             <ul className="space-y-2 pt-8 ">
               <li className="flex flex-wrap">
                 <div className="flex-none mr-3">
@@ -54,18 +57,7 @@ const Platform = () => {
                   </h4>
                 </div>
               </li>
-              <li className="flex flex-wrap">
-                <div className="flex-none mr-3">
-                  <div className="">
-                    <img src={ok} alt="Check mark" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-lg mb-1 font-semibold">
-                  Progress Tracking
-                  </h4>
-                </div>
-              </li>
+              
               <li className="flex flex-wrap">
                 <div className="flex-none mr-3">
                   <div className="">
@@ -80,7 +72,7 @@ const Platform = () => {
               </li>
             </ul>
           </div>
-          <div className="xl:col-span-7 lg:col-span-6 col-span-12 lg:pt-0 md:pt-10 pt-6">
+          <div className="xl:col-span-7 lg:col-span-6 col-span-12 lg:pt-10 md:pt-10 ">
             <img src={aboutTwo} alt="Robotics class illustration" className="mx-auto block w-full" />
           </div>
         </div>

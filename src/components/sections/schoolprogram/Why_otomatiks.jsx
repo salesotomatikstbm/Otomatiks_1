@@ -38,10 +38,10 @@ const WhyOtomatiks = () => {
   ];
 
   return (
-    <div className="py-12 container mx-auto px-4 lg:px-8">
+    <div className="py-16 container mx-auto px-4 lg:px-8">
       <div className="text-center mb-12">
         <SectionName>Why Otomatiks</SectionName>
-        <Title size={"3.5xl"} className={"mt-4 text-gray-800"}>
+        <Title size={"3.5xl"} className={"mt-4"}>
           What Value Do We Bring to Schools?
         </Title>
       </div>
@@ -49,17 +49,17 @@ const WhyOtomatiks = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-lg border border-gray-200 shadow-md transition-transform duration-300 transform hover:bg-warm hover:text-red-600 hover:scale-105"
+            className="relative bg-white p-6 rounded-lg border border-primary shadow-md transition-transform duration-300 transform hover:bg-secondary  hover:scale-105"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="text-4xl text-indigo-600 p-4 bg-indigo-100 rounded-full transition-transform duration-300 transform hover:bg-white hover:text-red-600">
+              <div className="text-4xl text-primary p-4  rounded-full transition-transform duration-300 transform hover:bg-white ">
                 {section.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 text-center mb-4 transition-transform duration-300 transform hover:text-red-600">
+            <h3 className="text-xl font-semibold text-gray-900 text-center mb-4 transition-transform duration-300 transform ">
               {section.title}
             </h3>
-            <p className="text-gray-600 text-center transition-transform duration-300 transform hover:text-red-400">
+            <p className="text-gray-600 text-center transition-transform duration-300 transform ">
               {section.description}
             </p>
           </div>

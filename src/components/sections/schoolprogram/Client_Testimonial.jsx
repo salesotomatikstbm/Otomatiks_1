@@ -24,7 +24,7 @@ const Client_Testimonial = () => {
             <div className="container">
                 <div className="text-center mb-10">
                     <SectionName>Client Testimonials</SectionName>
-                    <Title size="3.5xl">Client Testimonials</Title>
+                    <Title size="3.5xl">Stories of Success and Satisfaction</Title>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">

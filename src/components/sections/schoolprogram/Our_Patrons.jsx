@@ -38,7 +38,7 @@ import Img34 from "../../../assets/images/patrons/34.png";
 import Img35 from "../../../assets/images/patrons/35.png";
 import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
-import Img38 from "../../../assets/images/patrons/38.png";
+
 const images = [
   Img1,
   Img2,
@@ -77,7 +77,7 @@ const images = [
   Img35,
   Img36,
   Img37,
-  Img38,
+
 ];
 
 const Our_Patrons = () => {
@@ -87,7 +87,7 @@ const Our_Patrons = () => {
         <div className="text-center mb-12">
           <SectionName className="">Our Patrons</SectionName>
           <Title size="3.5xl" className="mt-4 ">
-            Our Esteemed Partners
+          Recognizing Our Patrons
           </Title>
         </div>
         

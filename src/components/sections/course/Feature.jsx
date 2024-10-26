@@ -3,14 +3,14 @@ import { Icon } from '@iconify/react';
 import Title from '@/components/ui/title';
 import SectionName from '@/components/ui/sectionName';
 import SectionDescription from '@/components/ui/sectionDescription';
-
+import { Link } from 'react-router-dom'
 const Feature = () => {
   return (
     <div className="feature-area py-16">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="text-center">
           <SectionName className="">Why Robotics for Kids</SectionName>
-          <Title size={"3.5xl"} className={"text-gray-800 mb-8"}>
+          <Title size={"3.5xl"} className={" mb-8"}>
           Empowering Young Minds through Robotics Education
           </Title>
         </div>
@@ -44,7 +44,7 @@ const FeatureCard = ({ icon, title, description }) => {
     <div className="relative group transform transition-transform duration-500 hover:scale-105">
       <div className="bg-white shadow-xl rounded-xl overflow-hidden p-8 flex flex-col items-center text-center">
         <div
-          className="h-20 w-20 flex items-center justify-center bg-red-400 rounded-full mb-6 text-white text-4xl
+          className="h-20 w-20 flex items-center justify-center bg-primary rounded-full mb-6 text-white text-4xl
             group-hover:bg-secondary-foreground transition-all duration-300"
         >
           <Icon icon={icon} />
@@ -55,13 +55,14 @@ const FeatureCard = ({ icon, title, description }) => {
         <SectionDescription className="text-gray-700 mb-6">
           {description}
         </SectionDescription>
+        {/* <Link to="/contact-us" className="font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Know More</Link>
         <a
-          href="/contact-us"
+          to="/contact-us"
           className="text-secondary-foreground hover:text-warm transition-colors duration-300 inline-flex items-center"
         >
           Learn More
           <Icon icon="carbon:arrow-right" className="ml-2" />
-        </a>
+        </a> */}
       </div>
       <div className="absolute inset-0 bg-warm opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
     </div>
