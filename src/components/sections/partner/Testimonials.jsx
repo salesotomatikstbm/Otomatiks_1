@@ -35,7 +35,7 @@ const Testimonials = () => {
             <div className="relative mt-7.5">
               {/* Placeholder Image */}
               <img
-                src="https://via.placeholder.com/150"
+                src="https://tse2.mm.bing.net/th?id=OIP.JApTopaZEPFS-EMypu3zpAHaFj&pid=Api&P=0&h=220"
                 alt="Placeholder"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

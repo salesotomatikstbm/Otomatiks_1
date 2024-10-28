@@ -19,7 +19,7 @@ const UniqueSellingPoints = () => {
           {/* Image Section */}
           <div className="lg:w-1/2 p-4">
             <img
-              src="https://via.placeholder.com/500x400"
+              src="https://tse4.mm.bing.net/th?id=OIP.4Ro3FSrRQsqvcPOHdhfAmgAAAA&pid=Api&P=0&h=220"
               alt="Unique Approach"
               className="w-full h-auto rounded-lg shadow-lg"
             />
