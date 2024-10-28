@@ -1,41 +1,43 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import { FaUsers, FaShieldAlt, FaChalkboardTeacher, FaBook, FaUserTie, FaAward } from 'react-icons/fa';
+import { FaUsers, FaHandsHelping, FaChalkboardTeacher, FaBook, FaUserTie, FaAward } from 'react-icons/fa';
+
 
 const WhyOtomatiks = () => {
   const sections = [
     {
       icon: <FaUsers />,
-      title: "Participants Diversity",
-      description: "We have trained more than 100,000+ students to date, ranging from 3rd Grade to 12th Grade from various parts of the country."
+      title: "Diverse Participation",
+      description: "Our robotics programs have engaged over 100,000 students from 3rd to 12th grade, covering schools across various regions in the country."
     },
     {
-      icon: <FaShieldAlt />,
-      title: "Safety",
-      description: "Our long-standing reputation for safety is one of the most often stated reasons by parents for using our Robotics Training Services in Equipment Handling."
+      icon: <FaHandsHelping />,
+      title: "Student Support",
+      description: "We provide dedicated support to students, helping them troubleshoot and develop their skills throughout the robotics training journey."
     },
     {
       icon: <FaChalkboardTeacher />,
-      title: "Experiential Learning",
-      description: "The modules are structured to keep the students engaged with relevant, sequential experiences that promote skill mastery & incorporate reflection & transference."
+      title: "Hands-On Learning",
+      description: "Our modules provide engaging, hands-on experiences that encourage skill development and practical application of robotics concepts."
     },
     {
       icon: <FaBook />,
-      title: "Curriculum Mapping with Academics",
-      description: "We have designed a curriculum that has been mapped with the NCERT/CBSE/IGCSE/ICSE & Matriculation Board, allowing students to relate it to their regular academics."
+      title: "Integrated Curriculum",
+      description: "Our curriculum aligns with NCERT, CBSE, IGCSE, ICSE, and Matriculation boards, making it easy for students to connect robotics with their school subjects."
     },
     {
       icon: <FaUserTie />,
-      title: "Instructor Team",
-      description: "Our instructors are highly qualified and experienced in creating engaging sessions for greater impact. Our domain expertise includes Electronics, Electrical, Mechanical, and Programming."
+      title: "Experienced Instructors",
+      description: "Our instructors are experts in Electronics, Mechanical, and Programming, bringing real-world knowledge to school robotics sessions for impactful learning."
     },
     {
       icon: <FaAward />,
-      title: "Excellence at All Levels",
-      description: "We have created 4 National Level Winners, 6 South India Level Winners, 4 State Level Winners, 3 District Level Winners, and more than 100+ School Level Winners."
+      title: "Achievements in Robotics",
+      description: "Our programs have produced national and state-level winners, inspiring students to excel in school-level robotics competitions."
     }
   ];
+
 
   return (
     <div className="py-16 container mx-auto px-4 lg:px-8">

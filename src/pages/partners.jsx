@@ -9,6 +9,8 @@ import FranchiseApplicants from '@/components/sections/partner/FranchiseApplican
 import UniqueSellingPoints from '@/components/sections/partner/UniqueSellingPoints'
 import Testimonials from '@/components/sections/partner/Testimonials'
 import FAQs from '@/components/sections/partner/FAQs'
+import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
+import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 
 
 const Partners = () => {
@@ -24,7 +26,10 @@ const Partners = () => {
        <FranchiseApplicants />
        <UniqueSellingPoints />
        <Testimonials />
+       
        <FAQs />
+       <Contact_Form_Partners />
+       <NewsletterTwo />
       </main>
       <ScrollRestoration/>
     </>
