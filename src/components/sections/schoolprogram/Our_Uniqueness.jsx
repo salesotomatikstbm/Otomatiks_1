@@ -28,9 +28,9 @@ const Our_Uniqueness = () => {
           {/* Content Section */}
           <div className="flex flex-col space-y-12 lg:space-y-14 ">
             <div className="text-center ">
-              <SectionName className="">Our Uniqueness</SectionName>
+              <SectionName className="">Our Impact & Excellence</SectionName>
               <Title size="3.5xl" className="mt-4 ">
-                What Value Do We Bring
+              A Legacy of Growth and Success
               </Title>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

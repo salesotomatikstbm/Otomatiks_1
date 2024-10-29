@@ -39,8 +39,8 @@ const Contact_School_Management = () => {
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
                 <div className="max-w-[500px] mx-auto text-center">
-                    <SectionName>Contact School Management</SectionName>
-                    <Title size={"3.5xl"}>Professional Inquiries and School Management Communication</Title>
+                    <SectionName>Connect with School Administration</SectionName>
+                    <Title size={"3.5xl"}>School Management Outreach & Inquiries</Title>
                 </div>
                 <div className="mt-15">
                     <div className="grid lg:grid-cols-1 grid-cols-1 items-center gap-7.5">
