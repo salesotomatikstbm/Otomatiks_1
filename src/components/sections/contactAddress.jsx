@@ -3,55 +3,58 @@ import React from 'react'
 import { FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
 import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
-import SectionDescription from '@/components/ui/sectionDescription'
 
 const ContactAddress = () => {
     return (
-        <div className="lg:py-16 py-12">
-            <div className="container">
+        <div className="container lg:py-16 py-12">
+            <div className="px-6">
                 <div className="text-center mb-12">
-                    <SectionName>Our Main Branch</SectionName>
+                    <SectionName>Reach Out to Our Team</SectionName>
                     <Title size="3xl" className="pb-4">Get in Touch</Title>
-                    <SectionDescription>
-                       Lorem Reach out to us at any of our Main branch or via email and phone. We're here to assist you with all your needs.
-                    </SectionDescription>
+                    <Title size="3.5xl">Connect with us for more information or assistance</Title>
                 </div>
-                
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+
+                {/* First row with Mail and Contact in two columns */}
+                <div className="grid lg:grid-cols-2 gap-8">
                     <SlideUp delay={2}>
-                        <div className="bg-white rounded-lg shadow-lg p-8 text-center flex flex-col items-center h-full">
-                            <div className="w-16 h-16 rounded-full flex justify-center items-center bg-green-500">
-                                <FaLocationDot className="text-white text-2xl" />
+                        <div className="flex flex-col bg-white shadow-lg rounded-lg p-8 items-center text-center">
+                            <div className="w-20 h-20 rounded-full flex justify-center items-center bg-primary text-white text-3xl mb-4">
+                                <FaEnvelope />
                             </div>
-                            <h5 className="font-semibold text-xl mt-5 text-gray-800">Location</h5>
-                            <p className="mt-2 text-gray-600">
-                                Otomatiks Activity Centre, No. A2/36, 12th East Cross Road Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006, Tamil Nadu 632006
+                            <h5 className="font-semibold text-2xl text-gray-800">Mail</h5>
+                            <p className="mt-2 text-gray-600 text-lg">
+                                <a href="mailto:support@otomatiks.in" className="hover:text-secondary transition-colors">
+                                    support@otomatiks.in
+                                </a>
                             </p>
                         </div>
                     </SlideUp>
 
                     <SlideUp delay={3}>
-                        <div className="bg-white rounded-lg shadow-lg p-8 text-center flex flex-col items-center h-full">
-                            <div className="w-16 h-16 rounded-full flex justify-center items-center bg-blue-500">
-                                <FaEnvelope className="text-white text-2xl" />
+                        <div className="flex flex-col bg-white shadow-lg rounded-lg p-8 items-center text-center">
+                            <div className="w-20 h-20 rounded-full flex justify-center items-center bg-primary text-white text-3xl mb-4">
+                                <FaPhone />
                             </div>
-                            <h5 className="font-semibold text-xl mt-5 text-gray-800">Mail</h5>
-                            <p className="mt-2 text-gray-600">
-                                <a href="mailto:email1@otomatiks.in" className="hover:text-blue-600 transition-colors">email1@otomatiks.in</a> <br />
-                                <a href="mailto:email2@otomatiks.in" className="hover:text-blue-600 transition-colors">email2@otomatiks.in</a>
+                            <h5 className="font-semibold text-2xl text-gray-800">Contact</h5>
+                            <p className="mt-2 text-gray-600 text-lg">
+                                <a href="tel:+919043209448" className="hover:text-secondary transition-colors">
+                                    +91 90432 09448
+                                </a>
                             </p>
                         </div>
                     </SlideUp>
+                </div>
 
+                {/* Second row with Address in one column */}
+                <div className="mt-8">
                     <SlideUp delay={4}>
-                        <div className="bg-white rounded-lg shadow-lg p-8 text-center flex flex-col items-center h-full">
-                            <div className="w-16 h-16 rounded-full flex justify-center items-center bg-red-500">
-                                <FaPhone className="text-white text-2xl" />
+                        <div className="flex flex-col bg-white shadow-lg rounded-lg p-8 items-center text-center">
+                            <div className="w-20 h-20 rounded-full flex justify-center items-center bg-secondary text-white text-3xl mb-4">
+                                <FaLocationDot />
                             </div>
-                            <h5 className="font-semibold text-xl mt-5 text-gray-800">Contact</h5>
-                            <p className="mt-2 text-gray-600">
-                                <a href="tel:+91Contact1" className="hover:text-red-600 transition-colors">+91 Contact 1</a><br />
-                                <a href="tel:+91Contact2" className="hover:text-red-600 transition-colors">+91 Contact 2</a>
+                            <h5 className="font-semibold text-2xl text-gray-800">Location</h5>
+                            <p className="mt-2 text-gray-600 text-lg hover:text-primary transition-colors">
+                                Otomatiks Activity Centre, No. A2/36, 12th East Cross Road, Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006.
                             </p>
                         </div>
                     </SlideUp>
@@ -61,4 +64,4 @@ const ContactAddress = () => {
     )
 }
 
-export default ContactAddress
+export default ContactAddress;
