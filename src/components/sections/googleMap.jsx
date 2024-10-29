@@ -9,7 +9,7 @@ const GoogleMap = () => {
     };
 
     return (
-        <div className="lg:pt-15 lg:pb-15 pt-10 pb-10 overflow-x-hidden">
+        <div className="lg:pt-22 lg:pb-5 pt-25  overflow-x-hidden">
             {/* <div className="text-center mb-8">
                 <SectionName>Our Location</SectionName>
                 <Title size="3xl" className="lg:max-w-[600px] mx-auto">

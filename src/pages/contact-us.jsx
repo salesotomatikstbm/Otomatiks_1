@@ -17,12 +17,13 @@ const ContactUs = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"Contact Us"} breadcrumbCurrent={"Contact Us"} />
+        <ContactForm />
         <ContactAddress />
-        <GoogleMap />
+        
         <BranchesInfo />
       
-        <ContactForm />
-        <NewsletterTwo />
+       
+        {/* <NewsletterTwo /> */}
       </main>
       <ScrollRestoration/>
     </>
