@@ -11,6 +11,7 @@ import Testimonials from '@/components/sections/partner/Testimonials'
 import FAQs from '@/components/sections/partner/FAQs'
 import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
+import Faq_Partners from '@/components/sections/partner/Faq_Partners'
 
 
 const Partners = () => {
@@ -26,8 +27,8 @@ const Partners = () => {
        <FranchiseApplicants />
        <UniqueSellingPoints />
        <Testimonials />
-       
-       <FAQs />
+       <Faq_Partners />
+       {/* <FAQs /> */}
        <Contact_Form_Partners />
        
       </main>
