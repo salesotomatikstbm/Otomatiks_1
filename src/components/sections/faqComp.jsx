@@ -17,7 +17,7 @@ const FaqComp = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-7.5">
           <div className="max-w-[528px] lg:max-w-full mx-auto">
-            <img src={faq_banner} alt="child with laptop" />
+            <img src={faq_banner} alt="child with laptop"  />
           </div>
           <div>
             <div className="lg:max-w-[520px] pb-10">

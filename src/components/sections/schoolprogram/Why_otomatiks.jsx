@@ -7,21 +7,6 @@ import { FaUsers, FaHandsHelping, FaChalkboardTeacher, FaBook, FaUserTie, FaAwar
 const WhyOtomatiks = () => {
   const sections = [
     {
-      icon: <FaUsers />,
-      title: "Diverse Participation",
-      description: "Our robotics programs have engaged over 100,000 students from 3rd to 12th grade, covering schools across various regions in the country."
-    },
-    {
-      icon: <FaHandsHelping />,
-      title: "Student Support",
-      description: "We provide dedicated support to students, helping them troubleshoot and develop their skills throughout the robotics training journey."
-    },
-    {
-      icon: <FaChalkboardTeacher />,
-      title: "Hands-On Learning",
-      description: "Our modules provide engaging, hands-on experiences that encourage skill development and practical application of robotics concepts."
-    },
-    {
       icon: <FaBook />,
       title: "Integrated Curriculum",
       description: "Our curriculum aligns with NCERT, CBSE, IGCSE, ICSE, and Matriculation boards, making it easy for students to connect robotics with their school subjects."
@@ -31,6 +16,24 @@ const WhyOtomatiks = () => {
       title: "Experienced Instructors",
       description: "Our instructors are experts in Electronics, Mechanical, and Programming, bringing real-world knowledge to school robotics sessions for impactful learning."
     },
+    {
+      icon: <FaChalkboardTeacher />,
+      title: "Hands-On Learning",
+      description: "Our modules provide engaging, hands-on experiences that encourage skill development and practical application of robotics concepts."
+    },
+    {
+      icon: <FaHandsHelping />,
+      title: "Student Support",
+      description: "We provide dedicated support to students, helping them troubleshoot and develop their skills throughout the robotics training journey."
+    },
+    {
+      icon: <FaUsers />,
+      title: "Diverse Participation",
+      description: "Our robotics programs have engaged over 100,000 students from 3rd to 12th grade, covering schools across various regions in the country."
+    },
+    
+   
+    
     {
       icon: <FaAward />,
       title: "Achievements in Robotics",
@@ -51,17 +54,17 @@ const WhyOtomatiks = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-lg border border-primary shadow-md transition-transform duration-300 transform hover:bg-secondary  hover:scale-105"
+            className="relative bg-white p-6 rounded-lg border border-secondary shadow-md transition-transform duration-300 transform hover:bg-[#066aab] hover:text-white hover:scale-105"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="text-4xl text-primary p-4  rounded-full transition-transform duration-300 transform hover:bg-white ">
+              <div className="text-4xl text-primary p-4  rounded-full transition-transform duration-300 transform hover:bg-white  ">
                 {section.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 text-center mb-4 transition-transform duration-300 transform ">
+            <h3 className="text-xl font-semibold  text-center mb-4 transition-transform duration-300 transform hover:text-white">
               {section.title}
             </h3>
-            <p className="text-gray-600 text-center transition-transform duration-300 transform ">
+            <p className="text-center transition-transform duration-300 transform hover:text-white ">
               {section.description}
             </p>
           </div>

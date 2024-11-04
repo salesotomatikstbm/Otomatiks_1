@@ -8,7 +8,7 @@ const FranchiseApplicants = () => {
     <div className="py-12 bg-[#066aab]">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
-        <div className="mb-10">
+        <div className="mb-10 text-center">
           <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
           <Title size={"3.5xl"} className={"mt-4 "}>
             Who Can Apply?

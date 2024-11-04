@@ -7,7 +7,7 @@ const UniqueSellingPoints = () => {
     <div className="py-16">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <SectionName>To Our Unique Selling Points</SectionName>
           <Title size={"3.5xl"} className={"mt-4"}>
             What Sets Us Apart?

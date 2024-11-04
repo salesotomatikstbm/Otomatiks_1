@@ -41,7 +41,7 @@ const FAQs = () => {
                                 <img src={faqImage} alt="FAQ Section" className="w-full h-full" />
                             </SlideDown>
                         </div>
-                        <div className="order-0 md:order-1">
+                        <div className="order-0 md:order-1 ">
                             <SectionName>FAQ Categories</SectionName>
                             <Title size={"3.5xl"} className={"mt-2.5 max-w-[494px]"}>
                                 Frequently Asked Questions

@@ -6,7 +6,7 @@ const CallToActionSection = () => {
   return (
     <div className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex-shrink-0 flex-grow-0 basis-auto">
+        <div className="flex-shrink-0 flex-grow-0 basis-auto text-center">
           <SectionName>Our Value Proposition</SectionName>
           <Title size={"3.5xl"} className={"mt-4 "}>
             Why Choose Otomatiks?

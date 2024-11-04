@@ -40,7 +40,7 @@ const Contact_Form_Partners = () => {
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10 bg-[#066aab]">
             <div className="container">
-                <div className="">
+                <div className="text-center">
                     <SectionName>Contact Us</SectionName>
                     <Title size={"3.5xl"}>Your Path to Success Begins with a Conversation</Title>
                 </div>

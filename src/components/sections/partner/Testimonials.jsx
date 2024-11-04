@@ -21,7 +21,7 @@ const Testimonials = () => {
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex lg:flex-row flex-col justify-between lg:items-center">
-          <div className="lg:w-[30%] mb-6 lg:mb-0">
+          <div className="lg:w-[100%] mb-6 lg:mb-0 text-center">
             <SectionName>Testimonials of Our Robotics Franchisee</SectionName>
             <Title size="3.5xl" className="mt-4">
               Hear From Our Partners

@@ -19,8 +19,10 @@ const FooterTwo = () => {
                     <SlideUp delay={2}>
                         <Logo className="text-cream-foreground" />
                         <div className="mt-10">
-                            <p className=" text-cream-foreground opacity-80">Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisi Imperdiet massa turpis sit proin loren ipsum</p>
-                            <SocalIcons prentClass={"gap-5 lg:pt-7.5 pt-5"} className={"w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-green"} />
+                            <p className=" text-cream-foreground ">Shape Your Child’s Future. 
+Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
+</p>
+                            <SocalIcons prentClass={"gap-5 lg:pt-7.5 pt-5"} className={"w-9 h-9 bg-primary border-none hover:bg-secondary"} />
                         </div>
                     </SlideUp>
 
@@ -31,10 +33,11 @@ const FooterTwo = () => {
                         </div>
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
                             <li><Link to="/about-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">About Us</Link></li>
-                            <li><Link to="/services" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Robotics Courses</Link></li>
-                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Software Courses</Link></li>
-                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Blogs</Link></li>
-                            
+                            <li><Link to="/services" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Courses</Link></li>
+                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School Curriculum</Link></li>
+                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Partners</Link></li>
+                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Shop</Link></li>
+                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Contact Us</Link></li>
                         </ul>
                     </SlideUp>
 
@@ -53,7 +56,10 @@ const FooterTwo = () => {
                                 <FaPhone className='mt-1.5' /> <Link to="#">+91 90432 09448</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Activity Centre, No. A2/36, 12th East Cross Road Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006, Tamil Nadu 632006</span>
+                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Head Office :
+Otomatiks Activity Centre, No. A2/36, 12th East Cross Road Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006, Tamil Nadu
+
+</span>
                             </li>
                         </ul>
                     </SlideUp>
