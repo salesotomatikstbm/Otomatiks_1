@@ -2,6 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
+import MSMESection from '@/components/sections/msme/MSMESection'
+import RoboticsImportanceSection from '@/components/sections/msme/RoboticsImportanceSection'
+import MSMERoboticsProgramsSection from '@/components/sections/msme/MSMERoboticsProgramsSection'
 
 const Msme = () => {
   return (
@@ -12,7 +15,9 @@ const Msme = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"MSME"} breadcrumbCurrent={"MSME"} />
-
+<MSMESection />
+<RoboticsImportanceSection />
+<MSMERoboticsProgramsSection />
       </main>
       <ScrollRestoration/>
     </>
