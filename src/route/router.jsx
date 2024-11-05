@@ -17,6 +17,9 @@ import Event from "../pages/event"
 import Robotica2024 from "@/pages/robotica2024";
 import Robotica2023 from "@/pages/robotica2023";
 import Robotica2025 from "@/pages/robotica2025";
+import Workshop from "@/pages/workshop";
+import Msme from "@/pages/msme";
+import Csr from "@/pages/csr";
 
 export const router = createBrowserRouter([
     {
@@ -80,6 +83,18 @@ export const router = createBrowserRouter([
             {
                 path: "/robotics-ai-lab",
                 element: <Ai />
+            },
+            {
+                path: "/workshop",
+                element: <Workshop />
+            },
+            {
+                path: "/msme",
+                element: <Msme />
+            },
+            {
+                path: "/csr",
+                element: <Csr />
             },
             {
                 path: "/contact-us",

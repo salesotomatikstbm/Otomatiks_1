@@ -10,27 +10,27 @@ import SlideUp from '@/lib/animations/slideUp'
 const categoryList = [
     {
         id: 1,
-        label: "Event 1",
+        label: "Robotica 2025",
         data_target: "education"
     },
     {
         id: 2,
-        label: "Event 2",
+        label: "Robotica 2024",
         data_target: "school"
     },
     {
         id: 3,
-        label: "Event 3",
+        label: "Robotica 2023",
         data_target: "learn"
     },
     {
         id: 4,
-        label: "Event 4",
+        label: "Robotica 2022",
         data_target: "child"
     },
     {
         id: 5,
-        label: "Event 5",
+        label: "Robotica 2021",
         data_target: "coaching"
     },
 
@@ -42,8 +42,8 @@ const Gallery = () => {
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 portfolio">
             <div className="container">
                 <div className="text-center flex flex-col items-center">
-                    <SectionName>Our Event</SectionName>
-                    <Title size={"3.5xl"} className={"lg:max-w-[630px]"}>Lorem ipsum dolor sit amet consectetur</Title>
+                    <SectionName>Events That Inspire</SectionName>
+                    <Title size={"3.5xl"} className={"lg:max-w-[830px]"}>Engaging moments that foster learning and connection</Title>
                 </div>
                 <div className="pt-10">
                     <ul className="flex items-center justify-center flex-wrap md:gap-7.5 gap-5">

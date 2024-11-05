@@ -9,6 +9,7 @@ import Products from '@/components/sections/products'
 import InfrastructureRequirements from '@/components/sections/lab/InfrastructureRequirements'
 import ValueSection from '@/components/sections/lab/ValueSection'
 import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup '
+import Contact_Form_Course from '@/components/sections/course/Contact_Form_Course'
 
 
 
@@ -29,7 +30,7 @@ const Ai = () => {
 <ValueSection />
 {/* 
         <NewsletterTwo /> */}
-        
+        <Contact_Form_Course />
       </main>
       <ScrollRestoration/>
     </>

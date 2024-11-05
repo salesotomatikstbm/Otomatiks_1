@@ -16,8 +16,8 @@ const ValueSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className=" mb-12">
-          <SectionName>Our Value Proposition</SectionName>
-          <Title size={"3.5xl"} className={" mt-2.5 "}>Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem</Title>
+          <SectionName className={"text-center"}>Our Value Proposition</SectionName>
+          <Title size={"3.5xl"} className={" mt-2.5 text-center"}>Empowering Future Innovators with Purposeful Learning</Title>
 
         </div>
 

@@ -29,7 +29,7 @@ export const menuList = [
             },
             {
                 id: 2,
-                path: "/robotics-ai-lab",
+                path: "/workshop",
                 label: "Workshops",
             },
             {
@@ -39,12 +39,12 @@ export const menuList = [
             },
             {
                 id: 4,
-                path: "/robotics-ai-lab",
+                path: "/msme",
                 label: "MSME",
             },
             {
                 id: 5,
-                path: "/contact-us",
+                path: "/csr",
                 label: "CSR",
             },
         ]

@@ -16,19 +16,19 @@ const AboutTwo = () => {
             <div className="container">
                 <div className="grid xl:grid-cols-[45%_52%] lg:grid-cols-[40%_44%] grid-cols-1 xl:justify-between gap-7.5">
                     <div>
-                        <SectionName>Why People Trust Us</SectionName>
-                        <Title size={"3.5xl"} className={"lg:max-w-[410px] mt-2.5"}>Invest in education, invest in the future</Title>
+                        <SectionName>Robotics Workshops</SectionName>
+                        <Title size={"3.5xl"} className={"lg:max-w-[610px] mt-2.5"}>Igniting Young Minds Through Engaging STEM Experiences</Title>
                         <SectionDescription className="mt-5">
-                            - Experienced educators<br />
-                            - Comprehensive curriculum<br />
-                            - Modern facilities<br />
-                            - Personalized support
+                        We provide animated and engaging robotics workshops in Vellore at Otomatiks, dedicated to energizing young minds through fun, hands-on activities. Our goal is to ignite interest in STEM and equip students with real-world skills.
+            
                         </SectionDescription>
                         <SectionDescription className="mt-5">
-                            - Strong community<br />
-                            - Holistic development<br />
-                            - Proven track record<br />
-                            - Accessible resources
+                        <li>Enhanced technical skills</li>
+                    <li>Exposure to cutting-edge technology</li>
+                    <li>Fun and engaging learning experience</li>
+                    <li>Improved critical thinking</li>
+                    <li>Boost in confidence</li>
+                    <li>Networking opportunities</li>
                         </SectionDescription>
                         <SlideUp delay={3}>
                             <div className="flex gap-8 mt-10">

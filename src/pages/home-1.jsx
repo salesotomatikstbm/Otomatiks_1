@@ -17,7 +17,9 @@ import AgeOne from '@/components/sections/studentsAge/ageOne'
 import ExtraCurricular from '@/components/sections/extraCurricular'
 import AgeTwo from '@/components/sections/studentsAge/ageTwo'
 import Partner from '@/components/sections/partner'
-
+import Robotics_Course from "@/components/sections/course/Robotics_Course";
+import ContactForm from '@/components/sections/contactForm'
+import Client_Testimonial from '@/components/sections/schoolprogram/Client_Testimonial'
 
 const HomeOne = () => {
   return (
@@ -28,23 +30,20 @@ const HomeOne = () => {
       </Helmet>
       <main>
         <HeroOne />
-        <SuccessProjectOne />
+        {/* <SuccessProjectOne /> */}
         <AboutOne isAboutpage={false} />
         {/* <Programs />
        
         <ServicesOne />
        <AgeTwo /> */}
-        <ExtraCurricular />
-       
+        {/* <ExtraCurricular /> */}
+        <Robotics_Course />
         <Gallery />
-
+<Client_Testimonial />
         <Teams />
         <FaqComp />
-        {/* <Partner /> */}
-        {/* <AgeOne /> */}
-        {/* <Testimonial /> */}
-        {/* <BlogsOne /> */}
-        {/* <NewsletterOne /> */}
+        <ContactForm />
+       
       </main>
       <ScrollRestoration/>
     </>
