@@ -2,7 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
-import CSRProgramsSection from '@/components/sections/csr/CSRProgramsSection'
+import Programs from '@/components/sections/programs'
+import CommunityEngagementSection from '@/components/sections/csr/CommunityEngagementSection'
 
 
 
@@ -15,9 +16,9 @@ const Csr = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
-<CSRProgramsSection />
 
- 
+<Programs />
+<CommunityEngagementSection />
       </main>
       <ScrollRestoration/>
     </>

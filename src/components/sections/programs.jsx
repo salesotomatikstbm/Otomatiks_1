@@ -8,11 +8,11 @@ import { servicesDataTwo } from '@/lib/fackdata/servicesDataTwo'
 
 const Programs = () => {
   return (
-    <section className="lg:pt-15 pt-10 lg:pb-15 pb-10 relative">
+    <section className="lg:pb-15 pb-10 relative">
     <div className="container">
         <div className="text-center flex flex-col items-center">
-            <SectionName className={"text-green-foreground"}>Our Offerings</SectionName>
-            <Title size={"3.5xl"} className={"lg:max-w-[630px]"}>Building the Future with Robotics: A Strong Foundation for Innovation</Title>
+            <SectionName className={""}>Empowering Communities through CSR Education</SectionName>
+            <Title size={"3.5xl"} className={"lg:max-w-[830px]"}>Our mission is to inspire and educate the next generation in STEM fields.</Title>
         </div>
         <div className="lg:pl-11">
             <div className="grid md:grid-cols-2 grid-cols-1 gap-y-7.5 lg:gap-x-[74px] gap-x-5 lg:pt-15 pt-10">

@@ -1,40 +1,30 @@
-
 export const servicesDataTwo = [
     {
-        id:1,
-        icon:"car",
-        service_name:"Level 1",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
+        id: 1,
+        icon: "workshops",
+        service_name: "Workshops & Training",
+        service_details: "Engaging workshops designed to provide hands-on experience with the latest technologies.",
+    
     },
     {
-        id:2,
-        icon:"toys",
-        service_name:"Level 2",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
+        id: 2,
+        icon: "partnership",
+        service_name: "Partnerships",
+        service_details: "Collaborations with leading organizations to enhance educational outcomes.",
+      
     },
     {
-        id:3,
-        icon:"feeder",
-        service_name:"Level 3",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
+        id: 3,
+        icon: "skills",
+        service_name: "Skill Development",
+        service_details: "Programs focused on building essential skills for the future workforce.",
+  
     },
     {
-        id:4,
-        icon:"book",
-        service_name:"Level 4",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
-    },
-    {
-        id:5,
-        icon:"mat",
-        service_name:"Level 5",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
-    },
-    {
-        id:6,
-        icon:"baby-body",
-        service_name:"Level 6",
-        service_details:"Lorem ipsum dolor sit amet consectetur adipiscing elit platea the ,osr of a proin mollis pretium facilisi in, ligula volutpat",
-    },
-
-]
+        id: 4,
+        icon: "mentorship",
+        service_name: "Mentorship",
+        service_details: "Connecting students with industry leaders for guidance and support.",
+    
+    }
+];

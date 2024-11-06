@@ -8,22 +8,23 @@ import Book from '@/assets/icons/book'
 import Mat from '@/assets/icons/mat'
 import BabyBody from '@/assets/icons/baby-body'
 import SlideUp from '@/lib/animations/slideUp'
+import { FaRobot, FaChartLine, FaChalkboardTeacher, FaMoneyBillWave, FaUsers } from 'react-icons/fa';
 
 const ServiceCardTwo = ({ icon, service_name, service_details }) => {
     const RenderComponent = ({ item }) => {
         switch (item) {
-            case 'car':
-                return <Car />
-            case 'toys':
-                return <Toys />
-            case 'feeder':
-                return <Feeder />
-            case 'book':
-                return <Book height='60' width='60' />
+            case 'workshops':
+                return <FaRobot />
+            case 'partnership':
+                return <FaChartLine />
+            case 'skills':
+                return <FaChalkboardTeacher />
+            case 'mentorship':
+                return <FaMoneyBillWave height='80' width='80' />
             case 'mat':
-                return <Mat height='60' width='60' />
+                return <FaUsers height='60' width='60' />
             case 'baby-body':
-                return <BabyBody height='60' width='60' />
+                return <FaRobot height='60' width='60' />
             default:
                 break;
         }
