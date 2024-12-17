@@ -14,6 +14,7 @@ import Students_Talk from "@/components/sections/course/Students_Talk";
 import Brands1 from "@/components/sections/abouts/Brands";
 import Robotics_Course from "@/components/sections/course/Robotics_Course";
 import Contact_Form_Course from "@/components/sections/course/Contact_Form_Course";
+import Software_Course from "@/components/sections/course/Software_Course";
 
 const Courses = () => {
   return (
@@ -28,12 +29,9 @@ const Courses = () => {
       <main>
         <PageTitle pageName={"Our Courses"} breadcrumbCurrent={"Our Courses"} />
         {/* <ServiceArtical /> */}
-        <Feature />
+        {/* <Feature /> */}
         <Robotics_Course />
-        {/* <ServicesTwo /> */}
-        {/* <NewsletterTwo /> */}
-
-        {/* <Brands /> */}
+       <Software_Course />
         <Platform />
         <Students_Talk />
         <Brands1 />

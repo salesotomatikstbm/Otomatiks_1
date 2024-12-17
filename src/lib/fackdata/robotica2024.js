@@ -1,4 +1,4 @@
-import team_1 from "@/assets/images/team/professonal1.png"
+import team_1 from "@/assets/images/Event/Robotica 2024/1.png"
 import team_2 from "@/assets/images/team/professonal2.png"
 import team_3 from "@/assets/images/team/professonal3.png"
 

@@ -42,11 +42,11 @@ const AboutUs = () => {
 {/* 
         <Partner /> */}
         <Testimonial />
-        {/* <Teams /> */}
+        <Teams />
         {/* <Pricing /> */}
         {/* <Testimonial /> */}
         {/* <NewsletterTwo /> */}
-        <Video />
+        {/* <Video /> */}
         <Brands1 />
         
       </main>

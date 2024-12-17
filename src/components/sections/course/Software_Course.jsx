@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
 import jr from "@/assets/images/shapes/class-j.png"
-import { extraCurricularData } from '@/lib/fackdata/Robotics_CourseData'
+import { extraCurricularData } from '@/lib/fackdata/Software_CourseData'
 import RingBell from '@/assets/icons/ring-bell'
 import CapDoll from '@/assets/icons/cap-doll'
 import Doll from '@/assets/icons/doll'
@@ -10,13 +10,13 @@ import SectionName from '../../ui/sectionName'
 import Title from '../../ui/title'
 import SlideUp from '@/lib/animations/slideUp'
 
-const ExtraCurricular = () => {
+const Software_Course = () => {
     return (
-        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative">
+        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative  bg-[#066aab]">
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
                     <SectionName>School Program</SectionName>
-                    <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Robotics Courses</Title>
+                    <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Software Courses</Title>
                 </div>
                 <div className="lg:pt-15 pt-10">
                     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">
@@ -35,7 +35,7 @@ const ExtraCurricular = () => {
     )
 }
 
-export default ExtraCurricular
+export default Software_Course
 
 const Card = ({ title, desc, src, icon, id, level }) => {
     const renderIcon = (icon) => {

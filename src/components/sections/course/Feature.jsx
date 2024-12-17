@@ -1,37 +1,39 @@
 import React from "react";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 import Title from '@/components/ui/title';
 import SectionName from '@/components/ui/sectionName';
 import SectionDescription from '@/components/ui/sectionDescription';
-import { Link } from 'react-router-dom'
+
 const Feature = () => {
   return (
-    <div className="feature-area py-16">
+    <div className="py-16 ">
       <div className="container mx-auto px-6 lg:px-20">
-        <div className="text-center">
-          <SectionName className="">Why Robotics for Kids</SectionName>
-          <Title size={"3.5xl"} className={" mb-8"}>
-          Empowering Young Minds through Robotics Education
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <SectionName>Why Robotics for Kids</SectionName>
+          <Title size="3.5xl" className="mb-4">
+            Empowering Young Minds through Robotics Education
           </Title>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
+
+        {/* Feature Cards */}
+        <div className="flex flex-wrap justify-center gap-8">
           <FeatureCard
             icon="codicon:globe"
             title="Boosts Problem Solving Skills"
-            description="Robotics challenges students to think critically, identify problems, and find innovative solutions, strengthening their analytical skills."
+            description="Robotics challenges students to think critically, identify problems, and find innovative solutions."
           />
           <FeatureCard
             icon="healthicons:i-training-class-outline"
             title="Encourages Creativity"
-            description="Building and programming robots encourages kids to bring their ideas to life, fostering imagination and creative thinking."
+            description="Building and programming robots encourages kids to bring their ideas to life."
           />
           <FeatureCard
             icon="fluent:handshake-32-regular"
             title="Prepares for Future Careers"
-            description="Learning robotics equips students with valuable tech skills and knowledge, providing a foundation for future career opportunities in STEM fields."
+            description="Learning robotics equips students with valuable skills for STEM careers."
           />
-</div>
-
+        </div>
       </div>
     </div>
   );
@@ -41,30 +43,20 @@ export default Feature;
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="relative group transform transition-transform duration-500 hover:scale-105">
-      <div className="bg-white shadow-xl rounded-xl overflow-hidden p-8 flex flex-col items-center text-center">
-        <div
-          className="h-20 w-20 flex items-center justify-center bg-primary rounded-full mb-6 text-white text-4xl
-            group-hover:bg-secondary-foreground transition-all duration-300"
-        >
-          <Icon icon={icon} />
-        </div>
-        <h4 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-secondary-foreground transition-colors duration-300">
-          {title}
-        </h4>
-        <SectionDescription className="text-gray-700 mb-6">
-          {description}
-        </SectionDescription>
-        {/* <Link to="/contact-us" className="font-semibold font-jost hover:text-cream-foreground hover:bg-primary transition-all duration-500 py-3 px-2.5 block border-b border-b-slate-300">Know More</Link>
-        <a
-          to="/contact-us"
-          className="text-secondary-foreground hover:text-warm transition-colors duration-300 inline-flex items-center"
-        >
-          Learn More
-          <Icon icon="carbon:arrow-right" className="ml-2" />
-        </a> */}
+    <div className="relative bg-white rounded-xl shadow-lg p-6 max-w-sm w-full overflow-hidden group text-center">
+      {/* Decorative Wave Shape */}
+      <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-10 transform scale-125 -translate-y-10 group-hover:translate-y-0 transition-all duration-500 rounded-tl-full rounded-br-full"></div>
+
+      {/* Icon */}
+      <div className="relative z-10 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white text-3xl mb-4 mx-auto">
+        <Icon icon={icon} />
       </div>
-      <div className="absolute inset-0 bg-warm opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl"></div>
+
+      {/* Content */}
+      <h4 className="relative z-10 text-lg font-semibold text-gray-800 mb-3">
+        {title}
+      </h4>
+      <p className="relative z-10 text-gray-600">{description}</p>
     </div>
   );
 };

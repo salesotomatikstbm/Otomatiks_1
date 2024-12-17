@@ -12,8 +12,8 @@ const Platform = () => {
       <div className="container">
         <div className="lg:grid grid-cols-12 gap-[30px]">
           <div className="xl:col-span-5 lg:col-span-6 col-span-12">
-            <SectionName>Robotics Online Classes</SectionName>
-            <Title size={"3.5xl"} className={"pb-5 "}>Explore the World of Robotics from Home</Title>
+            <SectionName>Robotics & Coding Online Classes</SectionName>
+            <Title size={"3.5xl"} className={"pb-5 "}>Explore the World of Robotics & Coding from Home</Title>
             <SectionDescription className={""}>
               Dive into robotics education with our comprehensive online classes. Designed for students of all ages, our courses make learning about robotics engaging and accessible.
             </SectionDescription>

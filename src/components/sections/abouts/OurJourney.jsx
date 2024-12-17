@@ -3,8 +3,8 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import { Icon } from '@iconify/react';
 import playIcon from '@iconify-icons/bi/play-fill';
-import PopupVideo from '../course/Video'; // Adjust the path if necessary
-
+import PopupVideo from '../course/Video'; 
+import Jounery from "@/assets/images/about/JourneyThumbnail.png";
 const OurJourney = () => {
     const [showVideo, setShowVideo] = useState(false);
 
@@ -29,13 +29,13 @@ const OurJourney = () => {
 
                 <div className="text-center mb-10">
                     <SectionName>Our Journey</SectionName>
-                    <Title size="3.5xl">Our Vision To Reality: The Evolution of Otomatiks</Title>
+                    <Title size="3.5xl">Our Vision To Reality : The Evolution of Otomatiks</Title>
                 </div>
 
                 <div className="w-full mb-10 flex justify-center relative">
                     <div className="relative" style={{ maxWidth: '800px' }}>
                         <img 
-                            src="https://bestwpware.com/react-templates/edumim/static/media/video.28396e783b15dc7b6cba.png" 
+                            src={Jounery}
                             alt="video thumbnail" 
                             className="w-full rounded-[10px]" 
                         />
