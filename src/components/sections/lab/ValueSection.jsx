@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import lab from "@/assets/images/projects/lab2.png"
 
 const ValueSection = () => {
   const values = [
@@ -26,7 +27,7 @@ const ValueSection = () => {
           {/* Image Section */}
           <div className="order-2 lg:order-1">
             <img 
-              src="https://otomatiks.com/wp-content/uploads/2023/05/8N1A7370.jpg" // Replace with your icon URL
+              src={lab} // Replace with your icon URL
               alt="Comprehensive Training"
               className="w-full h-auto rounded-lg shadow-lg"
             />

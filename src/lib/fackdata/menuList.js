@@ -87,7 +87,7 @@ export const menuList = [
     },
     {
         id: 8,
-        path: "https://otomatiks.free.nf/?product=product-1",
+        path: "/shop",
         label: "Shop",
         dropDownMenu: false
          // path: "/shop",

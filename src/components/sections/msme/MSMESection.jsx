@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
+import msme from "@/assets/images/projects/about2.png"
 
 export default function MSMESection() {
     return (
@@ -35,7 +36,7 @@ export default function MSMESection() {
                     </div>
                 </div>
                 <div className="md:w-1/2 mt-6 md:mt-0">
-                    <img src="https://otomatiks.com/wp-content/uploads/2023/05/8N1A7370.jpg" alt="Robotics in MSMEs" className="w-full h-auto object-cover rounded-lg" /> {/* Replace with your image URL */}
+                    <img src={msme} alt="Robotics in MSMEs" className="w-full h-auto object-cover rounded-lg" /> {/* Replace with your image URL */}
                 </div>
             </div>
         </section>

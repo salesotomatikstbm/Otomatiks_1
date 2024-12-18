@@ -54,10 +54,10 @@ export const router = createBrowserRouter([
                 path: "/blog",
                 element: <Blog />
             },
-            // {
-            //     path: "/shop",
-            //     element: <Shop />
-            // },
+            {
+                path: "/shop",
+                element: <Shop />
+            },
             {
                 path: "/event",
                 // element: <Event />

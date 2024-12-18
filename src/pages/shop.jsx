@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
-import Collection1 from '@/components/sections/shop/collection1';
+import ShopComingSoon from '@/components/sections/shop/ShopComingSoon';
+
 
 const Shop = () => {
   return (
@@ -13,7 +14,7 @@ const Shop = () => {
     </Helmet>
     <main>
       <PageTitle pageName={"Shop"} breadcrumbCurrent={"Shop"} />
-     <Collection1 />
+    <ShopComingSoon />
  
     </main>
     <ScrollRestoration/>

@@ -2,6 +2,7 @@ import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import CourseForm from './CourseForm';
+import Impact from "../../../assets/images/School_Curiculumn/impact.png";
 
 const Our_Uniqueness = () => {
   return (
@@ -13,12 +14,12 @@ const Our_Uniqueness = () => {
             <img
               alt=""
               aria-hidden="true"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDcwIiBoZWlnaHQ9IjQyNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+              src={Impact}
               className="absolute inset-0 w-full h-full object-cover"
             />
             <img
               alt="Our Uniqueness"
-              srcSet='https://img.freepik.com/free-vector/organic-flat-medical-conference-illustration_23-2148892742.jpg?ga=GA1.1.2071195669.1721226201&semt=ais_user'
+              srcSet={Impact}
               src=""
               loading="lazy"
               className="relative w-full h-full object-cover"
