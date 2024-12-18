@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
+import csr1 from "@/assets/images/csr/1.png"; 
+import csr2 from "@/assets/images/csr/2.png";
+import csr3 from "@/assets/images/csr/3.png";
+import csr4 from "@/assets/images/csr/4.png";
 
 const communityData = [
     {
         title: 'School Partnership',
         description: 'We collaborate with schools and universities to integrate robotics and STEM into their curricula, providing students with hands-on experiences that spark innovation.',
-        image: 'https://via.placeholder.com/400',
+        image: csr1,
         link: '#',
     },
     {
         title: 'Nonprofit Collaborations',
         description: 'Our partnerships with nonprofit organizations focus on making STEM education accessible to underserved communities, empowering youth with the skills for a brighter future.',
-        image: 'https://via.placeholder.com/400',
+        image: csr2,
         link: '#',
     },
     {
         title: 'Corporate Partnerships',
         description: 'We partner with tech companies to provide cutting-edge resources, mentorship, and job opportunities, preparing individuals for careers in the ever-evolving digital landscape.',
-        image: 'https://via.placeholder.com/400',
+        image: csr3,
         link: '#',
     },
     {
         title: 'Community Collaborations',
         description: 'Working closely with local communities, we foster innovation through joint initiatives, helping individuals to build essential skills in robotics, coding, and problem-solving.',
-        image: 'https://via.placeholder.com/400',
+        image: csr4,
         link: '#',
     }
 ];
@@ -63,7 +67,7 @@ export default function CommunityEngagementSection() {
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-52 object-cover"
                             />
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">

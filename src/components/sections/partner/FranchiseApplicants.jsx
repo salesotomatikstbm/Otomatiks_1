@@ -2,6 +2,9 @@ import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import Enquiry_Form from './Enquiry_Form';
+import who1 from "@/assets/images/partner/who1.png";
+import who2 from "@/assets/images/partner/who2.png";
+import who3 from "@/assets/images/partner/who3.png";
 
 const FranchiseApplicants = () => {
   return (
@@ -21,7 +24,7 @@ const FranchiseApplicants = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
             <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
               <img 
-                src="https://tse3.mm.bing.net/th?id=OIP.eqDm6IXdcNI0kiCKMF4h0AHaGH&pid=Api&P=0&h=220" // Replace with your image URL
+                src={who1} // Replace with your image URL
                 alt="Passionate Individual"
                 className="w-full h-full object-cover"
               />
@@ -36,7 +39,7 @@ const FranchiseApplicants = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
             <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
               <img 
-                src="https://tse3.mm.bing.net/th?id=OIP.eqDm6IXdcNI0kiCKMF4h0AHaGH&pid=Api&P=0&h=220" // Replace with your image URL
+                src={who2}  // Replace with your image URL
                 alt="Tutors / Coaching Centers"
                 className="w-full h-full object-cover"
               />
@@ -51,7 +54,7 @@ const FranchiseApplicants = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
             <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
               <img 
-                src="https://tse3.mm.bing.net/th?id=OIP.eqDm6IXdcNI0kiCKMF4h0AHaGH&pid=Api&P=0&h=220" // Replace with your image URL
+                src={who3}  // Replace with your image URL
                 alt="Educational Centers"
                 className="w-full h-full object-cover"
               />
@@ -65,6 +68,7 @@ const FranchiseApplicants = () => {
 
         {/* Enquiry Form */}
         <div className="mt-12">
+        
           <Enquiry_Form />
         </div>
       </div>

@@ -12,6 +12,10 @@ import FAQs from '@/components/sections/partner/FAQs'
 import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import Faq_Partners from '@/components/sections/partner/Faq_Partners'
+import Counter from '@/components/sections/partner/Counter'
+import BranchesMap from '@/components/sections/partner/BranchesMap'
+import Testimonials1 from '@/components/sections/partner/Testimonials1'
+
 
 
 const Partners = () => {
@@ -25,10 +29,16 @@ const Partners = () => {
         <PageTitle pageName={"Partners"} breadcrumbCurrent={"Partners"} />
        <CallToActionSection />
        <FranchiseApplicants />
+      
+     
+      {/* <Testimonials1 /> */}
        <UniqueSellingPoints />
+       <Counter />
+       <BranchesMap />
        <Testimonials />
-       <Faq_Partners />
-       {/* <FAQs /> */}
+       
+       {/* <Faq_Partners /> */}
+       <FAQs />
        <Contact_Form_Partners />
        
       </main>

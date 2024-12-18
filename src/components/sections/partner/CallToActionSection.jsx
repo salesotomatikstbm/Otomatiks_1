@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import call from "@/assets/images/partner/call.png";
 
 const CallToActionSection = () => {
   return (
@@ -20,7 +21,7 @@ const CallToActionSection = () => {
           {/* Image Section */}
           <div className="lg:order-1">
             <img 
-              src="https://tse2.mm.bing.net/th?id=OIP.7T5pMoBz7dsBllOSXamURwHaHZ&pid=Api&P=0&h=220" // Replace with your image URL
+              src={call} // Replace with your image URL
               alt="Lab Set-up"
               className="w-full h-auto rounded-lg shadow-lg"
             />

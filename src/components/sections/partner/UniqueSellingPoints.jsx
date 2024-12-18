@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import unique from "@/assets/images/partner/uniqu.png";
 
 const UniqueSellingPoints = () => {
   return (
@@ -19,7 +20,7 @@ const UniqueSellingPoints = () => {
           {/* Image Section */}
           <div className="lg:w-1/2 p-4">
             <img
-              src="https://tse4.mm.bing.net/th?id=OIP.4Ro3FSrRQsqvcPOHdhfAmgAAAA&pid=Api&P=0&h=220"
+              src={unique}
               alt="Unique Approach"
               className="w-full h-auto rounded-lg shadow-lg"
             />

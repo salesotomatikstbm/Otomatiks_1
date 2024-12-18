@@ -5,15 +5,50 @@ import 'swiper/css';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import Enquiry_Form from './Enquiry_Form';
+import testimonial from "@/assets/images/partner/testimonial.png";  // Placeholder Image
+import testi1 from "@/assets/images/partner/testi1.png";
+import testi2 from "@/assets/images/partner/testi2.png";
+import testi3 from "@/assets/images/partner/testi3.png";
 
 const Testimonials = () => {
   const testimonialsData = [
-    { name: "Name 1", location: "Parrys, Chennai", content: "Joining the robotics franchise has empowered my business significantly. The support and training are exceptional, ensuring growth and student engagement. " },
-    { name: "Name 2", location: "Annanagar, Chennai", content: "This franchise has provided me with the tools and network to succeed. The support and training are exceptional, ensuring growth and student engagement." },
-    { name: "Name 3", location: "Tambaram", content: "A fantastic opportunity! My center has grown and students are always excited about our programs. The support and training are exceptional, ensuring growth and student engagement." },
-    { name: "Name 4", location: "Salem", content: "The curriculum is well-structured, and the ongoing support has been a game-changer for my business. The support and training are exceptional, ensuring growth and student engagement." },
-    { name: "Name 5", location: "Attur", content: "The franchise has given me a strong foundation in robotics education, with great resources and a supportive community. The support ensuring growth and student engagement." },
-    { name: "Name 6", location: "Namakkal", content: "An amazing experience! My students love the learning experience here. The support and training are exceptional, ensuring growth and student engagement." }
+    { 
+      name: "Mr. Suresh Babu", 
+      location: "Director, Sri Puram Schools", 
+      content: "We have implemented Otomatiks Robotics in our schools for the past 5 years. Their innovative approach has introduced numerous technologies across all divisions, making learning both practical and impactful for our students. Our students find the robotics program highly beneficial.", 
+      image: testi3 
+    },
+    { 
+      name: "Mr. Rajendran", 
+      location: "Chairman, Spring Days Schools", 
+      content: "For the last decade, I’ve been observing the field, and I saw your presentation today. It’s remarkable that Otomatiks has grown by almost 30% compared to last year. This achievement is not just numbers, it reflects the quality of your work.", 
+      image: testi1 
+    },
+    { 
+      name: "Mrs. Kriti Nivedita", 
+      location: "Principal, Hindu Vidyalaya Schools", 
+      content: "We have been associated with Otomatiks since 2017, and the impact has been remarkable. After introducing Otomatiks into our curriculum, I have seen our students develop innovative skills and a passion for learning. The students genuinely enjoy the process.", 
+      image: testi2 
+    },
+    { 
+      name: "Mr. Suresh Babu", 
+      location: "Director, Sri Puram Schools", 
+      content: "We have implemented Otomatiks Robotics in our schools for the past 5 years. Their innovative approach has introduced numerous technologies across all divisions, making learning both practical and impactful for our students. Our students find the robotics program highly beneficial.", 
+      image: testi3 
+    },
+    { 
+      name: "Mr. Rajendran", 
+      location: "Chairman, Spring Days Schools", 
+      content: "For the last decade, I’ve been observing the field, and I saw your presentation today. It’s remarkable that Otomatiks has grown by almost 30% compared to last year. This achievement is not just numbers, it reflects the quality of your work.", 
+      image: testi1 
+    },
+    { 
+      name: "Mrs. Kriti Nivedita", 
+      location: "Principal, Hindu Vidyalaya Schools", 
+      content: "We have been associated with Otomatiks since 2017, and the impact has been remarkable. After introducing Otomatiks into our curriculum, I have seen our students develop innovative skills and a passion for learning. The students genuinely enjoy the process.", 
+      image: testi2 
+    },
+    
   ];
 
   return (
@@ -35,7 +70,7 @@ const Testimonials = () => {
             <div className="relative mt-7.5">
               {/* Placeholder Image */}
               <img
-                src="https://tse2.mm.bing.net/th?id=OIP.JApTopaZEPFS-EMypu3zpAHaFj&pid=Api&P=0&h=220"
+                src={testimonial}
                 alt="Placeholder"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -62,9 +97,9 @@ const Testimonials = () => {
               {testimonialsData.map((testimonial, index) => (
                 <SwiperSlide key={index}>
                   <div className="testimonial-card bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center h-full max-w-[320px] mx-auto"> {/* Increased width for better content visibility */}
-                    <div className="w-16 h-16 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
+                    <div className="w-18 h-16 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
                       <img
-                        src="https://tse1.mm.bing.net/th?id=OIP.GKAbRpYzDlJa139WC8xPtwHaIC&pid=Api&P=0&h=220"
+                        src={testimonial.image}  // Dynamically using the correct image for each testimonial
                         alt={`Testimonial ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
@@ -72,7 +107,7 @@ const Testimonials = () => {
                     <div
                       className="text-gray-600 mb-4"
                       style={{
-                        height: '12rem', // Set fixed height for consistent appearance
+                        height: '18rem', // Set fixed height for consistent appearance
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
                       }}
