@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /private/
+Sitemap: https://otomatiks-1.vercel.app/sitemap.xml
