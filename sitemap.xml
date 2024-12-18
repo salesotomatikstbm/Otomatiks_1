@@ -4,129 +4,130 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>1.0</priority>
-    <changefreq>daily</changefreq>
-  </url>
+    <!-- Homepage -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>1.0</priority>
+    </url>
 
-  <!-- About Us Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/about-us</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Home 2 -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/home-2</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Courses Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/courses</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+    <!-- About Us -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/about-us</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Blog Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/blog</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+    <!-- Blog -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/blog</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Contact Us Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/contact-us</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Shop -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/shop</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
 
-  <!-- Event Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/event</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Event -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/event</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
 
-  <!-- Partners Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/partners</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Robotica 2024 -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotica-2024</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.7</priority>
+    </url>
 
-  <!-- Robotics AI Lab Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/robotics-ai-lab</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+    <!-- Robotica 2023 -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotica-2023</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.7</priority>
+    </url>
 
-  <!-- Robotics Curriculum Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/robotics-coding-school-curriculum</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Robotica 2025 -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotica-2025</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.7</priority>
+    </url>
 
-  <!-- Workshop Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/workshop</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- School Program -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotics-coding-school-curriculum</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- MSME Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/msme</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Robotics Coding Courses -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotics-coding-courses</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- CSR Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/csr</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Service Details -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/service-details</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
 
-  <!-- Our Journey Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/our-journey</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Partners -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/partners</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
 
-  <!-- Teams Page -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/teams</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    <!-- Robotics AI Lab -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/robotics-ai-lab</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- Add Image Example -->
-  <url>
-    <loc>https://otomatiks-1.vercel.app/team</loc>
-    <lastmod>2024-12-18T13:34:24+00:00</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-    <image:image>
-      <image:loc>https://otomatiks-1.vercel.app/images/team-photo.jpg</image:loc>
-      <image:caption>Team photo of Otomatiks</image:caption>
-      <image:title>Otomatiks Team</image:title>
-    </image:image>
-  </url>
+    <!-- Workshop -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/workshop</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- MSME -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/msme</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- CSR -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/csr</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Contact Us -->
+    <url>
+        <loc>https://otomatiks-1.vercel.app/contact-us</loc>
+        <lastmod>2024-12-18T13:34:24+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
