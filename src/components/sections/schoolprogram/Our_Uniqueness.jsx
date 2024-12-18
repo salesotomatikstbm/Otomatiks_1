@@ -57,7 +57,7 @@ const Our_Uniqueness = () => {
               </div>
               
             </div>
-            <div className="lg:hidden relative w-full max-w-[500px]">
+            <div className="lg:hidden relative w-full max-w-[600px]">
               <img
                 alt=""
                 aria-hidden="true"
@@ -72,9 +72,10 @@ const Our_Uniqueness = () => {
                 className="relative w-full h-full object-cover"
               />
             </div>
-            <CourseForm />
+            
           </div>
         </div>
+        <CourseForm />
       </div>
     </section>
   );
