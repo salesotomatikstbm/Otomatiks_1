@@ -5,6 +5,7 @@ import PageTitle from "@/components/sections/pageTitle";
 import AboutTwo from "@/components/sections/abouts/aboutTwo";
 import UpcomingEvents from "@/components/sections/workshop/UpcomingEvents";
 
+
 const Workshop = () => {
   return (
     <>
@@ -55,7 +56,7 @@ const Workshop = () => {
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
-        <UpcomingEvents />
+      <UpcomingEvents />
       </main>
       <ScrollRestoration />
     </>

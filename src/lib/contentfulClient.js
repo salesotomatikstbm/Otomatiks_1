@@ -1,4 +1,3 @@
-// src/contentfulClient.js
 import { createClient } from 'contentful';
 
 const client = createClient({

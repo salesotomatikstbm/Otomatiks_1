@@ -1,85 +1,114 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SectionName from '@/components/ui/sectionName';
-import Title from '@/components/ui/title';
+import { Link } from 'react-router-dom';
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
+import { ScrollRestoration } from 'react-router-dom';
+import { client } from '../../../lib/contentfulClient';
 
-const workshops = [
-    {
-        id: 1,
-        title: 'Introduction to Robotics',
-        date: 'Nov 20, 2024',
-        description: 'Discover the exciting world of robotics with an introduction to core concepts. This beginner-friendly workshop will cover the fundamentals of robotic systems, allowing participants to understand how robots work. Through hands-on activities, students will build and program simple robots, sparking their curiosity for future innovation.',
-        image: 'https://otomatiks.com/wp-content/uploads/2023/05/8N1A7021.jpg', 
-    },
-    {
-        id: 2,
-        title: 'AI in Robotics',
-        date: 'Dec 15, 2024',
-        description: 'Dive into the intersection of artificial intelligence and robotics to see how AI empowers machines to make decisions. This workshop covers basics in machine learning and AI applications in robotics, helping students grasp how robots can "think" and act autonomously. It’s an interactive session aimed at inspiring the next generation of AI innovators.',
-        image: 'https://otomatiks.com/wp-content/uploads/2023/05/8N1A7021.jpg',
-    },
-    {
-        id: 3,
-        title: 'Hands-on Robotics Workshop',
-        date: 'Jan 10, 2025',
-        description: 'Experience a practical introduction to robotics with real-world tools. Participants will work on building small robots, learning wiring, assembly, and basic programming. This workshop emphasizes hands-on learning and creativity, offering valuable skills and knowledge to make robotics fun and approachable.',
-        image: 'https://otomatiks.com/wp-content/uploads/2023/05/8N1A7021.jpg',
-    },
-];
+const UpcomingEvents = () => {
+  const [events, setEvents] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+  const [loading, setLoading] = useState(true); // For loading state
+  const [error, setError] = useState(null); // For error state
 
-export default function UpcomingEventsSlider() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        responsive: [
-            {
-                breakpoint: 700, 
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
-        ],
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await client.getEntries({ content_type: 'workshop' });
+        setEvents(response.items);
+        setLoading(false);
+      } catch (error) {
+        setError('Error fetching events.');
+        setLoading(false);
+      }
     };
 
-    return (
-        <section className="py-12">
-            <div className="container mx-auto px-6 text-center">
-                <SectionName>Upcoming Workshops & Events</SectionName>
-                <Title size="3.5xl" className="mt-2.5">
-                    Join us in our upcoming events to dive deep into the world of robotics!
-                </Title>
+    fetchEvents();
+  }, []);
 
-                <Slider {...settings} className="w-full mt-8">
-                    {workshops.map((workshop) => (
-                        <div key={workshop.id} className="p-4">
-                            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                                <div className="flex justify-center items-center h-80 bg-gray-200">
-                                    <img
-                                        src={workshop.image}
-                                        alt={workshop.title}
-                                        className="object-cover h-full w-full rounded-t-lg"
-                                    />
-                                </div>
-                                <div className="p-6 text-center lg:text-left">
-                                    <h1 className="text-2xl font-semibold mb-2">{workshop.title}</h1>
-                                    <p className=" mb-2">{workshop.date}</p>
-                                    <p className=" mb-4">{workshop.description}</p>
-                                    <button className="mt-4 px-6 py-2 bg-primary text-white rounded-full hover:bg-secondary transition">
-                                        Learn More
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
+  const handleImageClick = (imageUrl) => {
+    setModalImage(imageUrl);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalImage('');
+  };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
+
+  return (
+    <>
+      <main>
+        <div className="text-center mb-10 py-16">
+          <SectionName>Our Upcoming Workshops</SectionName>
+          <Title size="3.5xl">Join Us for Exciting Workshops and Events</Title>
+        </div>
+
+        <div className="container mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5">
+            {events.length > 0 ? (
+              events.map((event) => (
+                <div key={event.sys.id} className="rounded-[10px] group shadow-lg bg-white overflow-hidden">
+                  {event.fields.image?.fields?.file?.url && (
+                    <img
+                      src={`https:${event.fields.image.fields.file.url}`}
+                      alt={event.fields.workshopTitle || 'Workshop Image'}
+                      className="w-[500px] h-[300px] object-cover transition-transform duration-1000 transform group-hover:scale-105 cursor-pointer"
+                      onClick={() => handleImageClick(`https:${event.fields.image.fields.file.url}`)}
+                    />
+                  )}
+                  <div className="p-5">
+                    <h3>
+                      <Link
+                        to={`/event-details/${event.sys.id}`}
+                        className="lg:text-[28px] sm:text-[26px] text-xl font-bold lg:leading-[148%] sm:leading-[140%] leading-[120%] group-hover:text-primary text-secondary transition-all duration-500"
+                      >
+                        {event.fields.workshopTitle}
+                      </Link>
+                    </h3>
+
+                    {event.fields.wrokshopDate && (
+                      <h2 className="mt-1 text-bold">
+                        {new Date(event.fields.wrokshopDate).toLocaleDateString()}
+                      </h2>
+                    )}
+                    {event.fields.workshopDescription && (
+                      <p className="mt-2">{event.fields.workshopDescription}</p>
+                    )}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No upcoming workshops available.</p>
+            )}
+          </div>
+        </div>
+
+        {/* Modal for Image Pop-Up */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <div className="relative">
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 text-lg"
+              >
+                ✖
+              </button>
+              <img src={modalImage} alt="Full Size" className="max-w-[90vw] max-h-[90vh] object-contain" />
             </div>
-        </section>
-    );
-}
+          </div>
+        )}
+      </main>
+
+      <ScrollRestoration />
+    </>
+  );
+};
+
+export default UpcomingEvents;
