@@ -2,7 +2,6 @@ import React from 'react';
 import contact_2 from "@/assets/images/contact/contact-2.png";
 import contact_1 from "@/assets/images/contact/contact-1.png";
 import winner from "@/assets/images/contact/service.jpg";
-import Input from '../ui/input';
 import { FaEnvelope, FaPhone, FaPaperPlane, FaUser, FaClipboard } from 'react-icons/fa6';
 import { Button } from '../ui/button';
 import SectionName from '../ui/sectionName';
@@ -18,7 +17,7 @@ const ContactForm = () => {
 
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbxRHUnHCqzlDNpBqEcrwUl5sOexpj1FYoTpmqYrXu3_YMOOHGj5SOW7l7L1HsbxkLj0/exec",
+                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
                 {
                     method: "POST",
                     body: formData,
@@ -32,9 +31,11 @@ const ContactForm = () => {
             const data = await response.text();
             console.log(data);
             setMessage('Your message has been sent successfully!');
+            alert('Your message has been sent successfully!'); // Display success alert
         } catch (error) {
             console.error('Error:', error);
             setMessage('There was an error sending your message.');
+            alert('There was an error sending your message.'); // Display error alert
         }
 
         formEle.reset();
@@ -56,7 +57,7 @@ const ContactForm = () => {
                                 </div>
                                 <div className="bg-primary px-5 py-[18px] rounded-[10px] flex items-center gap-5 mb-7.5 animate-left-right">
                                     <div >
-                                        <img src={winner} alt="img"className="h-15 " />
+                                        <img src={winner} alt="img" className="h-15 " />
                                     </div>
                                     <div>
                                         <h4 className="text-[28px] font-bold text-cream-foreground leading-[148%] font-nunito">24/7</h4>
@@ -74,27 +75,19 @@ const ContactForm = () => {
                                 <form className="form mt-7" onSubmit={handleSubmit}>
                                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                         <div className="relative">
-                                            <Input placeholder="Your Name">
-                                                <input type="text" name="Name" placeholder="Your Name" id="name" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            </Input>
+                                            <input type="text" name="Name" placeholder="Your Name" id="name" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
                                             <label htmlFor="name" className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser /></label>
                                         </div>
                                         <div className="relative">
-                                            <Input placeholder="Your Email">
-                                                <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            </Input>
+                                            <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
                                             <label htmlFor="email" className="absolute right-5 top-1/2 -translate-y-1/2"><FaEnvelope /></label>
                                         </div>
                                         <div className="relative">
-                                            <Input placeholder="Phone Number">
-                                                <input type="tel" name="Phone" placeholder="Your Phone" id="phone" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            </Input>
+                                            <input type="tel" name="Phone" placeholder="Your Phone" id="phone" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
                                             <label htmlFor="phone" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone /></label>
                                         </div>
                                         <div className="relative">
-                                            <Input placeholder="Subject">
-                                                <input type="text" name="Subject" placeholder="Subject" id="subject" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            </Input>
+                                            <input type="text" name="Subject" placeholder="Place" id="subject" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
                                             <label htmlFor="subject" className="absolute right-5 top-1/2 -translate-y-1/2"><FaClipboard /></label>
                                         </div>
                                     </div>

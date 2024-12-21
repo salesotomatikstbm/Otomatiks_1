@@ -6,6 +6,7 @@ import ContactForm from '@/components/sections/contactForm';
 import PageTitle from '@/components/sections/pageTitle';
 import BranchesInfo from '@/components/sections/BranchesInfo';
 
+
 const ContactUs = () => {
   return (
     <>
@@ -36,6 +37,7 @@ const ContactUs = () => {
         <ContactAddress />
         <BranchesInfo />
         <ContactForm />
+      
       </main>
       <ScrollRestoration />
     </>
