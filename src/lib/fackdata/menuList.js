@@ -8,7 +8,7 @@ export const menuList = [
     {
         id: 2,
         path: "/about-us",
-        label: "About",
+        label: "About Us",
         dropDownMenu: false
     },
     {
@@ -19,8 +19,7 @@ export const menuList = [
     },
     {
         id: 4,
-        path: "/robotics-ai-lab",
-        label: "Services",
+        label: "School Curriculum",
         dropDownMenu: [
             {
                 id: 1,
@@ -37,11 +36,11 @@ export const menuList = [
                 path: "/robotics-ai-lab",
                 label: "Robotics & AI Lab",
             },
-            {
-                id: 4,
-                path: "/msme",
-                label: "MSME",
-            },
+            // {
+            //     id: 4,
+            //     path: "/msme",
+            //     label: "MSME",
+            // },
             {
                 id: 5,
                 path: "/csr",
@@ -52,29 +51,28 @@ export const menuList = [
     {
         id: 5,
         path: "/partners",
-        label: "Partners",
+        label: "Franchise",
         dropDownMenu: false
     },
     {
         id: 6,
-        path: "/event",
         label: "Event",
         dropDownMenu: [
             {
                 id: 1,
-                path: "/robotica-2025",
-                label: "Robotica 2025",
+                path: "/robotica",
+                label: "Robotica",
             },
             {
                 id: 2,
                 path: "/robotica-2024",
-                label: "Robotica 2024",
+                label: "Past Event",
             },
-            {
-                id: 3,
-                path: "/robotica-2023",
-                label: "Robotica 2023",
-            },
+            // {
+            //     id: 3,
+            //     path: "/robotica-2023",
+            //     label: "Robotica 2023",
+            // },
            
         ]
     },

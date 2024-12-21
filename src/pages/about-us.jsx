@@ -9,6 +9,7 @@ import OurJourney from '@/components/sections/abouts/OurJourney';
 import Brands1 from '@/components/sections/abouts/Brands';
 import AgeOne from '@/components/sections/studentsAge/ageOne';
 import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons';
+import TopUp from '@/components/sections/footers/TopUp';
 
 const AboutUs = () => {
   return (
@@ -59,11 +60,13 @@ const AboutUs = () => {
         <PageTitle pageName="About Us" breadcrumbCurrent="About Us" />
         <AboutOne isAboutpage={true} />
         <OurJourney />
-        <Our_Patrons />
-        <AgeOne />
         <Testimonial />
+        <Our_Patrons />
+        {/* <AgeOne /> */}
+      
         <Teams />
         <Brands1 />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

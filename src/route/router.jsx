@@ -109,7 +109,7 @@ export const router = createBrowserRouter([
                 element: <Robotica2023 />
             },
             {
-                path: "/robotica-2025",
+                path: "/robotica",
                 element: <Robotica2025 />
             },
         ]

@@ -9,6 +9,7 @@ import Brands1 from "@/components/sections/abouts/Brands";
 import Robotics_Course from "@/components/sections/course/Robotics_Course";
 import Contact_Form_Course from "@/components/sections/course/Contact_Form_Course";
 import Software_Course from "@/components/sections/course/Software_Course";
+import TopUp from "@/components/sections/footers/TopUp";
 
 const Courses = () => {
   return (
@@ -62,6 +63,7 @@ const Courses = () => {
         <Brands1 />
         <FaqComp />
         <Contact_Form_Course />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

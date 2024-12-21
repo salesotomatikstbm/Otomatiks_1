@@ -5,6 +5,7 @@ import PageTitle from '@/components/sections/pageTitle';
 import MSMESection from '@/components/sections/msme/MSMESection';
 import RoboticsImportanceSection from '@/components/sections/msme/RoboticsImportanceSection';
 import MSMERoboticsProgramsSection from '@/components/sections/msme/MSMERoboticsProgramsSection';
+import TopUp from '@/components/sections/footers/TopUp';
 
 const Msme = () => {
   return (
@@ -55,6 +56,7 @@ const Msme = () => {
         <MSMESection />
         <RoboticsImportanceSection />
         <MSMERoboticsProgramsSection />
+        <TopUp />
       </main>
       
       <ScrollRestoration />

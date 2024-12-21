@@ -2,6 +2,7 @@ import React from 'react'
 import PageTitle from '@/components/sections/pageTitle'
 import { Helmet } from 'react-helmet'
 import EventPromoSection from '@/components/sections/robotica2025/EventPromoSection'
+import TopUp from '@/components/sections/footers/TopUp'
 
 const Robotica2025 = () => {
   return (
@@ -47,6 +48,7 @@ const Robotica2025 = () => {
 
       <PageTitle pageName={"Robotica 2025"} breadcrumbCurrent={"Robotica 2025"} />
       <EventPromoSection />
+      <TopUp />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "@/components/sections/pageTitle";
 import { Helmet } from "react-helmet";
+import TopUp from "@/components/sections/footers/TopUp";
 
 const Event = () => {
   return (
@@ -47,6 +48,7 @@ const Event = () => {
       </Helmet>
 
       <PageTitle pageName={"Upcoming Events"} breadcrumbCurrent={"Event"} />
+      <TopUp />
     </div>
   );
 };

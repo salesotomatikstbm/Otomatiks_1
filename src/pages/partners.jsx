@@ -10,6 +10,7 @@ import FAQs from '@/components/sections/partner/FAQs'
 import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
 import Counter from '@/components/sections/partner/Counter'
 import BranchesMap from '@/components/sections/partner/BranchesMap'
+import TopUp from '@/components/sections/footers/TopUp'
 
 
 const Partners = () => {
@@ -57,7 +58,7 @@ const Partners = () => {
       </Helmet>
 
       <main>
-        <PageTitle pageName={"Partners"} breadcrumbCurrent={"Partners"} />
+        <PageTitle pageName={"Franchise"} breadcrumbCurrent={"Franchise"} />
         <CallToActionSection />
         <FranchiseApplicants />
         <UniqueSellingPoints />
@@ -66,6 +67,7 @@ const Partners = () => {
         <Testimonials />
         <FAQs />
         <Contact_Form_Partners />
+        <TopUp />
       </main>
 
       <ScrollRestoration />

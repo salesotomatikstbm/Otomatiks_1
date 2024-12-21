@@ -12,10 +12,10 @@ import SlideUp from '@/lib/animations/slideUp'
 
 const ExtraCurricular = () => {
     return (
-        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative">
+        <section className="lg:pb-15 pb-10 relative">
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
-                    <SectionName>School Program</SectionName>
+                    <SectionName>Kids Program</SectionName>
                     <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Robotics Courses</Title>
                 </div>
                 <div className="lg:pt-15 pt-10">
@@ -28,9 +28,9 @@ const ExtraCurricular = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
+            <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
                 <img src={jr} alt="img" />
-            </div> */}
+            </div>
         </section>
     )
 }

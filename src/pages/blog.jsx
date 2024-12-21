@@ -5,6 +5,7 @@ import PageTitle from '@/components/sections/pageTitle';
 import { client } from '../lib/contentfulClient';
 import SectionName from '../../src/components/ui/sectionName';
 import Title from '../../src/components/ui/title';
+import TopUp from '@/components/sections/footers/TopUp';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -122,6 +123,7 @@ const Blog = () => {
           </div>
         )}
       </main>
+      <TopUp />
       <ScrollRestoration />
     </>
   );

@@ -5,6 +5,7 @@ import ContactAddress from '@/components/sections/contactAddress';
 import ContactForm from '@/components/sections/contactForm';
 import PageTitle from '@/components/sections/pageTitle';
 import BranchesInfo from '@/components/sections/BranchesInfo';
+import TopUp from '@/components/sections/footers/TopUp';
 
 
 const ContactUs = () => {
@@ -37,7 +38,7 @@ const ContactUs = () => {
         <ContactAddress />
         <BranchesInfo />
         <ContactForm />
-      
+      <TopUp/>
       </main>
       <ScrollRestoration />
     </>

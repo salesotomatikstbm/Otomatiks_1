@@ -4,6 +4,7 @@ import { ScrollRestoration } from "react-router-dom";
 import PageTitle from "@/components/sections/pageTitle";
 import AboutTwo from "@/components/sections/abouts/aboutTwo";
 import UpcomingEvents from "@/components/sections/workshop/UpcomingEvents";
+import TopUp from "@/components/sections/footers/TopUp";
 
 
 const Workshop = () => {
@@ -57,6 +58,7 @@ const Workshop = () => {
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
       <UpcomingEvents />
+      <TopUp />
       </main>
       <ScrollRestoration />
     </>

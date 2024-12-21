@@ -1,14 +1,13 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import CourseForm from './CourseForm';
 import Impact from "../../../assets/images/School_Curiculumn/impact.png";
 
 const Our_Uniqueness = () => {
   return (
-    <section className="py-12 bg-[#066aab]">
+    <section className="py-16 bg-[#066aab]">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-between mb-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-between">
           {/* Image Section */}
           <div className="hidden lg:block relative w-full max-w-[500px]">
             <img
@@ -75,7 +74,7 @@ const Our_Uniqueness = () => {
             
           </div>
         </div>
-        <CourseForm />
+        
       </div>
     </section>
   );

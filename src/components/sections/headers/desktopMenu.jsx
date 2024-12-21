@@ -11,10 +11,14 @@ const DesktopMenu = () => {
                     menuList.map(({ dropDownMenu, id, label, path }) => {
                         return (
                             <li key={id} className="leading-[164%] relative group">
-                                <Link to={path} className="font-semibold text-lg font-jost group-hover:text-primary-foreground transition-all duration-500 py-5 flex items-center gap-1">
+                                <Link
+                                    to={path}
+                                    className="font-semibold text-lg font-jost group-hover:text-primary-foreground transition-all duration-500 py-5 flex items-center gap-1 whitespace-nowrap"
+                                >
                                     {label}
                                     {dropDownMenu && dropDownMenu.length > 0 && <FaAngleDown className='text-sm' />}
                                 </Link>
+
                                 {
                                     dropDownMenu && dropDownMenu.length > 0 &&
                                     <ul className="absolute top-full z-10 bg-background shadow-sm min-w-56 transition-all duration-500 opacity-0 invisible translate-y-5 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">

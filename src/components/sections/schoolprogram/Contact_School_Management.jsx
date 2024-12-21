@@ -38,7 +38,7 @@ const Contact_School_Management = () => {
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
-                <div className="max-w-[500px] mx-auto text-center">
+                <div className="max-w-[800px] mx-auto text-center">
                     <SectionName>Connect with School Administration</SectionName>
                     <Title size={"3.5xl"}>School Management Outreach & Inquiries</Title>
                 </div>

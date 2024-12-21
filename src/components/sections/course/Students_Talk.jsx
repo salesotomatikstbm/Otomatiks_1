@@ -28,7 +28,7 @@ function Students_Talk({ className }) {
             <div className="container py-12">
                 {/* Text content */}
                 <div className="row mb-4">
-                    <div className="col-lg-12">
+                    <div className="col-lg-12 text-center">
                         <SectionName>Our Students Talk/Projects Display</SectionName>
                         <Title size="3.5xl" className="pb-5">
                             Hear What Our Students Have to Say!
@@ -36,11 +36,11 @@ function Students_Talk({ className }) {
                     </div>
                 </div>
 
-                {/* Grid container for video and slider */}
+                {/* Video and image sliders section */}
                 <div className="video-section grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                     {/* YouTube Video Slider */}
                     <div className="flex justify-center items-center mb-4 md:mb-0">
-                        <div className="relative w-full max-w-xs md:max-w-lg" style={{ maxWidth: '600px' }}>
+                        <div className="relative w-full max-w-[600px]">
                             <Slider ref={sliderRef} {...settings}>
                                 <div className="item">
                                     <iframe
@@ -51,7 +51,7 @@ function Students_Talk({ className }) {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowFullScreen
-                                        className="rounded"
+                                        className="rounded-xl"
                                     ></iframe>
                                 </div>
                                 <div className="item">
@@ -63,56 +63,50 @@ function Students_Talk({ className }) {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowFullScreen
-                                        className="rounded"
+                                        className="rounded-xl"
                                     ></iframe>
                                 </div>
-                                
                             </Slider>
                         </div>
                     </div>
 
                     {/* Image Slider */}
                     <div className="flex justify-center items-center">
-                        <div className="relative w-full" style={{ maxWidth: '600px' }}>
+                        <div className="relative w-full max-w-[600px]">
                             <Slider ref={sliderRef} {...settings}>
                                 <div className="item">
                                     <img
                                         src={videoSlideOne}
                                         alt="Student Project 1"
-                                        className="w-full h-auto rounded"
-                                        style={{ height: '415px', objectFit: 'cover' }}
+                                        className="w-full h-[415px] object-cover rounded-xl"
                                     />
                                 </div>
                                 <div className="item">
                                     <img
                                         src={videoSlideTwo}
                                         alt="Student Project 2"
-                                        className="w-full h-auto rounded"
-                                        style={{ height: '415px', objectFit: 'cover' }}
+                                        className="w-full h-[415px] object-cover rounded-xl"
                                     />
                                 </div>
                                 <div className="item">
                                     <img
                                         src={videoSlideThree}
                                         alt="Student Project 3"
-                                        className="w-full h-auto rounded"
-                                        style={{ height: '415px', objectFit: 'cover' }}
+                                        className="w-full h-[415px] object-cover rounded-xl"
                                     />
                                 </div>
                                 <div className="item">
                                     <img
                                         src={videoSlideFour}
                                         alt="Student Project 4"
-                                        className="w-full h-auto rounded"
-                                        style={{ height: '415px', objectFit: 'cover' }}
+                                        className="w-full h-[415px] object-cover rounded-xl"
                                     />
                                 </div>
                                 <div className="item">
                                     <img
                                         src={videoSlideFive}
                                         alt="Student Project 5"
-                                        className="w-full h-auto rounded"
-                                        style={{ height: '415px', objectFit: 'cover' }}
+                                        className="w-full h-[415px] object-cover rounded-xl"
                                     />
                                 </div>
                             </Slider>

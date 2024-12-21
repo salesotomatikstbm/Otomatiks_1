@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { ScrollRestoration } from 'react-router-dom'
 import PageTitle from '@/components/sections/pageTitle'
 import ShopComingSoon from '@/components/sections/shop/ShopComingSoon';
+import TopUp from '@/components/sections/footers/TopUp';
 
 const Shop = () => {
   return (
@@ -54,6 +55,7 @@ const Shop = () => {
       <main>
         <PageTitle pageName={"Shop"} breadcrumbCurrent={"Shop"} />
         <ShopComingSoon />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

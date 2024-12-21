@@ -4,6 +4,7 @@ import { ScrollRestoration } from "react-router-dom";
 import PageTitle from "@/components/sections/pageTitle";
 import Programs from "@/components/sections/programs";
 import CommunityEngagementSection from "@/components/sections/csr/CommunityEngagementSection";
+import TopUp from "@/components/sections/footers/TopUp";
 
 const Csr = () => {
   return (
@@ -52,6 +53,7 @@ const Csr = () => {
         <PageTitle pageName={"CSR Initiatives"} breadcrumbCurrent={"CSR"} />
         <Programs />
         <CommunityEngagementSection />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

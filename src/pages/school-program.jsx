@@ -8,6 +8,7 @@ import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
 import Client_Testimonial from '@/components/sections/schoolprogram/Client_Testimonial'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management'
+import TopUp from '@/components/sections/footers/TopUp'
 
 const SchoolProgram = () => {
   
@@ -66,6 +67,7 @@ const SchoolProgram = () => {
         <Our_Patrons />
         <Client_Testimonial />
         <Contact_School_Management />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

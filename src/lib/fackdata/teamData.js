@@ -53,7 +53,7 @@ export const teamData = [
     {
         id: 8,
         src: team_8,
-        name:"Mr. Wasim Abram",
+        name:"Mr. Wasim Akram",
         position:"Marketing Head"
     },
 

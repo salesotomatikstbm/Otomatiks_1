@@ -77,7 +77,6 @@ const images = [
   Img35,
   Img36,
   Img37,
-
 ];
 
 const Our_Patrons = () => {
@@ -86,18 +85,21 @@ const Our_Patrons = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <SectionName className="">Our Patrons</SectionName>
-          <Title size="3.5xl" className="mt-4 ">
-          Recognizing Our Patrons
+          <Title size="3.5xl" className="mt-4 font-bold">
+            Recognizing Our Patrons
           </Title>
         </div>
-        
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {images.map((src, index) => (
-            <div key={index} className="relative group overflow-hidden rounded-lg shadow-md">
+            <div
+              key={index}
+              className="group border border-gray-300 bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
               <img
                 alt={`Patron ${index + 1}`}
                 src={src}
-                className="w-full h-35 object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
+                className="w-full h-24 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
               />
             </div>
           ))}

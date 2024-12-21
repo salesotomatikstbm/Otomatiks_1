@@ -7,6 +7,7 @@ import InfrastructureRequirements from '@/components/sections/lab/Infrastructure
 import ValueSection from '@/components/sections/lab/ValueSection';
 import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup '
 import Contact_Form_Course from '@/components/sections/course/Contact_Form_Course';
+import TopUp from '@/components/sections/footers/TopUp';
 
 const Ai = () => {
   return (
@@ -40,6 +41,7 @@ const Ai = () => {
         <RoboticsAiLabSetup />
         <ValueSection />
         <Contact_Form_Course />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

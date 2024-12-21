@@ -8,10 +8,11 @@ import FaqComp from '@/components/sections/faqComp';
 import Teams from '@/components/sections/teams/teams';
 import Robotics_Course from '@/components/sections/course/Robotics_Course';
 import ContactForm from '@/components/sections/contactForm';
-import Client_Testimonial from '@/components/sections/schoolprogram/Client_Testimonial';
 import Software_Course from '@/components/sections/course/Software_Course';
 import TestiHome from '@/components/sections/TestiHome';
 import BranchesMap from '@/components/sections/partner/BranchesMap';
+import TopUp from '@/components/sections/footers/TopUp';
+
 
 const HomeOne = () => {
   return (
@@ -55,6 +56,7 @@ const HomeOne = () => {
         <TestiHome />
         <FaqComp />
         <ContactForm />
+      <TopUp />
       </main>
       <ScrollRestoration />
     </>
