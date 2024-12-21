@@ -11,6 +11,7 @@ import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Pa
 import Counter from '@/components/sections/partner/Counter'
 import BranchesMap from '@/components/sections/partner/BranchesMap'
 import TopUp from '@/components/sections/footers/TopUp'
+import Testi from '@/components/sections/partner/Testi'
 
 
 const Partners = () => {
@@ -64,7 +65,8 @@ const Partners = () => {
         <UniqueSellingPoints />
         <Counter />
         <BranchesMap />
-        <Testimonials />
+        {/* <Testimonials /> */}
+        <Testi />
         <FAQs />
         <Contact_Form_Partners />
         <TopUp />

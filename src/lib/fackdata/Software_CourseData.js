@@ -6,42 +6,42 @@ export const extraCurricularData = [
     {
         id: 1,
         title: "Python",
-        desc: "Dive into the world of Python programming! This course introduces students to the fundamentals of Python, focusing on logical thinking and problem-solving with fun exercises.",
+        desc: "Learn Python basics with fun exercises focusing on logic and problem-solving. Build foundational coding skills for future projects.",
         src: img_1,
         level: 1, // Level 1
     },
     {
         id: 2,
         title: "Java",
-        desc: "Master the Java programming language. This course covers object-oriented concepts and practical coding techniques, helping students build robust and efficient applications.",
+        desc: "Master Java with object-oriented concepts and practical coding techniques. Develop efficient and robust applications with confidence.",
         src: img_2,
         level: 2, // Level 2
     },
     {
         id: 3,
         title: "Web Development",
-        desc: "Learn to create dynamic and responsive websites! This course teaches the basics of HTML, CSS, and JavaScript, enabling students to design and develop their own web pages.",
+        desc: "Learn HTML, CSS, and JavaScript to create dynamic, responsive websites. Design and build your own unique web pages from scratch.",
         src: img_3,
         level: 3, // Level 3
     },
     {
         id: 4,
         title: "App Development",
-        desc: "Turn your ideas into apps! This course focuses on app design and development, guiding students through creating interactive and user-friendly mobile applications.",
+        desc: "Turn ideas into apps by creating interactive, user-friendly mobile solutions. Discover tools and techniques for seamless app design.",
         src: img_1,
         level: 4, // Level 4
     },
     {
         id: 5,
         title: "Artificial Intelligence",
-        desc: "Explore the future with Artificial Intelligence! This course introduces students to AI concepts, machine learning, and hands-on projects, preparing them for innovative careers.",
+        desc: "Explore AI concepts and machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
         src: img_2,
         level: 5, // Level 5
     },
     {
         id: 6,
         title: "Cloud",
-        desc: "Unlock the power of the cloud! This course covers cloud computing fundamentals, data storage, and deployment, equipping students with essential skills for modern tech solutions.",
+        desc: "Understand cloud computing fundamentals, storage, and modern tech skills. Learn deployment strategies for scalable solutions.",
         src: img_3,
         level: 6, // Level 6
     }

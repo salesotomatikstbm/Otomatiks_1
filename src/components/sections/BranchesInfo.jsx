@@ -10,7 +10,7 @@ const BranchesInfo = () => {
       <div className="container">
         <div className="text-center flex flex-col items-center">
           <SectionName>Your Nearest Branch Awaits</SectionName>
-          <Title size="3.5xl" className="lg:max-w-[520px]">
+          <Title size="3.5xl" className="lg:max-w-[720px]">
             Find our services in a location near you
           </Title>
         </div>

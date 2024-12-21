@@ -19,7 +19,7 @@ export const menuList = [
     },
     {
         id: 4,
-        label: "School Curriculum",
+        label: "Academic Program",
         dropDownMenu: [
             {
                 id: 1,
@@ -50,7 +50,7 @@ export const menuList = [
     },
     {
         id: 5,
-        path: "/partners",
+        path: "/franchise",
         label: "Franchise",
         dropDownMenu: false
     },

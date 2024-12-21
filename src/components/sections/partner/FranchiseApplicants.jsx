@@ -8,67 +8,65 @@ import who3 from "@/assets/images/partner/who3.png";
 
 const FranchiseApplicants = () => {
   return (
-    <div className="py-12 bg-[#066aab]">
-      <div className="container mx-auto px-4">
+    <div className="py-16 bg-[#066aab] text-white">
+      <div className="container mx-auto px-6">
         {/* Section Heading */}
-        <div className="mb-10 text-center">
-          <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
-          <Title size={"3.5xl"} className={"mt-4 "}>
-            Who Can Apply?
-          </Title>
+        <div className="text-center mb-12">
+          <SectionName >Who Can Apply for the Robotics Franchise?</SectionName>
+          <Title size={"3.5xl"} className="mt-4">Who Can Apply?</Title>
         </div>
 
-        {/* Content Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Content Layout - Flexbox with updated design */}
+        <div className="flex flex-wrap justify-center gap-12">
           {/* Applicant 1 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
-            <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
-              <img 
-                src={who1} // Replace with your image URL
+          <div className="bg-white p-8 rounded-xl shadow-xl max-w-xs w-full hover:scale-105 transition-transform duration-300">
+            <div className="flex justify-center mb-6">
+              <img
+                src={who1}
                 alt="Passionate Individual"
-                className="w-full h-full object-cover"
+                className="w-24 h-24 object-cover rounded-full border-4 border-[#066aab]"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800 text-center">Passionate Individual / Entrepreneur</h3>
-            <p className="text-gray-600 text-center">
+            <h3 className="text-xl text-secondary mb-2 text-center">Passionate Individual / Entrepreneur</h3>
+            <p className="text-center">
               Individuals driven by passion and entrepreneurship who are eager to make a mark in the robotics education field.
             </p>
           </div>
 
           {/* Applicant 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
-            <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
-              <img 
-                src={who2}  // Replace with your image URL
+          <div className="bg-white p-8 rounded-xl shadow-xl max-w-xs w-full hover:scale-105 transition-transform duration-300">
+            <div className="flex justify-center mb-6">
+              <img
+                src={who2}
                 alt="Tutors / Coaching Centers"
-                className="w-full h-full object-cover"
+                className="w-24 h-24 object-cover rounded-full border-4 border-[#066aab]"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800 text-center">Tutors / Coaching Centers</h3>
-            <p className="text-gray-600 text-center">
+            <h3 className="text-xl text-secondary mb-2 text-center">Tutors / Coaching Centers</h3>
+            <p className="text-center">
               Tutors or coaching centers looking to expand their offerings with robotics education programs.
             </p>
           </div>
 
           {/* Applicant 3 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl flex flex-col items-center">
-            <div className="flex-shrink-0 w-20 h-20 rounded-full border-2 border-gray-300 overflow-hidden mb-4">
-              <img 
-                src={who3}  // Replace with your image URL
+          <div className="bg-white p-8 rounded-xl shadow-xl max-w-xs w-full hover:scale-105 transition-transform duration-300">
+            <div className="flex justify-center mb-6">
+              <img
+                src={who3}
                 alt="Educational Centers"
-                className="w-full h-full object-cover"
+                className="w-24 h-24 object-cover rounded-full border-4 border-[#066aab]"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800 text-center">Educational Centers with an Existing Student Base</h3>
-            <p className="text-gray-600 text-center">
+            <h3 className="text-xl text-secondary mb-2 text-center">Educational Centers with an Existing Student Base</h3>
+            <p className="text-center">
               Educational institutions with a current student base looking to introduce robotics programs as an additional offering.
             </p>
           </div>
         </div>
 
-        {/* Enquiry Form */}
-        <div className="mt-12">
-        
+        {/* Enquiry Form Section */}
+        <div className="mt-12 bg-white p-8 rounded-xl shadow-lg">
+          <h3 className="text-2xl text-secondary mb-2 text-center mb-2">Apply Now for Robotics Franchise</h3>
           <Enquiry_Form />
         </div>
       </div>

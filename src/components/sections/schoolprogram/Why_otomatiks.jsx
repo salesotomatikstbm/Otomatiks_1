@@ -3,7 +3,6 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import { FaUsers, FaHandsHelping, FaChalkboardTeacher, FaBook, FaUserTie, FaAward } from 'react-icons/fa';
 
-
 const WhyOtomatiks = () => {
   const sections = [
     {
@@ -31,9 +30,6 @@ const WhyOtomatiks = () => {
       title: "Diverse Participation",
       description: "Our robotics programs have engaged over 100,000 students from 3rd to 12th grade, covering schools across various regions in the country."
     },
-    
-   
-    
     {
       icon: <FaAward />,
       title: "Achievements in Robotics",
@@ -41,32 +37,27 @@ const WhyOtomatiks = () => {
     }
   ];
 
-
   return (
-    <div className="py-16 container mx-auto px-4 lg:px-8">
+    <div className="py-16 container mx-auto lg:px-8">
       <div className="text-center mb-12">
         <SectionName>Why Otomatiks</SectionName>
         <Title size={"3.5xl"} className={"mt-4"}>
           What Value Do We Bring to Schools?
         </Title>
       </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-center">
         {sections.map((section, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-lg border border-secondary shadow-md transition-transform duration-300 transform hover:bg-[#066aab] hover:text-white hover:scale-105"
+            className="relative bg-white p-6 rounded-lg border border-secondary shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="text-4xl text-primary p-4  rounded-full transition-transform duration-300 transform hover:bg-white  ">
+            <div className="flex justify-center items-center mb-6">
+              <div className="w-16 h-16 bg-primary text-white text-3xl flex items-center justify-center rounded-full shadow-lg mb-4">
                 {section.icon}
               </div>
             </div>
-            <h3 className="text-xl font-semibold  text-center mb-4 transition-transform duration-300 transform hover:text-white">
-              {section.title}
-            </h3>
-            <p className="text-center transition-transform duration-300 transform hover:text-white ">
-              {section.description}
-            </p>
+            <h3 className="text-2xl font-semibold mb-4 text-secondary">{section.title}</h3>
+            <p className="text-base text-gray-600">{section.description}</p>
           </div>
         ))}
       </div>

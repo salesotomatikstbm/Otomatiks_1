@@ -38,7 +38,12 @@ const FAQs = () => {
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5 items-start">
                         <div className="max-w-[400px] md:max-w-full mx-auto md:order-0 order-1">
                             <SlideDown delay={2}>
-                                <img src={faqImage} alt="FAQ Section" className="w-full h-full" />
+                                {/* Make the image hidden on mobile view and visible on medium screens */}
+                                <img 
+                                    src={faqImage} 
+                                    alt="FAQ Section" 
+                                    className="w-full h-full hidden md:block" 
+                                />
                             </SlideDown>
                         </div>
                         <div className="order-0 md:order-1 ">
@@ -182,4 +187,3 @@ const FAQCard = ({ category }) => {
         </div>
     );
 };
-
