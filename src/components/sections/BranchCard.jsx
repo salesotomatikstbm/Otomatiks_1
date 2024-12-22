@@ -11,7 +11,7 @@ const BranchCard = ({ name, location, contact, email, mapEmbed }) => {
         <p className="pt-1 text-center">Contact: {contact}</p>
         <p className="pt-1 text-center">Email: {email}</p>
       </div>
-      {/* Map Embed */}
+     
       <div className="pt-4">
         <div 
           className="map-embed" 
