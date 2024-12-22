@@ -1,7 +1,6 @@
 import React from 'react'
 import PageTitle from '@/components/sections/pageTitle'
 import { Helmet } from 'react-helmet'
-import RoboticaIframe from '@/components/sections/robotica2025/RoboticaIframe'
 import PreviousEventGallery2024 from '@/components/sections/robotica2024/PreviousEventGallery2024'
 import GlimplsVideo from '@/components/sections/robotica2024/GlimpsVideo'
 
