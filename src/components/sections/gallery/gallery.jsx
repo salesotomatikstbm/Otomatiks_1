@@ -25,12 +25,12 @@ const categoryList = [
     },
     {
         id: 4,
-        label: "Robotica 2022",
+        label: "Workshop",
         data_target: "child"
     },
     {
         id: 5,
-        label: "Robotica 2021",
+        label: "Summer Camp",
         data_target: "coaching"
     },
 
@@ -39,10 +39,10 @@ const Gallery = () => {
     const [activeTab, setActiveTab] = useState("education")
 
     return (
-        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 portfolio">
+        <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 portfolio bg-[#066aab]">
             <div className="container">
                 <div className="text-center flex flex-col items-center">
-                    <SectionName>Events That Inspire</SectionName>
+                    <SectionName>Events Gallery</SectionName>
                     <Title size={"3.5xl"} className={"lg:max-w-[830px]"}>Engaging moments that foster learning and connection</Title>
                 </div>
                 <div className="pt-10">

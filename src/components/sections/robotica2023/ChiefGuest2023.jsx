@@ -6,7 +6,7 @@ import TeamCard from './GuestCart2023'
 
 const ChiefGuest2023 = () => {
   return (
-    <section className="lg:pb-15  pb-10">
+    <section className="lg:pb-15 py-16 pb-10">
       <div className="container">
         <div className="text-center flex flex-col items-center ">
           <SectionName>Chief Guests 2023</SectionName>

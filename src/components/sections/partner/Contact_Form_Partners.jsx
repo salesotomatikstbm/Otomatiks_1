@@ -38,7 +38,7 @@ const Contact_Form_Partners = () => {
     };
 
     return (
-        <section className="lg:pt-15 lg:pb-15 pb-10 pt-10 bg-[#066aab]">
+        <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
                 <div className="text-center">
                     <SectionName>Contact Us</SectionName>

@@ -5,6 +5,9 @@ import PageTitle from "@/components/sections/pageTitle";
 import AboutTwo from "@/components/sections/abouts/aboutTwo";
 import UpcomingEvents from "@/components/sections/workshop/UpcomingEvents";
 import TopUp from "@/components/sections/footers/TopUp";
+import Contact_Workshop from "@/components/sections/workshop/Contact_Workshop";
+import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
+import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
 
 
 const Workshop = () => {
@@ -57,7 +60,11 @@ const Workshop = () => {
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
+        <WorkshopBenefits />
       <UpcomingEvents />
+     
+      <FaqWorkshop />
+      <Contact_Workshop />
       <TopUp />
       </main>
       <ScrollRestoration />

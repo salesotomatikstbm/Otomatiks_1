@@ -9,6 +9,9 @@ import Client_Testimonial from '@/components/sections/schoolprogram/Client_Testi
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management'
 import TopUp from '@/components/sections/footers/TopUp'
+import HomeTestimonial from '@/components/sections/Home/HomeTestimonial'
+import FaqSchool from '@/components/sections/schoolprogram/FaqSchool'
+import Curriculum from '@/components/sections/schoolprogram/Curriculum'
 
 const SchoolProgram = () => {
   
@@ -64,8 +67,11 @@ const SchoolProgram = () => {
         <PageTitle pageName={"School Curriculum"} breadcrumbCurrent={"School Curriculum"} />
         <Why_otomatiks />
         <Our_Uniqueness />
+        <Curriculum />
         <Our_Patrons />
-        <Client_Testimonial />
+        <HomeTestimonial />
+       
+        <FaqSchool />
         <Contact_School_Management />
         <TopUp />
       </main>

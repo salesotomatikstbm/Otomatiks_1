@@ -12,6 +12,13 @@ import Software_Course from '@/components/sections/course/Software_Course';
 import TestiHome from '@/components/sections/TestiHome';
 import BranchesMap from '@/components/sections/partner/BranchesMap';
 import TopUp from '@/components/sections/footers/TopUp';
+import Our_Patrons_Home from '@/components/sections/Home/Our_Patrons_Home';
+import BlogWithSlider from '@/components/sections/Home/BlogWithSlider';
+import HomeTestimonial from '@/components/sections/Home/HomeTestimonial';
+import RoboticCourseSlide from '@/components/sections/Home/RoboticCourseSlide';
+import SoftwareCourseslider from '@/components/sections/Home/SoftwareCourseslider';
+import Brands from '@/components/sections/abouts/Brands';
+
 
 
 const HomeOne = () => {
@@ -48,12 +55,22 @@ const HomeOne = () => {
       <main>
         <HeroOne />
         <AboutOne isAboutpage={false} />
-        <Robotics_Course />
-        <Software_Course />
-        {/* <Gallery /> */}
-        <BranchesMap />
+        {/* <Robotics_Course /> */}
+        <RoboticCourseSlide />
+       <SoftwareCourseslider />
+        {/* <Software_Course /> */}
+   
+        <Our_Patrons_Home />
+        <Brands />
+        
+           <Gallery />
+           <BlogWithSlider />
+       
         <Teams />
-        <TestiHome />
+       
+        <HomeTestimonial />
+    
+        
         <FaqComp />
         <ContactForm />
       <TopUp />

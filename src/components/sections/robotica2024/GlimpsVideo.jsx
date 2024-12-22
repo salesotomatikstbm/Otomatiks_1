@@ -26,7 +26,7 @@ const videos = [
 
 const GlimplsVideo = () => {
     return (
-        <section className="pt-10 pb-10">
+        <section className="py-16 bg-[#066aab] pb-10">
             <div className="container">
                 <div className="text-center mb-10">
                     <SectionName>Robotics 2024</SectionName>

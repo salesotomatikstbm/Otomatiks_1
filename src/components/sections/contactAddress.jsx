@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaLocationDot } from 'react-icons/fa6';
-import GoogleMap from './googleMap';
+
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
 
@@ -54,11 +54,6 @@ const ContactAddress = () => {
                             No..A2, 36, 12th Cross Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
                         </p>
                     </div>
-                </div>
-
-                {/* Google Map Section */}
-                <div className="mt-16">
-                    <GoogleMap />
                 </div>
             </div>
         </section>

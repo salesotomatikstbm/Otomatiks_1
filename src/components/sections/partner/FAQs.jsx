@@ -25,6 +25,11 @@ const faqCategories = [
         id: 4,
         label: "Financial",
         data_target: "financial"
+    },
+    {
+        id: 5,
+        label: "Franchise",
+        data_target: "franchise"
     }
 ];
 
@@ -32,13 +37,12 @@ const FAQs = () => {
     const [activeTab, setActiveTab] = useState("general");
 
     return (
-        <section className=" py-12">
-            <div className=" relative">
+        <section className="py-12">
+            <div className="relative">
                 <div className="container">
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-7.5 items-start">
                         <div className="max-w-[400px] md:max-w-full mx-auto md:order-0 order-1">
                             <SlideDown delay={2}>
-                                {/* Make the image hidden on mobile view and visible on medium screens */}
                                 <img 
                                     src={faqImage} 
                                     alt="FAQ Section" 
@@ -46,131 +50,114 @@ const FAQs = () => {
                                 />
                             </SlideDown>
                         </div>
-                        <div className="order-0 md:order-1 ">
+                        <div className="order-0 md:order-1">
                             <SectionName>FAQ Categories</SectionName>
                             <Title size={"3.5xl"} className={"mt-2.5 max-w-[494px]"}>
                                 Frequently Asked Questions
                             </Title>
                             <ul className="py-7.5 flex items-center flex-wrap gap-5">
-                                {
-                                    faqCategories.map(({ data_target, id, label }) => {
-                                        return (
-                                            <li
-                                                key={id}
-                                                onClick={() => setActiveTab(data_target)}
-                                                className={`rounded-full py-2.5 px-5 border border-destructive active-tab cursor-pointer ${activeTab === data_target ? "bg-destructive text-cream-foreground" : ""}`}
-                                            >
-                                                {label}
-                                            </li>
-                                        );
-                                    })
-                                }
+                                {faqCategories.map(({ data_target, id, label }) => (
+                                    <li
+                                        key={id}
+                                        onClick={() => setActiveTab(data_target)}
+                                        className={`rounded-full py-2.5 px-5 border border-destructive active-tab cursor-pointer ${activeTab === data_target ? "bg-destructive text-cream-foreground" : ""}`}
+                                    >
+                                        {label}
+                                    </li>
+                                ))}
                             </ul>
                             <div className="overflow-hidden relative">
-                                <div className={`transition-all duration-500 ${activeTab === 'general' ? "translate-y-0 visible opacity-100 relative" : "translate-y-10 invisible opacity-0 absolute"}`}>
-                                    <FAQCard category="general" />
-                                </div>
-                                <div className={`transition-all duration-500 ${activeTab === 'technical' ? "translate-y-0 visible opacity-100 relative" : "translate-y-10 invisible opacity-0 absolute"}`}>
-                                    <FAQCard category="technical" />
-                                </div>
-                                <div className={`transition-all duration-500 ${activeTab === 'marketing' ? "translate-y-0 visible opacity-100 relative" : "translate-y-10 invisible opacity-0 absolute"}`}>
-                                    <FAQCard category="marketing" />
-                                </div>
-                                <div className={`transition-all duration-500 ${activeTab === 'financial' ? "translate-y-0 visible opacity-100 relative" : "translate-y-10 invisible opacity-0 absolute"}`}>
-                                    <FAQCard category="financial" />
-                                </div>
+                                {faqCategories.map(({ data_target }) => (
+                                    <div key={data_target} className={`transition-all duration-500 ${activeTab === data_target ? "translate-y-0 visible opacity-100 relative" : "translate-y-10 invisible opacity-0 absolute"}`}>
+                                        <FAQCard category={data_target} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* <div className="absolute lg:right-15 left-5 lg:left-auto lg:bottom-14 bottom-5 w-20 xl:w-auto animate-up-down">
-                    <img src={faqImage} alt="FAQ Section Decoration" />
-                </div> */}
             </div>
         </section>
     );
 };
 
-export default FAQs;
-
-
 const FAQCard = ({ category }) => {
     const faqContent = {
         general: [
-            "What is the purpose of this program?",
-            "Who is eligible to join?",
-            "What is the duration of the course?",
-            "How do I enroll in the program?",
-            "What materials do I need to get started?"
+            "What is a franchise, and how does it work?",
+            "What are the eligibility criteria to apply for a franchise?",
+            "How long does the franchise application process take?",
+            "What is the initial investment required to start a franchise?",
+            "Will I receive training and ongoing support?"
         ],
         technical: [
-            "What technical skills are required?",
-            "Will there be hands-on projects?",
-            "How are technical issues resolved?",
-            "Is there a platform for online learning?",
-            "What tools or software will I need?"
+            "What technical setup is required to run the franchise?",
+            "Will there be technical training provided?",
+            "How do I handle technical issues?",
+            "Is there a specific software or platform required?",
+            "Can I operate the franchise remotely?"
         ],
         marketing: [
-            "What marketing strategies are included?",
-            "How can I attract more clients?",
-            "What is the best way to promote my business?",
-            "Do you provide marketing materials?",
-            "How can I measure my marketing success?"
+            "What marketing support will I receive as a franchisee?",
+            "Will you help me attract customers in my area?",
+            "Are marketing fees included in the franchise cost?",
+            "Can I run my own marketing campaigns?",
+            "What marketing strategies have been most successful?"
         ],
         financial: [
-            "What are the financial benefits?",
-            "Are there any hidden costs?",
-            "How do I manage my budget effectively?",
-            "What financing options are available?",
-            "What is the expected ROI for a franchise?"
+            "What are the financial requirements to open a franchise?",
+            "Are there financing options available?",
+            "What are the ongoing fees for the franchise?",
+            "When can I expect to see a return on investment (ROI)?",
+            "How do I manage operational expenses effectively?"
         ],
         franchise: [
-            "What support do franchise partners receive?",
-            "How can I ensure the success of my franchise?",
-            "What are the initial investment requirements?",
-            "Are there ongoing fees for franchise partners?",
-            "What is the process for renewing the franchise agreement?"
+            "What support will I receive to launch my franchise?",
+            "What are the benefits of joining your franchise system?",
+            "What is the process for renewing my franchise agreement?",
+            "Are there opportunities for multi-unit franchising?",
+            "How do I ensure my franchise meets the brand's standards?"
         ]
     };
-
+    
     const faqAnswers = {
         general: [
-            "The program aims to provide comprehensive training and support to empower individuals to succeed in their careers.",
-            "Anyone interested in learning and enhancing their skills can join, regardless of their background.",
-            "The duration of the course typically ranges from 6 to 12 weeks, depending on the specific program.",
-            "To enroll, visit our website and fill out the registration form. Our team will guide you through the process.",
-            "You will need a computer or tablet, a stable internet connection, and any specific software we recommend."
+            "A franchise is a business model where individuals (franchisees) operate under an established brand and receive support from the franchisor. Franchisees run their locations while adhering to brand standards.",
+            "We look for individuals with a passion for business, a willingness to adhere to our brand guidelines, and the necessary financial resources.",
+            "The application process typically takes 2–4 weeks, including review, interviews, and agreement signing.",
+            "The initial investment varies based on location, size, and market conditions. Please contact us for detailed estimates.",
+            "Yes, we provide comprehensive training and ongoing support, including marketing, technical assistance, and operational guidance."
         ],
         technical: [
-            "Basic computer skills are required. Familiarity with coding and software development is a plus.",
-            "Yes, hands-on projects are a core component of our curriculum, allowing you to apply what you've learned.",
-            "Technical issues are addressed through a dedicated support team and a comprehensive FAQ section on our website.",
-            "Yes, we have an online learning platform where you can access course materials and participate in discussions.",
-            "You'll need to install the recommended software, which will be provided during the onboarding process."
+            "You’ll need a reliable computer system, high-speed internet, and our recommended software tools.",
+            "Yes, all franchisees receive detailed training on our systems, software, and operational procedures.",
+            "We have a dedicated technical support team available to assist you with any challenges.",
+            "Yes, our proprietary software is essential for operations. We will provide access and training during onboarding.",
+            "Depending on the nature of the franchise, certain operations can be managed remotely, but physical presence may be required for some activities."
         ],
         marketing: [
-            "We cover a range of marketing strategies, including digital marketing, social media, and community engagement.",
-            "You can attract more clients through targeted advertising, community events, and leveraging social media.",
-            "Promoting your business effectively requires a mix of online and offline strategies tailored to your audience.",
-            "Yes, we provide marketing materials such as brochures, flyers, and digital assets to help you promote your franchise.",
-            "You can measure marketing success through analytics tools, customer feedback, and sales data."
+            "We provide digital marketing materials, social media templates, and strategies to promote your location effectively.",
+            "Yes, our team will assist with localized marketing campaigns to help you attract and retain customers.",
+            "Marketing fees are typically separate and contribute to regional and national advertising efforts.",
+            "Franchisees are encouraged to follow our approved guidelines for consistency, but localized campaigns can be tailored to your area.",
+            "Digital advertising, community events, and customer referral programs have proven highly effective for our franchisees."
         ],
         financial: [
-            "The financial benefits include increased revenue potential, access to exclusive resources, and ongoing support.",
-            "There are no hidden costs, but it's essential to understand all fees associated with running the franchise.",
-            "Managing your budget effectively involves tracking expenses, forecasting revenues, and regularly reviewing financial reports.",
-            "Financing options may include loans, grants, or payment plans depending on your circumstances.",
-            "The expected ROI can vary, but many franchise partners see a positive return within the first few years."
+            "Financial requirements include the initial franchise fee, setup costs, and sufficient working capital.",
+            "Yes, we can guide you toward financing options, including loans and partnerships with financial institutions.",
+            "Ongoing fees include royalty fees and contributions to the marketing fund. Details will be provided during the application process.",
+            "ROI timelines vary based on location and market conditions. On average, franchisees see returns within 12–18 months.",
+            "Our team provides financial training and tools to help you track expenses, forecast revenues, and maintain profitability."
         ],
         franchise: [
-            "Franchise partners receive comprehensive support, including training, marketing resources, and ongoing assistance from our experienced team.",
-            "To ensure success, focus on building relationships with your students, utilizing marketing strategies effectively, and engaging with the community.",
-            "The initial investment requirements vary based on the location and size of the franchise. Generally, it includes franchise fees, setup costs, and operational expenses.",
-            "Yes, there are ongoing fees, which typically include royalty fees and contributions to marketing funds.",
-            "The renewal process typically involves meeting specific performance criteria and paying a renewal fee to maintain your franchise."
+            "We provide end-to-end support, including site selection, training, and marketing assistance, to ensure a successful launch.",
+            "You’ll gain access to a proven business model, brand recognition, training programs, and ongoing support.",
+            "Franchise agreements typically last for a specified term. Renewal involves meeting performance criteria and paying a renewal fee.",
+            "Yes, we encourage franchisees to expand by opening multiple units. Additional terms and benefits apply.",
+            "Regular audits and ongoing training ensure consistency and alignment with our brand guidelines."
         ]
     };
-
+    
     return (
         <div>
             {faqContent[category].map((question, index) => (
@@ -187,3 +174,5 @@ const FAQCard = ({ category }) => {
         </div>
     );
 };
+
+export default FAQs;

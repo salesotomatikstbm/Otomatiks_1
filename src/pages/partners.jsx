@@ -12,6 +12,7 @@ import Counter from '@/components/sections/partner/Counter'
 import BranchesMap from '@/components/sections/partner/BranchesMap'
 import TopUp from '@/components/sections/footers/TopUp'
 import Testi from '@/components/sections/partner/Testi'
+import Brands from '@/components/sections/abouts/Brands'
 
 
 const Partners = () => {
@@ -62,12 +63,15 @@ const Partners = () => {
         <PageTitle pageName={"Franchise"} breadcrumbCurrent={"Franchise"} />
         <CallToActionSection />
         <FranchiseApplicants />
+        
         <UniqueSellingPoints />
         <Counter />
+        <Brands />
         <BranchesMap />
         {/* <Testimonials /> */}
-        <Testi />
         <FAQs />
+        <Testi />
+       
         <Contact_Form_Partners />
         <TopUp />
       </main>

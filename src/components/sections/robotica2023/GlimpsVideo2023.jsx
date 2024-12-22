@@ -26,10 +26,10 @@ const videos = [
 
 const GlimplsVideo2023 = () => {
     return (
-        <section className="pt-10 pb-10">
+        <section className="pt-10 py-16 pb-10">
             <div className="container">
                 <div className="text-center mb-10">
-                    <SectionName>Robotics 2023</SectionName>
+                    <SectionName>Robotica 2023</SectionName>
                     <Title size="3.5xl">Relive the Moments, Redefine the Future!</Title>
                 </div>
 

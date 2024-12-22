@@ -29,7 +29,7 @@ const UniqueSellingPoints = () => {
           {/* Titles & Descriptions Section */}
           <div className="lg:w-1/2 p-4 lg:pl-24 space-y-8">
             <div className="group">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300 ease-in-out">
+              <h3 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 ease-in-out">
                 Extensive Training
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
@@ -38,7 +38,7 @@ const UniqueSellingPoints = () => {
               </p>
             </div>
             <div className="group">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300 ease-in-out">
+              <h3 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 ease-in-out">
                 Diverse Course Offerings
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
@@ -47,7 +47,7 @@ const UniqueSellingPoints = () => {
               </p>
             </div>
             <div className="group">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300 ease-in-out">
+              <h3 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 ease-in-out">
                 Qualified Team
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
@@ -56,7 +56,7 @@ const UniqueSellingPoints = () => {
               </p>
             </div>
             <div className="group">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300 ease-in-out">
+              <h3 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors duration-300 ease-in-out">
                 Strong Support
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>

@@ -38,7 +38,7 @@ const WhyOtomatiks = () => {
   ];
 
   return (
-    <div className="py-16 container mx-auto lg:px-8">
+    <div className="py-12 container mx-auto lg:px-8">
       <div className="text-center mb-12">
         <SectionName>Why Otomatiks</SectionName>
         <Title size={"3.5xl"} className={"mt-4"}>

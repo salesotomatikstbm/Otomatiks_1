@@ -1,6 +1,9 @@
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import Slider from 'react-slick';
 import Img1 from "../../../assets/images/patrons/1.png";
 import Img2 from "../../../assets/images/patrons/2.png";
 import Img3 from "../../../assets/images/patrons/3.png";
@@ -40,73 +43,69 @@ import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
 
 const images = [
-  Img1,
-  Img2,
-  Img3,
-  Img4,
-  Img5,
-  Img6,
-  Img7,
-  Img8,
-  Img9,
-  Img10,
-  Img11,
-  Img12,
-  Img13,
-  Img14,
-  Img15,
-  Img16,
-  Img17,
-  Img18,
-  Img19,
-  Img20,
-  Img21,
-  Img22,
-  Img23,
-  Img24,
-  Img25,
-  Img26,
-  Img27,
-  Img28,
-  Img29,
-  Img30,
-  Img31,
-  Img32,
-  Img33,
-  Img34,
-  Img35,
-  Img36,
-  Img37,
+  Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13,
+  Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21, Img22, Img23, Img24, Img25,
+  Img26, Img27, Img28, Img29, Img30, Img31, Img32, Img33, Img34, Img35, Img36, Img37
 ];
 
-const Our_Patrons = () => {
+const Our_Patrons_Home = () => {
+  const settings = {
+    dots: false, // Removed dots
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="py-16 bg-[#066aab]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
-          <SectionName className="">Our Patrons</SectionName>
+          <SectionName>Our Academic Partner</SectionName>
           <Title size="3.5xl" className="mt-4 font-bold">
-            Recognizing Our Patrons
+            Honoring Our Esteemed Patrons
           </Title>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        {/* Slider Component */}
+        <Slider {...settings} className="patron-slider">
           {images.map((src, index) => (
-            <div
-              key={index}
-              className="group border border-gray-300 bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                alt={`Patron ${index + 1}`}
-                src={src}
-                className="w-full h-40 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
-              />
+            <div key={index} className="p-4">
+              <div className="border border-gray-300 bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img
+                  alt={`Patron ${index + 1}`}
+                  src={src}
+                  className="w-full h-32 object-contain" // Adjusted image size
+                />
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );
 };
 
-export default Our_Patrons;
+export default Our_Patrons_Home;

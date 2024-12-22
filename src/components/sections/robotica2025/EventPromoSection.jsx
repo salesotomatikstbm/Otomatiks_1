@@ -1,14 +1,18 @@
 import React from 'react';
-
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
 const EventPromoSection = () => {
   return (
-    <section className="relative py-12 px-6">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
+    <section className="relative py-8 px-6">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-y-0 lg:space-x-12">
         {/* Left Content */}
         <div className="lg:w-1/2 flex flex-col items-start space-y-6">
-          <h1 className="text-4xl lg:text-5xl font-extrabold tracking-tight text-secondary leading-tight">
-            Welcome to <span className="text-primary">Robotica 2025</span>
-          </h1>
+          
+        <div className="text-center">
+                    <SectionName>Robotica 2025</SectionName>
+                    <Title size="3.5xl">Welcome to Robotica 2025!</Title>
+                </div>
+         
           <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
             Robotica’25 isn’t just a competition; it’s a celebration of innovation and creativity in the realm of robotics. Building on the success of previous events, where over 2500 participants from 80+ schools joined, this year promises to surpass all expectations.
           </p>

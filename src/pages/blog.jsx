@@ -6,6 +6,7 @@ import { client } from '../lib/contentfulClient';
 import SectionName from '../../src/components/ui/sectionName';
 import Title from '../../src/components/ui/title';
 import TopUp from '@/components/sections/footers/TopUp';
+import Contact_Blog from '@/components/sections/blogs/Contact_Blog';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -83,16 +84,16 @@ const Blog = () => {
                     <h3>
                       <Link
                         to={`/blog-details/${post.sys.id}`}
-                        className="lg:text-[28px] sm:text-[26px] text-xl font-bold lg:leading-[148%] sm:leading-[140%] leading-[120%] group-hover:text-primary text-secondary transition-all duration-500"
+                        className="lg:text-[20px] sm:text-[18px] text-xl font-bold lg:leading-[148%] sm:leading-[140%] leading-[120%] group-hover:text-primary text-secondary transition-all duration-500"
                       >
                         {post.fields.title}
                       </Link>
                     </h3>
 
                     {post.fields.date && (
-                      <h2 className="mt-1 text-bold">
+                      <h3 className="mt-1 text-bold">
                         {new Date(post.fields.date).toLocaleDateString()}
-                      </h2>
+                      </h3>
                     )}
                     {post.fields.description && (
                       <p className="mt-2">
@@ -123,6 +124,9 @@ const Blog = () => {
           </div>
         )}
       </main>
+
+
+      <Contact_Blog />
       <TopUp />
       <ScrollRestoration />
     </>

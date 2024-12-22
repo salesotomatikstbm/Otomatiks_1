@@ -44,7 +44,7 @@ const ContactForm = () => {
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
-                <div className="max-w-[746px] mx-auto text-center">
+                <div className="max-w-[846px] mx-auto text-center">
                     <SectionName>Get in Touch with Us</SectionName>
                     <Title size={"3.5xl"}>We’re here to answer your questions and help you start your journey</Title>
                 </div>

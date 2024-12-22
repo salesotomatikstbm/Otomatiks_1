@@ -44,13 +44,13 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <main className="bg-[#066aab] py-16">
+      <main className="py-16">
         <div className="text-center ">
           <SectionName>Our Upcoming Workshops</SectionName>
           <Title size="3.5xl">Join Us for Exciting Workshops and Events</Title>
         </div>
 
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto mt-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5">
             {events.length > 0 ? (
               events.map((event) => (

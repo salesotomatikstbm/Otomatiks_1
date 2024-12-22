@@ -13,7 +13,7 @@ const ValueSection = () => {
   ];
 
   return (
-    <div className="py-16 bg-[#066aab]">
+    <div className="py-16 ">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className=" mb-12">
@@ -37,12 +37,12 @@ const ValueSection = () => {
           <div className="order-1 lg:order-2 space-y-6">
             {values.map((value, index) => (
               <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12  bg-secondary-foreground text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="flex-shrink-0 w-12 h-12  bg-secondary-foreground rounded-full flex items-center justify-center text-2xl font-bold">
                   {index + 1}
                 </div>
-                <div className="ml-6 text-white">
+                <div className="ml-6 ">
                   <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                  <p className="text-white">
+                  <p className="">
                     {value.description}
                   </p>
                 </div>

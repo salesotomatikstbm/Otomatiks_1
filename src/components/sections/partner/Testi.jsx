@@ -29,18 +29,18 @@ const testimonialsData = [
 
 const TestimonialCard = ({ name, location, content, image }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center bg-[#066aab] rounded-lg p-6 my-6 hover:shadow-2xl transform hover:scale-110 transition duration-300 ease-in-out">
-      <div className="w-full lg:w-1/3 flex justify-center">
+    <div className="flex flex-col lg:flex-row items-center justify-center bg-white rounded-xl shadow-lg p-8 my-6 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+      <div className="w-full lg:w-1/3 mb-6 lg:mb-0 flex justify-center">
         <img 
           src={image} 
           alt={name} 
-          className="w-80 h-60 rounded-lg object-cover transform transition duration-300 ease-in-out"
+          className="w-60 h-60 rounded-full object-cover border-4 border-[#066aab] transform transition duration-300 ease-in-out"
         />
       </div>
-      <div className="w-full lg:w-2/3 text-center lg:text-left mt-6 lg:mt-0 lg:pl-8 min-h-[250px]">
-        <h4 className="text-2xl font-semibold text-white mb-2">{name}</h4>
-        <p className="text-lg text-gray-300 mb-4">{location}</p>
-        <p className="text-base text-white">{content}</p>
+      <div className="w-full lg:w-2/3 text-center lg:text-left mt-6 lg:mt-0 lg:pl-8">
+        <h4 className="text-2xl font-semibold text-[#066aab] mb-2">{name}</h4>
+        <p className="text-lg text-gray-500 mb-4">{location}</p>
+        <p className="text-base text-gray-700">{content}</p>
       </div>
     </div>
   );
@@ -48,22 +48,22 @@ const TestimonialCard = ({ name, location, content, image }) => {
 
 const Testi = () => {
   const settings = {
-    dots: true,
+    dots: false, // Optional: add dots for navigation
     infinite: true,
     speed: 500,
-    slidesToShow: 1, // Show one testimonial at a time
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    fade: true, // Smooth fading transition between slides
-    arrows: false, // Hide arrows for a cleaner look
+    fade: true,
+    arrows: false,
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-[#066aab]">
       <div className="lg:w-[100%] lg:mb-0 text-center">
         <SectionName>Testimonials of Our Robotics Franchisee</SectionName>
-        <Title size="3.5xl" className="mt-4">
+        <Title size="3.5xl" className="mt-4 text-white">
           Hear From Our Partners
         </Title>
       </div>

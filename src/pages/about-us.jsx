@@ -10,6 +10,7 @@ import Brands1 from '@/components/sections/abouts/Brands';
 import AgeOne from '@/components/sections/studentsAge/ageOne';
 import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons';
 import TopUp from '@/components/sections/footers/TopUp';
+import Contact_About from '@/components/sections/abouts/Contact_About';
 
 const AboutUs = () => {
   return (
@@ -61,11 +62,12 @@ const AboutUs = () => {
         <AboutOne isAboutpage={true} />
         <OurJourney />
         <Testimonial />
-        <Our_Patrons />
-        {/* <AgeOne /> */}
-      
         <Teams />
+       
+        {/* <AgeOne /> */}
         <Brands1 />
+        <Our_Patrons />
+      <Contact_About />
         <TopUp />
       </main>
       <ScrollRestoration />
