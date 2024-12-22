@@ -50,9 +50,9 @@ const Csr = () => {
         <link rel="canonical" href="https://www.otomatiks.com/csr" />
       </Helmet>
       <main>
-        <PageTitle pageName={"CSR Initiatives"} breadcrumbCurrent={"CSR"} />
-        <Programs />
-        <CommunityEngagementSection />
+        <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
+        {/* <Programs />
+        <CommunityEngagementSection /> */}
         <TopUp />
       </main>
       <ScrollRestoration />

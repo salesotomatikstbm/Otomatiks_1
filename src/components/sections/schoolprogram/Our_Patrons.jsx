@@ -90,7 +90,7 @@ const Our_Patrons = () => {
           </Title>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
           {images.map((src, index) => (
             <div
               key={index}
@@ -99,7 +99,7 @@ const Our_Patrons = () => {
               <img
                 alt={`Patron ${index + 1}`}
                 src={src}
-                className="w-full h-24 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                className="w-full h-40 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
               />
             </div>
           ))}

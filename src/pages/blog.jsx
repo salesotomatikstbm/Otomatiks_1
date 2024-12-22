@@ -103,7 +103,7 @@ const Blog = () => {
                 </div>
               ))
             ) : (
-              <p>No blog posts available.</p>
+              <p>Loading .......</p>
             )}
           </div>
         </div>

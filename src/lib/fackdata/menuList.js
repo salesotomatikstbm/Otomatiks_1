@@ -63,11 +63,11 @@ export const menuList = [
                 path: "/robotica",
                 label: "Robotica",
             },
-            {
-                id: 2,
-                path: "/robotica-2024",
-                label: "Past Event",
-            },
+            // {
+            //     id: 2,
+            //     path: "/robotica-2024",
+            //     label: "Past Event",
+            // },
             // {
             //     id: 3,
             //     path: "/robotica-2023",

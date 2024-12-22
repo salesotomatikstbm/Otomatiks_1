@@ -2,7 +2,7 @@ import React from 'react';
 
 const EventPromoSection = () => {
   return (
-    <section className="relative py-12 lg:py-16 px-6">
+    <section className="relative py-12 px-6">
       <div className="container mx-auto flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
         {/* Left Content */}
         <div className="lg:w-1/2 flex flex-col items-start space-y-6">
