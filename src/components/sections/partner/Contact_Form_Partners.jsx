@@ -1,24 +1,94 @@
 import React from 'react';
-import Input from '../../ui/input';
-import { FaEnvelope, FaPhone, FaPaperPlane, FaUser } from 'react-icons/fa6';
+import { FaEnvelope, FaPhone, FaUser, FaCalendarAlt, FaBriefcase, FaMapMarkerAlt, FaBusinessTime, FaProcedures } from 'react-icons/fa';
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import { FaEdge, FaLocationArrow, FaMedal } from 'react-icons/fa6';
 
 const Contact_Form_Partners = () => {
+    const [formData, setFormData] = React.useState({
+        Name: '',
+        DOB: '',
+        Qualification: '',
+        Profession: '',
+        FranchiseLocation: '',
+        PhoneNo: '',
+        EmailId: '',
+        CurrentBusiness: '',
+        InvestmentPlan: '',
+    });
+
+    const [errors, setErrors] = React.useState({});
     const [message, setMessage] = React.useState('');
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const validate = () => {
+        const newErrors = {};
+
+        if (!formData.Name.trim()) {
+            newErrors.Name = 'Name is required';
+        }
+
+        if (!formData.DOB.trim()) {
+            newErrors.DOB = 'Date of Birth is required';
+        }
+
+        if (!formData.Qualification.trim()) {
+            newErrors.Qualification = 'Qualification is required';
+        }
+
+        if (!formData.Profession.trim()) {
+            newErrors.Profession = 'Profession is required';
+        }
+
+        if (!formData.FranchiseLocation.trim()) {
+            newErrors.FranchiseLocation = 'Franchise Location is required';
+        }
+
+        if (!formData.PhoneNo.trim()) {
+            newErrors.PhoneNo = 'Phone number is required';
+        } else if (!/^[0-9]{10}$/.test(formData.PhoneNo)) {
+            newErrors.PhoneNo = 'Enter a valid 10-digit phone number';
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.EmailId.trim()) {
+            newErrors.EmailId = 'Email is required';
+        } else if (!emailRegex.test(formData.EmailId)) {
+            newErrors.EmailId = 'Enter a valid email';
+        }
+
+        if (!formData.CurrentBusiness.trim()) {
+            newErrors.CurrentBusiness = 'Current Business is required';
+        }
+
+        if (!formData.InvestmentPlan.trim()) {
+            newErrors.InvestmentPlan = 'Investment Plan is required';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent the default form submission
-        const formEle = e.target; // Access the form element directly
-        const formData = new FormData(formEle);
+        e.preventDefault();
+        if (!validate()) return;
 
+        setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbxRHUnHCqzlDNpBqEcrwUl5sOexpj1FYoTpmqYrXu3_YMOOHGj5SOW7l7L1HsbxkLj0/exec", // Your actual deployment URL
+                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
                 {
                     method: "POST",
-                    body: formData,
+                    body: new URLSearchParams(formData),
                 }
             );
 
@@ -26,112 +96,230 @@ const Contact_Form_Partners = () => {
                 throw new Error('Network response was not ok');
             }
 
-            const data = await response.text(); // Change to .text() since the response is plain text
-            console.log(data); // Log the plain text response
-            setMessage('Your message has been sent successfully!'); // Success message
+            setMessage('Your message has been sent successfully!');
         } catch (error) {
             console.error('Error:', error);
-            setMessage('There was an error sending your message.'); // Error message
+            setMessage('There was an error sending your message.');
+        } finally {
+            setIsSubmitting(false);
         }
 
-        formEle.reset(); // Reset the form after submission
+        setFormData({
+            Name: '',
+            DOB: '',
+            Qualification: '',
+            Profession: '',
+            FranchiseLocation: '',
+            PhoneNo: '',
+            EmailId: '',
+            CurrentBusiness: '',
+            InvestmentPlan: '',
+        });
     };
 
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
-                <div className="text-center">
-                    <SectionName>Contact Us</SectionName>
-                    <Title size={"3.5xl"}>Your Path to Success Begins with a Conversation</Title>
+                <div className="max-w-[846px] mx-auto text-center">
+                    <SectionName>Partner With Us</SectionName>
+                    <Title size={"3.5xl"}>Fill the form to get started</Title>
                 </div>
                 <div className="mt-15">
-                    <div className="grid lg:grid-cols-1 grid-cols-1 items-center gap-7.5">
-                        <div>
-                            <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
-                                <h3 className="text-[28px] font-bold leading-[148%]  text-center font-nunito">Send a message</h3>
-                                <form className="form mt-7" onSubmit={handleSubmit}>
-                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
-                                        <div className="relative">
-                                            <Input placeholder="Your Name"> 
-                                                <input type="text" name="Name" placeholder="Your Name" id="name" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="name" className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser /></label>
-                                        </div>
-                                        <div className="relative">
-                                            <Input placeholder="Date of Birth (mm/dd/yyyy)">
-                                                <input type="text" name="DOB" placeholder="mm/dd/yyyy" id="dob" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] py-5" />
-                                            </Input>
-                                            <label htmlFor="dob" className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser /></label>
-                                        </div>
-                                    </div>
+                    <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
+                        <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
+                        <form className="form mt-7" onSubmit={handleSubmit}>
+                            <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
+                                {/* Name Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="Name"
+                                        placeholder="Your Name"
+                                        value={formData.Name}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.Name ? 'border-red-500' : formData.Name.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="name"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaUser />
+                                    </label>
+                                    {errors.Name && <p className="text-red-500 text-sm mt-1">{errors.Name}</p>}
+                                </div>
 
-                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                        <div className="relative">
-                                            <Input placeholder="Qualification"> 
-                                                <input type="text" name="Qualification" placeholder="Qualification" id="qualification" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="qualification" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                        <div className="relative">
-                                            <Input placeholder="Profession"> 
-                                                <input type="text" name="Profession" placeholder="Profession" id="profession" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="profession" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                    </div>
+                                {/* Date of Birth Field */}
+                                <div className="relative">
+                                    <input
+                                        type="date"
+                                        name="DOB"
+                                        value={formData.DOB}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.DOB ? 'border-red-500' : formData.DOB.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                  
+                                    {errors.DOB && <p className="text-red-500 text-sm mt-1">{errors.DOB}</p>}
+                                </div>
 
-                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                        <div className="relative">
-                                            <Input placeholder="Franchise Location You Looking For"> 
-                                                <input type="text" name="FranchiseLocation" placeholder="Franchise Location" id="franchiseLocation" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="franchiseLocation" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                        <div className="relative">
-                                            <Input placeholder="Phone Number"> 
-                                                <input type="text" name="Phone" placeholder="Your Phone Number" id="phone" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="phone" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone /></label>
-                                        </div>
-                                    </div>
+                                {/* Qualification Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="Qualification"
+                                        placeholder="Qualification"
+                                        value={formData.Qualification}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.Qualification ? 'border-red-500' : formData.Qualification.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="dob"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaMedal />
+                                    </label>
+                                    {errors.Qualification && <p className="text-red-500 text-sm mt-1">{errors.Qualification}</p>}
+                                </div>
 
-                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                        <div className="relative">
-                                            <Input placeholder="Address"> 
-                                                <input type="text" name="Address" placeholder="Address" id="address" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="address" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                        <div className="relative">
-                                            <Input placeholder="Email Id"> 
-                                                <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input>
-                                            <label htmlFor="email" className="absolute right-5 top-1/2 -translate-y-1/2"><FaEnvelope /></label>
-                                        </div>
-                                    </div>
+                                {/* Profession Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="Profession"
+                                        placeholder="Profession"
+                                        value={formData.Profession}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.Profession ? 'border-red-500' : formData.Profession.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="dob"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaEdge />
+                                    </label>
+                                    {errors.Profession && <p className="text-red-500 text-sm mt-1">{errors.Profession}</p>}
+                                </div>
 
-                                    <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5 mt-5">
-                                        <div className="relative">
-                                            <Input placeholder="Current Business"> 
-                                                <input type="text" name="CurrentBusiness" placeholder="Current Business" id="currentBusiness" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="currentBusiness" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                        <div className="relative">
-                                            <Input placeholder="Investment Plan"> 
-                                                <input type="text" name="InvestmentPlan" placeholder="Upto 3 Lakhs" id="investmentPlan" className="text-[#686868] placeholder:[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" /> 
-                                            </Input> 
-                                            <label htmlFor="investmentPlan" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPaperPlane /></label>
-                                        </div>
-                                    </div>
+                                {/* Franchise Location Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="FranchiseLocation"
+                                        placeholder="Franchise Location You Are Looking For"
+                                        value={formData.FranchiseLocation}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.FranchiseLocation ? 'border-red-500' : formData.FranchiseLocation.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="dob"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaLocationArrow />
+                                    </label>
+                                    {errors.FranchiseLocation && <p className="text-red-500 text-sm mt-1">{errors.FranchiseLocation}</p>}
+                                </div>
 
-                                    <div className="flex justify-center">
-                                    <Button variant="pill" type="submit" className="w-1/2  bg-primary text-center border-primary hover:text-primary-foreground lg:mt-10 mt-5">Send Now</Button>
-                                    </div>
-                                </form>
-                                {message && <div className="mt-4 text-center text-green-500">{message}</div>}
+                                {/* Phone Number Field */}
+                                <div className="relative">
+                                    <input
+                                        type="tel"
+                                        name="PhoneNo"
+                                        placeholder="Phone No"
+                                        value={formData.PhoneNo}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.PhoneNo ? 'border-red-500' : formData.PhoneNo.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="phone"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaPhone />
+                                    </label>
+                                    {errors.PhoneNo && <p className="text-red-500 text-sm mt-1">{errors.PhoneNo}</p>}
+                                </div>
+
+                                {/* Email Field */}
+                                <div className="relative">
+                                    <input
+                                        type="email"
+                                        name="EmailId"
+                                        placeholder="Email Id"
+                                        value={formData.EmailId}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.EmailId ? 'border-red-500' : formData.EmailId.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="email"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaEnvelope />
+                                    </label>
+                                    {errors.EmailId && <p className="text-red-500 text-sm mt-1">{errors.EmailId}</p>}
+                                </div>
+
+                                {/* Current Business Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="CurrentBusiness"
+                                        placeholder="Current Business"
+                                        value={formData.CurrentBusiness}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.CurrentBusiness ? 'border-red-500' : formData.CurrentBusiness.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="dob"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaBusinessTime />
+                                    </label>
+                                    {errors.CurrentBusiness && <p className="text-red-500 text-sm mt-1">{errors.CurrentBusiness}</p>}
+                                </div>
+
+                                {/* Investment Plan Dropdown */}
+                                <div className="relative">
+                                    <select
+                                        name="InvestmentPlan"
+                                        value={formData.InvestmentPlan}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.InvestmentPlan ? 'border-red-500' : formData.InvestmentPlan.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    >
+                                        <option value="">Select Investment Plan</option>
+                                        <option value="Upto 3 Lakhs">Upto 3 Lakhs</option>
+                                        <option value="Upto 5 Lakhs">Upto 5 Lakhs</option>
+                                        <option value="Above 10 Lakh">Above 10 Lakhs</option>
+                                    </select>
+                                    {errors.InvestmentPlan && <p className="text-red-500 text-sm mt-1">{errors.InvestmentPlan}</p>}
+                                </div>
                             </div>
-                        </div>
+
+                            <div className="mt-6 flex justify-center">
+                               <Button
+                                                                   type="submit"
+                                                                   disabled={isSubmitting}
+                                                                   className={`bg-primary text-white py-4 px-8 rounded-[10px] mt-4
+                                                                                                                                  ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
+                                                               >
+                                                                   {isSubmitting ? 'Sending...' : 'Send Message'}
+                                                               </Button>
+                            </div>
+
+                            {message && (
+                                <div className="mt-4 text-center text-sm text-red-500">
+                                    {message}
+                                </div>
+                            )}
+                        </form>
                     </div>
                 </div>
             </div>

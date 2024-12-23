@@ -6,10 +6,10 @@ import Products from '@/components/sections/products';
 import InfrastructureRequirements from '@/components/sections/lab/InfrastructureRequirements';
 import ValueSection from '@/components/sections/lab/ValueSection';
 import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup '
-import Contact_Form_Course from '@/components/sections/course/Contact_Form_Course';
 import TopUp from '@/components/sections/footers/TopUp';
 import FaqLab from '@/components/sections/lab/FaqLab';
 import AiIntegration from '@/components/sections/lab/AIIntegration';
+import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management';
 
 const Ai = () => {
   return (
@@ -44,7 +44,7 @@ const Ai = () => {
         <AiIntegration />
         <ValueSection />
         <FaqLab />
-        <Contact_Form_Course />
+       <Contact_School_Management />
         <TopUp />
       </main>
       <ScrollRestoration />

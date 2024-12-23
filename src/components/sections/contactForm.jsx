@@ -8,19 +8,74 @@ import SectionName from '../ui/sectionName';
 import Title from '../ui/title';
 
 const ContactForm = () => {
+    const [formData, setFormData] = React.useState({
+        Name: '',
+        Email: '',
+        Phone: '',
+        Subject: '',
+        Message: '',
+    });
+
+    const [errors, setErrors] = React.useState({});
     const [message, setMessage] = React.useState('');
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const validate = () => {
+        const newErrors = {};
+
+        if (!formData.Name.trim()) {
+            newErrors.Name = 'Name is required';
+        } else if (!/^[A-Za-z]+$/.test(formData.Name.trim())) {
+            newErrors.Name = 'Name must contain only letters';
+        }
+        
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.Email.trim()) {
+            newErrors.Email = 'Email is required';
+        } else if (!emailRegex.test(formData.Email)) {
+            newErrors.Email = 'Enter a valid email';
+        }
+
+        if (!formData.Phone.trim()) {
+            newErrors.Phone = 'Phone number is required';
+        } else if (!/^[0-9]{10}$/.test(formData.Phone)) {
+            newErrors.Phone = 'Enter a valid 10-digit phone number';
+        }
+
+        if (!formData.Subject.trim()) {
+            newErrors.Subject = 'Subject is required';
+        }
+
+        if (!formData.Message.trim()) {
+            newErrors.Message = 'Message is required';
+        } else if (formData.Message.length < 10) {
+            newErrors.Message = 'Message must be at least 10 characters long';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const formEle = e.target;
-        const formData = new FormData(formEle);
+        if (!validate()) return;
 
+        setIsSubmitting(true); // Show sending message
         try {
             const response = await fetch(
                 "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
                 {
                     method: "POST",
-                    body: formData,
+                    body: new URLSearchParams(formData), // Send form data
                 }
             );
 
@@ -28,17 +83,21 @@ const ContactForm = () => {
                 throw new Error('Network response was not ok');
             }
 
-            const data = await response.text();
-            console.log(data);
             setMessage('Your message has been sent successfully!');
-            alert('Your message has been sent successfully!'); // Display success alert
         } catch (error) {
             console.error('Error:', error);
             setMessage('There was an error sending your message.');
-            alert('There was an error sending your message.'); // Display error alert
+        } finally {
+            setIsSubmitting(false); // Hide sending message
         }
 
-        formEle.reset();
+        setFormData({
+            Name: '',
+            Email: '',
+            Phone: '',
+            Subject: '',
+            Message: '',
+        });
     };
 
     return (
@@ -56,8 +115,8 @@ const ContactForm = () => {
                                     <img src={contact_2} alt="two-girls-img" />
                                 </div>
                                 <div className="bg-primary px-5 py-[18px] rounded-[10px] flex items-center gap-5 mb-7.5 animate-left-right">
-                                    <div >
-                                        <img src={winner} alt="img" className="h-15 " />
+                                    <div>
+                                        <img src={winner} alt="img" className="h-15" />
                                     </div>
                                     <div>
                                         <h4 className="text-[28px] font-bold text-cream-foreground leading-[148%] font-nunito">24/7</h4>
@@ -75,27 +134,100 @@ const ContactForm = () => {
                                 <form className="form mt-7" onSubmit={handleSubmit}>
                                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                         <div className="relative">
-                                            <input type="text" name="Name" placeholder="Your Name" id="name" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            <label htmlFor="name" className="absolute right-5 top-1/2 -translate-y-1/2"><FaUser /></label>
+                                            <input
+                                                type="text"
+                                                name="Name"
+                                                placeholder="Your Name"
+                                                value={formData.Name}
+                                                onChange={handleChange}
+                                                className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
+                                                required
+                                            />
+                                            <label
+                                                htmlFor="name"
+                                                className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                                <FaUser />
+                                            </label>
+                                            {errors.Name && <p className="text-red-500 text-sm mt-1">{errors.Name}</p>}
                                         </div>
                                         <div className="relative">
-                                            <input type="email" name="Email" placeholder="Your Email" id="email" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            <label htmlFor="email" className="absolute right-5 top-1/2 -translate-y-1/2"><FaEnvelope /></label>
+                                            <input
+                                                type="email"
+                                                name="Email"
+                                                placeholder="Your Email"
+                                                value={formData.Email}
+                                                onChange={handleChange}
+                                                className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
+                                                required
+                                            />
+                                            <label
+                                                htmlFor="email"
+                                                className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                                <FaEnvelope />
+                                            </label>
+                                            {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                         </div>
                                         <div className="relative">
-                                            <input type="tel" name="Phone" placeholder="Your Phone" id="phone" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            <label htmlFor="phone" className="absolute right-5 top-1/2 -translate-y-1/2"><FaPhone /></label>
+                                            <input
+                                                type="tel"
+                                                name="Phone"
+                                                placeholder="Your Phone"
+                                                value={formData.Phone}
+                                                onChange={handleChange}
+                                                className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
+                                                required
+                                            />
+                                            <label
+                                                htmlFor="phone"
+                                                className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                                <FaPhone />
+                                            </label>
+                                            {errors.Phone && <p className="text-red-500 text-sm mt-1">{errors.Phone}</p>}
                                         </div>
+                                       
+
                                         <div className="relative">
-                                            <input type="text" name="Subject" placeholder="Place" id="subject" className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] lg:py-[15px] lg:px-10 py-5" required />
-                                            <label htmlFor="subject" className="absolute right-5 top-1/2 -translate-y-1/2"><FaClipboard /></label>
+                                            <input
+                                                type="text"
+                                                name="Subject"
+                                                placeholder="Place"
+                                                value={formData.Subject}
+                                                onChange={handleChange}
+                                                className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
+                                                required
+                                            />
+                                            <label
+                                                htmlFor="subject"
+                                                className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                                <FaClipboard />
+                                            </label>
+                                            {errors.Subject && <p className="text-red-500 text-sm mt-1">{errors.Subject}</p>}
+                    
                                         </div>
                                     </div>
                                     <div className="relative mt-5">
-                                        <textarea name="Message" id="message" placeholder="Write your Message here" className="w-full min-h-36 rounded-[10px] border-2 text-[#686868] placeholder-[#686868] border-[#F2F2F2] px-5 py-[15px] outline-none" required></textarea>
-                                        <label htmlFor="message" className="absolute right-5 top-[15px]"><FaPaperPlane /></label>
+                                        <textarea
+                                            name="Message"
+                                            placeholder="Write your Message here"
+                                            value={formData.Message}
+                                            onChange={handleChange}
+                                            className="w-full min-h-36 rounded-[10px] border-2 text-[#686868] placeholder-[#686868] border-[#F2F2F2] px-5 py-[15px] outline-none"
+                                            required
+                                        ></textarea>
+                                        {errors.Message && <p className="text-red-500 text-sm mt-1">{errors.Message}</p>}
+                           
+                                        <label htmlFor="message" className="absolute right-5 top-[15px]">
+                                            <FaPaperPlane />
+                                        </label>
                                     </div>
-                                    <Button variant="pill" type="submit" className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-10 mt-5">Send Now</Button>
+                                    <Button
+                                        variant="pill"
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-10 mt-5"
+                                    >
+                                        {isSubmitting ? 'Sending...' : 'Send Now'}
+                                    </Button>
                                 </form>
                                 {message && <p className="mt-4 text-center text-lg text-gray-600">{message}</p>}
                             </div>
@@ -105,6 +237,6 @@ const ContactForm = () => {
             </div>
         </section>
     );
-}
+};
 
 export default ContactForm;

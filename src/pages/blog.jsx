@@ -6,7 +6,7 @@ import { client } from '../lib/contentfulClient';
 import SectionName from '../../src/components/ui/sectionName';
 import Title from '../../src/components/ui/title';
 import TopUp from '@/components/sections/footers/TopUp';
-import Contact_Blog from '@/components/sections/blogs/Contact_Blog';
+import Contact_Workshop from '@/components/sections/workshop/Contact_Workshop';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -126,7 +126,7 @@ const Blog = () => {
       </main>
 
 
-      <Contact_Blog />
+     <Contact_Workshop />
       <TopUp />
       <ScrollRestoration />
     </>
