@@ -5,9 +5,10 @@ import aboutTwo from "../../../assets/images/services/about2.png";
 import Title from '@/components/ui/title'
 import SectionName from '@/components/ui/sectionName'
 import SectionDescription from '@/components/ui/sectionDescription'
-
+import PopupCourse from './PopupCourse'
 const Platform = () => {
   return (
+    
     <div className=" bg-cover bg-no-repeat bg-center section-padding py-16">
       <div className="container">
         <div className="lg:grid grid-cols-12 gap-[30px]">
@@ -70,13 +71,17 @@ const Platform = () => {
                   </h4>
                 </div>
               </li>
+             
             </ul>
+           
           </div>
           <div className="xl:col-span-7 lg:col-span-6 col-span-12 lg:pt-10 md:pt-10 ">
             <img src={aboutTwo} alt="Robotics class illustration" className="mx-auto block w-full" />
           </div>
         </div>
+        
       </div>
+      
     </div>
   );
 };

@@ -9,6 +9,7 @@ import Doll from '@/assets/icons/doll'
 import SectionName from '../../ui/sectionName'
 import Title from '../../ui/title'
 import SlideUp from '@/lib/animations/slideUp'
+import PopupCourse from './PopupCourse'
 
 const ExtraCurricular = () => {
     return (
@@ -30,6 +31,9 @@ const ExtraCurricular = () => {
             </div>
             <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
                 <img src={jr} alt="img" />
+            </div>
+            <div className="lg:pt-15 pt-10">
+            <PopupCourse />
             </div>
         </section>
     )

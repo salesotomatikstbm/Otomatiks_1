@@ -2,6 +2,7 @@ import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import { FaUsers, FaHandsHelping, FaChalkboardTeacher, FaBook, FaUserTie, FaAward } from 'react-icons/fa';
+import PopupSchool from './PopupSchool';
 
 const WhyOtomatiks = () => {
   const sections = [
@@ -61,7 +62,11 @@ const WhyOtomatiks = () => {
           </div>
         ))}
       </div>
+      <div className="lg:mt-10 mt-4">
+          <PopupSchool />
+        </div>
     </div>
+    
   );
 };
 

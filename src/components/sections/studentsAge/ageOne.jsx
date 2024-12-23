@@ -6,7 +6,7 @@ import { Button } from '../../ui/button'
 import { Link } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import SectionDescription from '@/components/ui/sectionDescription'
-import CourseForm from '../abouts/Enquiry_Form'
+import CourseForm from '../abouts/PopupAbout'
 
 const AgeOne = () => {
     return (

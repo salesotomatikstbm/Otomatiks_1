@@ -3,6 +3,8 @@ import Title from '@/components/ui/title'
 import { teamData } from '@/lib/fackdata/teamData'
 import React from 'react'
 import TeamCard from './teamCard'
+import PopupAbout from '../abouts/PopupAbout'
+
 
 const Teams = () => {
   return (
@@ -17,6 +19,9 @@ const Teams = () => {
             {teamData.map(({id, name, position, src}) => <TeamCard key={id} name={name} position={position} src={src} />)}
           </div>
         </div>
+      </div>
+      <div className="lg:pt-15 pt-10 mt-4">
+    <PopupAbout />
       </div>
     </section>
   )

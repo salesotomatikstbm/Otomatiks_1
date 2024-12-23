@@ -2,6 +2,7 @@ import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import call from "@/assets/images/partner/call.png";
+import PopupPartner from './PopupPartner';
 
 const CallToActionSection = () => {
   return (
@@ -75,9 +76,8 @@ const CallToActionSection = () => {
               </div>
 
               {/* Final Note */}
-              <div className="text-lg text-gray-800 mt-6">
-                Join Otomatiks and be part of a mission to inspire the next generation of innovators!
-              </div>
+              <div className="lg:mt-5 mt-4">
+                <PopupPartner />    </div>
             </div>
           </div>
         </div>

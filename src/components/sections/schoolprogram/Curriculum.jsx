@@ -1,7 +1,7 @@
 import React from "react";
 import SectionName from "../../ui/sectionName";
 import Title from "../../ui/title";
-
+import PopupSchool from './PopupSchool';
 const Curriculum = () => {
   // Curriculum topics in JSON form
   const topics = [
@@ -43,7 +43,9 @@ const Curriculum = () => {
   ))}
 </div>
 
-
+<div className="lg:mt-10 mt-4">
+          <PopupSchool />
+        </div>
 
     </section>
   );

@@ -12,6 +12,7 @@ import Software_Course from "@/components/sections/course/Software_Course";
 import TopUp from "@/components/sections/footers/TopUp";
 import FaqCompAbout from "@/components/sections/faqCompCourse";
 import FaqCompCourse from "@/components/sections/faqCompCourse";
+import PopupCourse from "@/components/sections/course/PopupCourse";
 
 const Courses = () => {
   return (
@@ -59,6 +60,7 @@ const Courses = () => {
       <main>
         <PageTitle pageName={"Our Courses"} breadcrumbCurrent={"Our Courses"} />
         <Robotics_Course />
+       
         <Software_Course />
         <Platform />
         <Students_Talk />

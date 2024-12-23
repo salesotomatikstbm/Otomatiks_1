@@ -41,6 +41,7 @@ import Img34 from "../../../assets/images/patrons/34.png";
 import Img35 from "../../../assets/images/patrons/35.png";
 import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
+import PopupSchool from '../schoolprogram/PopupSchool';
 
 const images = [
   Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13,
@@ -104,6 +105,9 @@ const Our_Patrons_Home = () => {
           ))}
         </Slider>
       </div>
+      <div className="lg:pt-15 pt-10">
+           <PopupSchool />
+            </div>
     </section>
   );
 };

@@ -7,10 +7,10 @@ import Testimonial from '@/components/sections/testimonial';
 import Teams from '@/components/sections/teams/teams';
 import OurJourney from '@/components/sections/abouts/OurJourney';
 import Brands1 from '@/components/sections/abouts/Brands';
-import AgeOne from '@/components/sections/studentsAge/ageOne';
 import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons';
 import TopUp from '@/components/sections/footers/TopUp';
 import Contact_About from '@/components/sections/abouts/Contact_About';
+
 
 const AboutUs = () => {
   return (
@@ -63,7 +63,7 @@ const AboutUs = () => {
         <OurJourney />
         <Testimonial />
         <Teams />
-       
+      
         {/* <AgeOne /> */}
         <Brands1 />
         <Our_Patrons />

@@ -9,6 +9,7 @@ import Kindergarden from '@/assets/icons/kindergarden';
 import SectionDescription from '@/components/ui/sectionDescription';
 import SlideUp from '@/lib/animations/slideUp';
 import SlideDown from '@/lib/animations/slideDown';
+import PopupWorkshop from '../workshop/PopupWorkshop';
 
 const AboutTwo = () => {
     return (
@@ -33,11 +34,12 @@ const AboutTwo = () => {
                         </SectionDescription>
                         <SlideUp delay={3}>
                             <div className="flex gap-8 mt-10">
-                                <Button asChild size="lg" variant="pill" className="bg-primary border-primary hover:text-primary-foreground">
+                                <Button asChild size="lg" variant="pill" className="bg-secondary border-secondary hover:text-primary-foreground">
                                     <Link to={"/about-us"}>Read More</Link>
                                 </Button>
                                 <Button asChild size="lg" variant="pill" className="bg-transparent border-primary text-muted-foreground hover:text-cream-foreground hover:bg-primary">
-                                    <Link to={"/contact-us"}>Contact Us</Link>
+                                   
+                                    <PopupWorkshop />
                                 </Button>
                             </div>
                         </SlideUp>
@@ -64,6 +66,9 @@ const AboutTwo = () => {
                         </SlideDown>
                     </div>
                 </div>
+            </div>
+            <div>
+               
             </div>
         </section>
     );

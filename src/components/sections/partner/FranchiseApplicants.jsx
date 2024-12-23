@@ -1,10 +1,10 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-
+import PopupPartner from './PopupPartner';
 const FranchiseApplicants = () => {
   return (
-    <div className="py-16 bg-gradient-to-r from-[#045a93] to-[#066aab] text-white">
+    <div className="py-16  text-white">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
@@ -74,7 +74,11 @@ const FranchiseApplicants = () => {
             </div>
           </div>
         </div>
+
+
       </div>
+      <div className="lg:mt-10 mt-4">
+        <PopupPartner />    </div>
     </div>
   );
 };

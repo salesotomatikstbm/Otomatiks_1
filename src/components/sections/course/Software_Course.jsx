@@ -9,7 +9,7 @@ import Doll from '@/assets/icons/doll'
 import SectionName from '../../ui/sectionName'
 import Title from '../../ui/title'
 import SlideUp from '@/lib/animations/slideUp'
-
+import PopupCourse from './PopupCourse'
 const Software_Course = () => {
     return (
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative  bg-[#066aab]">
@@ -30,6 +30,9 @@ const Software_Course = () => {
             </div>
             <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
                 <img src={jr} alt="img" />
+            </div>
+            <div className="lg:pt-15 pt-10">
+            <PopupCourse />
             </div>
         </section>
     )

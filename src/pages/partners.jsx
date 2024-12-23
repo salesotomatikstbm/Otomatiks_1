@@ -5,7 +5,6 @@ import PageTitle from '@/components/sections/pageTitle'
 import CallToActionSection from '@/components/sections/partner/CallToActionSection'
 import FranchiseApplicants from '@/components/sections/partner/FranchiseApplicants'
 import UniqueSellingPoints from '@/components/sections/partner/UniqueSellingPoints'
-import Testimonials from '@/components/sections/partner/Testimonials'
 import FAQs from '@/components/sections/partner/FAQs'
 import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
 import Counter from '@/components/sections/partner/Counter'
@@ -13,6 +12,7 @@ import BranchesMap from '@/components/sections/partner/BranchesMap'
 import TopUp from '@/components/sections/footers/TopUp'
 import Testi from '@/components/sections/partner/Testi'
 import Brands from '@/components/sections/abouts/Brands'
+
 
 
 const Partners = () => {
@@ -62,16 +62,17 @@ const Partners = () => {
       <main>
         <PageTitle pageName={"Franchise"} breadcrumbCurrent={"Franchise"} />
         <CallToActionSection />
-        <FranchiseApplicants />
+        
         
         <UniqueSellingPoints />
+        <FranchiseApplicants />
         <Counter />
         <Brands />
         <BranchesMap />
-        {/* <Testimonials /> */}
+       
         <FAQs />
         <Testi />
-       
+     
         <Contact_Form_Partners />
         <TopUp />
       </main>

@@ -7,6 +7,7 @@ import SectionName from '../../src/components/ui/sectionName';
 import Title from '../../src/components/ui/title';
 import TopUp from '@/components/sections/footers/TopUp';
 import Contact_Workshop from '@/components/sections/workshop/Contact_Workshop';
+import PopupWorkshop from '@/components/sections/workshop/PopupWorkshop';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -123,10 +124,13 @@ const Blog = () => {
             </div>
           </div>
         )}
+            <div className="lg:mt-10 mt-4 mb-10">
+<PopupWorkshop />
+</div>
       </main>
 
 
-     <Contact_Workshop />
+     {/* <Contact_Workshop /> */}
       <TopUp />
       <ScrollRestoration />
     </>

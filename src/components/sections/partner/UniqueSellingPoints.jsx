@@ -5,7 +5,7 @@ import unique from "@/assets/images/partner/uniqu.png";
 
 const UniqueSellingPoints = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 bg-gradient-to-r from-[#045a93] to-[#066aab]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mb-12 text-center">
@@ -16,7 +16,7 @@ const UniqueSellingPoints = () => {
         </div>
 
         {/* Unique Selling Points Layout */}
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row-reverse items-center">
           {/* Image Section */}
           <div className="lg:w-1/2 p-4">
             <img
@@ -33,7 +33,7 @@ const UniqueSellingPoints = () => {
                 Extensive Training
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-white">
                 We provide comprehensive training sessions, ensuring that franchisees and instructors are equipped with the knowledge and skills needed to deliver high-quality robotics education effectively.
               </p>
             </div>
@@ -42,7 +42,7 @@ const UniqueSellingPoints = () => {
                 Diverse Course Offerings
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-white">
                 From beginner to advanced robotics, AI, and coding, we offer a wide range of courses tailored to different age groups and learning needs, setting students on the path to future success.
               </p>
             </div>
@@ -51,7 +51,7 @@ const UniqueSellingPoints = () => {
                 Qualified Team
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-white">
                 Our team comprises skilled professionals with expertise in robotics, engineering, and education, ensuring top-notch teaching standards across all franchises.
               </p>
             </div>
@@ -60,7 +60,7 @@ const UniqueSellingPoints = () => {
                 Strong Support
               </h3>
               <div className="w-16 h-1 bg-secondary mt-2 transition-width duration-300 ease-in-out group-hover:w-24"></div>
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-white">
                 We offer continuous support, from technical guidance to marketing assistance, helping franchises grow and maintain a strong reputation in their local communities.
               </p>
             </div>

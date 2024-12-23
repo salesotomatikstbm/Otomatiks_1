@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import SectionName from "../../ui/sectionName";
 import Title from "../../ui/title";
+import PopupPartner from "../partner/PopupPartner";
 
 // Array of districts with contact numbers
 const districts = [
@@ -56,6 +57,9 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             ))}
           </div>
         </div>
+        <div className="lg:mt-10 mt-4">
+        <PopupPartner />
+          </div>
       </section>
 
       {/* Mobile View */}
@@ -88,6 +92,9 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             ))}
           </div>
         </div>
+        <div className="mt-5 mt-4">
+        <PopupPartner />
+          </div>
       </section>
     </>
   );

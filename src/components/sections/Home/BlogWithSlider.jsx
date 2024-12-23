@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import SectionName from '../../../../src/components/ui/sectionName';
 import Title from '../../../../src/components/ui/title';
+import PopupWorkshop from '../workshop/PopupWorkshop';
 
 const BlogWithSlider = () => {
   const [posts, setPosts] = useState([]);
@@ -128,6 +129,9 @@ const BlogWithSlider = () => {
             </div>
           </div>
         )}
+          <div className="lg:mt-10 mt-4 mb-10">
+ <PopupWorkshop />
+</div>
       </main>
       <TopUp />
       <ScrollRestoration />

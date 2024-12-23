@@ -10,6 +10,7 @@ import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
 import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
 
 
+
 const Workshop = () => {
   return (
     <>
@@ -60,6 +61,7 @@ const Workshop = () => {
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
+    
         <WorkshopBenefits />
       <UpcomingEvents />
      

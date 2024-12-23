@@ -10,6 +10,7 @@ const Contact_Form_Course = () => {
         Email: '',
         ContactNumber: '',
         InterestedCourse: '',
+        CourseMode: '',
         Place: '',
         Message: '',
     });
@@ -52,6 +53,10 @@ const Contact_Form_Course = () => {
             newErrors.InterestedCourse = 'Interested Course is required';
         }
 
+        if (!formData.CourseMode.trim()) {
+            newErrors.CourseMode = 'Interested Course is required';
+        }
+        
         if (!formData.Place.trim()) {
             newErrors.Place = 'Place is required';
         }
@@ -97,6 +102,7 @@ const Contact_Form_Course = () => {
             Email: '',
             ContactNumber: '',
             InterestedCourse: '',
+            CourseMode: '',
             Place: '',
             Message: '',
         });
@@ -195,6 +201,24 @@ const Contact_Form_Course = () => {
                                     {errors.InterestedCourse && <p className="text-red-500 text-sm mt-1">{errors.InterestedCourse}</p>}
                                 </div>
 
+
+                                <div className="relative">
+                                    <select
+                                        name="CourseMode"
+                                        value={formData.CourseMode}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.CourseMode ? 'border-red-500' : formData.CourseMode ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    >
+                                        <option value="">Select Course Mode</option>
+                                        <option value="Online">Online</option>
+                                        <option value="Offline">Offline</option>
+                                       
+                                    </select>
+                                    {errors.CourseMode && <p className="text-red-500 text-sm mt-1">{errors.CourseMode}</p>}
+                                </div>
+
                                 {/* Place Field */}
                                 <div className="relative">
                                     <input
@@ -217,7 +241,7 @@ const Contact_Form_Course = () => {
                             </div>
 
                             {/* Message Field */}
-                            <div className="relative mt-7">
+                            {/* <div className="relative mt-7">
                                 <textarea
                                     name="Message"
                                     placeholder="Your Message"
@@ -229,14 +253,14 @@ const Contact_Form_Course = () => {
                                     required
                                 />
                                 {errors.Message && <p className="text-red-500 text-sm mt-1">{errors.Message}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Submit Button */}
-                            <div className="mt-5">
+                            <div className="mt-5 text-center">
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`bg-primary text-white py-4 px-8 rounded-[10px] w-full
+                                    className={`bg-primary text-white py-4 px-8 rounded-[10px] 
                                         ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
                                 >
                                     {isSubmitting ? 'Sending...' : 'Send Message'}

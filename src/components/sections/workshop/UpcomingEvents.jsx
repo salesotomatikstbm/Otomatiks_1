@@ -6,6 +6,7 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import { ScrollRestoration } from 'react-router-dom';
 import { client } from '../../../lib/contentfulClient';
+import PopupWorkshop from './PopupWorkshop';
 
 const UpcomingEvents = () => {
   const [events, setEvents] = useState([]);
@@ -89,7 +90,9 @@ const UpcomingEvents = () => {
             )}
           </div>
         </div>
-
+        <div className="lg:mt-10 mt-4">
+  <PopupWorkshop />
+</div>
         {/* Modal for Image Pop-Up */}
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
