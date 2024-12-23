@@ -22,8 +22,8 @@ const FaqComp = () => {
           {/* Content Section */}
           <div>
             <div className="lg:max-w-[720px] pb-10">
-              <SectionName>Faq</SectionName>
-              <Title size={"3.5xl"}>Get Insights Into Our Robotics Learning Programs</Title>
+              <SectionName>Frequently Asked Questions</SectionName>
+              <Title size={"3.5xl"}>Your Questions Answered for a Seamless Experience</Title>
             </div>
             <Accordion type="single" defaultValue="one" collapsible>
               {faqData.map(({ ans, id, question }) => {

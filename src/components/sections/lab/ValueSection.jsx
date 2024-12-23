@@ -13,7 +13,7 @@ const ValueSection = () => {
   ];
 
   return (
-    <div className="py-16 ">
+    <div className="py-16 bg-[#066aab]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className=" mb-12">
@@ -41,8 +41,8 @@ const ValueSection = () => {
                   {index + 1}
                 </div>
                 <div className="ml-6 ">
-                  <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                  <p className="">
+                  <h3 className="text-xl text-secondary font-semibold mb-2">{value.title}</h3>
+                  <p className="text-white">
                     {value.description}
                   </p>
                 </div>

@@ -86,7 +86,7 @@ const Our_Patrons_Home = () => {
         <div className="text-center mb-12">
           <SectionName>Our Academic Partner</SectionName>
           <Title size="3.5xl" className="mt-4 font-bold">
-            Honoring Our Esteemed Patrons
+          Celebrating Our Trusted Collaborators and Supporters
           </Title>
         </div>
 

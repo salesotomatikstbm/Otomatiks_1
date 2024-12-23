@@ -60,7 +60,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                     <div className={`${isAboutpage ? "" : "lg:max-w-[839px]"} pt-7.5`}>
                         <SectionName>Our Story</SectionName>
                         <Title size={"3.5xl"} className={""}>
-                            Igniting Young Minds with Innovation: The Story of Otomatiks
+                        Empowering Young Innovators Through Creativity and Technology
                         </Title>
                         <SectionDescription>
                             <div className="flex items-start mt-4 mb-4">

@@ -63,9 +63,9 @@ const HomeTestimonial = () => {
   return (
     <section className="container mx-auto px-4 py-16">
      <div className="text-center mb-12">
-          <SectionName>Best Reviews</SectionName>
+          <SectionName>What Our Clients Say</SectionName>
           <Title size="3.5xl" className="mt-4 font-bold">
-          Stories of Success and Satisfaction
+          Trusted Feedback from Those Who Matter Most
           </Title>
         </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

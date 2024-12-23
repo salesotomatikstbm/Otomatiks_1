@@ -9,7 +9,7 @@ const FranchiseApplicants = () => {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
-          <Title size={"3.5xl"} className="mt-4">Who Can Apply?</Title>
+          <Title size={"3.5xl"} className="mt-4">Open Doors to Innovation</Title>
         </div>
 
         {/* Staggered Layout */}

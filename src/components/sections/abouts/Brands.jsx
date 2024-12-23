@@ -32,7 +32,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
             <SectionName className="">Our Hubs</SectionName>
-            <Title size="3.5xl">Innovation and Learning Hubs</Title>
+            <Title size="3.5xl">Centers of Innovation and Knowledge</Title>
           </div>
 
           <div className="flex justify-center items-center flex-wrap gap-4">
@@ -66,8 +66,8 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-8 lg:hidden`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
-            <SectionName className="">Our Hubs</SectionName>
-            <Title size="3.5xl">Innovation and Learning Hubs</Title>
+          <SectionName className="">Our Hubs</SectionName>
+            <Title size="3.5xl">Centers of Innovation and Knowledge</Title>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">

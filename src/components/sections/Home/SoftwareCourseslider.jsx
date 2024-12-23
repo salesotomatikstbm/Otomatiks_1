@@ -43,8 +43,8 @@ const SoftwareCourseslider = () => {
     <section className="lg:pb-15 py-16 pb-10 relative">
       <div className="container">
         <div className="flex flex-col justify-center items-center">
-          <SectionName>Kids Program</SectionName>
-          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Software Courses</Title>
+          <SectionName>Kids Software Program</SectionName>
+          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Empowering Young Minds to Create and Innovate Through Coding</Title>
         </div>
         <div className="lg:pt-15 pt-10">
   {/* Slider for Cards */}

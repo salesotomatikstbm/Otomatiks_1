@@ -1,6 +1,7 @@
 import React from "react";
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import PopupSchool from "../schoolprogram/PopupSchool";
 
 const RoboticsAiLabSetup = () => {
   return (
@@ -48,6 +49,9 @@ const RoboticsAiLabSetup = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-5 lg:mt-10">
+        <PopupSchool />
       </div>
     </section>
   );

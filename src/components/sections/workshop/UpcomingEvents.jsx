@@ -48,7 +48,7 @@ const UpcomingEvents = () => {
       <main className="py-16">
         <div className="text-center ">
           <SectionName>Our Upcoming Workshops</SectionName>
-          <Title size="3.5xl">Join Us for Exciting Workshops and Events</Title>
+          <Title size="3.5xl">Exciting Learning Opportunities in Robotics Await You</Title>
         </div>
 
         <div className="container mx-auto mt-12">

@@ -29,7 +29,7 @@ const OurJourney = () => {
 
                 <div className="text-center mb-10">
                     <SectionName>Our Journey</SectionName>
-                    <Title size="3.5xl">Our Vision To Reality : The Evolution of Otomatiks</Title>
+                    <Title size="3.5xl">Building a Legacy of Growth and Innovation</Title>
                 </div>
 
                 <div className="w-full mb-10 flex justify-center relative">

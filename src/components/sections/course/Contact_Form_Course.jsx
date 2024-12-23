@@ -113,7 +113,7 @@ const Contact_Form_Course = () => {
             <div className="container">
                 <div className="max-w-[846px] mx-auto text-center">
                     <SectionName>Join Our Course</SectionName>
-                    <Title size={"3.5xl"}>We’re here to answer your questions and help you start your journey</Title>
+                    <Title size={"3.5xl"}>Take the First Step Toward an Exciting Learning Journey</Title>
                 </div>
                 <div className="mt-15">
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">

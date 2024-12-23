@@ -42,8 +42,8 @@ const RoboticCourseSlide = () => {
     <section className="lg:pb-16 py-16 relative bg-[#066aab]">
       <div className="container">
         <div className="flex flex-col justify-center items-center">
-          <SectionName>Kids Program</SectionName>
-          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Robotics Courses</Title>
+          <SectionName>Kids Robotics Program</SectionName>
+          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Inspiring Future Engineers Through Fun and Hands-On Learning</Title>
         </div>
         <div className="lg:pt-15 pt-10">
   {/* Slider for Cards */}

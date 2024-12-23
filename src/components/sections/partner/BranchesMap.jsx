@@ -10,7 +10,7 @@ const BranchesMap = () => {
       <div className="mb-12 text-center">
           <SectionName>Our Branches</SectionName>
           <Title size={"3.5xl"} className={"mt-4"}>
-            National & International
+          Discover Our Network of Branches
           </Title>
         </div>
         <img src={mapImage} className="w-full h-auto" alt="Map showing our branches" />

@@ -41,8 +41,9 @@ const Ai = () => {
         <Products />
         <InfrastructureRequirements />
         <RoboticsAiLabSetup />
-        <AiIntegration />
+      
         <ValueSection />
+        <AiIntegration />
         <FaqLab />
        <Contact_School_Management />
         <TopUp />

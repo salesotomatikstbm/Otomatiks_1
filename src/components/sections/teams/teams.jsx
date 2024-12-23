@@ -11,8 +11,8 @@ const Teams = () => {
     <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 bg-[#066aab]">
       <div className="container">
         <div className="text-center flex flex-col items-center ">
-          <SectionName>Our Team</SectionName>
-          <Title size={"3.5xl"} className={"lg:max-w-[820px]"}>Meet the Innovators Behind Otomatiks</Title>
+          <SectionName>Meet Our Experts</SectionName>
+          <Title size={"3.5xl"} className={"lg:max-w-[820px]"}>A Dedicated Team Driving Innovation and Growth</Title>
         </div>
         <div className="lg:pt-15 pt-10">
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">

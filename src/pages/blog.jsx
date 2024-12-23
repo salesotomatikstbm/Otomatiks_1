@@ -65,8 +65,8 @@ const Blog = () => {
       <main>
         <PageTitle pageName="Blog" breadcrumbCurrent="Blog" />
         <div className="text-center mb-10">
-          <SectionName>Our Recent Blog</SectionName>
-          <Title size="3.5xl">Insights and Innovations in Robotics and STEM Education.</Title>
+          <SectionName>Latest Insights</SectionName>
+          <Title size="3.5xl">Exploring the World of Innovation and Education</Title>
         </div>
         <div className="container mx-auto mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5">

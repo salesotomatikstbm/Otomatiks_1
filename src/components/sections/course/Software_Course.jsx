@@ -15,8 +15,8 @@ const Software_Course = () => {
         <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 relative  bg-[#066aab]">
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
-                    <SectionName>Kids Program</SectionName>
-                    <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Software Courses</Title>
+                    <SectionName>Kids Software Program</SectionName>
+                    <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Empowering Young Minds to Create and Innovate Through Coding</Title>
                 </div>
                 <div className="lg:pt-15 pt-10">
                     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">

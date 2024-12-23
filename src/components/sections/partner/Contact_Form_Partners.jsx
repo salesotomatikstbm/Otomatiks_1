@@ -122,7 +122,7 @@ const Contact_Form_Partners = () => {
             <div className="container">
                 <div className="max-w-[846px] mx-auto text-center">
                     <SectionName>Partner With Us</SectionName>
-                    <Title size={"3.5xl"}>Fill the form to get started</Title>
+                    <Title size={"3.5xl"}>Fill the form to get Started</Title>
                 </div>
                 <div className="mt-15">
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">

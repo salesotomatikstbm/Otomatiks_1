@@ -65,8 +65,8 @@ const BlogWithSlider = () => {
     <>
       <main>
       <div className="text-center py-16">
-          <SectionName>Our Recent Blog</SectionName>
-          <Title size="3.5xl">Insights and Innovations in Robotics and STEM Education.</Title>
+          <SectionName>Latest Insights</SectionName>
+          <Title size="3.5xl">Exploring the World of Innovation and Education</Title>
         </div>
         {/* Slider Section */}
         <div className="container mx-auto mb-12">

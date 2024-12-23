@@ -11,7 +11,7 @@ const UniqueSellingPoints = () => {
         <div className="mb-12 text-center">
           <SectionName>To Our Unique Selling Points</SectionName>
           <Title size={"3.5xl"} className={"mt-4"}>
-            What Sets Us Apart?
+          The Key Features That Make Our Program Stand Out
           </Title>
         </div>
 

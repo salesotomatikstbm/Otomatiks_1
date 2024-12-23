@@ -52,8 +52,8 @@ const FAQs = () => {
                         </div>
                         <div className="order-0 md:order-1">
                             <SectionName>FAQ Categories</SectionName>
-                            <Title size={"3.5xl"} className={"mt-2.5 max-w-[494px]"}>
-                                Frequently Asked Questions
+                            <Title size={"3.5xl"} className={"mt-2.5"}>
+                            Discover our franchise opportunities and benefits
                             </Title>
                             <ul className="py-7.5 flex items-center flex-wrap gap-5">
                                 {faqCategories.map(({ data_target, id, label }) => (

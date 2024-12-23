@@ -2,10 +2,10 @@ import React from "react";
 import SectionName from "../../ui/sectionName";
 import Title from "../../ui/title";
 import SectionDescription from "@/components/ui/sectionDescription";
-
+import PopupSchool from "../schoolprogram/PopupSchool";
 const SkillsGained = () => {
   return (
-    <section className="mx-auto px-4 py-16 bg-[#066aab]">
+    <section className="mx-auto px-4 py-16 ">
       {/* Header Section */}
       <div className="text-center mb-12">
         <SectionName>Skills Gained in Our Robotics and AI Lab</SectionName>
@@ -35,6 +35,9 @@ const SkillsGained = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg w-full md:w-[48%] lg:w-[30%]">
           <h3 className="text-2xl font-semibold text-center">Robotic Process Automation</h3>
         </div>
+      </div>
+      <div className="mt-5 lg:mt-10">
+        <PopupSchool />
       </div>
     </section>
   );

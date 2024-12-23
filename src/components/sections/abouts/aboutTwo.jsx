@@ -19,7 +19,7 @@ const AboutTwo = () => {
                     <div>
                         <SectionName>About Our Robotics Workshops</SectionName>
                         <Title size={"3.5xl"} className={"lg:max-w-[610px] mt-2.5"}>
-                            Igniting Young Minds Through Engaging STEM Experiences
+                        Fostering Creativity and Problem-Solving with Robotics Education
                         </Title>
                         <SectionDescription className="mt-5">
                             Attending robotics workshops can lead to improved critical thinking, as well as boost confidence and promote innovation and entrepreneurship.
