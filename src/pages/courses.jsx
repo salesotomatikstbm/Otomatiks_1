@@ -10,9 +10,8 @@ import Robotics_Course from "@/components/sections/course/Robotics_Course";
 import Contact_Form_Course from "@/components/sections/course/Contact_Form_Course";
 import Software_Course from "@/components/sections/course/Software_Course";
 import TopUp from "@/components/sections/footers/TopUp";
-import FaqCompAbout from "@/components/sections/faqCompCourse";
 import FaqCompCourse from "@/components/sections/faqCompCourse";
-import PopupCourse from "@/components/sections/course/PopupCourse";
+
 
 const Courses = () => {
   return (

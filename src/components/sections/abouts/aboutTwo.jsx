@@ -1,5 +1,5 @@
 import React from 'react';
-import about_bg_2 from "@/assets/images/about/about-2.png";
+import about_bg_2 from "@/assets/images/about/about-2.mp4";
 import about_bg_3 from "@/assets/images/about/about-3.png";
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -19,7 +19,7 @@ const AboutTwo = () => {
                     <div>
                         <SectionName>About Our Robotics Workshops</SectionName>
                         <Title size={"3.5xl"} className={"lg:max-w-[610px] mt-2.5"}>
-                        Fostering Creativity and Problem-Solving with Robotics Education
+                            Fostering Creativity and Problem-Solving with Robotics Education
                         </Title>
                         <SectionDescription className="mt-5">
                             Attending robotics workshops can lead to improved critical thinking, as well as boost confidence and promote innovation and entrepreneurship.
@@ -38,7 +38,7 @@ const AboutTwo = () => {
                                     <Link to={"/about-us"}>Read More</Link>
                                 </Button>
                                 <Button asChild size="lg" variant="pill" className="bg-transparent border-primary text-muted-foreground hover:text-cream-foreground hover:bg-primary">
-                                   
+
                                     <PopupWorkshop />
                                 </Button>
                             </div>
@@ -55,7 +55,14 @@ const AboutTwo = () => {
                             </div>
                             <SlideUp>
                                 <div className="flex justify-center sm:justify-start">
-                                    <img src={about_bg_2} alt="img-1" className="mx-auto sm:mx-0" />
+                                    <video
+                                        src={about_bg_2}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        className="mx-auto block w-full rounded-lg shadow-lg"
+                                    ></video>
+
                                 </div>
                             </SlideUp>
                         </div>
@@ -68,7 +75,7 @@ const AboutTwo = () => {
                 </div>
             </div>
             <div>
-               
+
             </div>
         </section>
     );

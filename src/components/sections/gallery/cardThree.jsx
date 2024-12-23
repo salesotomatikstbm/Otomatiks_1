@@ -1,6 +1,6 @@
 import React from 'react'
-import portfolio_3 from "@/assets/images/portfolio/portfolio-3.png"
-import portfolio_5 from "@/assets/images/portfolio/portfolio-5.png"
+import portfolio_3 from "@/assets/images/portfolio/portfolio-33.png"
+import portfolio_5 from "@/assets/images/portfolio/portfolio-35.png"
 import { FaArrowRight } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
@@ -11,8 +11,8 @@ const CardThree = ({data_target}) => {
             <div className="sm:col-start-1 sm:col-end-7 col-span-full relative group/card max-h-[453px]">
                 <img src={portfolio_3} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
                 <div className="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible group-hover/card:opacity-80 transition-all duration-500 bg-primary rounded-[10px] flex flex-col items-center justify-center">
-                    <h5 className="text-center"><Link to={"/about-us"} className="text-cream-foreground text-2xl font-medium">Lorem ipsum dolor sit amet consectetur</Link></h5>
-                    <p className="text-cream-foreground">Dreamland Elementary</p>
+                    <h5 className="text-center"><Link to={"/about-us"} className="text-cream-foreground text-2xl font-medium">Discover the excitement of building and programming robots at our Robotics Workshop.</Link></h5>
+                    <p className="text-cream-foreground">Robotics Workshop</p>
                     <Link to={"/about-us"} className="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group">
                         <FaArrowRight className='text-destructive-foreground' />
                     </Link>
@@ -23,9 +23,9 @@ const CardThree = ({data_target}) => {
             <div className="sm:col-start-7 sm:col-end-13 col-span-full relative group/card max-h-[453px]">
                 <img src={portfolio_5} alt="img" className="w-full h-full max-h-[300px] sm:max-h-full object-cover rounded-[10px]" />
                 <div className="px-7.5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-[calc(100%-60px)] w-[calc(100%-60px)] opacity-0 invisible group-hover/card:visible group-hover/card:opacity-80 transition-all duration-500 bg-primary rounded-[10px] flex flex-col items-center justify-center">
-                    <h5 className="text-center"><Link to={"/about-us"} className="text-cream-foreground text-2xl font-medium">Lorem ipsum dolor sit amet consectetur</Link></h5>
-                    <p className="text-cream-foreground">Dreamland Elementary</p>
-                    <Link to={"/about-us"} className="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group">
+                <h5 className="text-center"><Link to={"/about-us"} className="text-cream-foreground text-2xl font-medium">Discover the excitement of building and programming robots at our Robotics Workshop.</Link></h5>
+                    <p className="text-cream-foreground">Robotics Workshop</p>
+                     <Link to={"/about-us"} className="bg-background w-11 h-11 rounded-full flex justify-center items-center cursor-pointer absolute -bottom-5 left-1/2 -translate-x-1/2 overflow-hidden group">
                         <FaArrowRight className='text-destructive-foreground' />
                     </Link>
                 </div>

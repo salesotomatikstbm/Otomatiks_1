@@ -10,29 +10,25 @@ import SlideUp from '@/lib/animations/slideUp'
 const categoryList = [
     {
         id: 1,
-        label: "Robotica 2025",
+        label: "Robotica 2024",
         data_target: "education"
     },
     {
         id: 2,
-        label: "Robotica 2024",
+        label: "Robotica 2023",
         data_target: "school"
     },
     {
         id: 3,
-        label: "Robotica 2023",
+        label: "Workshop",
         data_target: "learn"
     },
     {
         id: 4,
-        label: "Workshop",
+        label: "Summer Camp",
         data_target: "child"
     },
-    {
-        id: 5,
-        label: "Summer Camp",
-        data_target: "coaching"
-    },
+    
 
 ]
 const Gallery = () => {

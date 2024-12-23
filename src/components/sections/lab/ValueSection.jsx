@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import lab from "@/assets/images/projects/lab2.png"
+import lab from "@/assets/images/projects/ailab.mp4"
 
 const ValueSection = () => {
   const values = [
@@ -26,11 +26,13 @@ const ValueSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="order-2 lg:order-1">
-            <img 
-              src={lab} // Replace with your icon URL
-              alt="Comprehensive Training"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+            <video
+              src={lab}
+              autoPlay
+              muted
+              loop
+              className="mx-auto block w-full rounded-lg shadow-lg"
+            ></video>
           </div>
 
           {/* Value List */}

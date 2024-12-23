@@ -7,12 +7,12 @@ const EventPromoSection = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-y-0 lg:space-x-12">
         {/* Left Content */}
         <div className="lg:w-1/2 flex flex-col items-start space-y-6">
-          
-        <div className="text-center">
-                    <SectionName>Robotica 2025</SectionName>
-                    <Title size="3.5xl">Welcome to Robotica 2025!</Title>
-                </div>
-         
+
+          <div className="text-center">
+            <SectionName>Robotica 2025</SectionName>
+            <Title size="3.5xl">Welcome to Robotica 2025!</Title>
+          </div>
+
           <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
             Robotica’25 isn’t just a competition; it’s a celebration of innovation and creativity in the realm of robotics. Building on the success of previous events, where over 2500 participants from 80+ schools joined, this year promises to surpass all expectations.
           </p>
@@ -62,17 +62,18 @@ const EventPromoSection = () => {
           </div>
         </div>
         {/* Right Graphic */}
-         <div className="lg:w-1/2 flex justify-center items-center">
-         <iframe
-                                        width="100%"
-                                        height="415"
-                                        src="https://www.youtube.com/embed/I-vdhLprvus?si=fRouhedTDSB5JCf1"
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
-                                        className="rounded"
-                                    ></iframe>
+        <div className="lg:w-1/2 flex justify-center items-center">
+        <iframe
+  width="100%"
+  height="415"
+  src="https://www.youtube.com/embed/I-vdhLprvus?autoplay=1&mute=1&si=fRouhedTDSB5JCf1"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+  className="rounded"
+/>
+
         </div>
       </div>
     </section>
