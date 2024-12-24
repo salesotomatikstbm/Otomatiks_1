@@ -1,6 +1,9 @@
-import img_1 from "@/assets/images/extra-curricula/img-1.png";
-import img_2 from "@/assets/images/extra-curricula/img-2.png";
-import img_3 from "@/assets/images/extra-curricula/img-3.png";
+import img_1 from "@/assets/images/extra-curricula/7.png"
+import img_2 from "@/assets/images/extra-curricula/8.png"
+import img_3 from "@/assets/images/extra-curricula/9.png"
+import img_4 from "@/assets/images/extra-curricula/10.png"
+import img_5 from "@/assets/images/extra-curricula/11.png"
+import img_6 from "@/assets/images/extra-curricula/12.png"
 
 export const extraCurricularData = [
     {
@@ -28,21 +31,21 @@ export const extraCurricularData = [
         id: 4,
         title: "App Development",
         desc: "Turn ideas into apps by creating interactive, user-friendly mobile solutions. Discover tools and techniques for seamless app design.",
-        src: img_1,
+        src: img_4,
         level: 4, // Level 4
     },
     {
         id: 5,
         title: "Artificial Intelligence",
         desc: "Explore AI concepts and machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
-        src: img_2,
+        src: img_5,
         level: 5, // Level 5
     },
     {
         id: 6,
-        title: "Cloud",
-        desc: "Understand cloud computing fundamentals, storage, and modern tech skills. Learn deployment strategies for scalable solutions.",
-        src: img_3,
+        title: "Data Science for Kids",  
+        desc: "Learn the basics of data analysis, visualization, and problem-solving using beginner-friendly tools and techniques.",        
+        src: img_6,
         level: 6, // Level 6
     }
 ];
