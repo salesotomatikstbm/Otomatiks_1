@@ -2,9 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 import PageTitle from "@/components/sections/pageTitle";
-import Programs from "@/components/sections/programs";
-import CommunityEngagementSection from "@/components/sections/csr/CommunityEngagementSection";
 import TopUp from "@/components/sections/footers/TopUp";
+import CSRQuotesSection from "@/components/sections/csr/CSRQuotesSection";
+import Our_Uniqueness from "@/components/sections/schoolprogram/Our_Uniqueness";
+import PartnershipSection from "@/components/sections/csr/PartnershipSection";
+import WhatWeOffer from "@/components/sections/csr/WhatWeOffer";
+import Contact_Form_Csr from "@/components/sections/csr/Contact_Form_Csr";
 
 const Csr = () => {
   return (
@@ -51,8 +54,11 @@ const Csr = () => {
       </Helmet>
       <main>
         <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
-        {/* <Programs />
-        <CommunityEngagementSection /> */}
+      <CSRQuotesSection />
+      <Our_Uniqueness />
+      <PartnershipSection />
+      <WhatWeOffer />
+      <Contact_Form_Csr />
         <TopUp />
       </main>
       <ScrollRestoration />
