@@ -14,19 +14,19 @@ const ExtraInfo = () => {
                 </a>
             </div>
             <div>
-                <h4 className="text-xl font-bold text-[#385469]">Contact Info</h4>
+                <h4 className="text-xl font-bold text-secondary">Contact Info</h4>
                 <ul className="mt-5 flex flex-col gap-[15px] mb-6">
                     <li className='flex items-center gap-2'>
                         <FaPhone className="text-primary-foreground" /> 
-                        <a href="" className="ml-2.5"> +91 90432 09448</a>
+                        <a href="" className="ml-2.5 text-white"> +91 90432 09448</a>
                     </li>
                     <li className='flex items-center gap-2'>
                         <FaEnvelope className="text-primary-foreground" /> 
-                        <a href="" className="ml-2.5">support@otomatiks.in</a>
+                        <a href="" className="ml-2.5 text-white">support@otomatiks.in</a>
                     </li>
                     <li className='flex items-center gap-2'>
                         <FaLocationDot className="text-primary-foreground" /> 
-                        <span className="ml-2.5">Vellore-632006</span>
+                        <span className="ml-2.5 text-white">Vellore-632006</span>
                     </li>
                 </ul>
             </div>
