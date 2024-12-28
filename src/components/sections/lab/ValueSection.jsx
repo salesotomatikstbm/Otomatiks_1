@@ -25,7 +25,7 @@ const ValueSection = () => {
         {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 hidden lg:block">
             <video
               src={lab}
               autoPlay

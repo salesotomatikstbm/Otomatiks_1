@@ -59,11 +59,6 @@ export const router = createBrowserRouter([
                 element: <Shop />
             },
             {
-                path: "/event",
-                // element: <Event />
-                element: <Robotica2025 />
-            },
-            {
                 path: "/robotics-coding-school-curriculum",
                 element: <SchoolProgram  />
             },
@@ -88,10 +83,7 @@ export const router = createBrowserRouter([
                 path: "/workshop",
                 element: <Workshop />
             },
-            {
-                path: "/msme",
-                element: <Msme />
-            },
+          
             {
                 path: "/csr",
                 element: <Csr />
@@ -99,14 +91,6 @@ export const router = createBrowserRouter([
             {
                 path: "/contact-us",
                 element: <ContactUs />
-            },
-            {
-                path: "/robotica-2024",
-                element: <Robotica2024 />
-            },
-            {
-                path: "/robotica-2023",
-                element: <Robotica2023 />
             },
             {
                 path: "/robotica",

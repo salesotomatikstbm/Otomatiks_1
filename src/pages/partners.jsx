@@ -19,7 +19,7 @@ const Partners = () => {
   return (
     <>
       <Helmet>
-        <title>Partner</title>
+        <title>Franchise</title>
         <meta
           name="description"
           content="Discover how partnering with us can help you grow your business. Learn about our unique selling points, franchise opportunities, and partner benefits."

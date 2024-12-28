@@ -14,7 +14,7 @@ const Robotica2025 = () => {
   return (
     <div>
       <Helmet>
-        <title>Robotica 2025 - The Future of Robotics Innovation</title>
+        <title>Robotica</title>
         <meta
           name="description"
           content="Join us at Robotica 2025, the premier robotics event where innovation meets technology. Watch exciting event promos, and get a glimpse of the future of robotics!"

@@ -101,7 +101,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
+        <section className="lg:pt-15 lg:pb-15 pb-10 pt-10 ">
             <div className="container">
                 <div className="max-w-[896px] mx-auto text-center">
                     <SectionName>Get in Touch with Us</SectionName>

@@ -2,9 +2,17 @@ import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import PopupPartner from './PopupPartner';
+
 const FranchiseApplicants = () => {
+  const applicants = [
+    { title: "Passionate Individual" },
+    { title: "Entrepreneur" },
+    { title: "Tutors" },
+    { title: "Coaching Centers" },
+  ];
+
   return (
-    <div className="py-16  text-white">
+    <div className="py-16">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
@@ -12,73 +20,61 @@ const FranchiseApplicants = () => {
           <Title size={"3.5xl"} className="mt-4">Open Doors to Innovation</Title>
         </div>
 
-        {/* Staggered Layout */}
-        <div className="space-y-12">
-          {/* Applicant 1 */}
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="bg-white text-black p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">
-                Passionate Individual / Entrepreneur
+        {/* Flowchart Layout (Responsive for Mobile and Desktop) */}
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {applicants.map((applicant, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col items-center justify-center text-center group"
+            >
+              {/* Title */}
+              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-all duration-300">
+                {applicant.title}
               </h3>
-              <p>
-                Individuals driven by passion and entrepreneurship who are eager to make a mark in the robotics education field.
-              </p>
-            </div>
-            <div className="bg-[#fff] text-secondary p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
-              <ul className="list-disc ml-5">
-                <li>Opportunities in emerging markets</li>
-                <li>Flexible working hours</li>
-                <li>Start small and scale</li>
-              </ul>
-            </div>
-          </div>
 
-          {/* Applicant 2 */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-            <div className="bg-white text-black p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">
-                Tutors / Coaching Centers
-              </h3>
-              <p>
-                Tutors or coaching centers looking to expand their offerings with robotics education programs.
-              </p>
-            </div>
-            <div className="bg-[#fff] text-secondary p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">Why It's Perfect</h3>
-              <ul className="list-disc ml-5">
-                <li>Enhance your coaching portfolio</li>
-                <li>Access to exclusive robotics content</li>
-                <li>Supportive community and training</li>
-              </ul>
-            </div>
-          </div>
+              {/* Arrow (SVG Path) */}
+              {index < applicants.length - 1 && (
+                <>
+                  {/* Desktop - Horizontal Arrow */}
+                  <svg
+                    className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-full ml-8 w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
 
-          {/* Applicant 3 */}
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="bg-white text-black p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">
-                Educational Centers with an Existing Student Base
-              </h3>
-              <p>
-                Educational institutions with a current student base looking to introduce robotics programs as an additional offering.
-              </p>
+                  {/* Mobile - Vertical Arrow */}
+                  <svg
+                    className="lg:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-8 h-8"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 19V6m-7 7l7-7 7 7" />
+                  </svg>
+                </>
+              )}
+
+              {/* Underline Effect */}
+              <div className="w-16 h-1 bg-primary mx-auto group-hover:w-24 transition-all duration-300"></div>
             </div>
-            <div className="bg-[#fff] text-secondary p-6 rounded-lg shadow-md md:w-1/2 hover:shadow-xl transition-transform hover:scale-105 duration-300">
-              <h3 className="text-xl font-semibold mb-4">Benefits for Students</h3>
-              <ul className="list-disc ml-5">
-                <li>Hands-on learning experience</li>
-                <li>Competitive edge in technology</li>
-                <li>Exposure to STEM fields</li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
-
-
       </div>
+
       <div className="lg:mt-10 mt-4">
-        <PopupPartner />    </div>
+        <PopupPartner />
+      </div>
     </div>
   );
 };

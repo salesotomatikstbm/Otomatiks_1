@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import unique from "@/assets/images/partner/franchise.mp4";
+import unique from "@/assets/images/projects/ailab.mp4";
 
 const UniqueSellingPoints = () => {
   return (
@@ -19,13 +19,15 @@ const UniqueSellingPoints = () => {
         <div className="flex flex-col lg:flex-row items-center">
           {/* Image Section */}
           <div className="lg:w-1/2 p-4">
-            <video
-              src={unique}
-              autoPlay
-              muted
-              loop
-              className="mx-auto block w-full rounded-lg shadow-lg"
-            ></video>
+             <div className="order-2 lg:order-1 hidden lg:block">
+                        <video
+                          src={unique}
+                          autoPlay
+                          muted
+                          loop
+                          className="mx-auto block w-full rounded-lg shadow-lg"
+                        ></video>
+                      </div>
           </div>
 
           {/* Titles & Descriptions Section */}

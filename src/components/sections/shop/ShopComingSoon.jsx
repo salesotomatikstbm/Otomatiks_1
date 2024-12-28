@@ -2,20 +2,16 @@ import React from "react";
 
 const ShopComingSoon = () => {
   return (
-    <section className="flex items-center justify-center min-h-screen  text-center px-6 py-12">
-      <div className="relative bg-white shadow-xl rounded-2xl p-8 lg:p-12 flex flex-col items-center justify-center gap-8 w-full max-w-screen-lg">
-        <div className="absolute -top-20 -right-20 bg-primary rounded-full w-96 h-96 opacity-10"></div>
-        <div className="absolute -bottom-20 -left-20 bg-secondary rounded-full w-96 h-96 opacity-10"></div>
-
-        <h1 className="text-5xl lg:text-6xl font-extrabold text-secondary mb-4 animate-pulse">
+    <section className="flex items-center justify-center min-h-screen text-center py-8">
+      <div className="relative flex flex-col items-center justify-center gap-8 w-full max-w-screen-lg">
+        
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary mb-4 animate-pulse">
           Coming Soon
         </h1>
-        <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
-          We're building something incredible! Our shop page is under
-          development and will be live soon. Stay tuned for updates and be the
-          first to explore our collections.
+        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          We're building something incredible! Our shop page is under development and will be live soon. Stay tuned for updates and be the first to explore our collections.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-6">
           <button
             className="bg-primary hover:bg-secondary text-white font-bold text-lg lg:text-xl px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105"
           >
@@ -39,7 +35,12 @@ const ShopComingSoon = () => {
           ></iframe>
         </div>
         <div className="text-sm text-gray-500 mt-6">
-          <p>Have questions? Reach us at <a href="mailto:support@example.com" className="underline hover:text-primary">support@otomatiks.in</a></p>
+          <p>
+            Have questions? Reach us at{" "}
+            <a href="mailto:support@example.com" className="underline hover:text-primary">
+              support@otomatiks.in
+            </a>
+          </p>
         </div>
       </div>
     </section>

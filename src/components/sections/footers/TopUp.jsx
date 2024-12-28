@@ -26,7 +26,7 @@ const TopUp = () => {
   return (
     <div
       id="scroll-up"
-      className="fixed bottom-20 right-6 w-12 h-12 rounded-full bg-primary text-white flex justify-center items-center border-[3px] border-white shadow-lg cursor-pointer hover:bg-secondary transition-all"
+      className="container fixed bottom-20 right-6 w-12 h-12 rounded-full bg-primary text-white flex justify-center items-center border-[3px] border-white shadow-lg cursor-pointer hover:bg-secondary transition-all"
     >
       <FaArrowUp size={20} />
     </div>

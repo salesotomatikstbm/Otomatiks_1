@@ -10,7 +10,6 @@ import testi3 from "@/assets/images/partner/testi3.png";
 import TestiHome from '../TestiHome';
 // Sample data for testimonials
 const videos = [
-  
   {
       src: "https://www.youtube.com/embed/6-EccKrkbRw?si=vuurX5a2pI0l403O",
   },
@@ -61,14 +60,14 @@ const HomeTestimonial = () => {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="mx-auto px-4 py-16">
      <div className="text-center mb-12">
           <SectionName>What Our Clients Say</SectionName>
           <Title size="3.5xl" className="mt-4 font-bold">
           Trusted Feedback from Those Who Matter Most
           </Title>
         </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
@@ -114,31 +113,31 @@ const HomeTestimonial = () => {
           </div>
         ))}
       </div>
-      <section className="pt-10">
-    <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
-            {videos.map((video, index) => (
-                <div 
-                    key={index} 
-                    className="relative flex flex-col items-center justify-center animate-fade-in"
-                >
-                    <div className="relative w-full flex justify-center items-center h-64 sm:h-72 md:h-96">
-                        <iframe
-                            width="80%"
-                            height="80%"
-                            src={video.src}
-                            title={`YouTube video player ${index + 1}`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                            className="rounded-[10px] shadow-lg hover:shadow-xl transition-shadow duration-300"
-                        ></iframe>
-                    </div>
-                </div>
-            ))}
+      <section className="pt-10 container">
+  <div className="">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {videos.map((video, index) => (
+        <div
+          key={index}
+          className="relative flex flex-col items-center justify-center animate-fade-in"
+        >
+          <div className="relative w-full flex justify-center items-center h-72 sm:h-80 md:h-[450px]">
+            <iframe
+              width="90%"
+              height="90%"
+              src={video.src}
+              title={`YouTube video player ${index + 1}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-[10px] shadow-lg hover:shadow-xl transition-shadow duration-300"
+            ></iframe>
+          </div>
         </div>
+      ))}
     </div>
+  </div>
 </section>
 
     </section>

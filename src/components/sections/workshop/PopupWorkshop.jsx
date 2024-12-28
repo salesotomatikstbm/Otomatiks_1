@@ -102,7 +102,7 @@ const PopupWorkshop = () => {
 
             {/* Popup form */}
             {isPopupOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className=" container fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white w-full max-w-lg p-8 rounded-lg shadow-lg relative mx-4 sm:mx-0">
                         <button
                             className="absolute top-2 right-2 text-black text-xl"

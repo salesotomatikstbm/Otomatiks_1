@@ -63,8 +63,8 @@ const BlogWithSlider = () => {
 
   return (
     <>
-      <main>
-      <div className="text-center py-16">
+   
+      <div className="text-center py-16 ">
           <SectionName>Latest Insights</SectionName>
           <Title size="3.5xl">Exploring the World of Innovation and Education</Title>
         </div>
@@ -132,7 +132,7 @@ const BlogWithSlider = () => {
           <div className="lg:mt-10 mt-4 mb-10">
  <PopupWorkshop />
 </div>
-      </main>
+    
       <TopUp />
       <ScrollRestoration />
     </>
