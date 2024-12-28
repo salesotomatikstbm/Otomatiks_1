@@ -19,21 +19,24 @@ const SoftwareCourseslider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // You can change this value to show multiple cards at once (e.g., 2 or 3)
+    slidesToShow: 3, // Show 3 items by default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablet view
         settings: {
-          slidesToShow: 2, // For larger screens, show 2 cards
+          slidesToShow: 2, // Show 2 items for tablet
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // Mobile view
         settings: {
-          slidesToShow: 1, // For mobile devices, show 1 card at a time
+          slidesToShow: 1, // Show 1 item on mobile
+          slidesToScroll: 1,
+          arrows: false, // Hide arrows on mobile to improve UX
         },
       },
     ],

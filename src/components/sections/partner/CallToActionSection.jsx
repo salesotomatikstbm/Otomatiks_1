@@ -33,15 +33,32 @@ const CallToActionSection = () => {
     }
   ];
 
-  const settings = {
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 1, // Show 1 video at a time by default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: true
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablet view
+        settings: {
+          slidesToShow: 1, // Show 1 video for tablet
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile view
+        settings: {
+          slidesToShow: 1, // Show 1 video on mobile
+          slidesToScroll: 1,
+          arrows: false, // Hide arrows on mobile to improve UX
+        },
+      },
+    ],
   };
 
   return (
@@ -84,7 +101,7 @@ const CallToActionSection = () => {
 
           {/* Video Slider Section */}
           <div className="lg:w-1/2 w-full">
-            <Slider {...settings}>
+            <Slider {...sliderSettings}>
               {videoData.map((videoUrl, index) => (
                 <div key={index} className="video-wrapper">
                   <iframe

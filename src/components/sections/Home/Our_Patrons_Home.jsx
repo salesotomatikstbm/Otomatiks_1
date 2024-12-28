@@ -50,31 +50,28 @@ const images = [
 ];
 
 const Our_Patrons_Home = () => {
-  const settings = {
-    dots: false, // Removed dots
+  const sliderSettings = {
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3, // Show 3 items by default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablet view
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2, // Show 2 items for tablet
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // Mobile view
         settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Show 1 item on mobile
+          slidesToScroll: 1,
+          arrows: false, // Hide arrows on mobile to improve UX
         },
       },
     ],
@@ -82,23 +79,22 @@ const Our_Patrons_Home = () => {
 
   return (
     <section className="py-16 bg-[#066aab]">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
-          <SectionName>Our Academic Partner</SectionName>
-          <Title size="3.5xl" className="mt-4 font-bold">
+      <div className="text-center mb-12">
+        <SectionName>Our Academic Partner</SectionName>
+        <Title size="3.5xl" className="mt-4 font-bold">
           Celebrating Our Trusted Collaborators and Supporters
-          </Title>
-        </div>
-
+        </Title>
+      </div>
+      <div className="container mx-auto px-4 lg:px-8 overflow-hidden">
         {/* Slider Component */}
-        <Slider {...settings} className="patron-slider">
+        <Slider {...sliderSettings} className="patron-slider">
           {images.map((src, index) => (
             <div key={index} className="p-4">
               <div className="border border-gray-300 bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
                   alt={`Patron ${index + 1}`}
                   src={src}
-                  className="w-full h-32 object-contain" // Adjusted image size
+                  className="w-full h-32 object-contain rounded-md" // Use object-contain for better fit
                 />
               </div>
             </div>
@@ -106,8 +102,8 @@ const Our_Patrons_Home = () => {
         </Slider>
       </div>
       <div className="lg:pt-15 pt-10">
-           <PopupSchool />
-            </div>
+        <PopupSchool />
+      </div>
     </section>
   );
 };

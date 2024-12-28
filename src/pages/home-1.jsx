@@ -15,8 +15,6 @@ import RoboticCourseSlide from '@/components/sections/Home/RoboticCourseSlide';
 import SoftwareCourseslider from '@/components/sections/Home/SoftwareCourseslider';
 import Brands from '@/components/sections/abouts/Brands';
 
-
-
 const HomeOne = () => {
   return (
     <>
@@ -51,25 +49,18 @@ const HomeOne = () => {
       <main>
         <HeroOne />
         <AboutOne isAboutpage={false} />
-        {/* <Robotics_Course /> */}
         <RoboticCourseSlide />
-       <SoftwareCourseslider />
-        {/* <Software_Course /> */}
-   
+        <SoftwareCourseslider />
         <Our_Patrons_Home />
         <Brands />
-        
-           <Gallery />
-           <BlogWithSlider />
-       
+        <Gallery />
+        <BlogWithSlider />
         <Teams />
-       
         <HomeTestimonial />
-    
-        
         <FaqComp />
         <ContactForm />
-      <TopUp />
+        
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

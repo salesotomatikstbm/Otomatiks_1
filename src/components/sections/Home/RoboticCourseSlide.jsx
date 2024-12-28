@@ -18,21 +18,24 @@ const RoboticCourseSlide = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // You can change this value to show multiple cards at once (e.g., 2 or 3)
+    slidesToShow: 3, // Show 3 items by default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Tablet view
         settings: {
-          slidesToShow: 2, // For larger screens, show 2 cards
+          slidesToShow: 2, // Show 2 items for tablet
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 768, // Mobile view
         settings: {
-          slidesToShow: 1, // For mobile devices, show 1 card at a time
+          slidesToShow: 1, // Show 1 item on mobile
+          slidesToScroll: 1,
+          arrows: false, // Hide arrows on mobile to improve UX
         },
       },
     ],
@@ -43,22 +46,24 @@ const RoboticCourseSlide = () => {
       <div className="container">
         <div className="flex flex-col justify-center items-center">
           <SectionName>Kids Robotics Program</SectionName>
-          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Inspiring Future Engineers Through Fun and Hands-On Learning</Title>
+          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>
+            Inspiring Future Engineers Through Fun and Hands-On Learning
+          </Title>
         </div>
         <div className="lg:pt-15 pt-10">
-  {/* Slider for Cards */}
-  <Slider {...sliderSettings}>
-    {extraCurricularData.map(({ desc, id, src, title, icon, level }) => (
-      <div key={id} className="px-3"> {/* Add horizontal padding to create gaps */}
-        <Card id={id} desc={desc} title={title} src={src} icon={icon} level={level} />
+          {/* Slider for Cards */}
+          <Slider {...sliderSettings}>
+            {extraCurricularData.map(({ desc, id, src, title, icon, level }) => (
+              <div key={id} className="px-3"> {/* Add horizontal padding to create gaps */}
+                <Card id={id} desc={desc} title={title} src={src} icon={icon} level={level} />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
-    ))}
-  </Slider>
-</div>
-      </div>
-      <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
+      {/* <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
         <img src={jr} alt="img" />
-      </div>
+      </div> */}
     </section>
   );
 };
@@ -83,7 +88,7 @@ const Card = ({ title, desc, src, icon, id, level }) => {
     <SlideUp delay={id}>
       <div className="border border-[#F2F2F2] bg-background rounded-[10px] p-7.5 group/card layer-card">
         <div className="relative overflow-hidden">
-          <img src={src} alt="Tutoring Services" className="w-full" />
+          <img src={src} alt="Tutoring Services" className="w-full h-auto" />
           <div className="absolute left-0 top-full w-full h-full flex">
             <div className={`image-layer-hover`} style={{ backgroundImage: `url(${src})` }}></div>
             <div className={`image-layer-hover`} style={{ backgroundImage: `url(${src})` }}></div>
