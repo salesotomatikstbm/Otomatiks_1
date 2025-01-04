@@ -17,28 +17,27 @@ const AboutTwo = () => {
             <div className="container">
                 <div className="grid xl:grid-cols-[45%_52%] lg:grid-cols-[40%_44%] grid-cols-1 xl:justify-between gap-7.5">
                     <div>
-                        <SectionName>About Our Robotics Workshops</SectionName>
+                        <SectionName>Why Choose Otomatiks Workshop?</SectionName>
                         <Title size={"3.5xl"} className={"lg:max-w-[610px] mt-2.5"}>
-                            Fostering Creativity and Problem-Solving with Robotics Education
+                            Experience the Future of Learning with Otomatiks Workshops
                         </Title>
                         <SectionDescription className="mt-5">
-                            Attending robotics workshops can lead to improved critical thinking, as well as boost confidence and promote innovation and entrepreneurship.
+                            At Otomatiks, we offer transformative workshops that combine innovation, creativity, and technology to inspire the next generation. Our programs are designed to equip students with hands-on experience in Robotics, AI, and Coding, ensuring they are ready for tomorrow's challenges.
                         </SectionDescription>
                         <SectionDescription className="mt-5">
-                            <li>Hands-on learning experiences with robotics kits</li>
-                            <li>Opportunities to build and program robots</li>
-                            <li>Introduction to foundational STEM concepts</li>
-                            <li>Encouragement of teamwork and collaboration</li>
-                            <li>Development of problem-solving skills</li>
-                            <li>Insight into future technology trends</li>
+                            <li>Engage in dynamic, hands-on projects</li>
+                            <li>Explore cutting-edge technologies</li>
+                            <li>Learn from experienced instructors</li>
+                            <li>Boost critical thinking and teamwork skills</li>
+                            <li>Gain insights into STEM careers and trends</li>
+                            <li>Build confidence through real-world problem-solving</li>
                         </SectionDescription>
                         <SlideUp delay={3}>
                             <div className="flex gap-8 mt-10">
                                 <Button asChild size="lg" variant="pill" className="bg-secondary border-secondary hover:text-primary-foreground">
-                                    <Link to={"/about-us"}>Read More</Link>
+                                    <Link to={"/about-us"}>Learn More</Link>
                                 </Button>
                                 <Button asChild size="lg" variant="pill" className="bg-transparent border-primary text-muted-foreground hover:text-cream-foreground hover:bg-primary">
-
                                     <PopupWorkshop />
                                 </Button>
                             </div>
@@ -50,7 +49,7 @@ const AboutTwo = () => {
                                 <Kindergarden height='60' width='60' />
                                 <div>
                                     <h3 className="text-[32px] font-bold leading-[130%]">5K+</h3>
-                                    <p>Students</p>
+                                    <p>Happy Participants</p>
                                 </div>
                             </div>
                             <SlideUp>
@@ -62,20 +61,16 @@ const AboutTwo = () => {
                                         loop
                                         className="mx-auto block w-full rounded-lg shadow-lg"
                                     ></video>
-
                                 </div>
                             </SlideUp>
                         </div>
                         <SlideDown>
                             <div className="hidden md:block">
-                                <img src={about_bg_3} alt="img-2" />
+                                <img src={about_bg_3} alt="Workshop Preview" />
                             </div>
                         </SlideDown>
                     </div>
                 </div>
-            </div>
-            <div>
-
             </div>
         </section>
     );

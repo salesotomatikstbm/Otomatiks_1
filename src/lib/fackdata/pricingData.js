@@ -1,103 +1,59 @@
 export const pricingData = [
     {
         id: 1,
-        paln_name: "Stater  Plan",
+        paln_name: "Robotics Workshop",
         price: 19,
         features: [
             {
                 id: 1,
                 have_feature: true,
-                feature:"Mistakes To Avoid"
+                feature:"Dive into the world of robotics with practical, project-based learning. Students will design, build, and program robots to solve real-world challenges."
             },
-            {
-                id: 2,
-                have_feature: true,
-                feature:"Your Startup"
-            },
-            {
-                id: 3,
-                have_feature: false,
-                feature:"Knew About Fonts"
-            },
-            {
-                id: 4,
-                have_feature: false,
-                feature:"Winning Metric for Your Startup"
-            },
-            {
-                id: 5,
-                have_feature: false,
-                feature:"Your Startup"
-            },
+          
 
         ]
     },
     
     {
         id: 2,
-        paln_name: "Golden Plan",
+        paln_name: "Coding Workshop",
         price: 39,
         is_center:true,
         features: [
             {
                 id: 1,
                 have_feature: true,
-                feature:"Mistakes To Avoid"
+                feature:"Learn the fundamentals of programming and develop critical problem-solving skills. From Scratch to Python, we tailor coding workshops for all skill levels."
             },
-            {
-                id: 2,
-                have_feature: true,
-                feature:"Your Startup"
-            },
-            {
-                id: 3,
-                have_feature: true,
-                feature:"Knew About Fonts"
-            },
-            {
-                id: 4,
-                have_feature: false,
-                feature:"Winning Metric for Your Startup"
-            },
-            {
-                id: 5,
-                have_feature: false,
-                feature:"Your Startup"
-            },
-
+            
         ]
     },
     {
         id: 3,
-        paln_name: "Platinum  Plan",
+        paln_name: "AI Workshop",
         price: 79,
         features: [
             {
                 id: 1,
                 have_feature: true,
-                feature:"Mistakes To Avoid"
+                feature:"Explore Artificial Intelligence through exciting projects like chatbots, sentiment analysis, and image recognition, making complex concepts accessible and fun."
             },
-            {
-                id: 2,
-                have_feature: true,
-                feature:"Your Startup"
-            },
-            {
-                id: 3,
-                have_feature: true,
-                feature:"Knew About Fonts"
-            },
-            {
-                id: 4,
-                have_feature: true,
-                feature:"Winning Metric for Your Startup"
-            },
-            {
-                id: 5,
-                have_feature: true,
-                feature:"Your Startup"
-            },
+           
 
         ]
     },
+    // {
+    //     id: 4,
+    //     paln_name: "Custom Workshops",
+    //     price: 79,
+    //     features: [
+    //         {
+    //             id: 1,
+    //             have_feature: true,
+    //             feature:"We understand that every school has unique needs. Our team is ready to design tailor-made workshops to align with your specific goals and curriculum requirements. Contact us to discuss how we can create a personalized learning experience for your students."
+    //         },
+           
+
+    //     ]
+    // },
 ]

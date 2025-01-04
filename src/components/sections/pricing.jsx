@@ -9,15 +9,16 @@ import SlideUp from '@/lib/animations/slideUp'
 
 const Pricing = () => {
     return (
-        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10">
+        <section className="lg:pt-15 pt-10 lg:pb-15 pb-10 bg-[#066aab]">
             <div className="container">
                 <div className="flex flex-col justify-center items-center">
-                    <SectionName className={"text-primary-foreground"}>Our Pricing</SectionName>
-                    <Title size={"3.5xl"} className={"mt-2.5 text-center max-w-[516px]"}>Transforming lives through knowledge by education</Title>
+                    <SectionName className={"text-primary-foreground"}>Our Workshops
+                    </SectionName>
+                    <Title size={"3.5xl"} className={"mt-2.5 text-center max-w-[516px]"}>Hands-on Learning Experiences for Future Innovators</Title>
                 </div>
                 <div className="lg:pt-15 pt-10">
                     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-7.5 gap-x-7.5 lg:gap-x-0">
-                        {pricingData.map(({ features, id, paln_name, price, is_center }) => <Card key={id} id={id} features={features} plan_name={paln_name} price={price} is_center={is_center} />)}
+                        {pricingData.map(({ features, id, paln_name, price, is_center }) => <Card key={id} id={id} features={features} plan_name={paln_name}  is_center={is_center} />)}
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@ const Card = ({ price, plan_name, features, is_center, id }) => {
                     <p className={`lg:text-[28px] text-2xl font-bold text-center ${is_center ? "text-cream-foreground" : "text-muted-foreground"}`}>{plan_name}</p>
                 </div>
                 <div className="lg:pt-7.5 pt-6 lg:pb-10 pb-7 lg:px-10 px-5">
-                    <h2 className="lg:text-[70px] md:text-[50px] text-4xl lg:leading-[117%] md:leading-[110%] leading-[100%] font-bold text-green">${price}<span className="md:text-2xl text-lg font-semibold text-muted-foreground md:leading-[140%] leading-[130%]">/mo</span> </h2>
+                    {/* <h2 className="lg:text-[70px] md:text-[50px] text-4xl lg:leading-[117%] md:leading-[110%] leading-[100%] font-bold text-green">${price}<span className="md:text-2xl text-lg font-semibold text-muted-foreground md:leading-[140%] leading-[130%]">/mo</span> </h2> */}
                     <ul className="lg:pt-7.5 pt-5 flex gap-3 flex-col">
                         {
                             features.map(({ id, have_feature, feature }) => {
@@ -58,11 +59,11 @@ const Card = ({ price, plan_name, features, is_center, id }) => {
                         {
                             is_center ?
                                 <Button asChild className="text-cream-foreground">
-                                    <Link to={"/contact-us"}>Buy Now</Link>
+                                    <Link to={"/contact-us"}>Enquiry Now</Link>
                                 </Button>
                                 :
                                 <Button asChild size="lg" variant="outline" className="border-primary">
-                                    <Link to={"/contact-us"}>Buy Now</Link>
+                                    <Link to={"/contact-us"}>Enquiry Now</Link>
                                 </Button>
                         }
                     </div>

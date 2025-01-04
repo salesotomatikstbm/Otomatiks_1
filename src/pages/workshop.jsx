@@ -8,6 +8,8 @@ import TopUp from "@/components/sections/footers/TopUp";
 import Contact_Workshop from "@/components/sections/workshop/Contact_Workshop";
 import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
 import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
+import Pricing from "@/components/sections/pricing";
+import PreviousYearWorkshop from "@/components/sections/workshop/PreviousYearWorkshop";
 
 
 
@@ -61,10 +63,11 @@ const Workshop = () => {
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
-    
-        <WorkshopBenefits />
+    <Pricing />
+        
       <UpcomingEvents />
-     
+      <WorkshopBenefits />
+      <PreviousYearWorkshop />
       <FaqWorkshop />
       <Contact_Workshop />
       <TopUp />
