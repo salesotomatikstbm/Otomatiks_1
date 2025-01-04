@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
-import DesktopMenu from './desktopMenu'
-import MobileMenu from './mobileMenu'
-import logo from "@/assets/images/logo.png"
-import { Button } from '@/components/ui/button'
-import { Link } from 'react-router-dom'
-import { FaMagnifyingGlass, FaArrowRight } from "react-icons/fa6";
-import TopHeader from './topHeader'
-import SearchForm from './searchForm'
-import Logo from '@/components/ui/logo'
-import StickyHeader from '@/components/ui/stickyHeader'
+import React, { useState } from 'react';
+import DesktopMenu from './desktopMenu';
+import MobileMenu from './mobileMenu';
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
+import TopHeader from './topHeader';
+import SearchForm from './searchForm';
+import Logo from '@/components/ui/logo';
+import { Button } from '@/components/ui/button';
+import StickyHeader from '@/components/ui/stickyHeader';
 
 const HeaderOne = () => {
-    const [isSerchActive, setIsSerchActive] = useState(false)
-    const [isMobleMenuActive, setIsMobleMenuActive] = useState(false)
+    const [isSerchActive, setIsSerchActive] = useState(false);
+    const [isMobleMenuActive, setIsMobleMenuActive] = useState(false);
 
     return (
         <StickyHeader>
@@ -20,24 +19,29 @@ const HeaderOne = () => {
                 <div id="header-container">
                     <TopHeader />
                     <div className="[.header-pinned_&]:shadow-md bg-background transition-all duration-300">
-                        <div className="px-5 py-5 ">
-                            <div className="flex justify-between items-center ">
-                            <div className="flex-shrink-0 mr-5">
-        <Logo />
-    </div>
-                                <div className="flex items-center">
+                        <div className="px-5 py-5">
+                            <div className="flex justify-between items-center">
+                                <div className="flex-shrink-0 mr-5">
+                                    <Logo />
+                                </div>
+                                <div className="flex items-center w-full justify-end">
                                     <DesktopMenu />
                                     <MobileMenu isMobleMenuActive={isMobleMenuActive} setIsMobleMenuActive={setIsMobleMenuActive} />
 
-                                    <div className="flex items-center gap-6 ">
-                                        <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
-                                            {/* <FaMagnifyingGlass className='text-xl' /> */}
+                                    <div className="flex items-center gap-6">
+                                        <div className="cursor-pointer" onClick={() => setIsSerchActive(true)}>
+                                            {/* Add a search icon here if needed */}
                                         </div>
-                                        <Button asChild variant="secondary" className="sm:flex hidden">
-                                            <Link to={"/contact-us"} className='bg-primary-foreground'> Contact Us <FaArrowRight /></Link>
+
+                                        {/* Responsive Contact Us Button */}
+                                        <Button asChild variant="secondary" className="flex">
+                                            <Link to="/contact-us" className='bg-primary-foreground'> Contact Us <FaArrowRight /></Link>
                                         </Button>
 
-                                        <div className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500" onClick={() => setIsMobleMenuActive(true)}>
+                                        <div
+                                            className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500"
+                                            onClick={() => setIsMobleMenuActive(true)}
+                                        >
                                             <span className="block h-[3px] w-5 bg-muted"></span>
                                             <span className="block h-[3px] w-7.5 bg-muted mt-2"></span>
                                             <span className="block h-[3px] w-5 bg-muted mt-2"></span>
@@ -52,7 +56,7 @@ const HeaderOne = () => {
                 </div>
             </header>
         </StickyHeader>
-    )
-}
+    );
+};
 
-export default HeaderOne
+export default HeaderOne;
