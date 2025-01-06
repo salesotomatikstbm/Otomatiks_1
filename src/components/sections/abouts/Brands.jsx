@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import SectionName from "../../ui/sectionName";
 import Title from "../../ui/title";
-import PopupPartner from "../partner/PopupPartner";
+import BranchCard from '../BranchCard';
 
-// Array of districts with contact numbers
+// Array of districts with contact numbers and other branch info
 const districts = [
-  { name: "Vellore", contact: "123-456-7890" },
-  { name: "Parrys, Chennai", contact: "234-567-8901" },
-  { name: "Annanagar, Chennai", contact: "345-678-9012" },
-  { name: "Tambaram", contact: "456-789-0123" },
-  { name: "Salem", contact: "567-890-1234" },
-  { name: "Attur", contact: "678-901-2345" },
-  { name: "Namakkal", contact: "789-012-3456" },
-  { name: "Gudiyatham", contact: "890-123-4567" },
-  { name: "Dindigul", contact: "901-234-5678" },
-  { name: "Madurai", contact: "012-345-6789" },
-  { name: "Theni", contact: "123-456-7891" },
-  { name: "Mumbai", contact: "234-567-8902" },
-  { name: "United Kingdom (UK)", contact: "345-678-9013" },
-  { name: "United Arab Emirates (UAE)", contact: "456-789-0124" }
+  { name: "Vellore", contact: "123-456-7890", email: "vellore@example.com", location: "Vellore" },
+  { name: "Parrys, Chennai", contact: "234-567-8901", email: "parrys@example.com", location: "Chennai" },
+  { name: "Annanagar, Chennai", contact: "345-678-9012", email: "annanagar@example.com", location: "Chennai" },
+  { name: "Tambaram", contact: "456-789-0123", email: "tambaram@example.com", location: "Tambaram" },
+  { name: "Salem", contact: "567-890-1234", email: "salem@example.com", location: "Salem" },
+  { name: "Attur", contact: "678-901-2345", email: "attur@example.com", location: "Attur" },
+  { name: "Namakkal", contact: "789-012-3456", email: "namakkal@example.com", location: "Namakkal" },
+  { name: "Gudiyatham", contact: "890-123-4567", email: "gudiyatham@example.com", location: "Gudiyatham" },
+  { name: "Dindigul", contact: "901-234-5678", email: "dindigul@example.com", location: "Dindigul" },
+  { name: "Madurai", contact: "012-345-6789", email: "madurai@example.com", location: "Madurai" },
+  { name: "Theni", contact: "123-456-7891", email: "theni@example.com", location: "Theni" },
+  { name: "Mumbai", contact: "234-567-8902", email: "mumbai@example.com", location: "Mumbai" },
+  { name: "United Kingdom (UK)", contact: "345-678-9013", email: "uk@example.com", location: "United Kingdom" },
+  { name: "United Arab Emirates (UAE)", contact: "456-789-0124", email: "uae@example.com", location: "UAE" }
 ];
 
 const Brands = ({ section_padding_bottom, section_padding_top }) => {
@@ -35,7 +35,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             <Title size="3.5xl">Centers of Innovation and Knowledge</Title>
           </div>
 
-          <div className="flex justify-center items-center flex-wrap gap-4">
+          <div className="flex justify-center items-center flex-wrap gap-4 relative">
             {districts.map((district) => (
               <span
                 key={district.name}
@@ -44,33 +44,31 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
                 onMouseLeave={() => setHoveredDistrict(null)} // Reset on mouse leave
               >
                 {district.name}
-                {/* Show contact number separately above the district */}
+                {/* Show BranchCard when the district is hovered */}
                 {hoveredDistrict === district.name && (
-                  <a
-                    href={`tel:${district.contact}`} // Use the "tel:" protocol to open dialer
-                    className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 text-sm text-gray-700 bg-white px-2 py-1 rounded shadow-md whitespace-nowrap"
-                  >
-                    {district.contact}
-                  </a>
+                  <div className="absolute top-[100%] left-1/2 transform -translate-x-1/2 w-[280px] z-10">
+                    <BranchCard
+                      location={district.location}
+                      contact={district.contact}
+                      email={district.email}
+                    />
+                  </div>
                 )}
               </span>
             ))}
           </div>
         </div>
-        <div className="lg:mt-10 mt-4">
-        <PopupPartner />
-          </div>
       </section>
 
       {/* Mobile View */}
       <section className={`brands-area ${section_padding_bottom} ${section_padding_top} py-8 lg:hidden`}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-6">
-          <SectionName className="">Our Hubs</SectionName>
+            <SectionName className="">Our Hubs</SectionName>
             <Title size="3.5xl">Centers of Innovation and Knowledge</Title>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 relative">
             {districts.map((district) => (
               <span
                 key={district.name}
@@ -79,22 +77,28 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
                 onMouseLeave={() => setHoveredDistrict(null)} // Reset on mouse leave
               >
                 {district.name}
-                {/* Show contact number separately above the district */}
+                {/* Show BranchCard when the district is hovered */}
                 {hoveredDistrict === district.name && (
-                  <a
-                    href={`tel:${district.contact}`} // Use the "tel:" protocol to open dialer
-                    className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 text-sm text-gray-700 bg-white px-2 py-1 rounded shadow-md whitespace-nowrap"
-                  >
-                    {district.contact}
-                  </a>
+                  <div className="absolute top-[-120%] left-1/2 transform -translate-x-1/2 w-[280px] z-10">
+                    <div className="bg-white shadow-md rounded-lg p-4">
+                      <div className="text-gray-800">
+                        <h3 className="font-semibold text-lg">{district.location}</h3>
+                        <p className="text-sm mt-2">
+                          {/* Clickable Phone Number */}
+                          <a href={`tel:${district.contact}`} className="text-orange-500 hover:underline">{district.contact}</a>
+                        </p>
+                        <p className="text-sm mt-2">
+                          {/* Clickable Email */}
+                          <a href={`mailto:${district.email}`} className="text-orange-500 hover:underline">{district.email}</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 )}
               </span>
             ))}
           </div>
         </div>
-        <div className="mt-5 mt-4">
-        <PopupPartner />
-          </div>
       </section>
     </>
   );
