@@ -56,8 +56,9 @@ const Csr = () => {
         <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
       <CSRQuotesSection />
       <Our_Uniqueness />
-      <PartnershipSection />
       <WhatWeOffer />
+      <PartnershipSection />
+      
       <Contact_Form_Csr />
         <TopUp />
       </main>

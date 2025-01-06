@@ -20,7 +20,7 @@ const Testimonial = () => {
 
                 <div className="relative w-full h-full lg:after:absolute lg:after:left-0 lg:after:top-0 lg:after:lg:max-w-[calc(100%-410px)] lg:after:md:max-w-[calc(100%-310px)] lg:after:max-w-[calc(100%-100px)] lg:after:w-full lg:after:h-full lg:after:bg-testimonial-banner lg:after:bg-cover lg:after:bg-no-repeat lg:after:z-[-1]">
 
-                    {/* Mobile Background Image */}
+                    {/* Mobile Background Image  bg-[#066aab]*/}
                     <div className="block lg:hidden w-full h-48 bg-testimonial-banner bg-cover bg-no-repeat"></div>
 
                     <div className="py-10">

@@ -54,7 +54,7 @@ const Our_Patrons_Home = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show 3 items by default
+    slidesToShow: 5, // Show 3 items by default
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,

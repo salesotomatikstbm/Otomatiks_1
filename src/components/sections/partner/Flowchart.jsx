@@ -1,61 +1,40 @@
-import React from 'react';
+import React from "react";
 
 const Flowchart = () => {
+  const steps = [
+    "Official Meeting & Screening",
+    "Franchisee Proposal Discussion",
+    "Franchisee Agreement Signing",
+    "Franchisee Office Setup",
+    "Inauguration of Franchisee",
+  ];
+
   return (
-    <div className="py-10 container">
-      <div className="flex items-center justify-center">
-        <div className="relative w-full max-w-6xl">
-          {/* Wrapping the entire flowchart in a flex container */}
-          <div className="flex flex-wrap justify-between items-center">
-            {/* Step 1 */}
-            <div className="w-full sm:w-1/5 text-center bg-white p-5 rounded-lg shadow-lg mb-6 sm:mb-0" data-aos="fade-up" data-aos-delay="100">
-              <p className="text-lg font-medium">Official Meeting & Screening</p>
-            </div>
+    <div className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800">Open Doors to Innovation</h2>
+          <p className="text-gray-600 mt-4">
+            Follow these steps to embark on an exciting journey with us.
+          </p>
+        </div>
 
-            {/* Arrow between steps */}
-            <div className="flex items-center justify-center w-full sm:w-auto mb-6 sm:mb-0">
-              <div className="w-16 h-1 bg-gray-400"></div>
-              <p className="text-2xl mx-3">&#10148;</p>
+        {/* Flowchart Steps */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105"
+              data-aos="fade-up"
+              data-aos-delay={`${(index + 1) * 100}`}
+            >
+              <div className="w-12 h-12 mx-auto flex items-center justify-center bg-secondary text-white rounded-full mb-4">
+                <span className="text-lg font-bold">{index + 1}</span>
+              </div>
+              <p className="text-lg font-medium text-gray-800">{step}</p>
             </div>
-
-            {/* Step 2 */}
-            <div className="w-full sm:w-1/5 text-center bg-white p-5 rounded-lg shadow-lg mb-6 sm:mb-0" data-aos="fade-up" data-aos-delay="200">
-              <p className="text-lg font-medium">Franchisee Proposal Discussion</p>
-            </div>
-
-            {/* Arrow between steps */}
-            <div className="flex items-center justify-center w-full sm:w-auto mb-6 sm:mb-0">
-              <div className="w-16 h-1 bg-gray-400"></div>
-              <p className="text-2xl mx-3">&#10148;</p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="w-full sm:w-1/5 text-center bg-white p-5 rounded-lg shadow-lg mb-6 sm:mb-0" data-aos="fade-up" data-aos-delay="300">
-              <p className="text-lg font-medium">Franchisee Agreement Signing</p>
-            </div>
-
-            {/* Arrow between steps */}
-            <div className="flex items-center justify-center w-full sm:w-auto mb-6 sm:mb-0">
-              <div className="w-16 h-1 bg-gray-400"></div>
-              <p className="text-2xl mx-3">&#10148;</p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="w-full sm:w-1/5 text-center bg-white p-5 rounded-lg shadow-lg mb-6 sm:mb-0" data-aos="fade-up" data-aos-delay="400">
-              <p className="text-lg font-medium">Franchisee Office Setup</p>
-            </div>
-
-            {/* Arrow between steps */}
-            <div className="flex items-center justify-center w-full sm:w-auto mb-6 sm:mb-0">
-              <div className="w-16 h-1 bg-gray-400"></div>
-              <p className="text-2xl mx-3">&#10148;</p>
-            </div>
-
-            {/* Step 5 */}
-            <div className="w-full sm:w-1/5 text-center bg-white p-5 rounded-lg shadow-lg mb-6 sm:mb-0" data-aos="fade-up" data-aos-delay="500">
-              <p className="text-lg font-medium">Inauguration of Franchisee</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

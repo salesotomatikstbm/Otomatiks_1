@@ -20,59 +20,24 @@ const FranchiseApplicants = () => {
           <Title size={"3.5xl"} className="mt-4">Open Doors to Innovation</Title>
         </div>
 
-        {/* Flowchart Layout (Responsive for Mobile and Desktop) */}
-        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* Card Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {applicants.map((applicant, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center justify-center text-center group"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
             >
-              {/* Title */}
-              <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-all duration-300">
+              <h3 className="text-2xl font-semibold mb-4">
                 {applicant.title}
               </h3>
-
-              {/* Arrow (SVG Path) */}
-              {index < applicants.length - 1 && (
-                <>
-                  {/* Desktop - Horizontal Arrow */}
-                  <svg
-                    className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-full ml-8 w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-
-                  {/* Mobile - Vertical Arrow */}
-                  <svg
-                    className="lg:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 19V6m-7 7l7-7 7 7" />
-                  </svg>
-                </>
-              )}
-
-              {/* Underline Effect */}
-              <div className="w-16 h-1 bg-primary mx-auto group-hover:w-24 transition-all duration-300"></div>
+              
             </div>
           ))}
         </div>
       </div>
 
-      <div className="lg:mt-10 mt-4">
+      {/* Popup Partner Section */}
+      <div className="lg:mt-10 mt-6">
         <PopupPartner />
       </div>
     </div>

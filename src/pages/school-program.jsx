@@ -67,11 +67,12 @@ const SchoolProgram = () => {
         <Why_otomatiks />
       
         <Our_Uniqueness />
-        <Curriculum />
-        <Our_Patrons />
+        {/* <Curriculum /> */}
         <HomeTestimonial />
+        <Our_Patrons />
+        
     
-        <FaqSchool />
+        {/* <FaqSchool /> */}
         <Contact_School_Management />
         <TopUp />
       </main>

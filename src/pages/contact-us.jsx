@@ -39,8 +39,9 @@ const ContactUs = () => {
         <PageTitle pageName="Contact Us" breadcrumbCurrent="Contact Us" />
         <ContactAddress />
         <GoogleMap />
-        <BranchesInfo />
         <BranchesMap />
+        <BranchesInfo />
+        
         <ContactForm />
       <TopUp/>
       </main>

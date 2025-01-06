@@ -17,7 +17,7 @@ const OurJourney = () => {
     };
 
     return (
-        <section className="pt-10 pb-10 bg-[#066aab]">
+        <section className="pt-10 pb-10">
             <div className="container">
                 {/* Video Popup */}
                 {showVideo && (

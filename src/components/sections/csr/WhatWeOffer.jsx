@@ -31,7 +31,7 @@ const offerings = [
 
 const WhatWeOffer = () => {
   return (
-    <div className="mx-auto px-6 py-16 bg-[#066aab]">
+    <div className="mx-auto px-6 py-16  ">
       {/* Title Section */}
       <div className="text-center mb-16">
         <SectionName>What We Offer</SectionName>
@@ -45,15 +45,15 @@ const WhatWeOffer = () => {
             key={index}
             className="relative flex flex-col items-center bg-white p-6 border border-gray-300 rounded-lg shadow-lg mb-6"
           >
-            <div className="absolute inset-0 transform lg:rotate-45 md:rotate-0 bg-secondary opacity-10 rounded-lg"></div>
+            <div className="absolute inset-0 transform lg:rotate-45 md:rotate-0 bg-primary opacity-10 rounded-lg"></div>
             <FontAwesomeIcon
               icon={offering.icon}
               className="w-16 h-16 text-secondary mb-6 z-10"
             />
-            <h4 className="text-2xl text-center font-semibold mb-4 z-10">
+            <h4 className="text-2xl text-center text-primary font-semibold mb-4 z-10">
               {offering.title}
             </h4>
-            <p className="text-gray-600 text-center z-10">{offering.description}</p>
+            <p className="text-center z-10">{offering.description}</p>
           </div>
         ))}
       </div>

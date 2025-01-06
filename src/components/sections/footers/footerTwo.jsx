@@ -33,11 +33,11 @@ Our robotics classes are designed to help you discover the potential of this exc
                         </div>
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
                             <li><Link to="/about-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">About Us</Link></li>
-                            <li><Link to="/services" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Courses</Link></li>
-                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School Curriculum</Link></li>
-                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Partners</Link></li>
-                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Shop</Link></li>
-                            <li><Link to="/faq" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Contact Us</Link></li>
+                            <li><Link to="/robotics-coding-courses" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Courses</Link></li>
+                            <li><Link to="/robotics-coding-school-curriculum" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School Curriculum</Link></li>
+                            <li><Link to="/franchise" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Franchise</Link></li>
+                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Blog</Link></li>
+                            <li><Link to="/contact-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Contact Us</Link></li>
                         </ul>
                     </SlideUp>
 
@@ -50,14 +50,14 @@ Our robotics classes are designed to help you discover the potential of this exc
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5">
                            
                             <li className="text-cream-foreground flex gap-4">
-                                <FaEnvelope className='mt-1.5' /> <Link to="#">support@otomatiks.in</Link>
+                                <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">support@otomatiks.in</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaPhone className='mt-1.5' /> <Link to="#">+91 90432 09448</Link>
+                                <FaPhone className='mt-1.5' /> <Link to="/contact-us">+91 90432 09448</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
                                 <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Head Office :
-Otomatiks Activity Centre, No. A2/36, 12th East Cross Road Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006, Tamil Nadu
+No.A2/36, 12th East Cross Road Opp B&B Golden Gate Apartment, Gandhi Nagar, Vellore-632006, Tamil Nadu
 
 </span>
                             </li>

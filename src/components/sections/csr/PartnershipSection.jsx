@@ -10,70 +10,67 @@ const partners = [
   {
     title: "Corporates",
     description:
-      "Collaborate with us to drive innovation, promote corporate social responsibility, and create sustainable solutions for the future. Your corporate involvement helps us build a better world for everyone.",
+      "Collaborate with us to drive innovation, promote corporate social responsibility, and create sustainable solutions for the future.",
     img: img4,
     imgAlt: "Corporates",
-    imgCaption:
-      "Join us in promoting innovation, collaboration, and sustainability. Corporate partnerships foster growth and mutual success.",
+    imgCaption: "Corporate partnerships foster growth and mutual success.",
   },
   {
     title: "Individuals",
     description:
-      "Collaborate with us for personal growth, educational opportunities, and skill development. We offer a variety of programs that cater to individual growth, empowering you to reach your full potential.",
+      "Collaborate with us for personal growth, educational opportunities, and skill development.",
     img: img2,
     imgAlt: "Individuals",
     imgCaption:
-      "A dedicated space for individuals to explore collaborative opportunities for personal and professional growth.",
+      "A dedicated space for individuals to explore personal and professional growth.",
   },
   {
     title: "Not For Profits",
     description:
-      "Join hands with us to create social change and support causes that matter. We believe in the power of collaboration to make a lasting impact. Our partnership helps foster a better future through collective efforts and shared resources.",
+      "Join hands with us to create social change and support causes that matter. Collaboration makes a lasting impact.",
     img: img3,
     imgAlt: "Not For Profits",
-    imgCaption:
-      "Collaborate with not-for-profits to support communities, drive social change, and create meaningful programs.",
+    imgCaption: "Support communities and create meaningful programs.",
   },
 ];
 
 const PartnerSection = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center flex flex-col items-center pb-8">
+    <div className="mx-auto px-4 py-16 bg-[#066aab]">
+      {/* Section Header */}
+      <div className="text-center container mb-12">
         <SectionName>Who Can Partner With Us</SectionName>
-        <Title size={"3.5xl"} className={""}>
-          Exploring Collaboration Opportunities Across Diverse Sectors
+        <Title size="3.5xl" className="mt-4">
+          Collaborate Across Sectors for a Better Future
         </Title>
       </div>
 
-      {partners.map((partner, index) => (
-        <div
-          key={index}
-          className={`flex flex-col lg:flex-row lg:gap-8 ${
-            index % 2 === 0 ? "" : "lg:flex-row-reverse"
-          } items-center justify-between mb-8`}
-        >
-          {/* Text Section */}
-          <div className="w-full lg:w-1/2 text-left mb-4 lg:mb-0">
-            <h4 className="text-3xl text-secondary font-semibold mb-2">
-              {partner.title}
-            </h4>
-            <p className="text-gray-600">{partner.description}</p>
-          </div>
-
-          {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="w-full lg:w-10/12 p-6 border border-secondary rounded-lg shadow-lg">
-              <img
-                src={partner.img}
-                alt={partner.imgAlt}
-                className="w-full h-58 object-cover rounded-md mb-4"
-              />
-              <p className="text-gray-600">{partner.imgCaption}</p>
+      {/* Partner Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {partners.map((partner, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200"
+          >
+            {/* Image */}
+            <img
+              src={partner.img}
+              alt={partner.imgAlt}
+              className="w-full h-48 object-cover"
+            />
+            {/* Text Content */}
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold text-primary mb-2">
+                {partner.title}
+              </h3>
+              <p className="text-gray-600 mb-4">{partner.description}</p>
+              <p className="text-sm text-gray-500 italic">
+                {partner.imgCaption}
+              </p>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

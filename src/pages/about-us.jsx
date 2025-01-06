@@ -60,8 +60,9 @@ const AboutUs = () => {
       <main>
         <PageTitle pageName="About Us" breadcrumbCurrent="About Us" />
         <AboutOne isAboutpage={true} />
-        <OurJourney />
         <Testimonial />
+        <OurJourney />
+        
         <Teams />
       
         {/* <AgeOne /> */}

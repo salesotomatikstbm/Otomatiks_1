@@ -34,8 +34,8 @@ const HeaderOne = () => {
                                         </div>
 
                                         {/* Responsive Contact Us Button */}
-                                        <Button asChild variant="secondary" className="flex">
-                                            <Link to="/contact-us" className='bg-primary-foreground'> Contact Us <FaArrowRight /></Link>
+                                        <Button asChild variant="ghost" className="sm:flex hidden">
+                                            <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
                                         </Button>
 
                                         <div

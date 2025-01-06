@@ -15,7 +15,7 @@ const Teams = () => {
           <Title size={"3.5xl"} className={"lg:max-w-[820px]"}>A Dedicated Team Driving Innovation and Growth</Title>
         </div>
         <div className="lg:pt-15 pt-10">
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7.5">
             {teamData.map(({id, name, position, src}) => <TeamCard key={id} name={name} position={position} src={src} />)}
           </div>
         </div>
