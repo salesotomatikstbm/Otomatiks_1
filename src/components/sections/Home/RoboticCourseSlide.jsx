@@ -94,6 +94,7 @@ const Card = ({ title, desc, src, icon, id, level }) => {
             <div className={`image-layer-hover`} style={{ backgroundImage: `url(${src})` }}></div>
             <div className={`image-layer-hover`} style={{ backgroundImage: `url(${src})` }}></div>
             <div className={`image-layer-hover`} style={{ backgroundImage: `url(${src})` }}></div>
+            
           </div>
         </div>
         <div className="pt-7.5">
