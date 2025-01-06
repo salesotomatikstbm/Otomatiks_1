@@ -56,10 +56,10 @@ const PartnerSection = () => {
             <img
               src={partner.img}
               alt={partner.imgAlt}
-              className="w-full h-48 object-cover"
+              className="w-full h-50 object-cover"
             />
             {/* Text Content */}
-            <div className="p-6">
+            <div className="p-4">
               <h3 className="text-2xl font-semibold text-primary mb-2">
                 {partner.title}
               </h3>
