@@ -50,14 +50,14 @@ const WhyOtomatiks = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-lg border border-secondary shadow-lg hover:shadow-xl transition-all duration-300"
+            className="relative bg-white bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch"
           >
             <div className="flex justify-center items-center mb-6">
-              <div className="w-16 h-16 bg-primary text-white text-3xl flex items-center justify-center rounded-full shadow-lg mb-4">
+              <div className="w-16 h-16 bg-secondary text-white text-3xl flex items-center justify-center rounded-full shadow-lg mb-4">
                 {section.icon}
               </div>
             </div>
-            <h3 className="text-2xl font-semibold mb-4 text-secondary">{section.title}</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-primary">{section.title}</h3>
             <p className="text-base text-gray-600">{section.description}</p>
           </div>
         ))}

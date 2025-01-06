@@ -94,7 +94,7 @@ const Our_Patrons = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="group border border-gray-300 bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="group bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <img
                 alt={`Patron ${index + 1}`}

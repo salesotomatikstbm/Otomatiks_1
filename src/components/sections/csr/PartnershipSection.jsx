@@ -50,7 +50,7 @@ const PartnerSection = () => {
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200"
+            className="bg-white bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch overflow-hidden border border-gray-200"
           >
             {/* Image */}
             <img

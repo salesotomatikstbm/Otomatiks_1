@@ -29,7 +29,7 @@ const testimonialsData = [
 
 const TestimonialCard = ({ name, location, content, image }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center bg-white rounded-xl shadow-lg p-8 my-6 hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+    <div className="flex flex-col lg:flex-row items-center justify-center bg-white rounded-xl shadow-lg p-8 my-6 hover:shadow-xl  transform hover:scale-105 transition duration-300 ease-in-out ">
       <div className="w-full lg:w-1/3 mb-6 lg:mb-0 flex justify-center">
         <img 
           src={image} 
@@ -37,7 +37,7 @@ const TestimonialCard = ({ name, location, content, image }) => {
           className="w-60 h-60 rounded-full object-cover border-4 border-[#066aab] transform transition duration-300 ease-in-out"
         />
       </div>
-      <div className="w-full lg:w-2/3 text-center lg:text-left mt-6 lg:mt-0 lg:pl-8">
+      <div className="w-full lg:w-2/3 text-center lg:text-left mt-6 lg:mt-0 lg:pl-8 bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[510px] mx-auto group/branch">
         <h4 className="text-2xl font-semibold text-[#066aab] mb-2">{name}</h4>
         <p className="text-lg text-gray-500 mb-4">{location}</p>
         <p className="text-base text-gray-700">{content}</p>

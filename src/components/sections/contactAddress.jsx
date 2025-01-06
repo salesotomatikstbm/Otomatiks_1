@@ -17,7 +17,7 @@ const ContactAddress = () => {
                 {/* Contact Steps Layout */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
                     {/* Step 1 - Email */}
-                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d border-2 border-dotted border-gray-300 p-6 rounded-lg">
+                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[510px] mx-auto group/branch">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 mb-4 shadow-xl group-hover:shadow-2xl">
                             <FaEnvelope className="text-3xl text-primary" />
                         </div>
@@ -29,9 +29,17 @@ const ContactAddress = () => {
                             support@otomatiks.in
                         </a>
                     </div>
-
+                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch">
+                        <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 mb-4 shadow-xl group-hover:shadow-2xl">
+                            <FaLocationDot className="text-3xl text-primary" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-primary mb-2">Visit Us</h3>
+                        <p className="text-center max-w-sm mx-auto">
+                            No..A2, 36, 12th Cross Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
+                        </p>
+                    </div>
                     {/* Step 2 - Phone */}
-                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d border-2 border-dotted border-gray-300 p-6 rounded-lg">
+                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[510px] mx-auto group/branch">
                         <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 mb-4 shadow-xl group-hover:shadow-2xl">
                             <FaPhone className="text-3xl text-primary" />
                         </div>
@@ -45,15 +53,7 @@ const ContactAddress = () => {
                     </div>
 
                     {/* Step 3 - Location */}
-                    <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d border-2 border-dotted border-gray-300 p-6 rounded-lg">
-                        <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 mb-4 shadow-xl group-hover:shadow-2xl">
-                            <FaLocationDot className="text-3xl text-primary" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-primary mb-2">Visit Us</h3>
-                        <p className="text-center max-w-sm mx-auto">
-                            No..A2, 36, 12th Cross Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
-                        </p>
-                    </div>
+                   
                 </div>
             </div>
         </section>

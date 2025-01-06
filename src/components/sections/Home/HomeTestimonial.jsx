@@ -71,7 +71,7 @@ const HomeTestimonial = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 flex flex-col justify-between"
+            className="bg-white bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch shadow-md rounded-lg p-6 flex flex-col justify-between"
           >
             <div className="flex items-center mb-4">
               <img
@@ -121,7 +121,7 @@ const HomeTestimonial = () => {
           key={index}
           className="relative flex flex-col items-center justify-center animate-fade-in"
         >
-          <div className="relative w-full flex justify-center items-center h-72 sm:h-80 md:h-[450px]">
+          <div className="relative bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[610px] mx-auto group/branch w-full flex justify-center items-center h-72 sm:h-80 md:h-[450px]">
             <iframe
               width="90%"
               height="90%"

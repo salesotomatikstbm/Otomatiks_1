@@ -25,9 +25,9 @@ const FranchiseApplicants = () => {
           {applicants.map((applicant, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
+              className="bg-white bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch hover:shadow-lg transition-shadow duration-300 text-center"
             >
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold">
                 {applicant.title}
               </h3>
               

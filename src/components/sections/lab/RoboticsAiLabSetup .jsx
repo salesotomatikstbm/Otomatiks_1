@@ -39,11 +39,11 @@ const RoboticsAiLabSetup = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+              className="relative bg-white p-8 rounded-2xl bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch flex flex-col items-center"
             >
               <div className="mb-6 text-4xl">{item.icon}</div>
               <div className="text-center">
-                <h3 className=" text-xl text-secondary font-semibold mb-4">{item.title}</h3>
+                <h3 className=" text-xl text-primary font-semibold mb-4">{item.title}</h3>
                 <p className="text-base">{item.description}</p>
               </div>
             </div>
