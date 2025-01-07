@@ -190,17 +190,17 @@ const Contact_About = () => {
                                         required
                                     >
                                         <option value="">Select Experience</option>
-                                        <option value="1">1 year</option>
-                                        <option value="2">2 years</option>
-                                        <option value="3">3 years</option>
-                                        <option value="4">4 years</option>
-                                        <option value="5">5 years</option>
+                                        <option value="Fresher">Fresher</option>
+                                        <option value="1 - 2 years">1 - 2 years</option>
+                                        <option value="3 - 5 years">3 - 5 years</option>
+                                        <option value="5 years above">5 years above</option>
+                                       
                                     </select>
                                     {errors.Experience && <p className="text-red-500 text-sm mt-1">{errors.Experience}</p>}
                                 </div>
 
                                 {/* Expected Salary Field */}
-                                <div className="relative">
+                                {/* <div className="relative">
                                     <input
                                         type="number"
                                         name="ExpectedSalary"
@@ -217,10 +217,10 @@ const Contact_About = () => {
                                         <FaDollarSign />
                                     </label>
                                     {errors.ExpectedSalary && <p className="text-red-500 text-sm mt-1">{errors.ExpectedSalary}</p>}
-                                </div>
+                                </div> */}
 
                                 {/* Message Field */}
-                                <div className="relative sm:col-span-2">
+                                {/* <div className="relative sm:col-span-2">
                                     <textarea
                                         name="Message"
                                         value={formData.Message}
@@ -231,7 +231,7 @@ const Contact_About = () => {
                                         required
                                     />
                                     {errors.Message && <p className="text-red-500 text-sm mt-1">{errors.Message}</p>}
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="text-center mt-6">

@@ -9,6 +9,7 @@ import PreviousEventGallery2023 from '@/components/sections/robotica2023/Previou
 import GlimplsVideo2023 from '@/components/sections/robotica2023/GlimpsVideo2023'
 import ChiefGuest2024 from '@/components/sections/robotica2024/ChiefGuest2024'
 import ChiefGuest2023 from '@/components/sections/robotica2023/ChiefGuest2023'
+import ChiefGuest2025 from '@/components/sections/robotica2025/ChiefGuest2025'
 
 const Robotica2025 = () => {
   return (
@@ -51,19 +52,16 @@ const Robotica2025 = () => {
         <link rel="canonical" href="https://www.otomatiks.com/robotica2025" />
 
       </Helmet>
-
       <PageTitle pageName={"Robotica 2025"} breadcrumbCurrent={"Robotica 2025"} />
       <EventPromoSection />
       {/* <ChiefGuest2025 /> */}
-
+      <ChiefGuest2025 />
       <ChiefGuest2024 />
-<PreviousEventGallery2024 />
+      <PreviousEventGallery2024 />
       <GlimplsVideo />
-
       <ChiefGuest2023 />
       <PreviousEventGallery2023 />
       <GlimplsVideo2023 />
-
       <TopUp />
     </div>
   )

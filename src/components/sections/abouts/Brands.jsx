@@ -6,21 +6,24 @@ import BranchCard from '../BranchCard';
 
 // Array of districts with contact numbers and other branch info
 const districts = [
-  { name: "Vellore", contact: "123-456-7890", email: "vellore@example.com", location: "Vellore" },
-  { name: "Parrys, Chennai", contact: "234-567-8901", email: "parrys@example.com", location: "Chennai" },
-  { name: "Annanagar, Chennai", contact: "345-678-9012", email: "annanagar@example.com", location: "Chennai" },
-  { name: "Tambaram", contact: "456-789-0123", email: "tambaram@example.com", location: "Tambaram" },
-  { name: "Salem", contact: "567-890-1234", email: "salem@example.com", location: "Salem" },
-  { name: "Attur", contact: "678-901-2345", email: "attur@example.com", location: "Attur" },
-  { name: "Namakkal", contact: "789-012-3456", email: "namakkal@example.com", location: "Namakkal" },
-  { name: "Gudiyatham", contact: "890-123-4567", email: "gudiyatham@example.com", location: "Gudiyatham" },
-  { name: "Dindigul", contact: "901-234-5678", email: "dindigul@example.com", location: "Dindigul" },
-  { name: "Madurai", contact: "012-345-6789", email: "madurai@example.com", location: "Madurai" },
-  { name: "Theni", contact: "123-456-7891", email: "theni@example.com", location: "Theni" },
-  { name: "Mumbai", contact: "234-567-8902", email: "mumbai@example.com", location: "Mumbai" },
-  { name: "United Kingdom (UK)", contact: "345-678-9013", email: "uk@example.com", location: "United Kingdom" },
-  { name: "United Arab Emirates (UAE)", contact: "456-789-0124", email: "uae@example.com", location: "UAE" }
+  { name: "Vellore", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Vellore" },
+  { name: "Parrys, Chennai", contact: "+91 9600015954", email: "chennai@otomatiks.in", location: "Chennai" },
+  { name: "Annanagar, Chennai", contact: "+91 7603849783", email: "otomatiksannanagar@gmail.com", location: "Chennai" },
+  { name: "Tambaram", contact: "+91 8610210593", email: "otomatikstambaram@gmail.com", location: "Tambaram" },
+  { name: "Salem", contact: "+91 9360404063", email: "salem.otomatiks@gmail.com", location: "Salem" },
+  { name: "Attur", contact: "+91 9994506530", email: "otomatiksattur@gmail.com", location: "Attur" },
+  { name: "Namakkal", contact: "+91 9994570354", email: "otomatiksnkl@gmail.com", location: "Namakkal" },
+  { name: "Gudiyatham", contact: "+91 1234567890", email: "gudiyatham.branch@example.com", location: "Gudiyatham" },
+  { name: "Dindigul", contact: "+91 9876543210", email: "dindigul@example.com", location: "Dindigul" },
+  { name: "Madurai", contact: "+91 9988776655", email: "madurai@example.com", location: "Madurai" },
+  { name: "Theni", contact: "+91 8899776655", email: "theni@example.com", location: "Theni" },
+  { name: "Mumbai", contact: "+91 9988665544", email: "mumbai@example.com", location: "Mumbai" },
+  { name: "United Kingdom (UK)", contact: "+91 7985783392", email: "uk@example.com", location: "United Kingdom" },
+  { name: "United Arab Emirates (UAE)", contact: "+971 123456789", email: "uae@example.com", location: "UAE" },
+  { name: "Thirunelveli", contact: "+91 9043337564", email: "thirunelveli@otomatiks.in", location: "Thirunelveli" },
+  { name: "Bangalore", contact: "+91 8792076264", email: "bangalore@otomatiks.in", location: "Bangalore" }
 ];
+
 
 const Brands = ({ section_padding_bottom, section_padding_top }) => {
   const [hoveredDistrict, setHoveredDistrict] = useState(null); // Track the hovered district
@@ -47,11 +50,17 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
                 {/* Show BranchCard when the district is hovered */}
                 {hoveredDistrict === district.name && (
                   <div className="absolute top-[100%] left-1/2 transform -translate-x-1/2 w-[280px] z-10">
-                    <BranchCard
-                      location={district.location}
-                      contact={district.contact}
-                      email={district.email}
-                    />
+                    <div className="bg-white shadow-md rounded-lg p-4">
+                      <h3 className="font-semibold text-lg text-gray-800">{district.location}</h3>
+                      <p className="text-sm mt-2">
+                        {/* Clickable Phone Number */}
+                        <a href={`tel:${district.contact}`} className="text-orange-500 hover:underline">{district.contact}</a>
+                      </p>
+                      <p className="text-sm mt-2">
+                        {/* Clickable Email */}
+                        <a href={`mailto:${district.email}`} className="text-orange-500 hover:underline">{district.email}</a>
+                      </p>
+                    </div>
                   </div>
                 )}
               </span>
@@ -72,7 +81,7 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
             {districts.map((district) => (
               <span
                 key={district.name}
-                className="relative text-lg font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-3 py-1 shadow-md transition-colors duration-300 hover:bg-orange-500 hover:text-white"
+                className="relative text-xl font-semibold text-gray-800 bg-white border border-gray-300 rounded-full px-4 py-2 shadow-md transition-colors duration-300 hover:bg-orange-500 hover:text-white"
                 onMouseEnter={() => setHoveredDistrict(district.name)} // Set the hovered district
                 onMouseLeave={() => setHoveredDistrict(null)} // Reset on mouse leave
               >
@@ -81,17 +90,15 @@ const Brands = ({ section_padding_bottom, section_padding_top }) => {
                 {hoveredDistrict === district.name && (
                   <div className="absolute top-[-120%] left-1/2 transform -translate-x-1/2 w-[280px] z-10">
                     <div className="bg-white shadow-md rounded-lg p-4">
-                      <div className="text-gray-800">
-                        <h3 className="font-semibold text-lg">{district.location}</h3>
-                        <p className="text-sm mt-2">
-                          {/* Clickable Phone Number */}
-                          <a href={`tel:${district.contact}`} className="text-orange-500 hover:underline">{district.contact}</a>
-                        </p>
-                        <p className="text-sm mt-2">
-                          {/* Clickable Email */}
-                          <a href={`mailto:${district.email}`} className="text-orange-500 hover:underline">{district.email}</a>
-                        </p>
-                      </div>
+                      <h3 className="font-semibold text-lg text-gray-800">{district.location}</h3>
+                      <p className="text-sm mt-2">
+                        {/* Clickable Phone Number */}
+                        <a href={`tel:${district.contact}`} className="text-orange-500 hover:underline">{district.contact}</a>
+                      </p>
+                      <p className="text-sm mt-2">
+                        {/* Clickable Email */}
+                        <a href={`mailto:${district.email}`} className="text-orange-500 hover:underline">{district.email}</a>
+                      </p>
                     </div>
                   </div>
                 )}

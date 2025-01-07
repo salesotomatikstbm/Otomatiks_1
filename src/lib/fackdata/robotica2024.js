@@ -57,55 +57,55 @@ export const teamData = [
         src: team_8,
        
     },
-    {
-        id: 9,
-        src: team_9,
+    // {
+    //     id: 9,
+    //     src: team_9,
        
-    },
-    {
-        id: 10,
-        src: team_10,
+    // },
+    // {
+    //     id: 10,
+    //     src: team_10,
        
-    },
-    {
-        id: 11,
-        src: team_11,
+    // },
+    // {
+    //     id: 11,
+    //     src: team_11,
        
-    },
-    {
-        id: 12,
-        src: team_12,
+    // },
+    // {
+    //     id: 12,
+    //     src: team_12,
        
-    },
-    {
-        id: 13,
-        src: team_13,
+    // },
+    // {
+    //     id: 13,
+    //     src: team_13,
        
-    },
-    {
-        id: 14,
-        src: team_14,
+    // },
+    // {
+    //     id: 14,
+    //     src: team_14,
        
-    },
-    {
-        id: 15,
-        src: team_15,
+    // },
+    // {
+    //     id: 15,
+    //     src: team_15,
        
-    },
-    {
-        id: 16,
-        src: team_16,
+    // },
+    // {
+    //     id: 16,
+    //     src: team_16,
        
-    },
-    {
-        id: 17,
-        src: team_17,
+    // },
+    // {
+    //     id: 17,
+    //     src: team_17,
        
-    },
-    {
-        id: 18,
-        src: team_18,
+    // },
+    // {
+    //     id: 18,
+    //     src: team_18,
        
-    },
+    // },
 
 ]

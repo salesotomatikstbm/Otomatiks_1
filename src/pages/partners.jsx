@@ -66,8 +66,8 @@ const Partners = () => {
         
         <UniqueSellingPoints />
         <FranchiseApplicants />
-        <Counter />
-        <Brands />
+        {/* <Counter /> */}
+        {/* <Brands /> */}
         <BranchesMap />
        
         <FAQs />

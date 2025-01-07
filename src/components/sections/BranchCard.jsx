@@ -7,9 +7,27 @@ const BranchCard = ({ name, location, contact, email, mapEmbed }) => {
         <h4 className="leading-[141%] text-center">
           <span className="text-2xl font-medium">{name}</span>
         </h4>
+       
+       {/* Clickable contact number */}
+       <p className="pt-1 text-center">
+          <a 
+            href={`tel:${contact}`} 
+            className="text-orange-500 hover:underline"
+          >
+            {contact}
+          </a>
+        </p>
+
+        {/* Clickable email */}
+        <p className="pt-1 text-center">
+          <a 
+            href={`mailto:${email}`} 
+            className="text-orange-500 hover:underline"
+          >
+            {email}
+          </a>
+        </p>
         <p className="pt-1 text-center">{location}</p>
-        <p className="pt-1 text-center">Contact: {contact}</p>
-        <p className="pt-1 text-center">Email: {email}</p>
       </div>
      
       <div className="pt-4">

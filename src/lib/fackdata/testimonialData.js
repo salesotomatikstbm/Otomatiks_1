@@ -1,4 +1,4 @@
-import user_1 from "@/assets/images/testimonial/user-1.png"
+import user_1 from "@/assets/images/testimonial/testimonial-small.png"
 
 
 export const testimonialData = [

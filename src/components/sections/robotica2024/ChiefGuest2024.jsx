@@ -14,7 +14,7 @@ const ChiefGuest2024 = () => {
           </Title>
         </div>
         <div className="lg:pt-15 pt-10">
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">
+          <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-7.5">
             {teamData.map(({id, name, position, src}) => <TeamCard key={id} name={name} position={position} src={src} />)}
           </div>
         </div>
