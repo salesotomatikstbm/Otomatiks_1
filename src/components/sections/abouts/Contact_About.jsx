@@ -51,8 +51,8 @@ const Contact_About = () => {
 
         if (!formData.Experience.trim()) {
             newErrors.Experience = 'Experience is required';
-        } else if (!/^[1-5]$/.test(formData.Experience)) {
-            newErrors.Experience = 'Enter a valid experience between 1 to 5 years';
+        } else if (!["Fresher", "1 - 2 years", "3 - 5 years", "5 years above"].includes(formData.Experience)) {
+            newErrors.Experience = 'Please select a valid experience option';
         }
 
         if (!formData.ExpectedSalary.trim()) {
