@@ -29,7 +29,7 @@ const Card = ({ plan_name, features }) => {
             <p className="">{features}</p>
             <div className="mt-6 text-center">
             <Button asChild size="lg" variant="outline" className="border-primary">
-                                    <Link to={"/contact-us"}>Enquiry Now</Link>
+                                    <Link to={"/contact-us"}>Know Now</Link>
                                 </Button>
             </div>
         </div>

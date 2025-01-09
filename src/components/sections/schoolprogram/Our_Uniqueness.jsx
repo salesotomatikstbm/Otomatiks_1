@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import Impact from "../../../assets/images/School_Curiculumn/impact.mp4";
+import Impact from "../../../assets/images/School_Curiculumn/impact.png";
 
 const Our_Uniqueness = () => {
   return (
@@ -10,15 +10,12 @@ const Our_Uniqueness = () => {
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 justify-between">
           {/* Video Section */}
           <div className="relative w-full max-w-[500px]">
-            <video
-              autoPlay
-              muted
-              loop
-              className="w-full h-full object-cover rounded-lg"
-            >
-              <source src={Impact} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <img
+  src={Impact}
+  alt="Impact"
+  className="w-full h-full object-cover rounded-lg"
+/>
+
           </div>
 
           {/* Content Section */}
@@ -37,7 +34,7 @@ const Our_Uniqueness = () => {
                 <p className="text-3xl font-bold pb-2">1 Lakh+</p> Lives Upskilled
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
-                <p className="text-3xl font-bold pb-2">80+</p> Mentors
+                <p className="text-3xl font-bold pb-2">150+</p> Mentors
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">14+</p> Branches

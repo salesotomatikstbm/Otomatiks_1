@@ -1,5 +1,5 @@
 import React from 'react';
-import about_bg_2 from "@/assets/images/about/about-2.mp4";
+import about_bg_2 from "@/assets/images/about/about-2.png";
 import about_bg_3 from "@/assets/images/about/about-3.png";
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -53,15 +53,9 @@ const AboutTwo = () => {
                                 </div>
                             </div>
                             <SlideUp>
-                                <div className="flex justify-center sm:justify-start">
-                                    <video
-                                        src={about_bg_2}
-                                        autoPlay
-                                        muted
-                                        loop
-                                        className="mx-auto block w-full rounded-lg shadow-lg"
-                                    ></video>
-                                </div>
+                            <div className="hidden md:block">
+                                <img src={about_bg_2} alt="Workshop Preview" />
+                            </div>
                             </SlideUp>
                         </div>
                         <SlideDown>

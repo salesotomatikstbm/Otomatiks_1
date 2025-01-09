@@ -107,7 +107,7 @@ const Contact_School_Management = () => {
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
                 <div className=" mx-auto text-center">
-                    <SectionName>Join Our Patrons</SectionName>
+                    <SectionName>Academic Programs Enrollment</SectionName>
                     <Title size={"3.5xl"}>Shaping the Future by Supporting Education and Innovation</Title>
                 </div>
                 <div className="mt-15">

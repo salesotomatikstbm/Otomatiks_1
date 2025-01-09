@@ -226,7 +226,7 @@ const Contact_Form_Course = () => {
                         </form>
 
                         {/* Success or Error Message */}
-                        {message && <p className={`mt-5 text-center ${message.includes('error') ? 'text-red-500' : 'text-green-500'}`}>{message}</p>}
+                        {message && <p className={`mt-5 text-center text-[#2C2C2C] ${message.includes('error') ? 'text-red-500' : 'text-green-500'}`}>{message}</p>}
                     </div>
                 </div>
             </div>

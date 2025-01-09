@@ -29,7 +29,7 @@ const WhyOtomatiks = () => {
     {
       icon: <FaUsers />,
       title: "Diverse Participation",
-      description: "Our robotics programs have engaged over 100,000 students from 3rd to 12th grade, covering schools across various regions in the country."
+      description: "Our robotics programs have engaged over 1 lakh students from 3rd to 12th grade, covering schools across various regions in the country."
     },
     {
       icon: <FaAward />,

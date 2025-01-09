@@ -8,16 +8,16 @@ import img_6 from "@/assets/images/extra-curricula/12.png"
 export const extraCurricularData = [
     {
         id: 1,
-        title: "Python",
-        desc: "Learn Python basics with fun exercises focusing on logic and problem-solving. Build foundational coding skills for future projects.",
+        title: "Scratch",
+        desc: "Explore the basics of coding with Scratch, a block-based programming platform. while developing problem-solving",
         src: img_1,
         level: 1, // Level 1
     },
     {
         id: 2,
-        title: "Java",
-        desc: "Master Java with object-oriented concepts and practical coding techniques. Develop efficient and robust applications with confidence.",
-        src: img_2,
+        title: "Python",
+        desc: "Learn Python basics with fun exercises focusing on logic and problem-solving. Build foundational coding skills for future projects.",
+      src: img_2,
         level: 2, // Level 2
     },
     {
@@ -36,15 +36,15 @@ export const extraCurricularData = [
     },
     {
         id: 5,
-        title: "Artificial Intelligence",
+        title: "Artificial Intelligence Basics",
         desc: "Explore AI concepts and machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
         src: img_5,
         level: 5, // Level 5
     },
     {
         id: 6,
-        title: "Data Science for Kids",  
-        desc: "Learn the basics of data analysis, visualization, and problem-solving using beginner-friendly tools and techniques.",        
+        title: "Artificial Intelligence",  
+        desc: "Discover the fundamentals of Artificial Intelligence through engaging projects. Learn concepts like image recognition and ML",        
         src: img_6,
         level: 6, // Level 6
     }

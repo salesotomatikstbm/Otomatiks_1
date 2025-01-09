@@ -249,7 +249,7 @@ const Contact_Form_Partners = () => {
                             </div>
 
                             {message && (
-                                <div className="mt-4 text-center text-sm text-red-500">
+                                <div className="mt-4 text-center text-sm text-[#2C2C2C]">
                                     {message}
                                 </div>
                             )}
