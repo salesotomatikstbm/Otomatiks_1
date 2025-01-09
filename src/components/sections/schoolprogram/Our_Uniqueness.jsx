@@ -31,7 +31,7 @@ const Our_Uniqueness = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
-                <p className="text-3xl font-bold pb-2">13+</p> Years of Industry Experience
+                <p className="text-3xl font-bold pb-2">14+</p> Years of Industry Experience
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">1 Lakh+</p> Lives Upskilled
@@ -40,10 +40,10 @@ const Our_Uniqueness = () => {
                 <p className="text-3xl font-bold pb-2">80+</p> Mentors
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
-                <p className="text-3xl font-bold pb-2">10+</p> Branches
+                <p className="text-3xl font-bold pb-2">14+</p> Branches
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
-                <p className="text-3xl font-bold pb-2">13,000+</p> Students Every Year
+                <p className="text-3xl font-bold pb-2">17,000+</p> Students Every Year
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">85%</p> Client Retention Rate

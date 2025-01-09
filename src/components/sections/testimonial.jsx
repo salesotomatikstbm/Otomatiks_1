@@ -11,7 +11,7 @@ const Testimonial = () => {
             <div className="container relative z-10">
                 <div className="text-center">
                     <SectionName>Founder Message</SectionName>
-                    <span> <Title size={"3.5xl"}>Note from Our Founder</Title></span>
+                    <span> <Title size={"3.5xl"}>Empowering the Next Generation of Innovators</Title></span>
                 </div>
     
                 <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:pb-15 pb-10">
@@ -52,11 +52,12 @@ const Card = ({ name, src, position, review, rating }) => {
                         </div>
                     </div>
                     <div className="sm:absolute sm:right-0 sm:top-0 sm:z-[-2]">
-                        <img src={quotation} alt="quotation" className="lg:w-auto w-9" />
-                    </div>
+    <img src={quotation} alt="quotation" className="lg:w-auto w-2 h-2" />
+</div>
                 </div>
-                <p className="text-left sm:text-left mt-4 sm:mt-0">We believe that by cultivating a love of learning, we can inspire our students to reach their full potential and achieve their dreams.</p>
-                {/* <Rating star={rating} /> */}
+                <p className="sm:text-left mt-4 sm:mt-0 text-justify">
+    We believe that by cultivating a love of learning, we can inspire our students to reach their full potential and achieve their dreams.
+</p>
             </div>
         </div>
     )

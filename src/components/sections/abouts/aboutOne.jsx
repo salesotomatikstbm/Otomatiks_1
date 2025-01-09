@@ -46,11 +46,11 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                     <p className="text-cream-foreground">Robotics Academy</p>
                                 </div>
                                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                                    <h6 className=" text-cream-foreground text-[32px] font-bold ">13+</h6>
+                                    <h6 className=" text-cream-foreground text-[32px] font-bold ">14+</h6>
                                     <p className="text-cream-foreground">Years Of Exp</p>
                                 </div>
                                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                                    <h6 className="text-cream-foreground text-[32px] font-bold ">13</h6>
+                                    <h6 className="text-cream-foreground text-[32px] font-bold ">14</h6>
                                     <p className="text-cream-foreground">Our Hubs</p>
                                 </div>
                             </div>
@@ -63,12 +63,12 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         Empowering Young Innovators Through Creativity and Technology
                         </Title>
                         <SectionDescription>
-                            <div className="flex items-start mt-4 mb-4">
+                            <div className="flex items-start mt-4 mb-4 text-justify">
                                 <p>
                                     At Otomatiks, we believe in the power of curiosity and innovation to shape the future. Our journey began with a passion for robotics and a vision to make cutting-edge technology accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks has grown into a leading provider of Robotics & AI education, empowering students to become tomorrow's innovators.
                                 </p>
                             </div>
-                            <div className="flex items-start mb-4">
+                            <div className="flex items-start mb-4 text-justify">
                                 <p>
                                     We started with a simple idea: to create hands-on learning experiences that ignite a love for science, technology, engineering, and mathematics (STEM). From our first classroom workshop to partnering with schools nationwide, we've been committed to nurturing creativity and critical thinking in students of all ages.
                                 </p>
@@ -83,19 +83,20 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                         {/* New Sections with Borders and Styling */}
                         <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mt-10">
                             <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-secondary  transition duration-300">
-                                <SectionName className="text-center hover:text-white">Our Mission</SectionName>
-                                <SectionDescription className="text-center mt-4">
-                                    <p className="hover:text-white">
-                                        To bridge the gap between academics and real-time environments.
-                                    </p>
-                                </SectionDescription>
-                            </div>
-
-                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-secondary transition duration-300">
-                                <SectionName className="text-center hover:text-white">Our Vision</SectionName>
+                            <SectionName className="text-center hover:text-white">Our Vision</SectionName>
                                 <SectionDescription className="text-center mt-4">
                                     <p className="hover:text-white">
                                         To make students globally recognized by changing the way they think.
+                                    </p>
+                                </SectionDescription>
+                                
+                            </div>
+
+                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-secondary transition duration-300">
+                            <SectionName className="text-center hover:text-white">Our Mission</SectionName>
+                                <SectionDescription className="text-center mt-4">
+                                    <p className="hover:text-white">
+                                        To bridge the gap between academics and real-time environments.
                                     </p>
                                 </SectionDescription>
                             </div>

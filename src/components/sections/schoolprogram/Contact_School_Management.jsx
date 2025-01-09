@@ -71,7 +71,7 @@ const Contact_School_Management = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbwNTyP_eEEyMDawgDyO_DI1uhJqbJR6o4h_w7h7CI_jig5PgrGPXgwbjc22ut7l_aEL/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData),

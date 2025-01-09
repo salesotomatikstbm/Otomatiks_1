@@ -59,29 +59,30 @@ const Contact_About = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validate()) return;
-
+    
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbxfm6j2ZtGkAZTKIyJ1T2iTadHDJtosJg-LKFfVMH2u2UTk2RSqhVNg_dJZ8ORKyxsX/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData), 
                 }
             );
-
+    
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                const errorDetails = await response.text(); // Get the error details from the response
+                throw new Error(`Network response was not ok: ${errorDetails}`);
             }
-
+    
             setMessage('Your message has been sent successfully!');
         } catch (error) {
             console.error('Error:', error);
-            setMessage('There was an error sending your message.');
+            setMessage(`There was an error sending your message: ${error.message}`);
         } finally {
             setIsSubmitting(false);
         }
-
+    
         setFormData({
             TeamName: '',
             TeamPhone: '',
@@ -89,6 +90,7 @@ const Contact_About = () => {
             TeamExperience: '',
         });
     };
+    
 
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
@@ -101,7 +103,7 @@ const Contact_About = () => {
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
                         <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
                         <form className="form mt-7" onSubmit={handleSubmit}>
-                        <input type="hidden" name="FormType" value="Join_Our_Team" />
+                        
 
                             <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                 {/* TeamName Field */}

@@ -10,6 +10,7 @@ import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
 import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
 import Pricing from "@/components/sections/pricing";
 import PreviousYearWorkshop from "@/components/sections/workshop/PreviousYearWorkshop";
+import Contact_School_Management from "@/components/sections/schoolprogram/Contact_School_Management";
 
 
 
@@ -69,7 +70,8 @@ const Workshop = () => {
       <WorkshopBenefits />
       <PreviousYearWorkshop />
       <FaqWorkshop />
-      <Contact_Workshop />
+      {/* <Contact_Workshop /> */}
+      <Contact_School_Management />
       <TopUp />
       </main>
       <ScrollRestoration />

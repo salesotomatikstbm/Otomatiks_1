@@ -13,13 +13,13 @@ const districts = [
   { name: "Salem", contact: "+91 9360404063", email: "salem.otomatiks@gmail.com", location: "Salem" },
   { name: "Attur", contact: "+91 9994506530", email: "otomatiksattur@gmail.com", location: "Attur" },
   { name: "Namakkal", contact: "+91 9994570354", email: "otomatiksnkl@gmail.com", location: "Namakkal" },
-  { name: "Gudiyatham", contact: "+91 1234567890", email: "gudiyatham.branch@example.com", location: "Gudiyatham" },
+  { name: "Gudiyatham", contact: "+91 ", email: "", location: "Gudiyatham" },
   { name: "Dindigul", contact: "+91 9876543210", email: "dindigul@example.com", location: "Dindigul" },
   { name: "Madurai", contact: "+91 9988776655", email: "madurai@example.com", location: "Madurai" },
   { name: "Theni", contact: "+91 8899776655", email: "theni@example.com", location: "Theni" },
   { name: "Mumbai", contact: "+91 9988665544", email: "mumbai@example.com", location: "Mumbai" },
   { name: "United Kingdom (UK)", contact: "+91 7985783392", email: "uk@example.com", location: "United Kingdom" },
-  { name: "United Arab Emirates (UAE)", contact: "+971 123456789", email: "uae@example.com", location: "UAE" },
+  { name: "United Arab Emirates (UAE)", contact: "+91", email: "", location: "UAE" },
   { name: "Thirunelveli", contact: "+91 9043337564", email: "thirunelveli@otomatiks.in", location: "Thirunelveli" },
   { name: "Bangalore", contact: "+91 8792076264", email: "bangalore@otomatiks.in", location: "Bangalore" }
 ];

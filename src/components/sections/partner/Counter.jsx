@@ -11,7 +11,7 @@ const Counter = () => {
           {/* Franchise */}
           <div className="flex flex-col items-center justify-center text-white text-center">
             <img src={img_1} className="w-20 h-20 mb-4" alt="Franchise" /> {/* Adjusted size */}
-            <h5 className="text-3xl font-semibold mb-1" id="number1">15+</h5>
+            <h5 className="text-3xl font-semibold mb-1" id="number1">14+</h5>
             <p className="text-2xl text-white ">Franchise</p>
           </div>
 
