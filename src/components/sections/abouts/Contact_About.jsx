@@ -1,17 +1,15 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaUser, FaDollarSign } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaUser } from 'react-icons/fa';  // Fixed the missing FaDollarSign import
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 
 const Contact_About = () => {
     const [formData, setFormData] = React.useState({
-        Name: '',
-        Phone: '',
-        Email: '',
-        Experience: '',
-        ExpectedSalary: '',
-        Message: '',
+        TeamName: '',
+        TeamPhone: '',
+        TeamEmail: '',
+        TeamExperience: '',  // Fixed the mismatch here
     });
 
     const [errors, setErrors] = React.useState({});
@@ -29,42 +27,29 @@ const Contact_About = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.Name.trim()) {
-            newErrors.Name = 'Name is required';
-        } else if (/[^a-zA-Z\s]/.test(formData.Name)) { // Check if the name contains non-alphabet characters (numbers or special characters)
-            newErrors.Name = 'Name should only contain letters and spaces';
+        if (!formData.TeamName.trim()) {
+            newErrors.TeamName = 'Name is required';
+        } else if (/[^a-zA-Z\s]/.test(formData.TeamName)) {
+            newErrors.TeamName = 'Name should only contain letters and spaces';
         }
-        
 
-        if (!formData.Phone.trim()) {
-            newErrors.Phone = 'Phone number is required';
-        } else if (!/^[0-9]{10}$/.test(formData.Phone)) {
-            newErrors.Phone = 'Enter a valid 10-digit phone number';
+        if (!formData.TeamPhone.trim()) {
+            newErrors.TeamPhone = 'Phone number is required';
+        } else if (!/^[0-9]{10}$/.test(formData.TeamPhone)) {
+            newErrors.TeamPhone = 'Enter a valid 10-digit phone number';
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!formData.Email.trim()) {
-            newErrors.Email = 'Email is required';
-        } else if (!emailRegex.test(formData.Email)) {
-            newErrors.Email = 'Enter a valid email';
+        if (!formData.TeamEmail.trim()) {
+            newErrors.TeamEmail = 'Email is required';
+        } else if (!emailRegex.test(formData.TeamEmail)) {
+            newErrors.TeamEmail = 'Enter a valid email';
         }
 
-        if (!formData.Experience.trim()) {
-            newErrors.Experience = 'Experience is required';
-        } else if (!["Fresher", "1 - 2 years", "3 - 5 years", "5 years above"].includes(formData.Experience)) {
-            newErrors.Experience = 'Please select a valid experience option';
-        }
-
-        if (!formData.ExpectedSalary.trim()) {
-            newErrors.ExpectedSalary = 'Expected salary is required';
-        } else if (isNaN(formData.ExpectedSalary)) {
-            newErrors.ExpectedSalary = 'Enter a valid number';
-        }
-
-        if (!formData.Message.trim()) {
-            newErrors.Message = 'Message is required';
-        } else if (formData.Message.length < 10) {
-            newErrors.Message = 'Message must be at least 10 characters long';
+        if (!formData.TeamExperience.trim()) {
+            newErrors.TeamExperience = 'Experience is required';
+        } else if (!["Fresher", "1 - 2 years", "3 - 5 years", "5 years above"].includes(formData.TeamExperience)) {
+            newErrors.TeamExperience = 'Please select a valid experience option';
         }
 
         setErrors(newErrors);
@@ -98,12 +83,10 @@ const Contact_About = () => {
         }
 
         setFormData({
-            Name: '',
-            Phone: '',
-            Email: '',
-            Experience: '',
-            ExpectedSalary: '',
-            Message: '',
+            TeamName: '',
+            TeamPhone: '',
+            TeamEmail: '',
+            TeamExperience: '',
         });
     };
 
@@ -118,75 +101,71 @@ const Contact_About = () => {
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
                         <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
                         <form className="form mt-7" onSubmit={handleSubmit}>
+                        <input type="hidden" name="FormType" value="Join_Our_Team" />
+
                             <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
-                                {/* Name Field */}
+                                {/* TeamName Field */}
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="Name"
+                                        name="TeamName"
                                         placeholder="Your Name"
-                                        value={formData.Name}
+                                        value={formData.TeamName}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Name ? 'border-red-500' : formData.Name.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                            ${errors.TeamName ? 'border-red-500' : formData.TeamName.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="name"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label htmlFor="TeamName" className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaUser />
                                     </label>
-                                    {errors.Name && <p className="text-red-500 text-sm mt-1">{errors.Name}</p>}
+                                    {errors.TeamName && <p className="text-red-500 text-sm mt-1">{errors.TeamName}</p>}
                                 </div>
 
-                                {/* Phone Field */}
+                                {/* TeamPhone Field */}
                                 <div className="relative">
                                     <input
                                         type="tel"
-                                        name="Phone"
+                                        name="TeamPhone"
                                         placeholder="Your Phone Number"
-                                        value={formData.Phone}
+                                        value={formData.TeamPhone}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Phone ? 'border-red-500' : formData.Phone.trim() && /^[0-9]{10}$/.test(formData.Phone) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                            ${errors.TeamPhone ? 'border-red-500' : formData.TeamPhone.trim() && /^[0-9]{10}$/.test(formData.TeamPhone) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="phone"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label htmlFor="TeamPhone" className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaPhone />
                                     </label>
-                                    {errors.Phone && <p className="text-red-500 text-sm mt-1">{errors.Phone}</p>}
+                                    {errors.TeamPhone && <p className="text-red-500 text-sm mt-1">{errors.TeamPhone}</p>}
                                 </div>
 
-                                {/* Email Field */}
+                                {/* TeamEmail Field */}
                                 <div className="relative">
                                     <input
                                         type="email"
-                                        name="Email"
+                                        name="TeamEmail"
                                         placeholder="Your Email"
-                                        value={formData.Email}
+                                        value={formData.TeamEmail}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Email ? 'border-red-500' : formData.Email.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                            ${errors.TeamEmail ? 'border-red-500' : formData.TeamEmail.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.TeamEmail) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="email"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label htmlFor="TeamEmail" className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaEnvelope />
                                     </label>
-                                    {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
+                                    {errors.TeamEmail && <p className="text-red-500 text-sm mt-1">{errors.TeamEmail}</p>}
                                 </div>
 
                                 {/* Experience Field */}
                                 <div className="relative">
                                     <select
-                                        name="Experience"
-                                        value={formData.Experience}
+                                        name="TeamExperience"
+                                        value={formData.TeamExperience}  // Fixed mismatch here
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Experience ? 'border-red-500' : formData.Experience && /^[1-5]$/.test(formData.Experience) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                            ${errors.TeamExperience ? 'border-red-500' : formData.TeamExperience ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     >
                                         <option value="">Select Experience</option>
@@ -194,44 +173,9 @@ const Contact_About = () => {
                                         <option value="1 - 2 years">1 - 2 years</option>
                                         <option value="3 - 5 years">3 - 5 years</option>
                                         <option value="5 years above">5 years above</option>
-                                       
                                     </select>
-                                    {errors.Experience && <p className="text-red-500 text-sm mt-1">{errors.Experience}</p>}
+                                    {errors.TeamExperience && <p className="text-red-500 text-sm mt-1">{errors.TeamExperience}</p>}
                                 </div>
-
-                                {/* Expected Salary Field */}
-                                {/* <div className="relative">
-                                    <input
-                                        type="number"
-                                        name="ExpectedSalary"
-                                        placeholder="Your Expected Salary"
-                                        value={formData.ExpectedSalary}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.ExpectedSalary ? 'border-red-500' : formData.ExpectedSalary ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="salary"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaDollarSign />
-                                    </label>
-                                    {errors.ExpectedSalary && <p className="text-red-500 text-sm mt-1">{errors.ExpectedSalary}</p>}
-                                </div> */}
-
-                                {/* Message Field */}
-                                {/* <div className="relative sm:col-span-2">
-                                    <textarea
-                                        name="Message"
-                                        value={formData.Message}
-                                        onChange={handleChange}
-                                        placeholder="Your Message"
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Message ? 'border-red-500' : formData.Message.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    {errors.Message && <p className="text-red-500 text-sm mt-1">{errors.Message}</p>}
-                                </div> */}
                             </div>
 
                             <div className="text-center mt-6">

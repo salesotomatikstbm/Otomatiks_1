@@ -132,12 +132,13 @@ const ContactForm = () => {
                             <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
                                 <h3 className="text-[28px] font-bold leading-[148%] font-nunito">Send a message</h3>
                                 <form className="form mt-7" onSubmit={handleSubmit}>
+                                <input type="hidden" name="FormType" value="Contact" />
                                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                         <div className="relative">
                                             <input
                                                 type="text"
                                                 name="Name"
-                                                placeholder="Your Name"
+                                                placeholder="Name"
                                                 value={formData.Name}
                                                 onChange={handleChange}
                                                 className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
@@ -154,7 +155,7 @@ const ContactForm = () => {
                                             <input
                                                 type="email"
                                                 name="Email"
-                                                placeholder="Your Email"
+                                                placeholder="Email"
                                                 value={formData.Email}
                                                 onChange={handleChange}
                                                 className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
@@ -171,7 +172,7 @@ const ContactForm = () => {
                                             <input
                                                 type="tel"
                                                 name="Phone"
-                                                placeholder="Your Phone"
+                                                placeholder="Phone"
                                                 value={formData.Phone}
                                                 onChange={handleChange}
                                                 className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
@@ -226,7 +227,7 @@ const ContactForm = () => {
                                         disabled={isSubmitting}
                                         className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-10 mt-5"
                                     >
-                                        {isSubmitting ? 'Sending...' : 'Send Now'}
+                                        {isSubmitting ? 'Sending...' : 'Sumbit'}
                                     </Button>
                                 </form>
                                 {message && <p className="mt-4 text-center text-lg text-gray-600">{message}</p>}

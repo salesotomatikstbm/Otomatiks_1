@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaUser, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaUser, FaMapMarkerAlt, FaChild } from 'react-icons/fa';
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
@@ -9,9 +9,10 @@ const Contact_Form_Course = () => {
         StudentName: '',
         Email: '',
         ContactNumber: '',
-        InterestedCourse: '',
         CourseMode: '',
         Place: '',
+        ChildName: '',
+        ChildAge: '',
         Message: '',
     });
 
@@ -32,7 +33,7 @@ const Contact_Form_Course = () => {
 
         if (!formData.StudentName.trim()) {
             newErrors.StudentName = 'Student Name is required';
-        } else if (/[^a-zA-Z\s]/.test(formData.StudentName)) { // Check if the name contains non-alphabet characters (numbers or special characters)
+        } else if (/[^a-zA-Z\s]/.test(formData.StudentName)) {
             newErrors.StudentName = 'Student Name should only contain letters and spaces';
         }
 
@@ -49,22 +50,24 @@ const Contact_Form_Course = () => {
             newErrors.Email = 'Enter a valid email';
         }
 
-        if (!formData.InterestedCourse.trim()) {
-            newErrors.InterestedCourse = 'Interested Course is required';
-        }
-
         if (!formData.CourseMode.trim()) {
             newErrors.CourseMode = 'Interested Course is required';
         }
-        
+
         if (!formData.Place.trim()) {
             newErrors.Place = 'Place is required';
         }
 
-        if (!formData.Message.trim()) {
-            newErrors.Message = 'Message is required';
-        } else if (formData.Message.length < 10) {
-            newErrors.Message = 'Message must be at least 10 characters long';
+        if (!formData.ChildName.trim()) {
+            newErrors.ChildName = 'Child Name is required';
+        } else if (/[^a-zA-Z\s]/.test(formData.ChildName)) {
+            newErrors.ChildName = 'Child Name should only contain letters and spaces';
+        }
+
+        if (!formData.ChildAge.trim()) {
+            newErrors.ChildAge = 'Child Age is required';
+        } else if (!/^[1-9][0-9]?$/.test(formData.ChildAge)) {
+            newErrors.ChildAge = 'Enter a valid age (1-99)';
         }
 
         setErrors(newErrors);
@@ -81,7 +84,7 @@ const Contact_Form_Course = () => {
                 "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
                 {
                     method: "POST",
-                    body: new URLSearchParams(formData), 
+                    body: new URLSearchParams(formData),
                 }
             );
 
@@ -101,9 +104,10 @@ const Contact_Form_Course = () => {
             StudentName: '',
             Email: '',
             ContactNumber: '',
-            InterestedCourse: '',
             CourseMode: '',
             Place: '',
+            ChildName: '',
+            ChildAge: '',
             Message: '',
         });
     };
@@ -125,19 +129,50 @@ const Contact_Form_Course = () => {
                                     <input
                                         type="text"
                                         name="StudentName"
-                                        placeholder="Student Name"
+                                        placeholder="Contact Person Name"
                                         value={formData.StudentName}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.StudentName ? 'border-red-500' : formData.StudentName.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
+                                            ${errors.StudentName ? 'border-red-500' : 'border-[#F2F2F2]'}`}
                                     />
-                                    <label
-                                        htmlFor="name"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaUser />
                                     </label>
                                     {errors.StudentName && <p className="text-red-500 text-sm mt-1">{errors.StudentName}</p>}
+                                </div>
+
+                                {/* Child Name Field */}
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="ChildName"
+                                        placeholder="Child Name"
+                                        value={formData.ChildName}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.ChildName ? 'border-red-500' : 'border-[#F2F2F2]'}`}
+                                    />
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaChild />
+                                    </label>
+                                    {errors.ChildName && <p className="text-red-500 text-sm mt-1">{errors.ChildName}</p>}
+                                </div>
+
+                                {/* Child Age Field */}
+                                <div className="relative">
+                                    <input
+                                        type="number"
+                                        name="ChildAge"
+                                        placeholder="Child Age"
+                                        value={formData.ChildAge}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.ChildAge ? 'border-red-500' : 'border-[#F2F2F2]'}`}
+                                    />
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaChild />
+                                    </label>
+                                    {errors.ChildAge && <p className="text-red-500 text-sm mt-1">{errors.ChildAge}</p>}
                                 </div>
 
                                 {/* Contact Number Field */}
@@ -149,12 +184,9 @@ const Contact_Form_Course = () => {
                                         value={formData.ContactNumber}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.ContactNumber ? 'border-red-500' : formData.ContactNumber.trim() && /^[0-9]{10}$/.test(formData.ContactNumber) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
+                                            ${errors.ContactNumber ? 'border-red-500' : 'border-[#F2F2F2]'}`}
                                     />
-                                    <label
-                                        htmlFor="phone"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaPhone />
                                     </label>
                                     {errors.ContactNumber && <p className="text-red-500 text-sm mt-1">{errors.ContactNumber}</p>}
@@ -165,96 +197,21 @@ const Contact_Form_Course = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Your Email"
+                                        placeholder="Email"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Email ? 'border-red-500' : formData.Email.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
+                                            ${errors.Email ? 'border-red-500' : 'border-[#F2F2F2]'}`}
                                     />
-                                    <label
-                                        htmlFor="email"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaEnvelope />
                                     </label>
                                     {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                 </div>
-
-                                {/* Interested Course Field */}
-                                <div className="relative">
-                                    <select
-                                        name="InterestedCourse"
-                                        value={formData.InterestedCourse}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.InterestedCourse ? 'border-red-500' : formData.InterestedCourse ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    >
-                                        <option value="">Select Interested Course</option>
-                                        <option value="Level 1">Level 1</option>
-                                        <option value="Level 2">Level 2</option>
-                                        <option value="Level 3">Level 3</option>
-                                        <option value="Level 4">Level 4</option>
-                                        <option value="Level 5">Level 5</option>
-                                        <option value="Level 6">Level 6</option>
-                                    </select>
-                                    {errors.InterestedCourse && <p className="text-red-500 text-sm mt-1">{errors.InterestedCourse}</p>}
-                                </div>
-
-
-                                <div className="relative">
-                                    <select
-                                        name="CourseMode"
-                                        value={formData.CourseMode}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.CourseMode ? 'border-red-500' : formData.CourseMode ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    >
-                                        <option value="">Select Course Mode</option>
-                                        <option value="Online">Online</option>
-                                        <option value="Offline">Offline</option>
-                                       
-                                    </select>
-                                    {errors.CourseMode && <p className="text-red-500 text-sm mt-1">{errors.CourseMode}</p>}
-                                </div>
-
-                                {/* Place Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Place"
-                                        placeholder="Your Place"
-                                        value={formData.Place}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Place ? 'border-red-500' : formData.Place.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="place"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaMapMarkerAlt />
-                                    </label>
-                                    {errors.Place && <p className="text-red-500 text-sm mt-1">{errors.Place}</p>}
-                                </div>
+                                {/* Other Fields */}
                             </div>
 
-                            {/* Message Field */}
-                            {/* <div className="relative mt-7">
-                                <textarea
-                                    name="Message"
-                                    placeholder="Your Message"
-                                    value={formData.Message}
-                                    onChange={handleChange}
-                                    className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                        ${errors.Message ? 'border-red-500' : formData.Message.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                    rows="6"
-                                    required
-                                />
-                                {errors.Message && <p className="text-red-500 text-sm mt-1">{errors.Message}</p>}
-                            </div> */}
-
+                            
                             {/* Submit Button */}
                             <div className="mt-5 text-center">
                                 <Button

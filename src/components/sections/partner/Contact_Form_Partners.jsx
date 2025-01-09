@@ -8,9 +8,7 @@ import { FaEdge, FaLocationArrow, FaMedal } from 'react-icons/fa6';
 const Contact_Form_Partners = () => {
     const [formData, setFormData] = React.useState({
         Name: '',
-        DOB: '',
-        Qualification: '',
-        Profession: '',
+      
         FranchiseLocation: '',
         PhoneNo: '',
         EmailId: '',
@@ -37,17 +35,7 @@ const Contact_Form_Partners = () => {
             newErrors.Name = 'Name is required';
         }
 
-        if (!formData.DOB.trim()) {
-            newErrors.DOB = 'Date of Birth is required';
-        }
-
-        if (!formData.Qualification.trim()) {
-            newErrors.Qualification = 'Qualification is required';
-        }
-
-        if (!formData.Profession.trim()) {
-            newErrors.Profession = 'Profession is required';
-        }
+       
 
         if (!formData.FranchiseLocation.trim()) {
             newErrors.FranchiseLocation = 'Franchise Location is required';
@@ -106,9 +94,7 @@ const Contact_Form_Partners = () => {
 
         setFormData({
             Name: '',
-            DOB: '',
-            Qualification: '',
-            Profession: '',
+          
             FranchiseLocation: '',
             PhoneNo: '',
             EmailId: '',
@@ -134,7 +120,7 @@ const Contact_Form_Partners = () => {
                                     <input
                                         type="text"
                                         name="Name"
-                                        placeholder="Your Name"
+                                        placeholder="Name"
                                         value={formData.Name}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
@@ -149,60 +135,7 @@ const Contact_Form_Partners = () => {
                                     {errors.Name && <p className="text-red-500 text-sm mt-1">{errors.Name}</p>}
                                 </div>
 
-                                {/* Date of Birth Field */}
-                                <div className="relative">
-                                    <input
-                                        type="date"
-                                        name="DOB"
-                                        value={formData.DOB}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.DOB ? 'border-red-500' : formData.DOB.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                  
-                                    {errors.DOB && <p className="text-red-500 text-sm mt-1">{errors.DOB}</p>}
-                                </div>
-
-                                {/* Qualification Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Qualification"
-                                        placeholder="Qualification"
-                                        value={formData.Qualification}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Qualification ? 'border-red-500' : formData.Qualification.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="dob"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaMedal />
-                                    </label>
-                                    {errors.Qualification && <p className="text-red-500 text-sm mt-1">{errors.Qualification}</p>}
-                                </div>
-
-                                {/* Profession Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Profession"
-                                        placeholder="Profession"
-                                        value={formData.Profession}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Profession ? 'border-red-500' : formData.Profession.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="dob"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaEdge />
-                                    </label>
-                                    {errors.Profession && <p className="text-red-500 text-sm mt-1">{errors.Profession}</p>}
-                                </div>
+                               
 
                                 {/* Franchise Location Field */}
                                 <div className="relative">
@@ -310,7 +243,7 @@ const Contact_Form_Partners = () => {
                                                                    className={`bg-primary text-white py-4 px-8 rounded-[10px] mt-4
                                                                                                                                   ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
                                                                >
-                                                                   {isSubmitting ? 'Sending...' : 'Send Message'}
+                                                                   {isSubmitting ? 'Sending...' : 'Submit'}
                                                                </Button>
                             </div>
 

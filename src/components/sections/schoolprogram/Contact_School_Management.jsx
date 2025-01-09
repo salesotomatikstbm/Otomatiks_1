@@ -13,9 +13,7 @@ const Contact_School_Management = () => {
         Email: '',
         PhoneNumber: '',
         SchoolAddress: '',
-        NumberOfStudents: '',
-        RequiredService: '',
-        AdditionalNotes: '',
+      
     });
 
     const [errors, setErrors] = React.useState({});
@@ -60,13 +58,7 @@ const Contact_School_Management = () => {
             newErrors.SchoolAddress = 'School Address is required';
         }
 
-        if (!formData.NumberOfStudents.trim() || isNaN(formData.NumberOfStudents)) {
-            newErrors.NumberOfStudents = 'Number of students is required and should be a valid number';
-        }
-
-        if (!formData.RequiredService.trim()) {
-            newErrors.RequiredService = 'Please select a required service';
-        }
+       
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -175,7 +167,7 @@ const Contact_School_Management = () => {
                                         required
                                     >
                                         
-                                        <option value="">Select Organization Type</option>
+                                        <option value="">Organization Type</option>
                                         <option value="CBSE">CBSE</option>
                                         <option value="International">International</option>
                                         <option value="State Board">State Board</option>
@@ -188,7 +180,7 @@ const Contact_School_Management = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Your Email"
+                                        placeholder="Email"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
@@ -243,46 +235,7 @@ const Contact_School_Management = () => {
                                     {errors.SchoolAddress && <p className="text-red-500 text-sm mt-1">{errors.SchoolAddress}</p>}
                                 </div>
 
-                                {/* Number of Students Field */}
-                                <div className="relative">
-                                    <input
-                                        type="number"
-                                        name="NumberOfStudents"
-                                        placeholder="Number of Students"
-                                        value={formData.NumberOfStudents}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
-                                            ${errors.NumberOfStudents ? 'border-red-500' : formData.NumberOfStudents.trim() && !isNaN(formData.NumberOfStudents) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                     <label
-                                        htmlFor="name"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaStubber />
-                                    </label>
-                                    {errors.NumberOfStudents && <p className="text-red-500 text-sm mt-1">{errors.NumberOfStudents}</p>}
-                                </div>
-
-                                {/* Required Service Field */}
-                                <div className="relative">
-                                    <select
-                                        name="RequiredService"
-                                        value={formData.RequiredService}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
-                                            ${errors.RequiredService ? 'border-red-500' : formData.RequiredService.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    >
-
-                                        <option value="">Select Required Service</option>
-                                        <option value="Robotics Training">Robotics Training</option>
-                                        <option value="Software Training">Software Training</option>
-                                        <option value="Robotics & AI Lab">Robotics & AI Lab</option>
-                                        <option value="Workshop">Workshop</option>
-                                    </select>
-                                    {errors.RequiredService && <p className="text-red-500 text-sm mt-1">{errors.RequiredService}</p>}
-                                </div>
-
+                              
                                
                             </div>
 
@@ -293,7 +246,7 @@ const Contact_School_Management = () => {
                                                                  className={`bg-primary text-white py-4 px-8 rounded-[10px] mt-4
                                                                                                                                 ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
                                                              >
-                                                                 {isSubmitting ? 'Sending...' : 'Send Message'}
+                                                                 {isSubmitting ? 'Sending...' : 'Submit'}
                                                              </Button>
                                                          </div>
 

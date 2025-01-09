@@ -1,7 +1,7 @@
 export const branchesData = [
     {
         id: 1,
-        name: 'Parrys Branch',
+        name: 'Parrys',
         location: 'New No. 317, Old No. 96, Butchammal Street, New Washermenpert, Chennai - 600081',
         contact: '+91 9600015954',
         email: 'chennai@otomatiks.in',
@@ -9,7 +9,7 @@ export const branchesData = [
     },
     {
         id: 2,
-        name: 'Annanagar Branch',
+        name: 'Annanagar',
         location: '19/53, 1st floor, madurai veeran street, annanagar west, padi, chennai-50',
         contact: '+91 7603849783',
         email: 'otomatiksannanagar@gmail.com',
@@ -17,7 +17,7 @@ export const branchesData = [
     },
     {
         id: 3,
-        name: 'Tambaram Branch',
+        name: 'Tambaram',
         location: '16/379 Mullai Nagar 2nd Cross Street West Tambaram, Chennai - 600045',
         contact: '+91 8610210593',
         email: 'otomatikstambaram@gmail.com',
@@ -25,7 +25,7 @@ export const branchesData = [
     },
     {
         id: 4,
-        name: 'Salem Branch',
+        name: 'Salem',
         location: 'Sri Venkatachalapathy Street, 322-A/110, MG Rd, New Fairlands, Salem, Tamil Nadu 636016',
         contact: '+91 9360404063',
         email: 'salem.otomatiks@gmail.com',
@@ -33,7 +33,7 @@ export const branchesData = [
     },
     {
         id: 5,
-        name: 'Attur Branch',
+        name: 'Attur',
         location: '191C, 1st Floor, 60 ft road, Near Lakshmi Super Market, Gandhi Nagar, Attur, Tamil Nadu 636102',
         contact: '+91 9994506530',
         email: 'otomatiksattur@gmail.com',
@@ -41,7 +41,7 @@ export const branchesData = [
     },
     {
         id: 6,
-        name: 'Namakkal Branch',
+        name: 'Namakkal',
         location: 'H4 Kaveri Nagar, Trichy Main Rd, Namakkal, Tamil Nadu 637001',
         contact: '+91 9994570354',
         email: 'otomatiksnkl@gmail.com',
@@ -49,7 +49,7 @@ export const branchesData = [
     },
     {
         id: 7,
-        name: 'Gudiyatham Branch',
+        name: 'Gudiyatham',
         location: 'Gudiyatham, Tamil Nadu',
         contact: '+91 0000000000',
         email: 'gudiyatham.branch@example.com',
@@ -57,7 +57,7 @@ export const branchesData = [
     },
     {
         id: 8,
-        name: 'Dindigul Branch',
+        name: 'Dindigul',
         location: 'old no.11,New no.21, Nehruji nagar,Land mark: Reshma hospital, Dindigul 624002',
         contact: '+91 6383078848',
         email: 'otomatiks.dindigul@gmail.com',
@@ -65,7 +65,7 @@ export const branchesData = [
     },
     {
         id: 9,
-        name: 'Madurai Branch',
+        name: 'Madurai',
         location: 'Madurai, Tamil Nadu',
         contact: '+91 0000000000',
         email: 'madurai.branch@example.com',
@@ -73,7 +73,7 @@ export const branchesData = [
     },
     {
         id: 10,
-        name: 'Theni Branch',
+        name: 'Theni',
         location: '28, Bharathi main road,  NRT Nagar,  Theni-625531 ',
         contact: '+91 9042248462',
         email: 'academybrainedge@gmail.com',
@@ -81,7 +81,7 @@ export const branchesData = [
     },
     {
         id: 11,
-        name: 'Mumbai Branch',
+        name: 'Mumbai',
         location: 'Mumbai, Maharashtra',
         contact: '+91 0000000000',
         email: 'mumbai.branch@example.com',
@@ -97,7 +97,7 @@ export const branchesData = [
     },
     {
         id: 13,
-        name: 'Tirunelveli Branch',
+        name: 'Tirunelveli',
         location: 'T4, 3rd Floor, Oxford Court Apartment, St. thomas road, Srinivasa Nagar, Tirunelveli -627011',
         contact: '+91 9043337564',
         email: 'otmatiksthirunelveli@gmail.com',
@@ -105,7 +105,7 @@ export const branchesData = [
     },
     {
         id: 14,
-        name: 'Bangalore Branch',
+        name: 'Bangalore',
         location: '2nd Floor, 9th cross and 2nd cross, Sri Ananthnagar Phase 2, Huskur gate, Electronic City phase 2, Bengaluru, Karnataka 560100',
         contact: '+91 8792076264',
         email: 'otomatikselectroniccity@gmail.com',

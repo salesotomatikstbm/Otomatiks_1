@@ -10,9 +10,7 @@ const Contact_Workshop = () => {
         StudentName: '',
         Email: '',
         ContactNumber: '',
-        Age: '',
-        Group: '',
-        WorkshopTitle: '',
+       
         SchoolName: '',
     });
 
@@ -50,20 +48,7 @@ const Contact_Workshop = () => {
             newErrors.Email = 'Enter a valid email';
         }
 
-        if (!formData.Age.trim()) {
-            newErrors.Age = 'Age is required';
-        } else if (isNaN(formData.Age)) {
-            newErrors.Age = 'Age must be a number';
-        }
-
-        if (!formData.Group.trim()) {
-            newErrors.Group = 'Group is required';
-        }
-
-        if (!formData.WorkshopTitle.trim()) {
-            newErrors.WorkshopTitle = 'Workshop Title is required';
-        }
-
+       
         if (!formData.SchoolName.trim()) {
             newErrors.SchoolName = 'School Name is required';
         }
@@ -102,9 +87,7 @@ const Contact_Workshop = () => {
             StudentName: '',
             Email: '',
             ContactNumber: '',
-            Age: '',
-            Group: '',
-            WorkshopTitle: '',
+          
             SchoolName : '',
         });
     };
@@ -166,7 +149,7 @@ const Contact_Workshop = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Your Email"
+                                        placeholder="Email"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
@@ -181,45 +164,7 @@ const Contact_Workshop = () => {
                                     {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                 </div>
 
-                                {/* Age Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Age"
-                                        placeholder="Your Age"
-                                        value={formData.Age}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Age ? 'border-red-500' : formData.Age.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="age"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaBirthdayCake />
-                                    </label>
-                                    {errors.Age && <p className="text-red-500 text-sm mt-1">{errors.Age}</p>}
-                                </div>
-
-                                {/* Group Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Group"
-                                        placeholder="Group"
-                                        value={formData.Group}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.Group ? 'border-red-500' : formData.Group.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="age"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaGraduationCap />
-                                    </label>
-                                    {errors.Group && <p className="text-red-500 text-sm mt-1">{errors.Group}</p>}
-                                </div>
+                               
 
 
                                 <div className="relative">
@@ -241,25 +186,7 @@ const Contact_Workshop = () => {
                                     {errors.WorkshopTitle && <p className="text-red-500 text-sm mt-1">{errors.WorkshopTitle}</p>}
                                 </div>
 
-                                {/* Workshop Title Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="WorkshopTitle"
-                                        placeholder="Workshop Title"
-                                        value={formData.WorkshopTitle}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.WorkshopTitle ? 'border-red-500' : formData.WorkshopTitle.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="age"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaFileWord />
-                                    </label>
-                                    {errors.WorkshopTitle && <p className="text-red-500 text-sm mt-1">{errors.WorkshopTitle}</p>}
-                                </div>
+                              
                             </div>
 
                             <div className="mt-6 flex justify-center">
@@ -269,7 +196,7 @@ const Contact_Workshop = () => {
                                     className={`bg-primary text-white py-4 px-8 rounded-[10px] mt-4
                                                                                                    ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
                                 >
-                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    {isSubmitting ? 'Sending...' : 'Submit'}
                                 </Button>
                             </div>
 
