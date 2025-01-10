@@ -28,10 +28,10 @@ const GlimplsVideo2023 = () => {
     return (
         <section className="pt-10 py-16 pb-10">
             <div className="container">
-                <div className="text-center mb-10">
+                {/* <div className="text-center mb-10">
                     <SectionName>Robotica 2023</SectionName>
                     <Title size="3.5xl">Relive the Moments, Redefine the Future!</Title>
-                </div>
+                </div> */}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
                     {videos.map((video, index) => (

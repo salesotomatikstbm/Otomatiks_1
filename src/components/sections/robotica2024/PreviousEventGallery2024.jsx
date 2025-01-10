@@ -6,11 +6,11 @@ import TeamCard from './teamCard1'
 
 const PreviousEventGallery2024 = () => {
   return (
-    <section className="lg:pb-15 py-16 pb-10">
+    <section className="lg:pb-15 bg-[#066aab] py-16 pb-10">
       <div className="container">
         <div className="text-center flex flex-col items-center ">
-          <SectionName>Robotics 2024 Highlights</SectionName>
-          <Title size={"3.5xl"} className={"lg:max-w-[520px]"}>Glimpse of Robotica 2024
+          <SectionName>Past Events</SectionName>
+          <Title size={"3.5xl"} className={"lg:max-w-[520px]"}>A Journey Through Our Milestones
           </Title>
         </div>
         <div className="lg:pt-15 pt-10">

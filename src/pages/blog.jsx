@@ -125,7 +125,7 @@ const Blog = () => {
           </div>
         )}
             <div className="lg:mt-10 mt-4 mb-10">
-<PopupWorkshop />
+{/* <PopupWorkshop /> */}
 </div>
       </main>
 

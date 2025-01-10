@@ -14,7 +14,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Get in Touch with Our Team</title>
+        <title>Contact Us</title>
         <meta 
           name="description" 
           content="Contact us for inquiries about robotics, STEM education, or AI lab setups. Reach out to our team for support, branch details, and educational solutions." 

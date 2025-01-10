@@ -67,7 +67,7 @@ const UpcomingEvents = () => {
                   <div className="p-5">
                     <h3>
                       <Link
-                        to={`/event-details/${event.sys.id}`}
+                        to={`/contact-us/`}
                         className="lg:text-[28px] sm:text-[26px] text-xl font-bold lg:leading-[148%] sm:leading-[140%] leading-[120%] group-hover:text-primary text-secondary transition-all duration-500"
                       >
                         {event.fields.workshopTitle}

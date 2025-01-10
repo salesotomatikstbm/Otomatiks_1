@@ -6,16 +6,13 @@ import team_5 from "@/assets/images/Event/Robotica 2024/5.png"
 import team_6 from "@/assets/images/Event/Robotica 2024/6.png"
 import team_7 from "@/assets/images/Event/Robotica 2024/7.png"
 import team_8 from "@/assets/images/Event/Robotica 2024/8.png"
-import team_9 from "@/assets/images/Event/Robotica 2024/9.png"
-import team_10 from "@/assets/images/Event/Robotica 2024/10.png"
-import team_11 from "@/assets/images/Event/Robotica 2024/11.png"
-import team_12 from "@/assets/images/Event/Robotica 2024/12.png"
-import team_13 from "@/assets/images/Event/Robotica 2024/13.png"
-import team_14 from "@/assets/images/Event/Robotica 2024/14.png"
-import team_15 from "@/assets/images/Event/Robotica 2024/15.png"
-import team_16 from "@/assets/images/Event/Robotica 2024/16.png"
-import team_17 from "@/assets/images/Event/Robotica 2024/17.png"
-import team_18 from "@/assets/images/Event/Robotica 2024/18.png"
+import team_9 from "@/assets/images/Event/Robotica 2023/2.png"
+import team_10 from "@/assets/images/Event/Robotica 2023/3.png"
+import team_11 from "@/assets/images/Event/Robotica 2023/4.png"
+import team_12 from "@/assets/images/Event/Robotica 2023/5.png"
+import team_13 from "@/assets/images/Event/Robotica 2023/6.png"
+import team_14 from "@/assets/images/Event/Robotica 2023/7.png"
+import team_15 from "@/assets/images/Event/Robotica 2023/8.png"
 
 export const teamData = [
     {
@@ -57,41 +54,41 @@ export const teamData = [
         src: team_8,
        
     },
-    // {
-    //     id: 9,
-    //     src: team_9,
+    {
+        id: 9,
+        src: team_9,
        
-    // },
-    // {
-    //     id: 10,
-    //     src: team_10,
+    },
+    {
+        id: 10,
+        src: team_10,
        
-    // },
-    // {
-    //     id: 11,
-    //     src: team_11,
+    },
+    {
+        id: 11,
+        src: team_11,
        
-    // },
-    // {
-    //     id: 12,
-    //     src: team_12,
+    },
+    {
+        id: 12,
+        src: team_12,
        
-    // },
-    // {
-    //     id: 13,
-    //     src: team_13,
+    },
+    {
+        id: 13,
+        src: team_13,
        
-    // },
-    // {
-    //     id: 14,
-    //     src: team_14,
+    },
+    {
+        id: 14,
+        src: team_14,
        
-    // },
-    // {
-    //     id: 15,
-    //     src: team_15,
+    },
+    {
+        id: 15,
+        src: team_15,
        
-    // },
+    },
     // {
     //     id: 16,
     //     src: team_16,

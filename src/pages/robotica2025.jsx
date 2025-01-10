@@ -52,16 +52,17 @@ const Robotica2025 = () => {
         <link rel="canonical" href="https://www.otomatiks.com/robotica2025" />
 
       </Helmet>
-      <PageTitle pageName={"Robotica 2025"} breadcrumbCurrent={"Robotica 2025"} />
+      <PageTitle pageName={"Robotica"} breadcrumbCurrent={"Robotica"} />
       <EventPromoSection />
       {/* <ChiefGuest2025 /> */}
-      <ChiefGuest2025 />
-      <ChiefGuest2024 />
+      {/* <ChiefGuest2025 />
+      <ChiefGuest2024 /> */}
       <PreviousEventGallery2024 />
+      {/* <PreviousEventGallery2023 /> */}
       <GlimplsVideo />
-      <ChiefGuest2023 />
-      <PreviousEventGallery2023 />
-      <GlimplsVideo2023 />
+      {/* <ChiefGuest2023 /> */}
+      
+      {/* <GlimplsVideo2023 /> */}
       <TopUp />
     </div>
   )
