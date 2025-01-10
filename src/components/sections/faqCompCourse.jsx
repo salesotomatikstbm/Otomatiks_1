@@ -33,7 +33,7 @@ const FaqCompCourse = () => {
                     value={id}
                     className="rounded-md border-2 border-[#F2F2F2] lg:pl-7.5 pl-5 pr-5 py-[15px] mb-7.5 last:mb-0"
                   >
-                    <AccordionTrigger className="font-bold lg:text-xl text-[17px] lg:leading-[130%] leading-[120%] hover:no-underline text-white">
+                    <AccordionTrigger className="font-bold lg:text-xl text-[17px] text-justify lg:leading-[100%] leading-[100%] hover:no-underline text-white">
                       {question}
                     </AccordionTrigger>
                     <AccordionContent className="text-base text-foreground text-white">

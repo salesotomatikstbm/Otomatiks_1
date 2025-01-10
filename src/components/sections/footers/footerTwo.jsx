@@ -29,7 +29,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                     <SlideUp delay={3}>
                         <div className="inline-block">
                             <h3 className="text-2xl font-semibold text-cream-foreground inline-block">Pages</h3>
-                            <span className="block w-[130%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+                            <span className="block w-[100%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
                         </div>
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
                             <li><Link to="/about-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">About Us</Link></li>
@@ -43,8 +43,8 @@ Our robotics classes are designed to help you discover the potential of this exc
 
                     <SlideUp delay={4}>
                         <div className="inline-block">
-                            <h3 className="text-2xl font-semibold text-cream-foreground">Contact</h3>
-                            <span className="block w-[130%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+                            <h3 className="text-2xl font-semibold text-cream-foreground">India Operations</h3>
+                            <span className="block w-[100%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
                         </div>
 
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5">
@@ -65,19 +65,24 @@ Our robotics classes are designed to help you discover the potential of this exc
 
                     <SlideUp delay={5}>
                         <div className="inline-block">
-                            <h3 className="text-2xl font-semibold text-cream-foreground inline-block">Our Newsletter</h3>
-                            <span className="block w-[120%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+                            <h3 className="text-2xl font-semibold text-cream-foreground inline-block">Global Operations</h3>
+                            <span className="block w-[100%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
                         </div>
                         <div className="lg:pt-7.5 pt-5">
-                            <p className="text-cream-foreground">Subscribe our newsletter to get our latest update</p>
-                            <form action="#" className="lg:mt-7.5 mt-5">
-                                <div className="relative overflow-hidden">
-                                    <Input type={"email"} placeholder={"Enter Your Email"} className={"rounded-md bg-[#FFFFFF1A] text-cream-foreground placeholder:text-cream-foreground max-h-15 border-none"} />
-                                    <button type="submit" className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-primary text-cream-foreground rounded-tr-md rounded-br-md">
-                                        <FaArrowRight />
-                                    </button>
-                                </div>
-                            </form>
+                        <ul className="flex flex-col lg:gap-[15px] gap-2.5 ">
+                           
+                           <li className="text-cream-foreground flex gap-4">
+                               <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">support@otomatiks.in</Link>
+                           </li>
+                           <li className="text-cream-foreground flex gap-4">
+                               <FaPhone className='mt-1.5' /> <Link to="/contact-us">+971 562118618</Link>
+                           </li>
+                           <li className="text-cream-foreground flex gap-4">
+                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Head Office :
+                               A2, 36, 12th cross road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
+</span>
+                           </li>
+                       </ul>
                         </div>
                     </SlideUp>
                     {/* <!-- Newsletter end --> */}
