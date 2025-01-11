@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FaArrowRight } from 'react-icons/fa6'
-import jr from "@/assets/images/shapes/class-j.png"
-import { extraCurricularData } from '@/lib/fackdata/Software_CourseData'
-import RingBell from '@/assets/icons/ring-bell'
-import CapDoll from '@/assets/icons/cap-doll'
-import Doll from '@/assets/icons/doll'
-import SectionName from '../../ui/sectionName'
-import Title from '../../ui/title'
-import SlideUp from '@/lib/animations/slideUp'
-import PopupCourse from './PopupCourse'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
+import jr from "@/assets/images/shapes/class-j.png";
+import { extraCurricularData } from '@/lib/fackdata/Software_CourseData';
+import RingBell from '@/assets/icons/ring-bell';
+import CapDoll from '@/assets/icons/cap-doll';
+import Doll from '@/assets/icons/doll';
+import SectionName from '../../ui/sectionName';
+import Title from '../../ui/title';
+import SlideUp from '@/lib/animations/slideUp';
+import PopupCourse from './PopupCourse';
+import PopCourse from './PopCourse';
 
 const Software_Course = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,6 @@ const Software_Course = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setCourseData(null);
   };
 
   return (
@@ -50,7 +50,6 @@ const Software_Course = () => {
                 />
               ))
             }
-          
           </div>
         </div>
       </div>
@@ -60,36 +59,37 @@ const Software_Course = () => {
 
       {/* Modal Popup */}
       {isModalOpen && courseData && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-white p-6 rounded-lg w-96">
-      <h3 className="text-2xl font-semibold mb-4">{courseData.title}</h3>
-      <p><strong>Duration:</strong> {courseData.duration}</p>
-      <h4 className="mt-3 font-semibold">Topics Covered:</h4>
-      <ul className="list-disc pl-5">
-        {courseData.topics.map((topic, index) => (
-          <li key={index}>{topic}</li>
-        ))}
-      </ul>
-      <div className="mt-4 flex justify-start">
-      <PopupCourse />
-      </div>
-      <div className="mt-4 flex justify-end">
-        <button onClick={closeModal} className="bg-red-500 text-white px-4 py-2 rounded">Close</button>
-      </div>
-    </div>
-    
-  </div>
-)}
-
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-96 relative">
+            <h3 className="text-2xl font-semibold mb-4">{courseData.title}</h3>
+            <h4 className="mt-3 font-semibold">Concepts to Learn:</h4>
+            <ul className="list-disc pl-5">
+              {courseData.topics.map((topic, index) => (
+                <li key={index}>{topic}</li>
+              ))}
+            </ul>
+            <div className="mt-4 flex justify-center">
+              <PopCourse />
+            </div>
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-white bg-gray-800 rounded-full pl-2 pr-2 pt-1 pb-1  text-lg"
+            >
+              ✖
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="lg:pt-15 pt-10">
         <PopupCourse />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Software_Course
+export default Software_Course;
 
 const Card = ({ title, desc, src, icon, id, level, duration, topics, openModal }) => {
   const renderIcon = (icon) => {
@@ -135,5 +135,5 @@ const Card = ({ title, desc, src, icon, id, level, duration, topics, openModal }
         </div>
       </div>
     </SlideUp>
-  )
-}
+  );
+};

@@ -14,16 +14,19 @@ export const extraCurricularData = [
         level: 1,
         duration: "4 weeks",
         topics: [
-            "Introduction to Robotics",
-            "Basic Coding Concepts",
-            "Building Simple Robots",
-            "Introduction to Sensors",
-            "Motor Control Basics",
-            "Working with LEDs",
-            "Using Buttons in Robotics",
-            "Understanding Robot Movement",
-            "Basic Troubleshooting",
-            "Exploring Robot Kits"
+            "Automatic Street Light",
+            "Fire Alarm",
+            "Rain Detector",
+            "Water Level Indicator",
+            "Earthquake Detector",
+            "Touch Door Bell",
+            "Torchlight",
+            "Brightness Control",
+            "Staircase Wiring",
+            "Automatic Traffic Light System",
+            "Laser Security System",
+            "Magnetic Door Alarm"
+
         ]
     },
     {
@@ -34,16 +37,20 @@ export const extraCurricularData = [
         level: 2,
         duration: "6 weeks",
         topics: [
-            "Intermediate Robotics",
-            "Advanced Coding Techniques",
-            "Building Autonomous Robots",
-            "Sensor Integration",
-            "Introduction to Robotics Programming",
-            "Data Collection with Sensors",
-            "Building Line Following Robots",
-            "Introduction to Robotics Simulations",
-            "Working with Motor Controllers",
-            "Building Smart Robots"
+            "Introduction To IR Sensor",
+            "Home Security System",
+            "Car Reverse Assist System",
+            "Automatic Hand Dryer System",
+            "Automatic Water Pump System",
+            "Automatic Braking System",
+            "Follow Me On",
+            "Touch Me Not",
+            "Obstacle Avoiding Left",
+            "Obstacle Avoiding Right",
+            "Pit Avoiding Robot",
+            "Manually Controlled Robot",
+            "Jumble Bot"
+
         ]
     },
     {
@@ -54,16 +61,16 @@ export const extraCurricularData = [
         level: 3,
         duration: "8 weeks",
         topics: [
-            "Introduction to Programming",
-            "Logical Thinking and Problem Solving",
-            "Building Interactive Projects",
-            "Basic App Development",
-            "Introduction to Algorithms",
-            "Working with Variables",
-            "Conditional Statements",
-            "Debugging and Testing Code",
-            "Introduction to Web Development",
-            "Understanding Loops and Iterations"
+            "Light Activated Robot",
+            "Cell Phone Controlled Robot",
+            "TV Remote Controlled Robot",
+            "Home Security System",
+            "Car Reverse Assistant",
+            "Home Automation Using TV Remote Control",
+            "Home Automation Using DTMF",
+            "Automatic Lighting System",
+            "Home Automation Using PIR"
+
         ]
     },
     {
@@ -74,16 +81,17 @@ export const extraCurricularData = [
         level: 4,
         duration: "10 weeks",
         topics: [
-            "Advanced Robotics Systems",
-            "Complex Robot Programming",
-            "Robot Design and Simulation",
-            "Robotic Arm Programming",
-            "Robotics for Automation",
-            "Machine Learning for Robotics",
-            "Advanced Sensor Integration",
-            "Robotics Communication Protocols",
-            "Introduction to Robot Operating System (ROS)",
-            "Building Multi-Robot Systems"
+            "Blinking LED",
+            "Traffic Light Controller",
+            "Light-Sensitive Light",
+            "Simple Alarm System",
+            "Robot Car",
+            "Automatic Toll Gate",
+            "Automatic Parking Sensor",
+            "Remote Control Bot",
+            "Home Security System",
+            "Home Automation System"
+
         ]
     },
     {
@@ -94,16 +102,22 @@ export const extraCurricularData = [
         level: 5,
         duration: "6 weeks",
         topics: [
-            "Introduction to App Development",
-            "UI/UX Design Principles",
-            "Building Functional Apps",
-            "Deploying Apps to Stores",
-            "Introduction to Mobile Programming",
-            "Creating Databases for Apps",
-            "Working with APIs in Apps",
-            "App Testing and Debugging",
-            "App Design and Wireframing",
-            "Understanding App Monetization"
+            "LED Game Project",
+            "Bluetooth Control Robot",
+            "Gesture Control Robot",
+            "Fire Detection Robot",
+            "Smart Alarm System",
+            "Smoke Detection Robot",
+            "Solar Controlled Street Lights",
+            "WiFi Control Robot",
+            "Surveillance Robot",
+            "Voice Controlled Robot",
+            "Line Tracking Robot Using Arduino",
+            "Home Cleaning Robot",
+            "Automated Plant Watering System",
+            "Smart Water Dispenser",
+            "Smart Dustbin"
+
         ]
     },
     {
@@ -114,16 +128,22 @@ export const extraCurricularData = [
         level: 6,
         duration: "12 weeks",
         topics: [
-            "Robotics Engineering Principles",
-            "Autonomous Robotics",
-            "AI in Robotics",
-            "Building Complex Robotic Systems",
-            "Robotic Vision Systems",
-            "Advanced Control Systems in Robotics",
-            "Robotics Prototyping Techniques",
-            "Introduction to Robot Sensors and Actuators",
-            "Robotics System Integration",
-            "Future Trends in Robotics and AI"
+            "LED Game Project",
+            "Bluetooth Control Robot",
+            "Gesture Control Robot",
+            "Fire Detection Robot",
+            "Smart Alarm System",
+            "Smoke Detection Robot",
+            "Solar Controlled Street Lights",
+            "WiFi Control Robot",
+            "Surveillance Robot",
+            "Voice Controlled Robot",
+            "Line Tracking Robot Using Arduino",
+            "Home Cleaning Robot",
+            "Automated Plant Watering System",
+            "Smart Water Dispenser",
+            "Smart Dustbin"
+
         ]
     }
 ];

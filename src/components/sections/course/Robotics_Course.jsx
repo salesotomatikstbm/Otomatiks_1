@@ -10,9 +10,10 @@ import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import SlideUp from '@/lib/animations/slideUp';
 import PopupCourse from './PopupCourse';
+import PopCourse from './PopCourse';
 
 const ExtraCurricular = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const [isModalOpen, setIsModalOpen] = useState(false);
   const [courseData, setCourseData] = useState(null);
 
   const openModal = (course) => {
@@ -22,9 +23,7 @@ const ExtraCurricular = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setCourseData(null);
   };
-
   return (
     <section className="lg:pb-15 pb-10 relative">
       <div className="container">
@@ -59,21 +58,31 @@ const ExtraCurricular = () => {
       {/* Modal for Popup Course */}
       {isModalOpen && courseData && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg w-96">
+          <div className="bg-white p-6 rounded-lg w-96 relative">
             <h3 className="text-2xl font-semibold mb-4">{courseData.title}</h3>
-            <p><strong>Duration:</strong> {courseData.duration}</p>
-            <h4 className="mt-3 font-semibold">Topics Covered:</h4>
+            <h4 className="mt-3 font-semibold">Concepts to Learn:</h4>
             <ul className="list-disc pl-5">
               {courseData.topics.map((topic, index) => (
                 <li key={index}>{topic}</li>
               ))}
             </ul>
-            <div className="mt-4 flex justify-end">
-              <button onClick={closeModal} className="bg-red-500 text-white px-4 py-2 rounded">Close</button>
+            <div className="mt-4 flex justify-center">
+              <PopCourse />
             </div>
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-white bg-gray-800 rounded-full pl-2 pr-2 pt-1 pb-1 text-lg"
+            >
+              ✖
+            </button>
           </div>
         </div>
       )}
+
+<div className="lg:pt-15 pt-10">
+      <PopupCourse />
+      </div>
     </section>
   );
 };

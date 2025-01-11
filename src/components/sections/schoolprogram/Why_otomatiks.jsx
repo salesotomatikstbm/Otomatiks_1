@@ -14,7 +14,7 @@ const WhyOtomatiks = () => {
     {
       icon: <FaUserTie />,
       title: "Experienced Instructors",
-      description: "Our instructors are experts in Electronics, Mechanical, and Programming, bringing real-world knowledge to school robotics sessions for impactful learning."
+      description: "Our instructors are experts in Electronics and Programming, bringing real-world knowledge to school robotics sessions for impactful learning."
     },
     {
       icon: <FaChalkboardTeacher />,
@@ -43,7 +43,7 @@ const WhyOtomatiks = () => {
       <div className="text-center mb-12">
         <SectionName>Why Otomatiks</SectionName>
         <Title size={"3.5xl"} className={"mt-4"}>
-          What Value Do We Bring to Schools?
+        Revolutionizing the Future with Cutting-Edge Innovation
         </Title>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-center">
