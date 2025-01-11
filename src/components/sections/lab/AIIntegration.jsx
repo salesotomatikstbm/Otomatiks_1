@@ -55,7 +55,7 @@ const SkillsGained = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="mt-10 text-center">
+      <div className="mt-10">
         <PopupSchool />
       </div>
     </section>

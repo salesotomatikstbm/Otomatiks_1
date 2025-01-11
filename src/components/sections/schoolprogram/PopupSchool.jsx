@@ -222,7 +222,7 @@ const PopupSchool = () => {
                             </div>
 
                             {/* Number of Students */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Number of Students</label>
                                 <div className="relative">
                                     <input
@@ -236,10 +236,10 @@ const PopupSchool = () => {
                                     <FaUsers className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.NumberOfStudents && <p className="text-red-500 text-sm">{errors.NumberOfStudents}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Request Services */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Request Services</label>
                                 <div className="relative">
                                     <select
@@ -256,7 +256,7 @@ const PopupSchool = () => {
                                     </select>
                                             </div>
                                 {errors.RequestServices && <p className="text-red-500 text-sm">{errors.RequestServices}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Submit Button */}
                             <div className="text-center">

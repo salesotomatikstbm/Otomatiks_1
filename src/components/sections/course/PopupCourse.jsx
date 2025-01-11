@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhone, FaList, FaMapMarkerAlt, FaChevronDown } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaBirthdayCake } from 'react-icons/fa';
 
 const PopupCourse = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [formData, setFormData] = useState({
-        StudentName: '',
-        Email: '',
+        ContactPersonName: '',
+        ChildName: '',
+        ChildAge: '',
         ContactNumber: '',
-        InterestedCourse: '',
-        CourseMode: '',
-        Place: '',
+        Email: '',
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState('');
@@ -23,23 +22,20 @@ const PopupCourse = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.StudentName.trim()) {
-            newErrors.StudentName = 'Student Name is required';
+        if (!formData.ContactPersonName.trim()) {
+            newErrors.ContactPersonName = 'Contact Person Name is required';
         }
-        if (!formData.Email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
-            newErrors.Email = 'Valid email is required';
+        if (!formData.ChildName.trim()) {
+            newErrors.ChildName = 'Child Name is required';
+        }
+        if (!formData.ChildAge.trim() || isNaN(formData.ChildAge)) {
+            newErrors.ChildAge = 'Valid Child Age is required';
         }
         if (!formData.ContactNumber.trim() || !/^\d{10}$/.test(formData.ContactNumber)) {
             newErrors.ContactNumber = 'Valid 10-digit contact number is required';
         }
-        if (!formData.InterestedCourse.trim()) {
-            newErrors.InterestedCourse = 'Course selection is required';
-        }
-        if (!formData.Place.trim()) {
-            newErrors.Place = 'Place is required';
-        }
-        if (!formData.CourseMode.trim()) {
-            newErrors.CourseMode = 'Please select a course mode';
+        if (!formData.Email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
+            newErrors.Email = 'Valid email is required';
         }
 
         setErrors(newErrors);
@@ -56,7 +52,7 @@ const PopupCourse = () => {
                 "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
                 {
                     method: "POST",
-                    body: new URLSearchParams(formData), // Send form data as URL-encoded
+                    body: new URLSearchParams(formData),
                 }
             );
 
@@ -73,12 +69,11 @@ const PopupCourse = () => {
         }
 
         setFormData({
-            StudentName: '',
-            Email: '',
+            ContactPersonName: '',
+            ChildName: '',
+            ChildAge: '',
             ContactNumber: '',
-            InterestedCourse: '',
-            CourseMode: '',
-            Place: '',
+            Email: '',
         });
     };
 
@@ -108,21 +103,75 @@ const PopupCourse = () => {
                         <h3 className="text-2xl font-bold mb-6 text-center">Join Our Course</h3>
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             <div className="mb-4">
-                                <label className="block text-gray-700">Student Name</label>
+                                <label className="block text-gray-700">Contact Person Name</label>
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="StudentName"
-                                        placeholder="Student Name"
-                                        value={formData.StudentName}
+                                        name="ContactPersonName"
+                                        placeholder="Contact Person Name"
+                                        value={formData.ContactPersonName}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.StudentName ? 'border-red-500' : 'border-gray-300'
+                                            errors.ContactPersonName ? 'border-red-500' : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     />
                                     <FaUser className="absolute right-3 top-3 text-gray-400" />
                                 </div>
-                                {errors.StudentName && <p className="text-red-500 text-sm">{errors.StudentName}</p>}
+                                {errors.ContactPersonName && <p className="text-red-500 text-sm">{errors.ContactPersonName}</p>}
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700">Child Name</label>
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="ChildName"
+                                        placeholder="Child Name"
+                                        value={formData.ChildName}
+                                        onChange={handleChange}
+                                        className={`w-full border ${
+                                            errors.ChildName ? 'border-red-500' : 'border-gray-300'
+                                        } p-3 rounded-md`}
+                                    />
+                                    <FaUser className="absolute right-3 top-3 text-gray-400" />
+                                </div>
+                                {errors.ChildName && <p className="text-red-500 text-sm">{errors.ChildName}</p>}
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700">Child Age</label>
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="ChildAge"
+                                        placeholder="Child Age"
+                                        value={formData.ChildAge}
+                                        onChange={handleChange}
+                                        className={`w-full border ${
+                                            errors.ChildAge ? 'border-red-500' : 'border-gray-300'
+                                        } p-3 rounded-md`}
+                                    />
+                                    <FaBirthdayCake className="absolute right-3 top-3 text-gray-400" />
+                                </div>
+                                {errors.ChildAge && <p className="text-red-500 text-sm">{errors.ChildAge}</p>}
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700">Contact Number</label>
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="ContactNumber"
+                                        placeholder="Contact Number"
+                                        value={formData.ContactNumber}
+                                        onChange={handleChange}
+                                        className={`w-full border ${
+                                            errors.ContactNumber ? 'border-red-500' : 'border-gray-300'
+                                        } p-3 rounded-md`}
+                                    />
+                                    <FaPhone className="absolute right-3 top-3 text-gray-400" />
+                                </div>
+                                {errors.ContactNumber && <p className="text-red-500 text-sm">{errors.ContactNumber}</p>}
                             </div>
 
                             <div className="mb-4">
@@ -141,85 +190,6 @@ const PopupCourse = () => {
                                     <FaEnvelope className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.Email && <p className="text-red-500 text-sm">{errors.Email}</p>}
-                            </div>
-
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Contact Number</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="ContactNumber"
-                                        placeholder="Contact Number"
-                                        value={formData.ContactNumber}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.ContactNumber ? 'border-red-500' : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaPhone className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.ContactNumber && (
-                                    <p className="text-red-500 text-sm">{errors.ContactNumber}</p>
-                                )}
-                            </div>
-
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Interested Course</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="InterestedCourse"
-                                        placeholder="Interested Course"
-                                        value={formData.InterestedCourse}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.InterestedCourse ? 'border-red-500' : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaList className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.InterestedCourse && (
-                                    <p className="text-red-500 text-sm">{errors.InterestedCourse}</p>
-                                )}
-                            </div>
-
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Place</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Place"
-                                        placeholder="Place"
-                                        value={formData.Place}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.Place ? 'border-red-500' : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaMapMarkerAlt className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.Place && <p className="text-red-500 text-sm">{errors.Place}</p>}
-                            </div>
-
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Course Mode</label>
-                                <div className="relative">
-                                    <select
-                                        name="CourseMode"
-                                        value={formData.CourseMode}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.CourseMode ? 'border-red-500' : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    >
-                                        <option value="">Select Mode</option>
-                                        <option value="Online">Online</option>
-                                        <option value="Offline">Offline</option>
-                                    </select>
-                                      </div>
-                                {errors.CourseMode && (
-                                    <p className="text-red-500 text-sm">{errors.CourseMode}</p>
-                                )}
                             </div>
 
                             <div className="text-center">

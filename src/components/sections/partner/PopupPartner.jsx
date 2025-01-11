@@ -146,7 +146,7 @@ const PopupPartner = () => {
                             </div>
 
                             {/* Date of Birth Field */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Date of Birth</label>
                                 <div className="relative">
                                     <input
@@ -164,10 +164,10 @@ const PopupPartner = () => {
                                     />
                                        </div>
                                 {errors.DOB && <p className="text-red-500 text-sm">{errors.DOB}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Qualification Field */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Qualification</label>
                                 <div className="relative">
                                     <input
@@ -187,10 +187,10 @@ const PopupPartner = () => {
                                     <FaGraduationCap className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.Qualification && <p className="text-red-500 text-sm">{errors.Qualification}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Profession Field */}
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Profession</label>
                                 <div className="relative">
                                     <input
@@ -210,7 +210,7 @@ const PopupPartner = () => {
                                     <FaBriefcase className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.Profession && <p className="text-red-500 text-sm">{errors.Profession}</p>}
-                            </div>
+                            </div> */}
 
                             {/* Franchise Location Field */}
                             <div className="mb-4">
