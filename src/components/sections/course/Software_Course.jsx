@@ -50,6 +50,7 @@ const Software_Course = () => {
                 />
               ))
             }
+          
           </div>
         </div>
       </div>
@@ -69,10 +70,14 @@ const Software_Course = () => {
           <li key={index}>{topic}</li>
         ))}
       </ul>
+      <div className="mt-4 flex justify-start">
+      <PopupCourse />
+      </div>
       <div className="mt-4 flex justify-end">
         <button onClick={closeModal} className="bg-red-500 text-white px-4 py-2 rounded">Close</button>
       </div>
     </div>
+    
   </div>
 )}
 

@@ -46,11 +46,18 @@ const Card = ({ name, src, position, review, rating }) => {
     return (
         <div className="lg:p-10 sm:p-4 sm:py-0 sm:-mr-10 ">
             <div className="bg-background border border-[#F2F2F2] lg:p-15 md:p-5 p-3 max-w-[630px] w-full rounded-[10px] ml-auto shadow-[0px_0px_60px_0px_rgba(0,0,0,0.05)]">
-                {/* Mobile and Desktop Layout Adjustments */}
+
                 <div className="flex flex-col sm:flex-row justify-between items-center relative z-10 lg:pb-7.5 pb-5 gap-4 sm:gap-5">
-                    {/* Image and Text for Mobile & Desktop */}
+
                     <div className="flex items-center gap-5 sm:gap-10">
-                        <img src={src} alt="bg-img" className="w-full sm:w-auto " />
+                        <div className="">
+
+                     
+                        <img
+                            src={src}
+                            alt="bg-img"
+                            className="w-full sm:w-auto rounded-full"
+                        />   </div>
                         <div>
                             <h5 className="md:text-2xl text-xl font-semibold md:leading-[140%]">{name}</h5>
                             <p>{position}</p>

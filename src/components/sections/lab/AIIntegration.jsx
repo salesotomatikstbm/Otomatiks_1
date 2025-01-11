@@ -53,8 +53,7 @@ const SkillsGained = () => {
           </h3>
         </div>
       </div>
-
-      {/* Call to Action */}
+      
       <div className="mt-10">
         <PopupSchool />
       </div>
