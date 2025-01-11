@@ -12,6 +12,7 @@ import SlideUp from '@/lib/animations/slideUp';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Button } from '@/components/ui/button'
 
 const RoboticCourseSlide = () => {
   const sliderSettings = {
@@ -64,6 +65,11 @@ const RoboticCourseSlide = () => {
       {/* <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
         <img src={jr} alt="img" />
       </div> */}
+       <div className="lg:pt-15 pt-10 flex justify-center">
+                <Button asChild variant={"secondary"} >
+                              <Link to="/robotics-coding-courses" className='bg-primary-foreground'>Know More</Link>
+                            </Button>
+                  </div>
     </section>
   );
 };

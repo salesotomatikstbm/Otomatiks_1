@@ -42,7 +42,8 @@ import Img35 from "../../../assets/images/patrons/35.png";
 import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
 import PopupSchool from '../schoolprogram/PopupSchool';
-
+import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom';
 const images = [
   Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10, Img11, Img12, Img13,
   Img14, Img15, Img16, Img17, Img18, Img19, Img20, Img21, Img22, Img23, Img24, Img25,
@@ -101,9 +102,11 @@ const Our_Patrons_Home = () => {
           ))}
         </Slider>
       </div>
-      <div className="lg:pt-15 pt-10">
-        <PopupSchool />
-      </div>
+      <div className="lg:pt-15 pt-10 flex justify-center">
+                     <Button asChild variant={"secondary"} >
+                                   <Link to="/robotics-coding-school-curriculum" className='bg-primary-foreground'>Know More</Link>
+                                 </Button>
+                       </div>
     </section>
   );
 };

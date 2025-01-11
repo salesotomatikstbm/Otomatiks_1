@@ -54,11 +54,11 @@ const HomeOne = () => {
         <Our_Patrons_Home />
         <Brands />
         <Gallery />
-        <BlogWithSlider />
-        <Teams />
+        {/* <BlogWithSlider /> */}
+        {/* <Teams /> */}
         <HomeTestimonial />
-        <FaqComp />
-        <ContactForm />
+        {/* <FaqComp /> */}
+        {/* <ContactForm /> */}
         
         <TopUp />
       </main>
