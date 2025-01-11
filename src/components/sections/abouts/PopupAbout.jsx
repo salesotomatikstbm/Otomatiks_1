@@ -199,7 +199,7 @@ const PopupAbout = () => {
                                 )}
                             </div>
 
-                            <div className="mb-4">
+                            {/* <div className="mb-4">
                                 <label className="block text-gray-700">Expected Salary</label>
                                 <div className="relative">
                                     <input
@@ -241,7 +241,7 @@ const PopupAbout = () => {
                                     />
                                 </div>
                                 {errors.Message && <p className="text-red-500 text-sm">{errors.Message}</p>}
-                            </div>
+                            </div> */}
 
                             <div className="text-center">
                                 <button
