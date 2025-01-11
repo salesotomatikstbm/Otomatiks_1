@@ -7,20 +7,20 @@ import BranchCard from '../BranchCard';
 // Array of districts with contact numbers and other branch info
 const districts = [
   { name: "Vellore", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Vellore" },
+  { name: "United Arab Emirates (UAE)", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "UAE" },
   { name: "Parrys, Chennai", contact: "+91 9600015954", email: "chennai@otomatiks.in", location: "Chennai" },
   { name: "Annanagar, Chennai", contact: "+91 7603849783", email: "otomatiksannanagar@gmail.com", location: "Chennai" },
   { name: "Tambaram", contact: "+91 8610210593", email: "otomatikstambaram@gmail.com", location: "Tambaram" },
   { name: "Salem", contact: "+91 9360404063", email: "salem.otomatiks@gmail.com", location: "Salem" },
   { name: "Attur", contact: "+91 9994506530", email: "otomatiksattur@gmail.com", location: "Attur" },
   { name: "Namakkal", contact: "+91 9994570354", email: "otomatiksnkl@gmail.com", location: "Namakkal" },
-  { name: "Gudiyatham", contact: "+91 ", email: "", location: "Gudiyatham" },
+  { name: "Gudiyatham", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Gudiyatham" },
   { name: "Dindigul", contact: "+91 9876543210", email: "dindigul@example.com", location: "Dindigul" },
   { name: "Madurai", contact: "+91 9988776655", email: "madurai@example.com", location: "Madurai" },
   { name: "Theni", contact: "+91 8899776655", email: "theni@example.com", location: "Theni" },
-  { name: "Mumbai", contact: "+91 9988665544", email: "mumbai@example.com", location: "Mumbai" },
+  { name: "Mumbai", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Mumbai" },
   { name: "United Kingdom (UK)", contact: "+91 7985783392", email: "uk@example.com", location: "United Kingdom" },
-  { name: "United Arab Emirates (UAE)", contact: "+91", email: "", location: "UAE" },
-  { name: "Thirunelveli", contact: "+91 9043337564", email: "thirunelveli@otomatiks.in", location: "Thirunelveli" },
+    { name: "Thirunelveli", contact: "+91 9043337564", email: "thirunelveli@otomatiks.in", location: "Thirunelveli" },
   { name: "Bangalore", contact: "+91 8792076264", email: "bangalore@otomatiks.in", location: "Bangalore" }
 ];
 

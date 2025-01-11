@@ -56,7 +56,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                                 <FaPhone className='mt-1.5' /> <Link to="/contact-us">+91 90432 09448</Link>
                             </li>
                             <li className="text-cream-foreground flex gap-4">
-                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Head Office :
+                                <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">
                                 A2, 36, 12th cross road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
 </span>
                             </li>
@@ -78,9 +78,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                                <FaPhone className='mt-1.5' /> <Link to="/contact-us">+971 562118618</Link>
                            </li>
                            <li className="text-cream-foreground flex gap-4">
-                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Head Office :
-                               A2, 36, 12th cross road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
-</span>
+                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster N, Jumeirah Lake Towers (JLT), Dubai.</span>
                            </li>
                        </ul>
                         </div>

@@ -178,22 +178,21 @@ const PopupAbout = () => {
                             <div className="mb-4">
                                 <label className="block text-gray-700">Experience</label>
                                 <div className="relative">
-                                    <input
-                                        type="text"
+                                    <select
                                         name="Experience"
-                                        placeholder="Experience"
                                         value={formData.Experience}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.Experience
-                                                ? 'border-red-500'
-                                                : formData.Experience.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
+                                            errors.Experience ? 'border-red-500' : 'border-gray-300'
                                         } p-3 rounded-md`}
-                                    />
-                                    <FaList className="absolute right-3 top-3 text-gray-400" />
-                                </div>
+                                    >
+                                        <option value="">Select Experience</option>
+                                        <option value="Fresher">Fresher</option>
+                                        <option value="1 - 2 years">1 - 2 years</option>
+                                        <option value="3 - 5 years">3 - 5 years</option>
+                                        <option value="5 years above">5 years above</option>
+                                    </select>
+                                      </div>
                                 {errors.Experience && (
                                     <p className="text-red-500 text-sm">{errors.Experience}</p>
                                 )}

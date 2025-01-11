@@ -86,8 +86,7 @@ const ContactAddress = () => {
                         </div>
                         <h3 className="text-lg font-semibold text-primary mb-2">Visit Us</h3>
                         <p className="text-center max-w-sm mx-auto">
-                            No..A2, 36, 12th Cross Road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
-                        </p>
+                        Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster N, Jumeirah Lake Towers (JLT), Dubai.              </p>
                     </div>
                     {/* Step 2 - Phone */}
                     <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[510px] mx-auto group/branch">
