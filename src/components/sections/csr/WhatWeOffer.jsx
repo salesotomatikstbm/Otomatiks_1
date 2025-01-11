@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faHeartbeat, faTree, faUsers } from '@fortawesome/free-solid-svg-icons'; // FontAwesome icons
+import { faBook, faCode, faDesktop, faHeartbeat, faRobot, faTools, faTree, faUsers } from '@fortawesome/free-solid-svg-icons'; // FontAwesome icons
 
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
@@ -8,24 +8,25 @@ import Title from '@/components/ui/title';
 // Array for content
 const offerings = [
   {
-    icon: faBook,
+    icon: faRobot,
     title: "Robotics Training",
-    description: "We provide innovative educational programs that empower underprivileged communities and foster growth in the next generation.",
+    description: "We are empowering students with hands-on robotics training, helping them develop critical skills for the future.",
   },
   {
-    icon: faHeartbeat,
+    icon: faCode,
     title: "Software Training",
-    description: "Our healthcare initiatives aim to provide access to quality medical care and support to communities in need.",
+    description: "Through software training, we are fostering the next generation of tech innovators by teaching students the fundamentals of programming.",
   },
+ 
   {
-    icon: faTree,
-    title: "Robotics & AI Lab",
-    description: "We focus on sustainability through environmental projects that help protect our planet for future generations.",
-  },
-  {
-    icon: faUsers,
+    icon: faTools,
     title: "Workshop",
-    description: "Our community development initiatives aim to uplift marginalized groups and provide them with tools for self-sufficiency.",
+    description: "Our workshops are designed to inspire creativity, collaboration, and problem-solving skills among students through practical, real-world projects.",
+  },
+  {
+    icon: faDesktop,
+    title: "Robotics & AI Lab",
+    description: "We are providing students with access to a state-of-the-art Robotics & AI Lab, allowing them to explore and experiment with cutting-edge technology.",
   },
 ];
 

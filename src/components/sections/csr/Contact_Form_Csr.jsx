@@ -1,19 +1,19 @@
 import React from 'react';
-import { FaUser, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClipboard, FaUsers } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaUser, FaBuilding, FaSchool, FaMapMarkerAlt, FaUsers } from 'react-icons/fa';
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import { FaAddressBook, FaStubber } from 'react-icons/fa6';
 
 const Contact_Form_Csr = () => {
     const [formData, setFormData] = React.useState({
-        companyName: '',
-        contactPerson: '',
-        email: '',
-        phone: '',
-        address: '',
-        initiativeTitle: '',
-        initiativeDescription: '',
-        targetAudience: '',
+        SchoolName: '',
+        ContactPersonName: '',
+        OrganizationType: '',
+        Email: '',
+        PhoneNumber: '',
+        SchoolAddress: '',
+      
     });
 
     const [errors, setErrors] = React.useState({});
@@ -31,41 +31,34 @@ const Contact_Form_Csr = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.companyName.trim()) {
-            newErrors.companyName = 'Company name is required';
+        if (!formData.SchoolName.trim()) {
+            newErrors.SchoolName = 'School Name is required';
         }
 
-        if (!formData.contactPerson.trim()) {
-            newErrors.contactPerson = 'Contact person is required';
+        if (!formData.ContactPersonName.trim()) {
+            newErrors.ContactPersonName = 'Contact Person Name is required';
+        } else if (/[^a-zA-Z\s]/.test(formData.ContactPersonName)) {
+            newErrors.ContactPersonName = 'Contact Person Name should only contain letters and spaces';
         }
 
-        if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            newErrors.email = 'Enter a valid email';
+        if (!formData.PhoneNumber.trim()) {
+            newErrors.PhoneNumber = 'Phone number is required';
+        } else if (!/^[0-9]{10}$/.test(formData.PhoneNumber)) {
+            newErrors.PhoneNumber = 'Enter a valid 10-digit phone number';
         }
 
-        if (!formData.phone.trim()) {
-            newErrors.phone = 'Phone number is required';
-        } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-            newErrors.phone = 'Enter a valid 10-digit phone number';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.Email.trim()) {
+            newErrors.Email = 'Email is required';
+        } else if (!emailRegex.test(formData.Email)) {
+            newErrors.Email = 'Enter a valid email';
         }
 
-        if (!formData.address.trim()) {
-            newErrors.address = 'Address is required';
+        if (!formData.SchoolAddress.trim()) {
+            newErrors.SchoolAddress = 'School Address is required';
         }
 
-        if (!formData.initiativeTitle.trim()) {
-            newErrors.initiativeTitle = 'Initiative title is required';
-        }
-
-        if (!formData.initiativeDescription.trim()) {
-            newErrors.initiativeDescription = 'Initiative description is required';
-        }
-
-        if (!formData.targetAudience.trim()) {
-            newErrors.targetAudience = 'Target audience is required';
-        }
+       
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -78,7 +71,7 @@ const Contact_Form_Csr = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbwNTyP_eEEyMDawgDyO_DI1uhJqbJR6o4h_w7h7CI_jig5PgrGPXgwbjc22ut7l_aEL/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData),
@@ -98,196 +91,166 @@ const Contact_Form_Csr = () => {
         }
 
         setFormData({
-            companyName: '',
-            contactPerson: '',
-            email: '',
-            phone: '',
-            address: '',
-            initiativeTitle: '',
-            initiativeDescription: '',
-            targetAudience: '',
+            SchoolName: '',
+            ContactPersonName: '',
+            OrganizationType: '',
+            Email: '',
+            PhoneNumber: '',
+            SchoolAddress: '',
+            NumberOfStudents: '',
+            RequiredService: '',
+            AdditionalNotes: '',
         });
     };
 
     return (
         <section className="lg:pt-15 lg:pb-15 pb-10 pt-10">
             <div className="container">
-                <div className="max-w-[846px] mx-auto text-center">
-                <SectionName>Make a Difference with Us</SectionName>
-                <Title size={"3.5xl"}>Join Hands for a Better Future</Title>
+                <div className=" mx-auto text-center">
+                    <SectionName>Academic Programs Enrollment</SectionName>
+                    <Title size={"3.5xl"}>Shaping the Future by Supporting Education and Innovation</Title>
                 </div>
                 <div className="mt-15">
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
                         <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
                         <form className="form mt-7" onSubmit={handleSubmit}>
-                            <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
-                                {/* Company Name Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="companyName"
-                                        placeholder="Company Name"
-                                        value={formData.companyName}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.companyName ? 'border-red-500' : formData.companyName.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="companyName"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaClipboard />
-                                    </label>
-                                    {errors.companyName && <p className="text-red-500 text-sm mt-1">{errors.companyName}</p>}
-                                </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
+                              
 
-                                {/* Contact Person Field */}
+                                {/* Contact Person Name Field */}
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="contactPerson"
-                                        placeholder="Contact Person"
-                                        value={formData.contactPerson}
+                                        name="ContactPersonName"
+                                        placeholder="Name"
+                                        value={formData.ContactPersonName}
                                         onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.contactPerson ? 'border-red-500' : formData.contactPerson.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
+                                            ${errors.ContactPersonName ? 'border-red-500' : formData.ContactPersonName.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
+                                        
                                     />
-                                    <label
-                                        htmlFor="contactPerson"
+                                     <label
+                                        htmlFor="name"
                                         className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaUser />
                                     </label>
-                                    {errors.contactPerson && <p className="text-red-500 text-sm mt-1">{errors.contactPerson}</p>}
+                                    {errors.ContactPersonName && <p className="text-red-500 text-sm mt-1">{errors.ContactPersonName}</p>}
                                 </div>
 
                                 {/* Email Field */}
                                 <div className="relative">
                                     <input
                                         type="email"
-                                        name="email"
+                                        name="Email"
                                         placeholder="Email"
-                                        value={formData.email}
+                                        value={formData.Email}
                                         onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.email ? 'border-red-500' : formData.email.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
+                                            ${errors.Email ? 'border-red-500' : formData.Email.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="email"
+                                     <label
+                                        htmlFor="name"
                                         className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaEnvelope />
                                     </label>
-                                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                                    {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                 </div>
 
-                                {/* Phone Field */}
+                                {/* Phone Number Field */}
                                 <div className="relative">
                                     <input
-                                        type="text"
-                                        name="phone"
+                                        type="tel"
+                                        name="PhoneNumber"
                                         placeholder="Phone Number"
-                                        value={formData.phone}
+                                        value={formData.PhoneNumber}
                                         onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.phone ? 'border-red-500' : formData.phone.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
+                                            ${errors.PhoneNumber ? 'border-red-500' : formData.PhoneNumber.trim() && /^[0-9]{10}$/.test(formData.PhoneNumber) ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="phone"
+                                     <label
+                                        htmlFor="name"
                                         className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaPhone />
                                     </label>
-                                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                                    {errors.PhoneNumber && <p className="text-red-500 text-sm mt-1">{errors.PhoneNumber}</p>}
                                 </div>
+                                {/* Organization Type Field */}
+                                {/* <div className="relative">
+                                    <select
+                                        name="OrganizationType"
+                                        value={formData.OrganizationType}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
+                                            ${errors.OrganizationType ? 'border-red-500' : formData.OrganizationType.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    >
+                                        
+                                        <option value="">Organization Type</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="International">International</option>
+                                        <option value="State Board">State Board</option>
+                                    </select>
+                                    {errors.OrganizationType && <p className="text-red-500 text-sm mt-1">{errors.OrganizationType}</p>}
+                                </div> */}
 
-                                {/* Address Field */}
+  {/* School Name Field */}
+  <div className="relative ">
+                                    <input
+                                        type="text"
+                                        name="SchoolName"
+                                        placeholder="Instuition Name"
+                                        value={formData.SchoolName}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.SchoolName ? 'border-red-500' : formData.SchoolName.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        required
+                                    />
+                                    <label
+                                        htmlFor="name"
+                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaSchool />
+                                    </label>
+                                    {errors.SchoolName && <p className="text-red-500 text-sm mt-1">{errors.SchoolName}</p>}
+                                </div>
+                                {/* School Address Field */}
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="address"
-                                        placeholder="Address"
-                                        value={formData.address}
+                                        name="SchoolAddress"
+                                        placeholder="Location"
+                                        value={formData.SchoolAddress}
                                         onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.address ? 'border-red-500' : formData.address.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full
+                                            ${errors.SchoolAddress ? 'border-red-500' : formData.SchoolAddress.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
                                         required
                                     />
-                                    <label
-                                        htmlFor="address"
+                                     <label
+                                        htmlFor="name"
                                         className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaMapMarkerAlt />
+                                        <FaAddressBook />
                                     </label>
-                                    {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
+                                    {errors.SchoolAddress && <p className="text-red-500 text-sm mt-1">{errors.SchoolAddress}</p>}
                                 </div>
 
-                                {/* Initiative Title Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="initiativeTitle"
-                                        placeholder="Initiative Title"
-                                        value={formData.initiativeTitle}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.initiativeTitle ? 'border-red-500' : formData.initiativeTitle.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="initiativeTitle"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaClipboard />
-                                    </label>
-                                    {errors.initiativeTitle && <p className="text-red-500 text-sm mt-1">{errors.initiativeTitle}</p>}
-                                </div>
-
-                                {/* Initiative Description Field */}
-                                <div className="relative">
-                                    <textarea
-                                        name="initiativeDescription"
-                                        placeholder="Initiative Description"
-                                        value={formData.initiativeDescription}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.initiativeDescription ? 'border-red-500' : formData.initiativeDescription.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="initiativeDescription"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaClipboard />
-                                    </label>
-                                    {errors.initiativeDescription && <p className="text-red-500 text-sm mt-1">{errors.initiativeDescription}</p>}
-                                </div>
-
-                                {/* Target Audience Field */}
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="targetAudience"
-                                        placeholder="Target Audience"
-                                        value={formData.targetAudience}
-                                        onChange={handleChange}
-                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
-                                            ${errors.targetAudience ? 'border-red-500' : formData.targetAudience.trim() ? 'border-green-500' : 'border-[#F2F2F2]'}`}
-                                        required
-                                    />
-                                    <label
-                                        htmlFor="targetAudience"
-                                        className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
-                                        <FaUsers />
-                                    </label>
-                                    {errors.targetAudience && <p className="text-red-500 text-sm mt-1">{errors.targetAudience}</p>}
-                                </div>
+                              
+                               
                             </div>
 
-                            {/* Submit Button */}
-                            <div className="text-center mt-8">
-                                <Button type="submit" className="bg-primary text-white w-full lg:w-72 rounded-[8px]" disabled={isSubmitting}>
-                                    {isSubmitting ? 'Submitting...' : 'Submit'}
-                                </Button>
-                                {message && <p className="text-center text-green-500 mt-4">{message}</p>}
-                            </div>
+                             <div className="mt-6 flex justify-center">
+                                                             <Button
+                                                                 type="submit"
+                                                                 disabled={isSubmitting}
+                                                                 className={`bg-primary text-white py-4 px-8 rounded-[10px] mt-4
+                                                                                                                                ${isSubmitting ? 'cursor-not-allowed opacity-50' : 'hover:bg-hovercolor'}`}
+                                                             >
+                                                                 {isSubmitting ? 'Sending...' : 'Submit'}
+                                                             </Button>
+                                                         </div>
+
+                            {message && <p className="mt-3 text-center text-[#2C2C2C]">{message}</p>}
                         </form>
                     </div>
                 </div>

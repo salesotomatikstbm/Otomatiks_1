@@ -25,13 +25,15 @@ const Products = () => {
                             <div className="lg:max-w-[430px] w-full md:order-0 order-1">
                                 <SlideUp> <h4 className="text-2xl font-semibold leading-[140%]">Empowering Young Innovators Through Hands-On Robotics & AI Learning</h4></SlideUp>
                                 {/* <h3 className="text-destructive-foreground lg:text-[32px] text-2xl font-bold mt-[15px]">29.80$</h3> */}
-                                <SectionDescription className={"mt-5"}>Our programs foster creativity, problem-solving, and collaboration, equipping young minds with essential skills for the future. With a curriculum designed to engage and excite, students explore real-world tech applications in a fun, supportive environment. Led by experienced mentors, each course encourages curiosity and innovation. Join us and help your child build a foundation in technology that lasts a lifetime. </SectionDescription>
+                                <SectionDescription className={"mt-5 text-justify"}>At Otomatiks Robotics & AI Lab, we immerse students in the exciting world of technology, where they can unleash their creativity and innovation. Our lab is designed to provide hands-on learning experiences in Robotics, AI, and coding, allowing students to build and program their own projects. With guidance from expert mentors, students dive deep into real-world challenges, exploring how technology can solve problems and create opportunities.
+
+</SectionDescription>
                                 <div className="flex gap-8 lg:mt-10 mt-7">
-                                    <Button asChild size="lg" variant="">
+                                    {/* <Button asChild size="lg" variant="">
                                         <Link to={"/about-us"} className='text-white'>Read More</Link>
-                                    </Button>
-                                    <Button asChild size="lg"  className="bg-secondary text-destructive-foreground hover:text-white hover:bg-primary">
-                                        <Link to={"/contact-us"} className='text-white'>Contact Us</Link>
+                                    </Button> */}
+                                    <Button asChild size="lg"  className="bg-primary text-destructive-foreground hover:text-white hover:bg-primary">
+                                        <Link to={"/contact-us"} className='text-white'>Enquire Now</Link>
                                     </Button>
                                 </div>
                             </div>

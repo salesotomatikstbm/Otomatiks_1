@@ -18,7 +18,7 @@ const partners = [
   {
     title: "Individuals",
     description:
-      "Collaborate with us for personal growth, educational opportunities, and skill development.",
+      "Contribute your skills and passion to our CSR initiatives, empowering the next generation and creating a positive impact in the communities we serve.",
     img: img2,
     imgAlt: "Individuals",
     imgCaption:
@@ -63,10 +63,10 @@ const PartnerSection = () => {
               <h3 className="text-2xl font-semibold text-primary mb-2">
                 {partner.title}
               </h3>
-              <p className="text-gray-600 mb-4">{partner.description}</p>
-              <p className="text-sm text-gray-500 italic">
+              <p className="text-gray-600 mb-4 text-justify">{partner.description}</p>
+              {/* <p className="text-sm text-gray-500 italic">
                 {partner.imgCaption}
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

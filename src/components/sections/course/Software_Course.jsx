@@ -119,9 +119,14 @@ const Card = ({ title, desc, src, icon, id, level, duration, topics, openModal }
         </div>
         <div className="pt-7.5">
           <h4>
-            <Link to="/service-details" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
+          <button
+              onClick={() => openModal({ title, duration, topics })}
+              className=" transition-colors duration-300"
+            >
+            <p to="" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
               {title}
-            </Link>
+            </p>
+            </button>
           </h4>
           <div className="flex pt-2">
             <button

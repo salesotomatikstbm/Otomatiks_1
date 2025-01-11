@@ -7,8 +7,8 @@ const FranchiseApplicants = () => {
   const applicants = [
     { title: "Passionate Individual" },
     { title: "Entrepreneur" },
-    { title: "Tutors" },
-    { title: "Coaching Centers" },
+    { title: "STEM Trainers" },
+    { title: "Educational Centers" },
   ];
 
   return (

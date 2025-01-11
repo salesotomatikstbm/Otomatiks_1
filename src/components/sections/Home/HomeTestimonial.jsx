@@ -8,6 +8,8 @@ import testi1 from "@/assets/images/partner/testi1.png";
 import testi2 from "@/assets/images/partner/testi2.png";
 import testi3 from "@/assets/images/partner/testi3.png";
 import TestiHome from '../TestiHome';
+import PopupPartner from '../partner/PopupPartner';
+import PopupSchool from '../schoolprogram/PopupSchool';
 // Sample data for testimonials
 const videos = [
   {
@@ -139,7 +141,9 @@ const HomeTestimonial = () => {
     </div>
   </div>
 </section>
-
+<div className="lg:mt-10 mt-4">
+          <PopupSchool />
+        </div>
     </section>
   );
 };

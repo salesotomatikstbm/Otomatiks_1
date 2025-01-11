@@ -57,9 +57,10 @@ const Robotica2025 = () => {
       {/* <ChiefGuest2025 /> */}
       {/* <ChiefGuest2025 />
       <ChiefGuest2024 /> */}
+      <GlimplsVideo />
       <PreviousEventGallery2024 />
       {/* <PreviousEventGallery2023 /> */}
-      <GlimplsVideo />
+      
       {/* <ChiefGuest2023 /> */}
       
       {/* <GlimplsVideo2023 /> */}

@@ -39,11 +39,11 @@ const Ai = () => {
       <main>
         <PageTitle pageName="Robotics & AI Lab" breadcrumbCurrent="Robotics & AI Lab" />
         <Products />
-        <InfrastructureRequirements />
+        {/* <InfrastructureRequirements /> */}
         <RoboticsAiLabSetup />
       
         <ValueSection />
-        <AiIntegration />
+        {/* <AiIntegration /> */}
         <FaqLab />
        <Contact_School_Management />
         <TopUp />

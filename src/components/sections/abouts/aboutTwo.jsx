@@ -34,9 +34,9 @@ const AboutTwo = () => {
                         </SectionDescription>
                         <SlideUp delay={3}>
                             <div className="flex gap-8 mt-10">
-                                <Button asChild size="lg" variant="pill" className="bg-secondary border-secondary hover:text-primary-foreground">
+                                {/* <Button asChild size="lg" variant="pill" className="bg-secondary border-secondary hover:text-primary-foreground">
                                     <Link to={"/about-us"}>Learn More</Link>
-                                </Button>
+                                </Button> */}
                                 <Button asChild size="lg" variant="pill" className="bg-transparent border-primary text-muted-foreground hover:text-cream-foreground hover:bg-primary">
                                     <PopupWorkshop />
                                 </Button>

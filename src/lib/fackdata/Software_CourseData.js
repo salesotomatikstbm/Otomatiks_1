@@ -89,7 +89,7 @@ export const extraCurricularData = [
     {
         id: 5,
         title: "Artificial Intelligence Basics",
-        desc: "Explore AI concepts and machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
+        desc: "Artificial Intelligence BasicsLearn the AI concepts and Discover the fundamentals of Artificial Intelligence through engaging projects.",
         src: img_5,
         level: 5,
         duration: "12 Weeks",
@@ -108,8 +108,8 @@ export const extraCurricularData = [
     },
     {
         id: 6,
-        title: "Artificial Intelligence",
-        desc: "Discover the fundamentals of Artificial Intelligence through engaging projects. Learn concepts like image recognition and ML",
+        title: "Artificial Intelligence Advanced",
+        desc: "Learn machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
         src: img_6,
         level: 6,
         duration: "14 Weeks",

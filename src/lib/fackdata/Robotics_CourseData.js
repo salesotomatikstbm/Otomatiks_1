@@ -32,7 +32,7 @@ export const extraCurricularData = [
     {
         id: 2,
         title: "Robo Explorers",
-        desc: "In this course, students will explore the world of robotics more deeply, gaining hands-on experience with various robotic systems and learning advanced coding techniques.",
+        desc: "In this course, students will explore the world of robotics more deeply, gaining hands-on experience with various robotic systems. The students will learn to develop their own bots.",
         src: img_2,
         level: 2,
         duration: "6 weeks",
@@ -76,7 +76,7 @@ export const extraCurricularData = [
     {
         id: 4,
         title: "Robo Champion",
-        desc: "This course is for older students who want to become champions in robotics. It covers advanced topics and complex projects that will challenge and inspire them.",
+        desc: "In Robo Champion the students will be introduced to Microcontroller based Robotics. Students will learn the concepts of bot building and create their own bots.",
         src: img_4,
         level: 4,
         duration: "10 weeks",

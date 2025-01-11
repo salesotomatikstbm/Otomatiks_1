@@ -5,7 +5,7 @@ import PopupSchool from "../schoolprogram/PopupSchool";
 
 const RoboticsAiLabSetup = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-[#066aab]">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">

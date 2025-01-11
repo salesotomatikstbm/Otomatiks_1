@@ -11,6 +11,7 @@ import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
 import Pricing from "@/components/sections/pricing";
 import PreviousYearWorkshop from "@/components/sections/workshop/PreviousYearWorkshop";
 import Contact_School_Management from "@/components/sections/schoolprogram/Contact_School_Management";
+import OurWorkshop from "@/components/sections/workshop/WhatWeOffer";
 
 
 
@@ -64,10 +65,10 @@ const Workshop = () => {
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
-    <Pricing />
-        
-      <UpcomingEvents />
-      <WorkshopBenefits />
+    {/* <Pricing /> */}
+        <OurWorkshop />
+      {/* <UpcomingEvents />
+      <WorkshopBenefits /> */}
       <PreviousYearWorkshop />
       <FaqWorkshop />
       {/* <Contact_Workshop /> */}

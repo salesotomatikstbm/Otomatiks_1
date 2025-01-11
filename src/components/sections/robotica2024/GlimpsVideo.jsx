@@ -44,7 +44,7 @@ const videos = [
 
 const GlimplsVideo = () => {
     return (
-        <section className="py-16 pb-10">
+        <section className="py-16 pb-10 bg-[#066aab]">
             <div className="container">
                 <div className="text-center mb-10">
                     <SectionName>Glimpse Video</SectionName>

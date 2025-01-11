@@ -3,6 +3,7 @@ import { FaEnvelope, FaPhone, FaUser, FaMapMarkerAlt, FaChild } from 'react-icon
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
+import { FaLocationPin } from 'react-icons/fa6';
 
 const Contact_Form_Course = () => {
     const [formData, setFormData] = React.useState({
@@ -208,7 +209,22 @@ const Contact_Form_Course = () => {
                                     </label>
                                     {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                 </div>
-                                {/* Other Fields */}
+                                
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="Place"
+                                        placeholder="Place"
+                                        value={formData.Place}
+                                        onChange={handleChange}
+                                        className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
+                                            ${errors.Place ? 'border-red-500' : 'border-[#F2F2F2]'}`}
+                                    />
+                                    <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
+                                        <FaLocationPin />
+                                    </label>
+                                    {errors.ChildAge && <p className="text-red-500 text-sm mt-1">{errors.ChildAge}</p>}
+                                </div>
                             </div>
 
                             
