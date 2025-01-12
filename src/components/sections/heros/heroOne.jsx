@@ -27,7 +27,7 @@ const HeroOne = () => {
             <img src={shap} alt="shap-2" className="w-5 h-8 -mt-7" />
           </div>
 
-          <p className="pt-5 max-w-[431px] text-white">Shape Your Child’s Future.
+          <p className="pt-5 max-w-[431px] text-white">
           Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.</p>
           <div className="mt-6">
             <Button asChild variant={"secondary"} >

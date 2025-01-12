@@ -48,7 +48,7 @@ const TestimonialCard = ({ name, location, content, image }) => {
 
 const Testi = () => {
   const settings = {
-    dots: false, // Optional: add dots for navigation
+    dots: true, // Optional: add dots for navigation
     infinite: true,
     speed: 500,
     slidesToShow: 1,

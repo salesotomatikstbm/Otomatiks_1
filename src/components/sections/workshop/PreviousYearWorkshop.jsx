@@ -2,7 +2,7 @@ import SectionName from '@/components/ui/sectionName'
 import Title from '@/components/ui/title'
 import { teamData } from '@/lib/fackdata/robotica2023'
 import React from 'react'
-import TeamCard from '../teams/teamCard'
+import TeamCard from '../robotica2024/teamCard1'
 
 const PreviousYearWorkshop = () => {
   return (

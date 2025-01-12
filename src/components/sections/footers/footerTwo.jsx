@@ -36,7 +36,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                             <li><Link to="/robotics-coding-courses" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Courses</Link></li>
                             <li><Link to="/robotics-coding-school-curriculum" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School Curriculum</Link></li>
                             <li><Link to="/franchise" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Franchise</Link></li>
-                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Blog</Link></li>
+                            <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Blogs</Link></li>
                             <li><Link to="/contact-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Contact Us</Link></li>
                         </ul>
                     </SlideUp>
