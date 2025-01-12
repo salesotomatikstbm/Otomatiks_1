@@ -23,7 +23,7 @@ const FaqWorkshop = () => {
           <div>
             <div className="lg:max-w-[720px] pb-10">
               <SectionName>Frequently Asked Questions</SectionName>
-              <Title size={"3.5xl"}>Answering Your Questions About Our Robotics Workshops</Title>
+              <Title size={"3.5xl"} className={"text-white"}>Answering Your Questions About Our Robotics Workshops</Title>
             </div>
             <Accordion type="single" defaultValue="one" collapsible>
               {faqData.map(({ ans, id, question }) => {

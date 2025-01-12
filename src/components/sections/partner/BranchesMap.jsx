@@ -10,7 +10,7 @@ const BranchesMap = () => {
       <div className="container mx-auto px-4">
       <div className="mb-2 text-center">
           <SectionName>Our Branches</SectionName>
-          <Title size={"3.5xl"} className={"mt-4"}>
+          <Title size={"3.5xl"} className={"mt-4 text-white"}>
           Discover Our Network of Branches
           </Title>
         </div>

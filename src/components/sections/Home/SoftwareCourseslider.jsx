@@ -62,7 +62,7 @@ const SoftwareCourseslider = () => {
 </div>
       </div>
       <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
-        <img src={jr} alt="img" />
+        {/* <img src={jr} alt="img" /> */}
       </div>
       <div className="lg:pt-15 pt-10 flex justify-center">
           <Button asChild variant={"secondary"} >
@@ -103,7 +103,7 @@ const Card = ({ title, desc, src, icon, id, level }) => {
         </div>
         <div className="pt-7.5">
           <h4>
-            <Link to="/service-details" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
+            <Link to="/robotics-coding-courses" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
               {title}
             </Link>
           </h4>

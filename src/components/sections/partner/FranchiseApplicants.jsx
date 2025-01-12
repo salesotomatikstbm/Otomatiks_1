@@ -17,7 +17,7 @@ const FranchiseApplicants = () => {
         {/* Section Heading */}
         <div className="text-center mb-12">
           <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
-          <Title size={"3.5xl"} className="mt-4">Open Doors to Innovation</Title>
+          <Title size={"3.5xl"} className="mt-4">Join Us in Pioneering the Next Wave of Technological Breakthroughs</Title>
         </div>
 
         {/* Card Grid Layout */}

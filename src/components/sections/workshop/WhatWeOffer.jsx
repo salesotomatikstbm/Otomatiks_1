@@ -35,7 +35,7 @@ const OurWorkshop = () => {
       {/* Title Section */}
       <div className="text-center mb-16">
         <SectionName>Our Workshops</SectionName>
-        <Title size={"3.5xl"} className={""}>Hands-on Learning Experiences for Future Innovators</Title>
+        <Title size={"3.5xl"} className={"text-white"}>Hands-on Learning Experiences for Future Innovators</Title>
       </div>
 
       {/* Offerings Section */}

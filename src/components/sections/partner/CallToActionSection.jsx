@@ -67,7 +67,7 @@ const CallToActionSection = () => {
         <div className="flex-shrink-0 flex-grow-0 basis-auto text-center">
           <SectionName>Our Value Proposition</SectionName>
           <Title size={"3.5xl"} className={"mt-4 "}>
-            Why Choose Otomatiks?
+          Delivering Excellence Through Innovation and Expertise
           </Title>
         </div>
       </div>

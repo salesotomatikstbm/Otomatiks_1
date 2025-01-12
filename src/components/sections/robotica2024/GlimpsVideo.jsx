@@ -48,7 +48,7 @@ const GlimplsVideo = () => {
             <div className="container">
                 <div className="text-center mb-10">
                     <SectionName>Glimpse Video</SectionName>
-                    <Title size="3.5xl">A Visual Journey Through Our Events</Title>
+                    <Title size="3.5xl" className={"text-white"}>A Visual Journey Through Our Events</Title>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">

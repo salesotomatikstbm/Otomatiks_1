@@ -18,7 +18,7 @@ const ValueSection = () => {
         {/* Section Header */}
         <div className=" mb-12">
           <SectionName className={"text-center"}>Our Value Proposition</SectionName>
-          <Title size={"3.5xl"} className={" mt-2.5 text-center"}>Empowering Future Innovators with Purposeful Learning</Title>
+          <Title size={"3.5xl"} className={" mt-2.5 text-center"}>Unlocking Potential Through Innovative Solutionsg</Title>
 
         </div>
 

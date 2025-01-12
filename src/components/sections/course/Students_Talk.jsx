@@ -30,7 +30,7 @@ function Students_Talk({ className }) {
                 <div className="row mb-8">
                     <div className="col-lg-12 text-center">
                         <SectionName>Our Students Talk/Projects Display</SectionName>
-                        <Title size="3.5xl" className="pb-5">
+                        <Title size="3.5xl" className="pb-5 text-white">
                             Hear What Our Students Have to Say!
                         </Title>
                     </div>

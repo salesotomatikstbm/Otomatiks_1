@@ -22,7 +22,7 @@ const Our_Uniqueness = () => {
           <div className="flex flex-col space-y-12 lg:space-y-14">
             <div className="text-center">
               <SectionName className="">Our Impact & Excellence</SectionName>
-              <Title size="3.5xl" className="mt-4">
+              <Title size="3.5xl" className="mt-4 text-white">
                 A Legacy of Growth and Success
               </Title>
             </div>

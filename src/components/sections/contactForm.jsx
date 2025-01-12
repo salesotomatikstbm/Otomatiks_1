@@ -130,7 +130,7 @@ const ContactForm = () => {
                         </div>
                         <div>
                             <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
-                                <h3 className="text-[28px] font-bold leading-[148%] font-nunito">Send a message</h3>
+                                {/* <h3 className="text-[28px] font-bold leading-[148%] font-nunito">Send a message</h3> */}
                                 <form className="form mt-7" onSubmit={handleSubmit}>
                                 <input type="hidden" name="FormType" value="Contact" />
                                     <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">

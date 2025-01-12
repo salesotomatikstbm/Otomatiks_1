@@ -10,7 +10,7 @@ const UniqueSellingPoints = () => {
         {/* Section Header */}
         <div className="mb-12 text-center">
           <SectionName>To Our Unique Selling Points</SectionName>
-          <Title size={"3.5xl"} className={"mt-4"}>
+          <Title size={"3.5xl"} className={"mt-4 text-white"}>
             The Key Features That Make Our Program Stand Out
           </Title>
         </div>

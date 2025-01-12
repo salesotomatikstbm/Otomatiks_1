@@ -112,7 +112,7 @@ const Contact_School_Management = () => {
                 </div>
                 <div className="mt-15">
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
-                        <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
+                        {/* <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3> */}
                         <form className="form mt-7" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
                                 {/* School Name Field */}

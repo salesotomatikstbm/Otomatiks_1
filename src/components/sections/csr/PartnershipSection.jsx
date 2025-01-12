@@ -40,8 +40,8 @@ const PartnerSection = () => {
       {/* Section Header */}
       <div className="text-center container mb-12">
         <SectionName>Who Can Partner With Us</SectionName>
-        <Title size="3.5xl" className="mt-4">
-          Collaborate Across Sectors for a Better Future
+        <Title size="3.5xl" className="mt-4 text-white">
+        Collaborating for a Smarter, More Connected Future
         </Title>
       </div>
 

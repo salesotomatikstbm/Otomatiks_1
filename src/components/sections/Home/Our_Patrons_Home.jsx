@@ -82,7 +82,7 @@ const Our_Patrons_Home = () => {
     <section className="py-16 bg-[#066aab]">
       <div className="text-center mb-12">
         <SectionName>Our Academic Partner</SectionName>
-        <Title size="3.5xl" className="mt-4 font-bold">
+        <Title size="3.5xl" className="mt-4 font-bold text-white">
           Celebrating Our Trusted Collaborators and Supporters
         </Title>
       </div>
@@ -91,7 +91,7 @@ const Our_Patrons_Home = () => {
         <Slider {...sliderSettings} className="patron-slider">
           {images.map((src, index) => (
             <div key={index} className="p-4">
-              <div className="bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 ">
                 <img
                   alt={`Patron ${index + 1}`}
                   src={src}

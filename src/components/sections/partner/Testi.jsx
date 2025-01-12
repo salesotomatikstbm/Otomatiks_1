@@ -63,7 +63,7 @@ const Testi = () => {
     <section className="py-16 bg-[#066aab]">
       <div className="lg:w-[100%] lg:mb-0 text-center">
         <SectionName>Testimonials of Our Robotics Franchisee</SectionName>
-        <Title size="3.5xl" className="mt-4">
+        <Title size="3.5xl" className="mt-4 text-white">
           Hear From Our Partners
         </Title>
       </div>

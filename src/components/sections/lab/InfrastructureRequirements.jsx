@@ -28,7 +28,7 @@ const InfrastructureRequirements = ({ section_padding_bottom, section_padding_to
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
             <SectionName>Infrastructure Requirements for Lab Set-up</SectionName>
-            <Title size="3.5xl" className="mt-4">
+            <Title size="3.5xl" className="mt-4 text-white">
               Essential Infrastructure for an Effective Lab Environment
             </Title>
           </div>

@@ -47,7 +47,7 @@ const RoboticCourseSlide = () => {
       <div className="container">
         <div className="flex flex-col justify-center items-center">
           <SectionName>Kids Robotics Program</SectionName>
-          <Title size={"3.5xl"} className={"mt-2.5 text-center"}>
+          <Title size={"3.5xl"} className={"mt-2.5 text-center text-white"}>
             Inspiring Future Engineers Through Fun and Hands-On Learning
           </Title>
         </div>
@@ -65,6 +65,7 @@ const RoboticCourseSlide = () => {
       {/* <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
         <img src={jr} alt="img" />
       </div> */}
+      
        <div className="lg:pt-15 pt-10 flex justify-center">
                 <Button asChild variant={"secondary"} >
                               <Link to="/robotics-coding-courses" className='bg-primary-foreground'>Know More</Link>
@@ -105,7 +106,7 @@ const Card = ({ title, desc, src, icon, id, level }) => {
         </div>
         <div className="pt-7.5">
           <h4>
-            <Link to="/service-details" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
+            <Link to="/robotics-coding-courses" className="lg:text-2xl text-xl font-semibold lg:leading-[140%] group-hover/card:text-destructive-foreground transition-all duration-500">
               {title}
             </Link>
           </h4>

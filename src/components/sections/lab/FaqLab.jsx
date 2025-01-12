@@ -23,7 +23,7 @@ const FaqLab = () => {
           <div>
             <div className=" pb-10">
               <SectionName>Frequently Asked Questions</SectionName>
-              <Title size={"3.5xl"}>Everything You Need to Know About the Robotics & AI Lab Program</Title>
+              <Title size={"3.5xl"} className={"text-white"}>Everything You Need to Know About the Robotics & AI Lab Program</Title>
             </div>
             <Accordion type="single" defaultValue="one" collapsible>
               {faqData.map(({ ans, id, question }) => {

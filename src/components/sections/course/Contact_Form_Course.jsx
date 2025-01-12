@@ -1,20 +1,18 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaUser, FaMapMarkerAlt, FaChild } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaUser, FaChild } from 'react-icons/fa';
+import { FaLocationPin } from 'react-icons/fa6';
 import { Button } from '../../ui/button';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
-import { FaLocationPin } from 'react-icons/fa6';
 
 const Contact_Form_Course = () => {
     const [formData, setFormData] = React.useState({
         StudentName: '',
-        Email: '',
-        ContactNumber: '',
-        CourseMode: '',
-        Place: '',
         ChildName: '',
         ChildAge: '',
-        Message: '',
+        ContactNumber: '',
+        Email: '',
+        Place: '',
     });
 
     const [errors, setErrors] = React.useState({});
@@ -38,6 +36,18 @@ const Contact_Form_Course = () => {
             newErrors.StudentName = 'Student Name should only contain letters and spaces';
         }
 
+        if (!formData.ChildName.trim()) {
+            newErrors.ChildName = 'Child Name is required';
+        } else if (/[^a-zA-Z\s]/.test(formData.ChildName)) {
+            newErrors.ChildName = 'Child Name should only contain letters and spaces';
+        }
+
+        if (!formData.ChildAge.trim()) {
+            newErrors.ChildAge = 'Child Age is required';
+        } else if (!/^[1-9][0-9]?$/.test(formData.ChildAge)) {
+            newErrors.ChildAge = 'Enter a valid age (1-99)';
+        }
+
         if (!formData.ContactNumber.trim()) {
             newErrors.ContactNumber = 'Contact number is required';
         } else if (!/^[0-9]{10}$/.test(formData.ContactNumber)) {
@@ -51,24 +61,8 @@ const Contact_Form_Course = () => {
             newErrors.Email = 'Enter a valid email';
         }
 
-        if (!formData.CourseMode.trim()) {
-            newErrors.CourseMode = 'Interested Course is required';
-        }
-
         if (!formData.Place.trim()) {
             newErrors.Place = 'Place is required';
-        }
-
-        if (!formData.ChildName.trim()) {
-            newErrors.ChildName = 'Child Name is required';
-        } else if (/[^a-zA-Z\s]/.test(formData.ChildName)) {
-            newErrors.ChildName = 'Child Name should only contain letters and spaces';
-        }
-
-        if (!formData.ChildAge.trim()) {
-            newErrors.ChildAge = 'Child Age is required';
-        } else if (!/^[1-9][0-9]?$/.test(formData.ChildAge)) {
-            newErrors.ChildAge = 'Enter a valid age (1-99)';
         }
 
         setErrors(newErrors);
@@ -82,7 +76,7 @@ const Contact_Form_Course = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbyU_Lfm1TFPNo8N38ctuu6_qQC_aVfqdP89MmhUpZyHQ5v3_1VEWXX_kKWm-APpiuSzRA/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData),
@@ -103,13 +97,11 @@ const Contact_Form_Course = () => {
 
         setFormData({
             StudentName: '',
-            Email: '',
-            ContactNumber: '',
-            CourseMode: '',
-            Place: '',
             ChildName: '',
             ChildAge: '',
-            Message: '',
+            ContactNumber: '',
+            Email: '',
+            Place: '',
         });
     };
 
@@ -122,7 +114,7 @@ const Contact_Form_Course = () => {
                 </div>
                 <div className="mt-15">
                     <div className="bg-background shadow-[0px_5px_60px_0px_rgba(0,0,0,0.05)] rounded-[10px] lg:p-10 p-5">
-                        <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3>
+                        {/* <h3 className="text-[28px] font-bold leading-[148%] font-nunito text-center">Send a message</h3> */}
                         <form className="form mt-7" onSubmit={handleSubmit}>
                             <div className="grid sm:grid-cols-2 grid-cols-1 gap-7.5">
                                 {/* Student Name Field */}
@@ -193,12 +185,12 @@ const Contact_Form_Course = () => {
                                     {errors.ContactNumber && <p className="text-red-500 text-sm mt-1">{errors.ContactNumber}</p>}
                                 </div>
 
-                                {/* Email Field */}
-                                <div className="relative">
+                              {/* Email Field */}
+                              <div className="relative">
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Email"
+                                        placeholder="Email Address"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
@@ -209,7 +201,8 @@ const Contact_Form_Course = () => {
                                     </label>
                                     {errors.Email && <p className="text-red-500 text-sm mt-1">{errors.Email}</p>}
                                 </div>
-                                
+
+                                {/* Place Field */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -223,13 +216,11 @@ const Contact_Form_Course = () => {
                                     <label className="absolute right-5 top-1/2 -translate-y-1/2 text-lg">
                                         <FaLocationPin />
                                     </label>
-                                    {errors.ChildAge && <p className="text-red-500 text-sm mt-1">{errors.ChildAge}</p>}
+                                    {errors.Place && <p className="text-red-500 text-sm mt-1">{errors.Place}</p>}
                                 </div>
                             </div>
-
-                            
-                            {/* Submit Button */}
-                            <div className="mt-5 text-center">
+                              {/* Submit Button */}
+                              <div className="mt-5 text-center">
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting}
@@ -243,6 +234,7 @@ const Contact_Form_Course = () => {
 
                         {/* Success or Error Message */}
                         {message && <p className={`mt-5 text-center text-[#2C2C2C] ${message.includes('error') ? 'text-red-500' : 'text-green-500'}`}>{message}</p>}
+                   
                     </div>
                 </div>
             </div>

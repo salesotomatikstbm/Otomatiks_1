@@ -85,7 +85,7 @@ const Our_Patrons = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <SectionName className="">Our Patrons</SectionName>
-          <Title size="3.5xl" className="mt-4 font-bold">
+          <Title size="3.5xl" className="mt-4 font-bold text-white">
           Celebrating the Visionaries Who Support Our Mission
           </Title>
         </div>
@@ -94,7 +94,7 @@ const Our_Patrons = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="group bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="group bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center"
             >
               <img
                 alt={`Patron ${index + 1}`}

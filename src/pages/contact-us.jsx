@@ -39,7 +39,7 @@ const ContactUs = () => {
         <PageTitle pageName="Contact Us" breadcrumbCurrent="Contact Us" />
         <ContactAddress />
         <GoogleMap />
-        <BranchesMap />
+        {/* <BranchesMap /> */}
         <BranchesInfo />
         <ContactForm />
       <TopUp/>

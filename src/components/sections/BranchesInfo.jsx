@@ -6,11 +6,11 @@ import BranchCard from './BranchCard';
 
 const BranchesInfo = () => {
   return (
-    <section className="lg:pt-15 lg:pb-15 pt-10 pb-10">
+    <section className="lg:pt-15 lg:pb-15 pt-10 pb-10 bg-[#066aab]">
       <div className="container">
         <div className="text-center flex flex-col items-center">
           <SectionName>Your Nearest Branch Awaits</SectionName>
-          <Title size="3.5xl" className="lg:max-w-[720px]">
+          <Title size="3.5xl" className="lg:max-w-[720px] text-white">
             Find our services in a location near you
           </Title>
         </div>

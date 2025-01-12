@@ -11,7 +11,7 @@ const Testimonial = () => {
             <div className="container relative z-10">
                 <div className="text-center">
                     <SectionName>Founder Message</SectionName>
-                    <span><Title size={"3.5xl"}>Empowering the Next Generation of Innovators</Title></span>
+                    <span><Title size={"3.5xl"} className={"text-white"}>Empowering the Next Generation of Innovators</Title></span>
                 </div>
 
                 <div className="flex lg:flex-row flex-col justify-between lg:items-center gap-4 lg:pb-15">

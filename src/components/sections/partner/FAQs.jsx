@@ -87,15 +87,14 @@ const FAQCard = ({ category }) => {
             "What is a franchise, and how does it work?",
             "What are the eligibility criteria to apply for a franchise?",
             "How long does the franchise application process take?",
-            "What is the initial investment required to start a franchise?",
+           
             "Will I receive training and ongoing support?"
         ],
         technical: [
-            "What technical setup is required to run the franchise?",
+            "What types of robotics education programs can the franchise offer?",
             "Will there be technical training provided?",
-            "How do I handle technical issues?",
-            "Is there a specific software or platform required?",
-            "Can I operate the franchise remotely?"
+            "How is the robotics curriculum updated to stay relevant?"
+           
         ],
         marketing: [
             "What marketing support will I receive as a franchisee?",
@@ -106,7 +105,7 @@ const FAQCard = ({ category }) => {
         ],
         financial: [
             "What are the financial requirements to open a franchise?",
-            "Are there financing options available?",
+            
             "What are the ongoing fees for the franchise?",
             "When can I expect to see a return on investment (ROI)?",
             "How do I manage operational expenses effectively?"
@@ -125,15 +124,14 @@ const FAQCard = ({ category }) => {
             "A franchise is a business model where individuals (franchisees) operate under an established brand and receive support from the franchisor. Franchisees run their locations while adhering to brand standards.",
             "We look for individuals with a passion for business, a willingness to adhere to our brand guidelines, and the necessary financial resources.",
             "The application process typically takes 2–4 weeks, including review, interviews, and agreement signing.",
-            "The initial investment varies based on location, size, and market conditions. Please contact us for detailed estimates.",
+           
             "Yes, we provide comprehensive training and ongoing support, including marketing, technical assistance, and operational guidance."
         ],
         technical: [
-            "You’ll need a reliable computer system, high-speed internet, and our recommended software tools.",
+           "The franchise offers programs on robotics fundamentals, AI integration, coding for robots, and hands-on workshops for schools, colleges, and corporate training.",
             "Yes, all franchisees receive detailed training on our systems, software, and operational procedures.",
-            "We have a dedicated technical support team available to assist you with any challenges.",
-            "Yes, our proprietary software is essential for operations. We will provide access and training during onboarding.",
-            "Depending on the nature of the franchise, certain operations can be managed remotely, but physical presence may be required for some activities."
+           "Our dedicated R&D team ensures the curriculum is updated annually to include advancements in robotics, AI, and automation trends."
+            
         ],
         marketing: [
             "We provide digital marketing materials, social media templates, and strategies to promote your location effectively.",
@@ -144,7 +142,7 @@ const FAQCard = ({ category }) => {
         ],
         financial: [
             "Financial requirements include the initial franchise fee, setup costs, and sufficient working capital.",
-            "Yes, we can guide you toward financing options, including loans and partnerships with financial institutions.",
+            
             "Ongoing fees include royalty fees and contributions to the marketing fund. Details will be provided during the application process.",
             "ROI timelines vary based on location and market conditions. On average, franchisees see returns within 12–18 months.",
             "Our team provides financial training and tools to help you track expenses, forecast revenues, and maintain profitability."

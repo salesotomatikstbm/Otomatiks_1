@@ -4,8 +4,8 @@ import { FaArrowRight, FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa
 import Logo from '@/components/ui/logo'
 import SocalIcons from '@/components/ui/socalIcons'
 import CopyRight from './copyRight'
-import apple from "@/assets/images/shapes/apple.svg"
-import scissors from "@/assets/images/shapes/scissors.svg"
+import apple from "@/assets/images/shapes/bot.png"
+import scissors from "@/assets/images/shapes/bot.png"
 import ScrollUp from './scrollUp'
 import Input from '@/components/ui/input'
 import SlideUp from '@/lib/animations/slideUp'
@@ -93,7 +93,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                     <img src={apple} alt="img" />
                 </div>
                 <div className="absolute left-[45%] lg:top-1/2 top-[40%]">
-                    <img src={scissors} alt="img" />
+                    {/* <img src={scissors} alt="img" /> */}
                 </div>
             </div>
         </footer>

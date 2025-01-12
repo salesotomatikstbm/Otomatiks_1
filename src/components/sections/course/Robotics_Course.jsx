@@ -52,15 +52,15 @@ const [isModalOpen, setIsModalOpen] = useState(false);
       </div>
 
       <div className="absolute left-0 top-0 z-[-1] 2xl:w-auto w-96 hidden xl:block">
-        <img src={jr} alt="img" />
+        {/* <img src={jr} alt="img" /> */}
       </div>
 
       {/* Modal for Popup Course */}
       {isModalOpen && courseData && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg w-96 relative">
-            <h3 className="text-2xl font-semibold mb-4">{courseData.title}</h3>
-            <h4 className="mt-3 font-semibold">Concepts to Learn:</h4>
+            <h3 className="text-2xl font-semibold text-primary mb=2">{courseData.title}</h3>
+            <h4 className="font-semibold">Concepts to Learn:</h4>
             <ul className="list-disc pl-5">
               {courseData.topics.map((topic, index) => (
                 <li key={index}>{topic}</li>
