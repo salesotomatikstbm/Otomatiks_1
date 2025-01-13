@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhone, FaBirthdayCake } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaBirthdayCake, FaMapMarkerAlt } from 'react-icons/fa';
 
 const PopCourse = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [formData, setFormData] = useState({
-        ContactPersonName: '',
+        StudentName: '',
         ChildName: '',
         ChildAge: '',
         ContactNumber: '',
         Email: '',
+        Place: '',
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false); 
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,8 +23,8 @@ const PopCourse = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.ContactPersonName.trim()) {
-            newErrors.ContactPersonName = 'Contact Person Name is required';
+        if (!formData.StudentName.trim()) {
+            newErrors.StudentName = 'Student Name is required';
         }
         if (!formData.ChildName.trim()) {
             newErrors.ChildName = 'Child Name is required';
@@ -37,6 +38,9 @@ const PopCourse = () => {
         if (!formData.Email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
             newErrors.Email = 'Valid email is required';
         }
+        if (!formData.Place.trim()) {
+            newErrors.Place = 'Place is required';
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -45,41 +49,49 @@ const PopCourse = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validate()) return;
-
+    
         setIsSubmitting(true);
+        setMessage(''); // Clear previous messages
+    
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbyU_Lfm1TFPNo8N38ctuu6_qQC_aVfqdP89MmhUpZyHQ5v3_1VEWXX_kKWm-APpiuSzRA/exec",
+                
                 {
                     method: "POST",
-                    body: new URLSearchParams(formData),
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: new URLSearchParams(formData).toString(),
                 }
             );
-
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+    
+            const result = await response.json(); // Parse the response
+            if (result.success) {
+                setMessage('Your message has been sent successfully!');
+            } else {
+                setMessage('There was an error saving your data.');
             }
-
-            setMessage('Your message has been sent successfully!');
         } catch (error) {
             console.error('Error:', error);
             setMessage('There was an error sending your message.');
         } finally {
             setIsSubmitting(false);
         }
-
+    
         setFormData({
-            ContactPersonName: '',
+            StudentName: '',
             ChildName: '',
             ChildAge: '',
             ContactNumber: '',
             Email: '',
+            Place: '',
         });
     };
+    
 
     return (
         <div>
-            {/* Button to open the popup */}
             <div className="text-center">
                 <button
                     type="button"
@@ -90,7 +102,6 @@ const PopCourse = () => {
                 </button>
             </div>
 
-            {/* Popup form */}
             {isPopupOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white w-full max-w-lg p-8 rounded-lg shadow-lg relative mx-4 sm:mx-0">
@@ -103,21 +114,21 @@ const PopCourse = () => {
                         <h3 className="text-2xl font-bold mb-6 text-center">Join Our Course</h3>
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             <div className="mb-4">
-                                <label className="block text-gray-700">Contact Person Name</label>
+                                <label className="block text-gray-700">Student Name</label>
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="ContactPersonName"
-                                        placeholder="Contact Person Name"
-                                        value={formData.ContactPersonName}
+                                        name="StudentName"
+                                        placeholder="Student Name"
+                                        value={formData.StudentName}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.ContactPersonName ? 'border-red-500' : 'border-gray-300'
+                                            errors.StudentName ? 'border-red-500' : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     />
                                     <FaUser className="absolute right-3 top-3 text-gray-400" />
                                 </div>
-                                {errors.ContactPersonName && <p className="text-red-500 text-sm">{errors.ContactPersonName}</p>}
+                                {errors.StudentName && <p className="text-red-500 text-sm">{errors.StudentName}</p>}
                             </div>
 
                             <div className="mb-4">
@@ -190,6 +201,24 @@ const PopCourse = () => {
                                     <FaEnvelope className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.Email && <p className="text-red-500 text-sm">{errors.Email}</p>}
+                            </div>
+
+                            <div className="mb-4">
+                                <label className="block text-gray-700">Place</label>
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="Place"
+                                        placeholder="Place"
+                                        value={formData.Place}
+                                        onChange={handleChange}
+                                        className={`w-full border ${
+                                            errors.Place ? 'border-red-500' : 'border-gray-300'
+                                        } p-3 rounded-md`}
+                                    />
+                                    <FaMapMarkerAlt className="absolute right-3 top-3 text-gray-400" />
+                                </div>
+                                {errors.Place && <p className="text-red-500 text-sm">{errors.Place}</p>}
                             </div>
 
                             <div className="text-center">

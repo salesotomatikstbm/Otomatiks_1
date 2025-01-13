@@ -10,6 +10,7 @@ import SectionDescription from '@/components/ui/sectionDescription';
 import SlideUp from '@/lib/animations/slideUp';
 import SlideDown from '@/lib/animations/slideDown';
 import PopupWorkshop from '../workshop/PopupWorkshop';
+import PopupSchool from '../schoolprogram/PopupSchool';
 
 const AboutTwo = () => {
     return (
@@ -38,7 +39,7 @@ const AboutTwo = () => {
                                     <Link to={"/about-us"}>Learn More</Link>
                                 </Button> */}
                                 <Button asChild size="lg" variant="pill" className="bg-transparent border-primary text-muted-foreground hover:text-cream-foreground hover:bg-primary">
-                                    <PopupWorkshop />
+                                    <PopupSchool />
                                 </Button>
                             </div>
                         </SlideUp>

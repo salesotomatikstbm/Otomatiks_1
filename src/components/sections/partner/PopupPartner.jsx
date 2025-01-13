@@ -5,9 +5,7 @@ const PopupPartner = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [formData, setFormData] = useState({
         Name: '',
-        DOB: '',
-        Qualification: '',
-        Profession: '',
+      
         FranchiseLocation: '',
         PhoneNo: '',
         EmailId: '',
@@ -29,18 +27,7 @@ const PopupPartner = () => {
         if (!formData.Name.trim()) {
             newErrors.Name = 'Name is required';
         }
-        if (!formData.DOB.trim()) {
-            newErrors.DOB = 'Date of Birth is required';
-        }
-        if (!formData.Qualification.trim()) {
-            newErrors.Qualification = 'Qualification is required';
-        }
-        if (!formData.Profession.trim()) {
-            newErrors.Profession = 'Profession is required';
-        }
-        if (!formData.FranchiseLocation.trim()) {
-            newErrors.FranchiseLocation = 'Franchise Location is required';
-        }
+       
         if (!formData.PhoneNo.trim() || !/^\d{10}$/.test(formData.PhoneNo)) {
             newErrors.PhoneNo = 'Valid 10-digit phone number is required';
         }
@@ -65,7 +52,7 @@ const PopupPartner = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbw8XAjT7RjqtzIlr3Puu51LSg7xieROM5ly8-m0Id8u0zeQJp0tqLxdbiazl-H6/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData), // Send form data as URL-encoded
@@ -86,7 +73,6 @@ const PopupPartner = () => {
 
         setFormData({
             Name: '',
-            DOB: '',
             Qualification: '',
             Profession: '',
             FranchiseLocation: '',
@@ -132,85 +118,12 @@ const PopupPartner = () => {
                                         placeholder="Your Name"
                                         value={formData.Name}
                                         onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.Name
-                                                ? 'border-red-500'
-                                                : formData.Name.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
+                                        className={`w-full border ${errors.Name ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     />
                                     <FaUser className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.Name && <p className="text-red-500 text-sm">{errors.Name}</p>}
                             </div>
-
-                            {/* Date of Birth Field */}
-                            {/* <div className="mb-4">
-                                <label className="block text-gray-700">Date of Birth</label>
-                                <div className="relative">
-                                    <input
-                                        type="date"
-                                        name="DOB"
-                                        value={formData.DOB}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.DOB
-                                                ? 'border-red-500'
-                                                : formData.DOB.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                       </div>
-                                {errors.DOB && <p className="text-red-500 text-sm">{errors.DOB}</p>}
-                            </div> */}
-
-                            {/* Qualification Field */}
-                            {/* <div className="mb-4">
-                                <label className="block text-gray-700">Qualification</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Qualification"
-                                        placeholder="Qualification"
-                                        value={formData.Qualification}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.Qualification
-                                                ? 'border-red-500'
-                                                : formData.Qualification.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaGraduationCap className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.Qualification && <p className="text-red-500 text-sm">{errors.Qualification}</p>}
-                            </div> */}
-
-                            {/* Profession Field */}
-                            {/* <div className="mb-4">
-                                <label className="block text-gray-700">Profession</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="Profession"
-                                        placeholder="Profession"
-                                        value={formData.Profession}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.Profession
-                                                ? 'border-red-500'
-                                                : formData.Profession.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaBriefcase className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.Profession && <p className="text-red-500 text-sm">{errors.Profession}</p>}
-                            </div> */}
 
                             {/* Franchise Location Field */}
                             <div className="mb-4">
@@ -222,13 +135,7 @@ const PopupPartner = () => {
                                         placeholder="Franchise Location"
                                         value={formData.FranchiseLocation}
                                         onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.FranchiseLocation
-                                                ? 'border-red-500'
-                                                : formData.FranchiseLocation.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
+                                        className={`w-full border ${errors.FranchiseLocation ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     />
                                     <FaMapMarkerAlt className="absolute right-3 top-3 text-gray-400" />
                                 </div>
@@ -245,13 +152,7 @@ const PopupPartner = () => {
                                         placeholder="Phone Number"
                                         value={formData.PhoneNo}
                                         onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.PhoneNo
-                                                ? 'border-red-500'
-                                                : formData.PhoneNo.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
+                                        className={`w-full border ${errors.PhoneNo ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     />
                                     <FaPhone className="absolute right-3 top-3 text-gray-400" />
                                 </div>
@@ -268,13 +169,7 @@ const PopupPartner = () => {
                                         placeholder="Email Id"
                                         value={formData.EmailId}
                                         onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.EmailId
-                                                ? 'border-red-500'
-                                                : formData.EmailId.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
+                                        className={`w-full border ${errors.EmailId ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     />
                                     <FaEnvelope className="absolute right-3 top-3 text-gray-400" />
                                 </div>
@@ -291,56 +186,49 @@ const PopupPartner = () => {
                                         placeholder="Current Business"
                                         value={formData.CurrentBusiness}
                                         onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.CurrentBusiness
-                                                ? 'border-red-500'
-                                                : formData.CurrentBusiness.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
+                                        className={`w-full border ${errors.CurrentBusiness ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     />
                                     <FaIndustry className="absolute right-3 top-3 text-gray-400" />
                                 </div>
                                 {errors.CurrentBusiness && <p className="text-red-500 text-sm">{errors.CurrentBusiness}</p>}
                             </div>
 
-                            {/* Investment Plan Dropdown */}
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Investment Plan</label>
-                                <div className="relative">
-                                    <select
-                                        name="InvestmentPlan"
-                                        value={formData.InvestmentPlan}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.InvestmentPlan
-                                                ? 'border-red-500'
-                                                : formData.InvestmentPlan.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    >
-                                        <option value="">Select Investment Plan</option>
-                                        <option value="Upto 3 Lakhs">Upto 3 Lakhs</option>
-                                        <option value="Upto 5 Lakhs">Upto 5 Lakhs</option>
-                                        <option value="Above 10 Lakh">Above 10 Lakhs</option>
-                                    </select>
-                                </div>
-                                {errors.InvestmentPlan && <p className="text-red-500 text-sm">{errors.InvestmentPlan}</p>}
-                            </div>
+                            {/* Investment Plan Field */}
+                         {/* Investment Plan Dropdown */}
+<div className="mb-4">
+    <label className="block text-gray-700">Investment Plan</label>
+    <div className="relative">
+        <select
+            name="InvestmentPlan"
+            value={formData.InvestmentPlan}
+            onChange={handleChange}
+            className={`w-full border ${errors.InvestmentPlan ? 'border-red-500' : formData.InvestmentPlan.trim() ? 'border-green-500' : 'border-gray-300'} p-3 rounded-md`}
+        >
+            <option value="">Select Investment Plan</option>
+            <option value="Upto 3 Lakhs">Upto 3 Lakhs</option>
+            <option value="Upto 5 Lakhs">Upto 5 Lakhs</option>
+            <option value="Above 10 Lakh">Above 10 Lakhs</option>
+        </select>
+    </div>
+    {errors.InvestmentPlan && <p className="text-red-500 text-sm">{errors.InvestmentPlan}</p>}
+</div>
+
 
                             {/* Submit Button */}
-                            <div className="text-center">
+                            <div className="mb-4 text-center">
                                 <button
                                     type="submit"
+                                    className={`bg-primary text-white py-3 px-6 rounded-[10px] ${isSubmitting ? 'opacity-50' : ''}`}
                                     disabled={isSubmitting}
-                                    className="bg-primary text-white py-4 px-8 rounded-[10px] w-full"
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Submit'}
                                 </button>
-                                {message && <p className="text-center mt-4">{message}</p>}
                             </div>
                         </form>
+
+                        {message && (
+                            <p className={`text-center ${message.includes('error') ? 'text-red-500' : 'text-green-500'}`}>{message}</p>
+                        )}
                     </div>
                 </div>
             )}

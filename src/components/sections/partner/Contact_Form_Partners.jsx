@@ -8,7 +8,6 @@ import { FaEdge, FaLocationArrow, FaMedal } from 'react-icons/fa6';
 const Contact_Form_Partners = () => {
     const [formData, setFormData] = React.useState({
         Name: '',
-      
         FranchiseLocation: '',
         PhoneNo: '',
         EmailId: '',

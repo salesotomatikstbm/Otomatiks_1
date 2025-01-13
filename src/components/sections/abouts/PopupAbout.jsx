@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhone, FaList, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const PopupAbout = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [formData, setFormData] = useState({
-        FullName: '',
-        Email: '',
-        PhoneNumber: '',
-        Experience: '',
-        ExpectedSalary: '',
-        Message: '',
+        TeamName: '',
+        TeamPhone: '',
+        TeamEmail: '',
+        TeamExperience: '',
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState('');
@@ -23,23 +21,17 @@ const PopupAbout = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.FullName.trim()) {
-            newErrors.FullName = 'Full Name is required';
+        if (!formData.TeamName.trim()) {
+            newErrors.TeamName = 'Team Name is required';
         }
-        if (!formData.Email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
-            newErrors.Email = 'Valid email is required';
+        if (!formData.TeamEmail.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.TeamEmail)) {
+            newErrors.TeamEmail = 'Valid email is required';
         }
-        if (!formData.PhoneNumber.trim() || !/^\d{10}$/.test(formData.PhoneNumber)) {
-            newErrors.PhoneNumber = 'Valid 10-digit phone number is required';
+        if (!formData.TeamPhone.trim() || !/^\d{10}$/.test(formData.TeamPhone)) {
+            newErrors.TeamPhone = 'Valid 10-digit phone number is required';
         }
-        if (!formData.Experience.trim()) {
-            newErrors.Experience = 'Experience is required';
-        }
-        if (!formData.ExpectedSalary.trim()) {
-            newErrors.ExpectedSalary = 'Expected salary is required';
-        }
-        if (!formData.Message.trim()) {
-            newErrors.Message = 'Message is required';
+        if (!formData.TeamExperience.trim()) {
+            newErrors.TeamExperience = 'Experience is required';
         }
 
         setErrors(newErrors);
@@ -53,10 +45,10 @@ const PopupAbout = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbxfm6j2ZtGkAZTKIyJ1T2iTadHDJtosJg-LKFfVMH2u2UTk2RSqhVNg_dJZ8ORKyxsX/exec",
                 {
                     method: "POST",
-                    body: new URLSearchParams(formData), // Send form data as URL-encoded
+                    body: new URLSearchParams(formData),
                 }
             );
 
@@ -73,18 +65,15 @@ const PopupAbout = () => {
         }
 
         setFormData({
-            FullName: '',
-            Email: '',
-            PhoneNumber: '',
-            Experience: '',
-            ExpectedSalary: '',
-            Message: '',
+            TeamName: '',
+            TeamPhone: '',
+            TeamEmail: '',
+            TeamExperience: '',
         });
     };
 
     return (
         <div>
-            {/* Button to open the popup */}
             <div className="text-center">
                 <button
                     type="button"
@@ -95,7 +84,6 @@ const PopupAbout = () => {
                 </button>
             </div>
 
-            {/* Popup form */}
             {isPopupOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white w-full max-w-lg p-8 rounded-lg shadow-lg relative mx-4 sm:mx-0">
@@ -108,25 +96,25 @@ const PopupAbout = () => {
                         <h3 className="text-2xl font-bold mb-6 text-center">Join Our Team</h3>
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             <div className="mb-4">
-                                <label className="block text-gray-700">Full Name</label>
+                                <label className="block text-gray-700">Name</label>
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="FullName"
-                                        placeholder="Full Name"
-                                        value={formData.FullName}
+                                        name="TeamName"
+                                        placeholder="Name"
+                                        value={formData.TeamName}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.FullName
+                                            errors.TeamName
                                                 ? 'border-red-500'
-                                                : formData.FullName.trim()
+                                                : formData.TeamName.trim()
                                                 ? 'border-green-500'
                                                 : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     />
                                     <FaUser className="absolute right-3 top-3 text-gray-400" />
                                 </div>
-                                {errors.FullName && <p className="text-red-500 text-sm">{errors.FullName}</p>}
+                                {errors.TeamName && <p className="text-red-500 text-sm">{errors.TeamName}</p>}
                             </div>
 
                             <div className="mb-4">
@@ -134,44 +122,44 @@ const PopupAbout = () => {
                                 <div className="relative">
                                     <input
                                         type="email"
-                                        name="Email"
+                                        name="TeamEmail"
                                         placeholder="Email"
-                                        value={formData.Email}
+                                        value={formData.TeamEmail}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.Email
+                                            errors.TeamEmail
                                                 ? 'border-red-500'
-                                                : formData.Email.trim()
+                                                : formData.TeamEmail.trim()
                                                 ? 'border-green-500'
                                                 : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     />
                                     <FaEnvelope className="absolute right-3 top-3 text-gray-400" />
                                 </div>
-                                {errors.Email && <p className="text-red-500 text-sm">{errors.Email}</p>}
+                                {errors.TeamEmail && <p className="text-red-500 text-sm">{errors.TeamEmail}</p>}
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Phone Number</label>
+                                <label className="block text-gray-700">Phone</label>
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        name="PhoneNumber"
+                                        name="TeamPhone"
                                         placeholder="Phone Number"
-                                        value={formData.PhoneNumber}
+                                        value={formData.TeamPhone}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.PhoneNumber
+                                            errors.TeamPhone
                                                 ? 'border-red-500'
-                                                : formData.PhoneNumber.trim()
+                                                : formData.TeamPhone.trim()
                                                 ? 'border-green-500'
                                                 : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     />
                                     <FaPhone className="absolute right-3 top-3 text-gray-400" />
                                 </div>
-                                {errors.PhoneNumber && (
-                                    <p className="text-red-500 text-sm">{errors.PhoneNumber}</p>
+                                {errors.TeamPhone && (
+                                    <p className="text-red-500 text-sm">{errors.TeamPhone}</p>
                                 )}
                             </div>
 
@@ -179,11 +167,11 @@ const PopupAbout = () => {
                                 <label className="block text-gray-700">Experience</label>
                                 <div className="relative">
                                     <select
-                                        name="Experience"
-                                        value={formData.Experience}
+                                        name="TeamExperience"
+                                        value={formData.TeamExperience}
                                         onChange={handleChange}
                                         className={`w-full border ${
-                                            errors.Experience ? 'border-red-500' : 'border-gray-300'
+                                            errors.TeamExperience ? 'border-red-500' : 'border-gray-300'
                                         } p-3 rounded-md`}
                                     >
                                         <option value="">Select Experience</option>
@@ -192,55 +180,11 @@ const PopupAbout = () => {
                                         <option value="3 - 5 years">3 - 5 years</option>
                                         <option value="5 years above">5 years above</option>
                                     </select>
-                                      </div>
-                                {errors.Experience && (
-                                    <p className="text-red-500 text-sm">{errors.Experience}</p>
+                                </div>
+                                {errors.TeamExperience && (
+                                    <p className="text-red-500 text-sm">{errors.TeamExperience}</p>
                                 )}
                             </div>
-
-                            {/* <div className="mb-4">
-                                <label className="block text-gray-700">Expected Salary</label>
-                                <div className="relative">
-                                    <input
-                                        type="text"
-                                        name="ExpectedSalary"
-                                        placeholder="Expected Salary"
-                                        value={formData.ExpectedSalary}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.ExpectedSalary
-                                                ? 'border-red-500'
-                                                : formData.ExpectedSalary.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                    <FaMapMarkerAlt className="absolute right-3 top-3 text-gray-400" />
-                                </div>
-                                {errors.ExpectedSalary && (
-                                    <p className="text-red-500 text-sm">{errors.ExpectedSalary}</p>
-                                )}
-                            </div>
-
-                            <div className="mb-4">
-                                <label className="block text-gray-700">Message</label>
-                                <div className="relative">
-                                    <textarea
-                                        name="Message"
-                                        placeholder="Your Message"
-                                        value={formData.Message}
-                                        onChange={handleChange}
-                                        className={`w-full border ${
-                                            errors.Message
-                                                ? 'border-red-500'
-                                                : formData.Message.trim()
-                                                ? 'border-green-500'
-                                                : 'border-gray-300'
-                                        } p-3 rounded-md`}
-                                    />
-                                </div>
-                                {errors.Message && <p className="text-red-500 text-sm">{errors.Message}</p>}
-                            </div> */}
 
                             <div className="text-center">
                                 <button

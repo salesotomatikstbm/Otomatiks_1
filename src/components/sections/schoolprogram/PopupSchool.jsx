@@ -10,8 +10,7 @@ const PopupSchool = () => {
         Email: '',
         PhoneNumber: '',
         SchoolAddress: '',
-        NumberOfStudents: '',
-        RequestServices: '',
+     
     });
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState('');
@@ -43,12 +42,7 @@ const PopupSchool = () => {
         if (!formData.SchoolAddress.trim()) {
             newErrors.SchoolAddress = 'School Address is required';
         }
-        if (!formData.NumberOfStudents.trim() || isNaN(formData.NumberOfStudents)) {
-            newErrors.NumberOfStudents = 'Valid Number of Students is required';
-        }
-        if (!formData.RequestServices.trim()) {
-            newErrors.RequestServices = 'Request Services is required';
-        }
+        
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -61,7 +55,7 @@ const PopupSchool = () => {
         setIsSubmitting(true);
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycby5Jjiu1SLdk4qmB9R7n-3Jet33hpDZuOANjka__qkEswYmttU_EKRMjXNIwg7aoIws/exec",
+                "https://script.google.com/macros/s/AKfycbwNTyP_eEEyMDawgDyO_DI1uhJqbJR6o4h_w7h7CI_jig5PgrGPXgwbjc22ut7l_aEL/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(formData), // Send form data as URL-encoded
@@ -87,8 +81,7 @@ const PopupSchool = () => {
             Email: '',
             PhoneNumber: '',
             SchoolAddress: '',
-            NumberOfStudents: '',
-            RequestServices: '',
+           
         });
     };
 
