@@ -46,7 +46,7 @@ const EventPromoSection = () => {
               href="https://www.robotica.org.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-none bg-primary hover:bg-secondary text-white font-semibold text-lg px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 text-center"
+              className="flex-1 sm:flex-none bg-primary sm:flex-nowrap hover:bg-secondary text-white font-semibold text-lg px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 text-center"
             >
               Know More
             </a>
@@ -54,7 +54,7 @@ const EventPromoSection = () => {
               href="https://pages.razorpay.com/robotica25"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-none bg-secondary text-nowrap hover:bg-primary text-white font-semibold text-lg px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 text-center"
+              className="flex-1 sm:flex-none bg-secondary text-nowrap sm:flex-nowrap hover:bg-primary text-white font-semibold text-lg px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105 text-center"
             >
               Register Now
             </a>
