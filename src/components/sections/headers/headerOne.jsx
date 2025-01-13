@@ -39,7 +39,7 @@ const HeaderOne = () => {
                     <div className="[.header-pinned_&]:shadow-md bg-background transition-all duration-300">
                         <div className="px-5 py-5">
                             <div className="flex justify-between items-center">
-                                <div className="flex-shrink-0 mr-5">
+                                <div className="flex-shrink-0 lg:mr-5">
                                     <Logo />
                                 </div>
                                 <div className="flex items-center w-full justify-end  white-space: nowrap overflow-x-hidden overflow-y-hidden">

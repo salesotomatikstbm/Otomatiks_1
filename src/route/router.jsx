@@ -56,10 +56,10 @@ export const router = createBrowserRouter([
                 element: <Blog />
             },
             {
-                path: "/blog-details",
-                element: <BlogDetails/>
+                path: "/blog-details/:id",  // Use :id for dynamic routing
+                element: <BlogDetails />
             },
-            {
+                        {
                 path: "/shop",
                 element: <Shop />
             },
