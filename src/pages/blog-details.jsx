@@ -8,6 +8,7 @@ import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
 import Blog from './blog'
 import Blog1 from '@/components/sections/blogs/Blog1'
 import BlogDetails1 from '@/components/sections/blogs/BlogDetails1'
+import TopUp from '@/components/sections/footers/TopUp'
 
 const BlogDetails = () => {
   return (
@@ -23,7 +24,7 @@ const BlogDetails = () => {
                 <BlogDetails1 />
            
      
-       
+       <TopUp />
        
       </main>
       <ScrollRestoration/>

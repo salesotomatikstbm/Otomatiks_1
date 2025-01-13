@@ -14,7 +14,7 @@ const ExtraInfo = () => {
                 </a>
             </div>
             <div>
-                <h4 className="text-xl font-bold text-secondary">Contact Info</h4>
+                <h4 className="text-xl font-bold text-primary">Contact Info</h4>
                 <ul className="mt-5 flex flex-col gap-[15px] mb-6">
                     <li className='flex items-center gap-2'>
                         <FaPhone className="text-primary-foreground" /> 
