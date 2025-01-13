@@ -35,7 +35,7 @@ const ContactUs = () => {
         <meta name="twitter:image" content="/path/to/twitter-contact-image.jpg" />
         <link rel="canonical" href="https://www.otomatiks.com/contact-us" />
       </Helmet>
-      <main>
+      <main className="overflow-hidden">
         <PageTitle pageName="Contact Us" breadcrumbCurrent="Contact Us" />
         <ContactAddress />
         <GoogleMap />
