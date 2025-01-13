@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DesktopMenu from './desktopMenu';
 import MobileMenu from './mobileMenu';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,24 @@ const HeaderOne = () => {
     const [isSerchActive, setIsSerchActive] = useState(false);
     const [isMobleMenuActive, setIsMobleMenuActive] = useState(false);
 
+    useEffect(() => {
+        // Ensure overflow-x is hidden on the body for all views
+        document.body.style.overflowX = 'hidden';
+
+        // Manage overflow for mobile menu interactions
+        if (isMobleMenuActive) {
+            document.body.style.overflowY = 'hidden'; // Prevent vertical scrolling when menu is active
+        } else {
+            document.body.style.overflowY = ''; // Reset vertical scrolling
+        }
+
+        return () => {
+            // Clean up styles on unmount
+            document.body.style.overflowX = '';
+            document.body.style.overflowY = '';
+        };
+    }, [isMobleMenuActive]);
+
     return (
         <StickyHeader>
             <header id="header" className="sticky top-0 transition-[top] duration-300 z-40">
@@ -26,7 +44,10 @@ const HeaderOne = () => {
                                 </div>
                                 <div className="flex items-center w-full justify-end">
                                     <DesktopMenu />
-                                    <MobileMenu isMobleMenuActive={isMobleMenuActive} setIsMobleMenuActive={setIsMobleMenuActive} />
+                                    <MobileMenu
+                                        isMobleMenuActive={isMobleMenuActive}
+                                        setIsMobleMenuActive={setIsMobleMenuActive}
+                                    />
 
                                     <div className="flex items-center gap-6">
                                         <div className="cursor-pointer" onClick={() => setIsSerchActive(true)}>
@@ -34,10 +55,13 @@ const HeaderOne = () => {
                                         </div>
 
                                         {/* Responsive Contact Us Button */}
-                                        <Button asChild variant="ghost" className="sm:flex hidden flex px-4">
-                                            <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
+                                        <Button asChild variant="ghost" className="sm:flex hidden px-4">
+                                            <Link to="/contact-us">
+                                                Contact Us <FaArrowRight />
+                                            </Link>
                                         </Button>
 
+                                        {/* Mobile menu toggle button */}
                                         <div
                                             className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500"
                                             onClick={() => setIsMobleMenuActive(true)}
@@ -48,7 +72,10 @@ const HeaderOne = () => {
                                         </div>
                                     </div>
 
-                                    <SearchForm isSerchActive={isSerchActive} setIsSerchActive={setIsSerchActive} />
+                                    <SearchForm
+                                        isSerchActive={isSerchActive}
+                                        setIsSerchActive={setIsSerchActive}
+                                    />
                                 </div>
                             </div>
                         </div>
