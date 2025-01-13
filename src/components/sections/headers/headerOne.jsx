@@ -1,35 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import DesktopMenu from './desktopMenu';
-import MobileMenu from './mobileMenu';
-import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa6';
-import TopHeader from './topHeader';
-import SearchForm from './searchForm';
-import Logo from '@/components/ui/logo';
-import { Button } from '@/components/ui/button';
-import StickyHeader from '@/components/ui/stickyHeader';
+import React, { useState } from 'react'
+import DesktopMenu from './desktopMenu'
+import MobileMenu from './mobileMenu'
+import logo from "@/assets/images/logo.png"
+import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
+import { FaMagnifyingGlass, FaArrowRight } from "react-icons/fa6";
+import TopHeader from './topHeader'
+import SearchForm from './searchForm'
+import Logo from '@/components/ui/logo'
+import StickyHeader from '@/components/ui/stickyHeader'
 
 const HeaderOne = () => {
-    const [isSerchActive, setIsSerchActive] = useState(false);
-    const [isMobleMenuActive, setIsMobleMenuActive] = useState(false);
-
-    useEffect(() => {
-        // Ensure overflow-x is hidden on the body for all views
-        document.body.style.overflowX = 'hidden';
-
-        // Manage overflow for mobile menu interactions
-        if (isMobleMenuActive) {
-            document.body.style.overflowY = 'hidden'; // Prevent vertical scrolling when menu is active
-        } else {
-            document.body.style.overflowY = ''; // Reset vertical scrolling
-        }
-
-        return () => {
-            // Clean up styles on unmount
-            document.body.style.overflowX = '';
-            document.body.style.overflowY = '';
-        };
-    }, [isMobleMenuActive]);
+    const [isSerchActive, setIsSerchActive] = useState(false)
+    const [isMobleMenuActive, setIsMobleMenuActive] = useState(false)
 
     return (
         <StickyHeader>
@@ -37,45 +20,30 @@ const HeaderOne = () => {
                 <div id="header-container">
                     <TopHeader />
                     <div className="[.header-pinned_&]:shadow-md bg-background transition-all duration-300">
-                        <div className="px-5 py-5">
+                        <div className="container py-5 ">
                             <div className="flex justify-between items-center">
-                                <div className="flex-shrink-0 lg:mr-5">
-                                    <Logo />
-                                </div>
-                                <div className="flex items-center w-full justify-end  white-space: nowrap overflow-x-hidden overflow-y-hidden">
+                                <Logo />
+                                <div className="flex items-center">
                                     <DesktopMenu />
-                                    <MobileMenu
-                                        isMobleMenuActive={isMobleMenuActive}
-                                        setIsMobleMenuActive={setIsMobleMenuActive}
-                                    />
+                                    <MobileMenu isMobleMenuActive={isMobleMenuActive} setIsMobleMenuActive={setIsMobleMenuActive} />
 
                                     <div className="flex items-center gap-6">
-                                        <div className="cursor-pointer" onClick={() => setIsSerchActive(true)}>
-                                            {/* Add a search icon here if needed */}
-                                        </div>
+                                        {/* <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
+                                            <FaMagnifyingGlass className='text-xl' />
+                                        </div> */}
+                                       <Button asChild variant="ghost" className="sm:flex hidden ml-6">
+    <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
+</Button>
 
-                                        {/* Responsive Contact Us Button */}
-                                        <Button asChild variant="ghost" className="sm:flex hidden">
-                                            <Link to="/contact-us">
-                                                Contact Us <FaArrowRight />
-                                            </Link>
-                                        </Button>
 
-                                        {/* Mobile menu toggle button */}
-                                        <div
-                                            className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500"
-                                            onClick={() => setIsMobleMenuActive(true)}
-                                        >
+                                        <div className="flex xl:hidden flex-col items-end cursor-pointer transition-all duration-500" onClick={() => setIsMobleMenuActive(true)}>
                                             <span className="block h-[3px] w-5 bg-muted"></span>
                                             <span className="block h-[3px] w-7.5 bg-muted mt-2"></span>
                                             <span className="block h-[3px] w-5 bg-muted mt-2"></span>
                                         </div>
                                     </div>
 
-                                    <SearchForm
-                                        isSerchActive={isSerchActive}
-                                        setIsSerchActive={setIsSerchActive}
-                                    />
+                                    <SearchForm isSerchActive={isSerchActive} setIsSerchActive={setIsSerchActive} />
                                 </div>
                             </div>
                         </div>
@@ -83,7 +51,7 @@ const HeaderOne = () => {
                 </div>
             </header>
         </StickyHeader>
-    );
-};
+    )
+}
 
-export default HeaderOne;
+export default HeaderOne
