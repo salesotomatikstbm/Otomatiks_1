@@ -20,6 +20,7 @@ import Robotica2025 from "@/pages/robotica2025";
 import Workshop from "@/pages/workshop";
 import Msme from "@/pages/msme";
 import Csr from "@/pages/csr";
+import BlogDetails from "@/pages/blog-details";
 
 export const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             {
                 path: "/blog",
                 element: <Blog />
+            },
+            {
+                path: "/blog-details",
+                element: <BlogDetails/>
             },
             {
                 path: "/shop",

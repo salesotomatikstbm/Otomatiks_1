@@ -5,6 +5,8 @@ import BlogArticle from '@/components/sections/blogs/blogArticle'
 import PageTitle from '@/components/sections/pageTitle'
 import Sidebar from '@/components/sections/sidebar/sidebar'
 import NewsletterTwo from '@/components/sections/newsletters/newsletterTwo'
+import Blog from './blog'
+import Blog1 from '@/components/sections/blogs/Blog1'
 
 const BlogDetails = () => {
   return (
@@ -19,11 +21,11 @@ const BlogDetails = () => {
           <div className='container'>
             <div className='grid xl:grid-cols-[850px_auto] lg:grid-cols-[670px_auto] grid-cols-1 gap-7.5'>
               <BlogArticle />
-              <Sidebar />
+              <Blog1 />
             </div>
           </div>
         </div>
-        <NewsletterTwo />
+       
       </main>
       <ScrollRestoration/>
     </>

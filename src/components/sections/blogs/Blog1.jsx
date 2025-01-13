@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ScrollRestoration, Link } from 'react-router-dom';
 import PageTitle from '@/components/sections/pageTitle';
 import { client } from '@/lib/contentfulClient';
-import SectionName from '@/components/ui/sectionName'
-import Title from '@/components/ui/title'
+import SectionName from '@/components/ui/sectionName';
+import Title from '@/components/ui/title';
 import TopUp from '@/components/sections/footers/TopUp';
 
 const Blog1 = () => {
@@ -32,6 +32,14 @@ const Blog1 = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setModalImage('');
+  };
+
+  // Function to truncate the description text
+  const truncateText = (text, maxLength = 150) => {
+    if (text && text.length > maxLength) {
+      return `${text.substring(0, maxLength)}...`;
+    }
+    return text;
   };
 
   return (
@@ -72,7 +80,12 @@ const Blog1 = () => {
                     )}
                     {post.fields.description && (
                       <p className="mt-2">
-                        {post.fields.description}
+                        {truncateText(post.fields.description)}{' '}
+                        {post.fields.description.length > 200 && (
+                          <Link to={`/blog-details`} className="text-primary hover:underline">
+                            Read More
+                          </Link>
+                        )}
                       </p>
                     )}
                   </div>
@@ -98,9 +111,7 @@ const Blog1 = () => {
             </div>
           </div>
         )}
-            <div className="lg:mt-10 mt-4 mb-10">
-
-</div>
+        <div className="lg:mt-10 mt-4 mb-10"></div>
       </main>
     </>
   );

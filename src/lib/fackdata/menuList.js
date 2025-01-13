@@ -90,4 +90,11 @@ export const menuList = [
         dropDownMenu: false
          // path: "/shop",
     },
+    // {
+    //     id: 9,
+    //     path: "/blog-details",
+    //     label: "Blogs",
+    //     dropDownMenu: false
+        
+    // },
 ];

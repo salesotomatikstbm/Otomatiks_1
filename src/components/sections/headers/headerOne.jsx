@@ -42,7 +42,7 @@ const HeaderOne = () => {
                                 <div className="flex-shrink-0 mr-5">
                                     <Logo />
                                 </div>
-                                <div className="flex items-center w-full justify-end">
+                                <div className="flex items-center w-full justify-end  white-space: nowrap overflow-x-hidden overflow-y-hidden">
                                     <DesktopMenu />
                                     <MobileMenu
                                         isMobleMenuActive={isMobleMenuActive}
@@ -55,7 +55,7 @@ const HeaderOne = () => {
                                         </div>
 
                                         {/* Responsive Contact Us Button */}
-                                        <Button asChild variant="ghost" className="sm:flex hidden px-4">
+                                        <Button asChild variant="ghost" className="sm:flex hidden">
                                             <Link to="/contact-us">
                                                 Contact Us <FaArrowRight />
                                             </Link>
