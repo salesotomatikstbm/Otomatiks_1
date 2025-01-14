@@ -22,7 +22,7 @@ const PopupAbout = () => {
         const newErrors = {};
 
         if (!formData.TeamName.trim()) {
-            newErrors.TeamName = 'Team Name is required';
+            newErrors.TeamName = 'Name is required';
         }
         if (!formData.TeamEmail.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.TeamEmail)) {
             newErrors.TeamEmail = 'Valid email is required';
@@ -96,7 +96,7 @@ const PopupAbout = () => {
                         <h3 className="text-2xl font-bold mb-6 text-center">Join Our Team</h3>
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             <div className="mb-4">
-                                <label className="block text-gray-700">Name</label>
+                                {/* <label className="block text-gray-700">Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -118,12 +118,12 @@ const PopupAbout = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Email</label>
+                                {/* <label className="block text-gray-700">Email</label> */}
                                 <div className="relative">
                                     <input
                                         type="email"
                                         name="TeamEmail"
-                                        placeholder="Email"
+                                        placeholder="Email ID"
                                         value={formData.TeamEmail}
                                         onChange={handleChange}
                                         className={`w-full border ${
@@ -140,7 +140,7 @@ const PopupAbout = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Phone</label>
+                                {/* <label className="block text-gray-700">Phone</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -164,7 +164,7 @@ const PopupAbout = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Experience</label>
+                                {/* <label className="block text-gray-700">Experience</label> */}
                                 <div className="relative">
                                     <select
                                         name="TeamExperience"
@@ -190,7 +190,7 @@ const PopupAbout = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="bg-primary text-white py-4 px-8 rounded-[10px] w-full"
+                                    className="bg-primary text-white py-4 px-8 rounded-[10px]"
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Submit'}
                                 </button>

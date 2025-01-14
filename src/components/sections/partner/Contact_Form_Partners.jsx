@@ -162,7 +162,7 @@ const Contact_Form_Partners = () => {
                                     <input
                                         type="tel"
                                         name="PhoneNo"
-                                        placeholder="Phone No"
+                                        placeholder="Phone Number"
                                         value={formData.PhoneNo}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 

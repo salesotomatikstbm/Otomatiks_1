@@ -155,7 +155,7 @@ const ContactForm = () => {
                                             <input
                                                 type="email"
                                                 name="Email"
-                                                placeholder="Email"
+                                                placeholder="Email ID"
                                                 value={formData.Email}
                                                 onChange={handleChange}
                                                 className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
@@ -172,7 +172,7 @@ const ContactForm = () => {
                                             <input
                                                 type="tel"
                                                 name="Phone"
-                                                placeholder="Phone"
+                                                placeholder="Phone Number"
                                                 value={formData.Phone}
                                                 onChange={handleChange}
                                                 className="text-[#686868] placeholder-[#686868] rounded-[10px] border-2 border-[#F2F2F2] py-4 px-5 lg:py-6 lg:px-8 w-full md:max-w-[400px]"
@@ -227,7 +227,7 @@ const ContactForm = () => {
                                         disabled={isSubmitting}
                                         className="w-full bg-primary border-primary hover:text-primary-foreground lg:mt-10 mt-5"
                                     >
-                                        {isSubmitting ? 'Sending...' : 'Sumbit'}
+                                        {isSubmitting ? 'Sending...' : 'Submit'}
                                     </Button>
                                 </form>
                                 {message && <p className="mt-4 text-center text-lg text-gray-600">{message}</p>}

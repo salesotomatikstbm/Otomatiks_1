@@ -36,6 +36,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                             <li><Link to="/robotics-coding-courses" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Courses</Link></li>
                             <li><Link to="/robotics-coding-school-curriculum" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">School Curriculum</Link></li>
                             <li><Link to="/franchise" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Franchise</Link></li>
+                            <li><Link to="/robotica" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Robotica</Link></li>
                             <li><Link to="/blog" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Blogs</Link></li>
                             <li><Link to="/contact-us" className="text-cream-foreground transition-all duration-500 hover:ml-[5px] hover:text-primary-foreground">Contact Us</Link></li>
                         </ul>
@@ -89,7 +90,7 @@ Our robotics classes are designed to help you discover the potential of this exc
             </div>
             <ScrollUp />
             <div>
-                <div className="absolute right-[68px] top-[40%] animate-up-down">
+                <div className="absolute right-[68px] top-[40%] animate-up-down lg:hidden">
                     <img src={apple} alt="img" />
                 </div>
                 <div className="absolute left-[45%] lg:top-1/2 top-[40%]">

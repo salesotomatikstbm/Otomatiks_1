@@ -169,8 +169,11 @@ const Contact_School_Management = () => {
                                         
                                         <option value="">Organization Type</option>
                                         <option value="CBSE">CBSE</option>
-                                        <option value="International">International</option>
+                                        <option value="IGCSE">IGCSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        
                                         <option value="State Board">State Board</option>
+                                        <option value="International">Others</option>
                                     </select>
                                     {errors.OrganizationType && <p className="text-red-500 text-sm mt-1">{errors.OrganizationType}</p>}
                                 </div>

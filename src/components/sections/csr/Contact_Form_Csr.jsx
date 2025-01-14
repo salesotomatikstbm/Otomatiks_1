@@ -127,7 +127,7 @@ const Contact_Form_Csr = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Email"
+                                        placeholder="Email ID"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full

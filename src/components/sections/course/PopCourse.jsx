@@ -173,7 +173,7 @@ const PopCourse = () => {
                                     <input
                                         type="text"
                                         name="ContactNumber"
-                                        placeholder="Contact Number"
+                                        placeholder="Phone Number"
                                         value={formData.ContactNumber}
                                         onChange={handleChange}
                                         className={`w-full border ${
@@ -191,7 +191,7 @@ const PopCourse = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Email"
+                                        placeholder="Email ID"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`w-full border ${

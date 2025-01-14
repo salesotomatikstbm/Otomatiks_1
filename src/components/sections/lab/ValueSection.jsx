@@ -39,7 +39,7 @@ const ValueSection = () => {
           <div className="order-1 lg:order-2 space-y-6">
             {values.map((value, index) => (
               <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12  bg-secondary-foreground rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="flex-shrink-0 w-12 h-12 text-white bg-secondary-foreground rounded-full flex items-center justify-center text-2xl font-bold">
                   {index + 1}
                 </div>
                 <div className="ml-6 ">

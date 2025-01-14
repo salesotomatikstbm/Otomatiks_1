@@ -95,12 +95,12 @@ const Our_Patrons = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="group bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center"
+              className="group rounded-[8px] bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center"
             >
               <img
                 alt={`Patron ${index + 1}`}
                 src={src}
-                className="w-full h-30 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
+                className="w-full  h-30 object-contain transition-transform duration-300 ease-in-out transform group-hover:scale-110"
               />
             </div>
           ))}

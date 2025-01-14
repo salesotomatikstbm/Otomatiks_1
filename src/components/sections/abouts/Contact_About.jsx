@@ -111,7 +111,7 @@ const Contact_About = () => {
                                     <input
                                         type="text"
                                         name="TeamName"
-                                        placeholder="Your Name"
+                                        placeholder="Name"
                                         value={formData.TeamName}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
@@ -129,7 +129,7 @@ const Contact_About = () => {
                                     <input
                                         type="tel"
                                         name="TeamPhone"
-                                        placeholder="Your Phone Number"
+                                        placeholder="Phone Number"
                                         value={formData.TeamPhone}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 
@@ -147,7 +147,7 @@ const Contact_About = () => {
                                     <input
                                         type="email"
                                         name="TeamEmail"
-                                        placeholder="Your Email"
+                                        placeholder="Email ID"
                                         value={formData.TeamEmail}
                                         onChange={handleChange}
                                         className={`text-[#686868] placeholder-[#686868] rounded-[10px] border-2 py-4 px-5 lg:py-6 lg:px-8 w-full 

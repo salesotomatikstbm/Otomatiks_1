@@ -16,7 +16,7 @@ const FranchiseApplicants = () => {
       <div className="container mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <SectionName>Who Can Apply for the Robotics Franchise?</SectionName>
+          <SectionName>Who Can Apply</SectionName>
           <Title size={"3.5xl"} className="mt-4">Join Us in Pioneering the Next Wave of Technological Breakthroughs</Title>
         </div>
 

@@ -32,7 +32,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           <Title size={"3.5xl"} className={"mt-2.5 text-center"}>Inspiring Future Engineers Through Fun and Hands-On Learning</Title>
         </div>
         <div className="lg:pt-15 pt-10">
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7.5 items-stretch">
             {extraCurricularData.map(({ desc, id, src, title, icon, level, duration, topics }) => (
               <Card
                 key={id}
@@ -105,7 +105,7 @@ const Card = ({ title, desc, src, icon, id, level, duration, topics, openModal }
 
   return (
     <SlideUp delay={id}>
-      <div className="border border-[#F2F2F2] bg-background rounded-[10px] p-7.5 group/card layer-card">
+      <div className="flex flex-col justify-top h-full border border-[#F2F2F2] bg-background rounded-[10px] p-7.5 group/card layer-card">
         <div className="relative overflow-hidden">
           <img src={src} alt="Tutoring Services" className="w-full" />
           <div className="absolute left-0 top-full w-full h-full flex">

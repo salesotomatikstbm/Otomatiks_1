@@ -154,10 +154,13 @@ const PopupSchool = () => {
                                         onChange={handleChange}
                                         className={`w-full border ${errors.OrganizationType ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
                                     >
-                                        <option value="">Select Organization Type</option>
+                                       <option value="">Organization Type</option>
                                         <option value="CBSE">CBSE</option>
-                                        <option value="International">International</option>
-                                        <option value="Stateboard">Stateboard</option>
+                                        <option value="IGCSE">IGCSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        
+                                        <option value="State Board">State Board</option>
+                                        <option value="International">Others</option>
                                     </select>
                                           </div>
                                 {errors.OrganizationType && <p className="text-red-500 text-sm">{errors.OrganizationType}</p>}
@@ -170,7 +173,7 @@ const PopupSchool = () => {
                                     <input
                                         type="email"
                                         name="Email"
-                                        placeholder="Email"
+                                        placeholder="Email ID"
                                         value={formData.Email}
                                         onChange={handleChange}
                                         className={`w-full border ${errors.Email ? 'border-red-500' : 'border-gray-300'} p-3 rounded-md`}
