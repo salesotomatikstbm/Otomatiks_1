@@ -7,7 +7,7 @@ const TeamCard = ({src, name, position}) => {
         <div className="bg-background shadow-3xl ">
             <div>
                 <div>
-                    <img src={src} alt="team-1" className=""/>
+                    <img src={src} alt="team-1" className="rounded-lg"/>
                 </div>
               
             </div>
