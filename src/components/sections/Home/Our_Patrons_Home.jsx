@@ -91,7 +91,7 @@ const Our_Patrons_Home = () => {
         <Slider {...sliderSettings} className="patron-slider">
           {images.map((src, index) => (
             <div key={index} className="p-4">
-              <div className="bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 ">
+              <div className="bg-background shadow-3xl border-2 rounded-lg border-transparent hover:border-green transition-all duration-500 ">
                 <img
                   alt={`Patron ${index + 1}`}
                   src={src}

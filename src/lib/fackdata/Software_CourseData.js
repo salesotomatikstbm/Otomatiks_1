@@ -9,7 +9,7 @@ export const extraCurricularData = [
     {
         id: 1,
         title: "Scratch",
-        desc: "Explore the basics of coding with Scratch, a block-based programming platform. while developing problem-solving",
+        desc: "Learn the basics of coding using Scratch, a block-based platform. Develop problem-solving and creative thinking through fun, interactive exercises.",
         src: img_1,
         level: 1,
         duration: "4 Weeks",
@@ -29,7 +29,7 @@ export const extraCurricularData = [
     {
         id: 2,
         title: "Python",
-        desc: "Learn Python basics with fun exercises focusing on logic and problem-solving. Build foundational coding skills for future projects.",
+        desc: "Master Python basics with hands-on exercises. Strengthen logic and problem-solving skills while building a strong foundation for future coding projects.",
         src: img_2,
         level: 2,
         duration: "6 Weeks",
@@ -49,7 +49,7 @@ export const extraCurricularData = [
     {
         id: 3,
         title: "Web Development",
-        desc: "Learn HTML, CSS, and JavaScript to create dynamic, responsive websites. Design and build your own unique web pages from scratch.",
+        desc: "Learn HTML, CSS, and JavaScript to create responsive websites. Design and build dynamic web pages with essential web development tools and techniques.",
         src: img_3,
         level: 3,
         duration: "8 Weeks",
@@ -69,7 +69,7 @@ export const extraCurricularData = [
     {
         id: 4,
         title: "App Development",
-        desc: "Turn ideas into apps by creating interactive, user-friendly mobile solutions. Discover tools and techniques for seamless app design.",
+        desc: "Transform ideas into functional mobile apps. Learn the fundamentals of app design, from interface creation to publishing apps to app stores.",
         src: img_4,
         level: 4,
         duration: "10 Weeks",
@@ -89,7 +89,7 @@ export const extraCurricularData = [
     {
         id: 5,
         title: "Artificial Intelligence Basics",
-        desc: "Artificial Intelligence BasicsLearn the AI concepts and Discover the fundamentals of Artificial Intelligence through engaging projects.",
+        desc: "Explore the world of Artificial Intelligence through engaging projects. Discover foundational concepts and the practical applications of AI in various fields.",
         src: img_5,
         level: 5,
         duration: "12 Weeks",
@@ -109,7 +109,7 @@ export const extraCurricularData = [
     {
         id: 6,
         title: "Artificial Intelligence Advanced",
-        desc: "Learn machine learning with hands-on, innovative projects. Gain skills to shape the future of technology and innovation.",
+        desc: "Dive into advanced machine learning concepts with innovative, hands-on projects. Gain the skills needed to develop cutting-edge AI solutions for diverse applications.",
         src: img_6,
         level: 6,
         duration: "14 Weeks",
@@ -127,3 +127,4 @@ export const extraCurricularData = [
         ]
     }
 ];
+

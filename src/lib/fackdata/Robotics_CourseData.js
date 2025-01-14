@@ -123,7 +123,7 @@ export const extraCurricularData = [
     {
         id: 6,
         title: "Robo Engineer",
-        desc: "Robo Engineer is an advanced course for students who aspire to become robotics engineers. It covers in-depth engineering principles and hands-on projects.",
+        desc: "Robo Engineer is an exciting advanced course for students who aspire to become robotics engineers. It covers in-depth engineering principles and hands-on projects.",
         src: img_6,
         level: 6,
         duration: "12 weeks",
