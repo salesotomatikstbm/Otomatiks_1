@@ -8,12 +8,8 @@ import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
 import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management'
 import TopUp from '@/components/sections/footers/TopUp'
 import HomeTestimonial from '@/components/sections/Home/HomeTestimonial'
-import FaqSchool from '@/components/sections/schoolprogram/FaqSchool'
-import Curriculum from '@/components/sections/schoolprogram/Curriculum'
-
 
 const SchoolProgram = () => {
-  
 
   return (
     <>
@@ -25,11 +21,11 @@ const SchoolProgram = () => {
         />
         <meta
           name="keywords"
-          content="school curriculum, Otomatiks school program, educational program, innovative learning, school education, kids learning, modern education, Otomatiks school, student development"
+          content="school curriculum, Otomatiks school program, educational program, innovative learning, school education, kids learning, modern education, Otomatiks school, student development, educational approach, curriculum design, learning strategies, student growth, personalized learning, teaching methods, education innovation, academic development, holistic education, student-centered learning, Otomatiks education, 21st-century skills, future-ready education, learning resources, educational excellence, skill development, creativity in education, critical thinking, problem-solving skills, learning outcomes, experiential learning, academic success, interactive learning, technology in education, STEM education, hands-on learning, project-based learning, collaborative learning, learning environment, educational programs for kids, school programs for students, career readiness, leadership development, lifelong learning, school learning resources, student engagement, personalized teaching, development of soft skills, educational workshops, school success stories, education for the future, modern classroom techniques, Otomatiks curriculum, global education standards, youth empowerment through education, positive learning experiences, inclusive education"
         />
+
         <meta name="author" content="Otomatiks Education" />
 
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="School Curriculum - Otomatiks Educational Program" />
         <meta
           property="og:description"
@@ -42,7 +38,6 @@ const SchoolProgram = () => {
         <meta property="og:url" content="https://www.otomatiks.com/school-program" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -57,7 +52,6 @@ const SchoolProgram = () => {
           content="https://www.otomatiks.com/images/otomatiks-school-curriculum.jpg"
         />
 
-        {/* Canonical Link */}
         <link rel="canonical" href="https://www.otomatiks.com/school-program" />
 
       </Helmet>
@@ -65,14 +59,9 @@ const SchoolProgram = () => {
       <main>
         <PageTitle pageName={"School Curriculum"} breadcrumbCurrent={"School Curriculum"} />
         <Why_otomatiks />
-      
         <Our_Uniqueness />
-        {/* <Curriculum /> */}
         <HomeTestimonial />
         <Our_Patrons />
-        
-    
-        {/* <FaqSchool /> */}
         <Contact_School_Management />
         <TopUp />
       </main>

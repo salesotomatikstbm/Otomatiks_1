@@ -3,17 +3,11 @@ import { Helmet } from "react-helmet";
 import { ScrollRestoration } from "react-router-dom";
 import PageTitle from "@/components/sections/pageTitle";
 import AboutTwo from "@/components/sections/abouts/aboutTwo";
-import UpcomingEvents from "@/components/sections/workshop/UpcomingEvents";
 import TopUp from "@/components/sections/footers/TopUp";
-import Contact_Workshop from "@/components/sections/workshop/Contact_Workshop";
 import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
-import WorkshopBenefits from "@/components/sections/workshop/WorkshopBenefits";
-import Pricing from "@/components/sections/pricing";
 import PreviousYearWorkshop from "@/components/sections/workshop/PreviousYearWorkshop";
 import Contact_School_Management from "@/components/sections/schoolprogram/Contact_School_Management";
 import OurWorkshop from "@/components/sections/workshop/WhatWeOffer";
-
-
 
 const Workshop = () => {
   return (
@@ -26,11 +20,11 @@ const Workshop = () => {
         />
         <meta
           name="keywords"
-          content="Otomatiks workshop, kids learning workshop, educational events, children workshop, interactive learning, creative workshops, upcoming workshops for kids"
+          content="Otomatiks workshop, kids learning workshop, educational events, children workshop, interactive learning, creative workshops, upcoming workshops for kids, kids creativity workshop, hands-on learning workshops, educational activities for children, learning through play, STEM workshops for kids, robotics workshops, coding workshops for kids, arts and crafts workshops for kids, educational games for kids, science experiments for kids, kids workshops near me, fun learning activities, workshops for creativity, children's educational events, online workshops for kids, summer workshops for kids, winter workshops for kids, interactive kids workshops, fun and educational workshops, learning activities for kids, school workshops, creative learning for kids, problem-solving workshops, kids development workshops, team-building workshops for kids, teamwork workshops for children, tech workshops for kids, future skills workshops, kids learning camps, kids programming workshops, kids tech activities, coding classes for kids, kids design workshops, workshops for child development, creative arts workshops for kids, robotics for kids, future-ready workshops, math workshops for kids, kids music workshops, theatre workshops for kids, kids storytelling workshops, learning fun for kids, educational workshops for all ages, extracurricular learning for kids, kids engagement workshops, kids self-expression workshops, brain development workshops, mind-challenging workshops, educational events for students, problem-solving for children, kids science clubs, kids engineering workshops"
         />
+
         <meta name="author" content="Otomatiks Education" />
 
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Otomatiks Workshop | Educational & Fun Learning Events for Kids" />
         <meta
           property="og:description"
@@ -43,7 +37,6 @@ const Workshop = () => {
         <meta property="og:url" content="https://www.otomatiks.com/workshop" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -58,22 +51,17 @@ const Workshop = () => {
           content="https://www.otomatiks.com/images/workshop.jpg"
         />
 
-        {/* Canonical Link */}
         <link rel="canonical" href="https://www.otomatiks.com/workshop" />
       </Helmet>
 
       <main>
         <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
         <AboutTwo />
-    {/* <Pricing /> */}
         <OurWorkshop />
-      {/* <UpcomingEvents />
-      <WorkshopBenefits /> */}
-      <PreviousYearWorkshop />
-      <FaqWorkshop />
-      {/* <Contact_Workshop /> */}
-      <Contact_School_Management />
-      <TopUp />
+        <PreviousYearWorkshop />
+        <FaqWorkshop />
+        <Contact_School_Management />
+        <TopUp />
       </main>
       <ScrollRestoration />
     </>

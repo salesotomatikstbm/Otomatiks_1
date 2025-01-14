@@ -23,11 +23,11 @@ const AboutUs = () => {
         />
         <meta
           name="keywords"
-          content="robotics for kids, coding for kids, STEM education for children, kids robotics classes, AI for kids, Otomatiks, fun learning robotics, children's coding workshops, robotics programs for children, kids STEM programs, children's robotics clubs"
+          content="robotics for kids, coding for kids, STEM education for children, kids robotics classes, AI for kids, Otomatiks, fun learning robotics, children's coding workshops, robotics programs for children, kids STEM programs, children's robotics clubs, robot building for kids, coding workshops for kids, AI classes for children, hands-on robotics learning, innovative STEM programs, technology education for kids, future tech for children, STEM curriculum for schools, robotics competitions for kids, child-friendly AI learning, robotics engineering for kids, STEM for young minds, programming for beginners, child-centric coding, creative robotics for kids, robot programming for children, educational robots for schools, beginner coding classes for kids, interactive AI learning, kids' coding apps, robotics tutorials for kids, coding games for children, junior robotics programs, AI and robotics integration, STEM-based activities for children, engaging STEM challenges, STEM labs for schools, advanced robotics for kids, problem-solving with robotics, team-building through STEM, educational robotics kits, future-focused kids' programs, introducing AI to children, STEM partnerships for schools, coding and AI bootcamps, early robotics education, inspiring young innovators, building creativity through robotics, STEM robotics camps for children"
         />
+
         <meta name="author" content="Otomatiks Team" />
 
-        {/* Open Graph Meta Tags for Social Media Sharing */}
         <meta property="og:title" content="About Us | Otomatiks - Inspiring Future Innovators" />
         <meta
           property="og:description"
@@ -38,7 +38,6 @@ const AboutUs = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Otomatiks" />
 
-        {/* Twitter Card Meta Tags for Twitter Sharing */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -53,7 +52,7 @@ const AboutUs = () => {
           content="https://www.otomatiks.com/images/twitter-preview.jpg"
         />
 
-        {/* Canonical Link */}
+      
         <link rel="canonical" href="https://www.otomatiks.com/about-us" />
 
       </Helmet>
@@ -62,13 +61,10 @@ const AboutUs = () => {
         <AboutOne isAboutpage={true} />
         <Testimonial />
         <OurJourney />
-        
         <Teams />
-      
-        {/* <AgeOne /> */}
         <Brands1 />
         <Our_Patrons />
-      <Contact_About />
+        <Contact_About />
         <TopUp />
       </main>
       <ScrollRestoration />

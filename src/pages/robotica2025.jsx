@@ -5,11 +5,6 @@ import EventPromoSection from '@/components/sections/robotica2025/EventPromoSect
 import TopUp from '@/components/sections/footers/TopUp'
 import PreviousEventGallery2024 from '@/components/sections/robotica2024/PreviousEventGallery2024'
 import GlimplsVideo from '@/components/sections/robotica2024/GlimpsVideo'
-import PreviousEventGallery2023 from '@/components/sections/robotica2023/PreviousEventGallery2023'
-import GlimplsVideo2023 from '@/components/sections/robotica2023/GlimpsVideo2023'
-import ChiefGuest2024 from '@/components/sections/robotica2024/ChiefGuest2024'
-import ChiefGuest2023 from '@/components/sections/robotica2023/ChiefGuest2023'
-import ChiefGuest2025 from '@/components/sections/robotica2025/ChiefGuest2025'
 
 const Robotica2025 = () => {
   return (
@@ -22,11 +17,10 @@ const Robotica2025 = () => {
         />
         <meta
           name="keywords"
-          content="Robotica 2025, robotics event, robotics competition, technology innovation, robotics showcase, robotics promo, robotics 2025, Otomatiks robotics, future robotics"
+          content="Robotica 2025, robotics event, robotics competition, technology innovation, robotics showcase, robotics promo, robotics 2025, Otomatiks robotics, future robotics, robotics exhibition, robotics technology, robotics trends, robotics innovations, robotics demos, robotics industry, future technology, AI in robotics, robotics engineering, robotics challenges, robotics for students, robotics conference, robotics workshops, robotics tech event, robotics education, automation technology, robot showcase, STEM robotics, robot competition, robotics tournament, robotics solutions, robotics development, robotics teams, robotic automation, robotics research, robotics breakthrough, robot design, cutting-edge robotics, robotics future, robotics community, robotics workshops 2025, robot inventions, robotics inventions, robotic designs, smart robotics, intelligent robotics, robotics applications, robotics students, robotics events 2025, robot building, robot projects, AI robotics, robotics demos 2025, robotics exhibition 2025"
         />
-        <meta name="author" content="Otomatiks Robotics" />
 
-        {/* Open Graph Meta Tags */}
+        <meta name="author" content="Otomatiks Robotics" />
         <meta property="og:title" content="Robotica 2025 - The Future of Robotics Innovation" />
         <meta
           property="og:description"
@@ -36,7 +30,6 @@ const Robotica2025 = () => {
         <meta property="og:url" content="https://www.otomatiks.com/robotica2025" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -48,22 +41,13 @@ const Robotica2025 = () => {
         />
         <meta name="twitter:image" content="https://www.otomatiks.com/path/to/robotica2025-twitter-image.jpg" />
 
-        {/* Canonical Link */}
         <link rel="canonical" href="https://www.otomatiks.com/robotica2025" />
 
       </Helmet>
       <PageTitle pageName={"Robotica"} breadcrumbCurrent={"Robotica"} />
       <EventPromoSection />
-      {/* <ChiefGuest2025 /> */}
-      {/* <ChiefGuest2025 />
-      <ChiefGuest2024 /> */}
       <GlimplsVideo />
       <PreviousEventGallery2024 />
-      {/* <PreviousEventGallery2023 /> */}
-      
-      {/* <ChiefGuest2023 /> */}
-      
-      {/* <GlimplsVideo2023 /> */}
       <TopUp />
     </div>
   )

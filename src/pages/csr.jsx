@@ -14,52 +14,52 @@ const Csr = () => {
     <>
       <Helmet>
         <title>CSR Initiatives</title>
-        <meta 
-          name="description" 
-          content="Discover Otomatiks' CSR initiatives focused on education, technology, and community development. Learn how we contribute to creating a better future through impactful programs." 
+        <meta
+          name="description"
+          content="Discover Otomatiks' CSR initiatives focused on education, technology, and community development. Learn how we contribute to creating a better future through impactful programs."
         />
-        <meta 
-          name="keywords" 
-          content="CSR initiatives, Otomatiks community programs, corporate social responsibility, educational outreach, community development, technology for good, social impact programs, STEM education for kids, robotics for rural areas" 
+        <meta
+          name="keywords"
+          content="CSR initiatives, Otomatiks community programs, corporate social responsibility, educational outreach, community development, technology for good, social impact programs, STEM education for kids, robotics for rural areas, sustainable development, educational equity, tech-driven social impact, STEM outreach projects, robotics workshops for schools, empowering rural students, corporate responsibility, digital literacy programs, technology education initiatives, rural education support, tech education for underprivileged, Otomatiks educational CSR, AI learning for students, school outreach programs, community partnerships, STEM skill development, AI workshops for kids, community technology empowerment, inclusive education programs, hands-on STEM training, robotics innovation for schools, rural development initiatives, school innovation programs, sustainable technology programs, CSR in education, Otomatiks rural outreach, coding for rural students, innovative learning solutions, educational technology support, robotics for social good, STEM in underserved areas, empowering education through technology, technology-driven outreach, social innovation education, CSR engagement projects, corporate-community partnerships, impactful STEM education, rural school programs, empowering students with technology, CSR robotics initiatives, Otomatiks educational outreach, AI and robotics for schools"
         />
+
         <meta name="author" content="Otomatiks Team" />
-        <meta 
-          property="og:title" 
-          content="CSR Initiatives | Otomatiks - Community Engagement" 
+        <meta
+          property="og:title"
+          content="CSR Initiatives | Otomatiks - Community Engagement"
         />
-        <meta 
-          property="og:description" 
-          content="Explore Otomatiks' impactful CSR programs aimed at education, technology empowerment, and community development. Join us in building a brighter future." 
+        <meta
+          property="og:description"
+          content="Explore Otomatiks' impactful CSR programs aimed at education, technology empowerment, and community development. Join us in building a brighter future."
         />
-        <meta 
-          property="og:image" 
-          content="/path/to/og-csr-image.jpg" 
+        <meta
+          property="og:image"
+          content="/path/to/og-csr-image.jpg"
         />
         <meta property="og:url" content="https://www.otomatiks.com/csr" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta 
-          name="twitter:title" 
-          content="CSR Initiatives | Otomatiks - Community Engagement" 
+        <meta
+          name="twitter:title"
+          content="CSR Initiatives | Otomatiks - Community Engagement"
         />
-        <meta 
-          name="twitter:description" 
-          content="Learn about Otomatiks' CSR initiatives, from educational outreach to community engagement. Making a difference through technology and innovation." 
+        <meta
+          name="twitter:description"
+          content="Learn about Otomatiks' CSR initiatives, from educational outreach to community engagement. Making a difference through technology and innovation."
         />
-        <meta 
-          name="twitter:image" 
-          content="/path/to/twitter-csr-image.jpg" 
+        <meta
+          name="twitter:image"
+          content="/path/to/twitter-csr-image.jpg"
         />
         <link rel="canonical" href="https://www.otomatiks.com/csr" />
       </Helmet>
       <main>
         <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
-      <CSRQuotesSection />
-      <Our_Uniqueness />
-      <WhatWeOffer />
-      <PartnershipSection />
-      
-      <Contact_Form_Csr />
+        <CSRQuotesSection />
+        <Our_Uniqueness />
+        <WhatWeOffer />
+        <PartnershipSection />
+        <Contact_Form_Csr />
         <TopUp />
       </main>
       <ScrollRestoration />
