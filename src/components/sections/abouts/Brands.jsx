@@ -7,7 +7,7 @@ import BranchCard from '../BranchCard';
 // Array of districts with contact numbers and other branch info
 const districts = [
   { name: "Vellore", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Vellore" },
-  { name: "United Arab Emirates (UAE)", contact: "+91 7985783392", email: "otomatiksuk@gmail.com", location: "UAE" },
+  { name: "United Arab Emirates (UAE)", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "UAE" },
   { name: "Parrys, Chennai", contact: "+91 9600015954", email: "chennai@otomatiks.in", location: "Chennai" },
   { name: "Annanagar, Chennai", contact: "+91 7603849783", email: "otomatiksannanagar@gmail.com", location: "Chennai" },
   { name: "Tambaram", contact: "+91 8610210593", email: "otomatikstambaram@gmail.com", location: "Tambaram" },

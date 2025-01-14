@@ -103,7 +103,7 @@ const PopupCourse = () => {
                         <h3 className="text-2xl font-bold mb-6 text-center">Join Our Course</h3>
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             <div className="mb-4">
-                                <label className="block text-gray-700">Contact Person Name</label>
+                                {/* <label className="block text-gray-700">Contact Person Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -121,7 +121,7 @@ const PopupCourse = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Child Name</label>
+                                {/* <label className="block text-gray-700">Child Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -139,7 +139,7 @@ const PopupCourse = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Child Age</label>
+                                {/* <label className="block text-gray-700">Child Age</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -157,7 +157,7 @@ const PopupCourse = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Contact Number</label>
+                                {/* <label className="block text-gray-700">Contact Number</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -175,7 +175,7 @@ const PopupCourse = () => {
                             </div>
 
                             <div className="mb-4">
-                                <label className="block text-gray-700">Email</label>
+                                {/* <label className="block text-gray-700">Email</label> */}
                                 <div className="relative">
                                     <input
                                         type="email"
@@ -196,7 +196,7 @@ const PopupCourse = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`bg-primary text-white py-3 px-6 rounded-md w-full ${
+                                    className={`bg-primary text-white py-3 px-6 rounded-md  ${
                                         isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                                     }`}
                                 >

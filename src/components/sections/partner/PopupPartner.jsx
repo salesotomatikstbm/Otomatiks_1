@@ -110,7 +110,7 @@ const PopupPartner = () => {
                         <form onSubmit={handleSubmit}>
                             {/* Name Field */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Name</label>
+                                {/* <label className="block text-gray-700">Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -127,7 +127,7 @@ const PopupPartner = () => {
 
                             {/* Franchise Location Field */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Franchise Location</label>
+                                {/* <label className="block text-gray-700">Franchise Location</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -144,7 +144,7 @@ const PopupPartner = () => {
 
                             {/* Phone Number Field */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Phone Number</label>
+                                {/* <label className="block text-gray-700">Phone Number</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -161,7 +161,7 @@ const PopupPartner = () => {
 
                             {/* Email Field */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Email Id</label>
+                                {/* <label className="block text-gray-700">Email Id</label> */}
                                 <div className="relative">
                                     <input
                                         type="email"
@@ -178,7 +178,7 @@ const PopupPartner = () => {
 
                             {/* Current Business Field */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Current Business</label>
+                                {/* <label className="block text-gray-700">Current Business</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -196,7 +196,7 @@ const PopupPartner = () => {
                             {/* Investment Plan Field */}
                          {/* Investment Plan Dropdown */}
 <div className="mb-4">
-    <label className="block text-gray-700">Investment Plan</label>
+    {/* <label className="block text-gray-700">Investment Plan</label> */}
     <div className="relative">
         <select
             name="InvestmentPlan"

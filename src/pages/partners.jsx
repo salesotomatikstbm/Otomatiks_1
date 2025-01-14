@@ -12,6 +12,7 @@ import BranchesMap from '@/components/sections/partner/BranchesMap'
 import TopUp from '@/components/sections/footers/TopUp'
 import Testi from '@/components/sections/partner/Testi'
 import Brands from '@/components/sections/abouts/Brands'
+import PartTesti from '@/components/sections/partner/PartTesti'
 
 
 
@@ -71,7 +72,8 @@ const Partners = () => {
         <BranchesMap />
        
         <FAQs />
-        <Testi />
+        {/* <Testi /> */}
+        <PartTesti />
      
         <Contact_Form_Partners />
         <TopUp />

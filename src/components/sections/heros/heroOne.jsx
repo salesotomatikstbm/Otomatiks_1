@@ -31,7 +31,7 @@ const HeroOne = () => {
           Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.</p>
           <div className="mt-6">
             <Button asChild variant={"secondary"} >
-              <Link to="/robotics-coding-courses" className='bg-secondary'>Our Courses</Link>
+              <Link to="/robotics-coding-courses" className='bg-primary'>Our Courses</Link>
             </Button>
           </div>
         </div>

@@ -112,7 +112,7 @@ const PopupSchool = () => {
                         <form onSubmit={handleSubmit} className="max-h-[80vh] overflow-y-auto">
                             {/* School Name */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">School Name</label>
+                                {/* <label className="block text-gray-700">School Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -129,7 +129,7 @@ const PopupSchool = () => {
 
                             {/* Contact Person Name */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Contact Person Name</label>
+                                {/* <label className="block text-gray-700">Contact Person Name</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -146,7 +146,7 @@ const PopupSchool = () => {
 
                             {/* Organization Type */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Organization Type</label>
+                                {/* <label className="block text-gray-700">Organization Type</label> */}
                                 <div className="relative">
                                     <select
                                         name="OrganizationType"
@@ -168,7 +168,7 @@ const PopupSchool = () => {
 
                             {/* Email */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Email</label>
+                                {/* <label className="block text-gray-700">Email</label> */}
                                 <div className="relative">
                                     <input
                                         type="email"
@@ -185,7 +185,7 @@ const PopupSchool = () => {
 
                             {/* Phone Number */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">Phone Number</label>
+                                {/* <label className="block text-gray-700">Phone Number</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -202,7 +202,7 @@ const PopupSchool = () => {
 
                             {/* School Address */}
                             <div className="mb-4">
-                                <label className="block text-gray-700">School Address</label>
+                                {/* <label className="block text-gray-700">School Address</label> */}
                                 <div className="relative">
                                     <input
                                         type="text"
@@ -258,7 +258,7 @@ const PopupSchool = () => {
                             <div className="text-center">
                                 <button
                                     type="submit"
-                                    className="bg-primary text-white py-3 px-8 rounded-lg w-full"
+                                    className="bg-primary text-white py-3 px-8 rounded-lg"
                                     disabled={isSubmitting}
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Submit'}
