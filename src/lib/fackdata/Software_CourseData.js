@@ -88,7 +88,7 @@ export const extraCurricularData = [
     },
     {
         id: 5,
-        title: "Artificial Intelligence Basics",
+        title: "AI Basics",
         desc: "Explore the world of Artificial Intelligence through engaging projects. Discover foundational concepts and the practical applications of AI in various fields.",
         src: img_5,
         level: 5,
@@ -108,7 +108,7 @@ export const extraCurricularData = [
     },
     {
         id: 6,
-        title: "Artificial Intelligence Advanced",
+        title: "AI Advanced",
         desc: "Dive into advanced machine learning concepts with innovative, hands-on projects. Gain the skills needed to develop cutting-edge AI solutions for diverse applications.",
         src: img_6,
         level: 6,

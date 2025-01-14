@@ -134,7 +134,7 @@ const Card = ({ title, desc, src, icon, id, level, duration, topics, openModal }
               <span className="text-sm">Level {level}</span>
             </button>
           </div>
-          <p className="pt-2">{desc}</p>
+          <p className="pt-2 text-justify">{desc}</p>
         </div>
       </div>
     </SlideUp>
