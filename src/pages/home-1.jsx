@@ -11,6 +11,9 @@ import RoboticCourseSlide from '@/components/sections/Home/RoboticCourseSlide';
 import SoftwareCourseslider from '@/components/sections/Home/SoftwareCourseslider';
 import Brands from '@/components/sections/abouts/Brands';
 
+import Sec01 from '@/components/sections/heros/Sec01';
+
+
 const HomeOne = () => {
   return (
     <>
@@ -44,7 +47,9 @@ const HomeOne = () => {
         <link rel="canonical" href="https://www.otomatiks.com/" />
       </Helmet>
       <main>
-        <HeroOne />
+        {/* <HeroOne /> */}
+        <Sec01 />
+        
         <AboutOne isAboutpage={false} />
         <RoboticCourseSlide />
         <SoftwareCourseslider />

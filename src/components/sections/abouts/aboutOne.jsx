@@ -23,7 +23,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                             <SlideUp>
                                 <div className="relative">
                                     <div>
-                                        <img src={shap_1} alt="shap" />
+                                        {/* <img src={shap_1} alt="shap" /> */}
                                     </div>
                                     <div className="ml-9">
                                         <img src={about_img_1} alt="about-bg" className="w-full" />
