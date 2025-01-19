@@ -31,7 +31,7 @@ const HeaderOne = () => {
                                         {/* <div className="ml-16 cursor-pointer" onClick={() => setIsSerchActive(true)}>
                                             <FaMagnifyingGlass className='text-xl' />
                                         </div> */}
-                                        <Button asChild variant="ghost" className="sm:flex hidden ml-6 hover:bg-primary">
+                                        <Button asChild variant="ghost" className="sm:flex hidden ml-6 bg-primary hover:bg-secondary">
                                             <Link to={"/contact-us"}> Contact Us <FaArrowRight /></Link>
                                         </Button>
 

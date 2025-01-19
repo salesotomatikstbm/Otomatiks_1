@@ -1,26 +1,48 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import hero from "@/assets/images/banner/hero.png";
+import hero1 from "@/assets/images/banner/hero1.png";
+import hero2 from "@/assets/images/banner/hero2.png";
+import hero3 from "@/assets/images/banner/hero3.png";
 
 const Sec01 = () => {
-    return (
-        <div
-            className="sec-01-container bg-cover bg-no-repeat bg-center relative h-screen"
-            style={{
-                backgroundImage: `url(${hero})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-        >
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black opacity-70 z-0"></div> {/* Dark overlay with opacity */}
+    const slides = [hero1, hero2, hero3];
 
-            {/* Hero Section Content */}
-            <div className="flex items-center justify-start h-full px-6 md:px-16 relative z-10">
+    return (
+        <div className="sec-01-container relative h-screen">
+            {/* Swiper for Background Images */}
+            <Swiper
+                modules={[Autoplay]}
+                autoplay={{ delay: 5000 }}
+                loop
+                className="h-full"
+            >
+                {slides.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <div
+                            className="h-full bg-cover bg-center relative"
+                            style={{
+                                backgroundImage: `url(${image})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}
+                        >
+                            {/* Dark Opacity Layer */}
+                            <div className="absolute inset-0 bg-black opacity-70"></div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+
+            {/* Fixed Hero Section Content */}
+            <div className="absolute inset-0 flex items-center justify-start px-6 md:px-16 z-10">
                 <div className="relative max-w-[700px] mx-auto md:mx-0">
                     {/* Text Content */}
-                    <div className="relative text-center md:text-left text-primary p-6 rounded-lg shadow-lg">
+                    <div className="text-center md:text-left text-primary p-6 rounded-lg shadow-lg">
                         {/* Heading */}
                         <h5 className="md:text-5xl text-3xl font-bold text-white">
                             Shape Your Child’s Future
@@ -28,9 +50,7 @@ const Sec01 = () => {
 
                         {/* Description */}
                         <p className="text-[20px] max-w-xl mt-4 mx-auto md:mx-0 text-gray-200">
-                            Our robotics classes are designed to help you discover the
-                            potential of this exciting field with the guidance of our
-                            experienced instructors.
+                            Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
                         </p>
 
                         {/* Button */}
@@ -56,7 +76,7 @@ const Sec01 = () => {
                     className="w-full"
                 >
                     <path
-                        fill="rgba(6, 106, 171, 0.8)" 
+                        fill="rgba(6, 106, 171, 0.8)"
                         d="M0,160L48,176C96,192,192,224,288,202.7C384,181,480,107,576,90.7C672,75,768,117,864,160C960,203,1056,245,1152,224C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                     ></path>
                 </svg>
