@@ -96,7 +96,7 @@ const PopCourse = () => {
                 <button
                     type="button"
                     onClick={() => setIsPopupOpen(true)}
-                    className="bg-primary text-white px-4 py-2 rounded px-8 rounded-[10px]"
+                    className="bg-primary text-white px-4 py-4 rounded px-8 rounded-[10px]"
                 >
                     Join Our Course
                 </button>

@@ -5,6 +5,7 @@ import { client } from '@/lib/contentfulClient';
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
 import TopUp from '@/components/sections/footers/TopUp';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Blog1 = () => {
   const [posts, setPosts] = useState([]);
@@ -34,14 +35,6 @@ const Blog1 = () => {
     setModalImage('');
   };
 
-  // Function to truncate the description text
-  const truncateText = (text, maxLength = 150) => {
-    if (text && text.length > maxLength) {
-      return `${text.substring(0, maxLength)}...`;
-    }
-    return text;
-  };
-
   return (
     <main>
       <PageTitle pageName="Blog" breadcrumbCurrent="Blog" />
@@ -52,40 +45,43 @@ const Blog1 = () => {
       <div className="container mx-auto mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5">
           {posts.length > 0 ? (
-            posts.map(post => (
-              <div key={post.sys.id} className="rounded-[10px] group shadow-lg bg-white overflow-hidden">
+            posts.map((post) => (
+              <div key={post.sys.id} className="rounded-[10px] group shadow-lg bg-white overflow-hidden flex flex-col">
                 {post.fields.image?.fields?.file?.url && (
                   <img
                     src={`https:${post.fields.image.fields.file.url}`}
                     alt={post.fields.title || 'Blog Image'}
-                    className="w-[500px] h-[300px] object-cover transition-transform duration-1000 transform group-hover:scale-105 cursor-pointer"
+                    className="w-full h-[300px] object-cover transition-transform duration-1000 transform group-hover:scale-105 cursor-pointer"
                     onClick={() => handleImageClick(`https:${post.fields.image.fields.file.url}`)}
                   />
                 )}
-                <div className="p-5">
+                <div className="flex-grow p-5">
                   <h3>
                     <Link
-                      to={`/blog-details/${post.sys.id}`}  // Pass the post ID here
+                      to={`/blog-details/${post.sys.id}`}
                       className="lg:text-[20px] sm:text-[18px] text-xl font-bold lg:leading-[148%] sm:leading-[140%] leading-[120%] group-hover:text-primary text-secondary transition-all duration-500"
                     >
                       {post.fields.title}
                     </Link>
                   </h3>
-
                   {post.fields.date && (
-                    <h3 className="mt-1 text-bold">
-                      {new Date(post.fields.date).toLocaleDateString()}
-                    </h3>
+                    <p className="mt-1 text-bold">{new Date(post.fields.date).toLocaleDateString()}</p>
                   )}
                   {post.fields.description && (
-                    <p className="mt-2 text-justify">
-                      {truncateText(post.fields.description)}{' '}
-                      {post.fields.description.length > 200 && (
+                    <div className="mt-2 text-justify flex-grow">
+                      {/* Extract plain text content from the rich text description */}
+                      {documentToReactComponents({
+                        ...post.fields.description,
+                        content: post.fields.description.content.slice(1, 3),
+                      })}
+
+                      {/* Show 'Read More' link if the content has more than 3 blocks */}
+                      {post.fields.description.content.length > 2 && (
                         <Link to={`/blog-details/${post.sys.id}`} className="text-primary hover:underline">
                           Read More
                         </Link>
                       )}
-                    </p>
+                    </div>
                   )}
                 </div>
               </div>

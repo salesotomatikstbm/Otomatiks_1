@@ -83,7 +83,7 @@ const Software_Course = () => {
       )}
 
       <div className="lg:pt-15 pt-10">
-        <PopupCourse />
+      <PopCourse />
       </div>
     </section>
   );

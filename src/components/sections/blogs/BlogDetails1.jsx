@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { client } from '@/lib/contentfulClient';
 import PageTitle from '@/components/sections/pageTitle';
 import SectionName from '@/components/ui/sectionName';
 import Title from '@/components/ui/title';
-import { Link } from 'react-router-dom';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const BlogDetails1 = () => {
   const { id } = useParams();
@@ -72,16 +72,25 @@ const BlogDetails1 = () => {
               {new Date(post.fields.date).toLocaleDateString()}
             </h3>
             <div className="mt-4">
-              <p className="text-lg leading-relaxed text-justify">{post.fields.description}</p>
-              <div
-                className="mt-6"
-                dangerouslySetInnerHTML={{ __html: post.fields.content }}
-              />
+              {/* Render Rich Text description */}
+              {post.fields.description && (
+                <div className="text-lg leading-relaxed text-justify">
+                  {documentToReactComponents(post.fields.description)}
+                </div>
+              )}
+              {/* Render Rich Text content */}
+              {post.fields.content && (
+                <div className="mt-6">
+                  {documentToReactComponents(post.fields.content)}
+                </div>
+              )}
             </div>
           </div>
         </div>
         <div className="mt-8 text-center">
-          <Link to="/blog" className="text-primary hover:underline">Back to Blog</Link>
+          <Link to="/blog" className="text-primary hover:underline">
+            Back to Blog
+          </Link>
         </div>
       </div>
 
