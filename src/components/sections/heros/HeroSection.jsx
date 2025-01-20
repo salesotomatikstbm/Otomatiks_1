@@ -75,8 +75,8 @@ const HeroSection = () => {
           <div className="flex-1 text-center md:text-left text-white space-y-4 animate__animated animate__fadeInLeft">
             <div className="flex flex-col items-center md:items-start relative z-20 animate__animated animate__fadeIn">
               <Title
-                size="7.5xl"
-                className="font-normal max-w-[776px] animate__animated animate__bounceIn"
+                size="7.5xl" // Adjust font size for mobile
+                className="font-normal max-w-[600px] animate__animated animate__bounceIn"
               >
                 <span className="relative text-white">
                   Shape Your{" "}
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 <span className="font-bold text-white">Child’s </span>
                 <span className="font-bold text-white">Future</span>
               </Title>
-              <p className="pt-5 text-justify max-w-[431px] text-white animate__animated animate__fadeInUp">
+              <p className="pt-5 text-justify max-w-[400px] text-white animate__animated animate__fadeInUp">
                 Our robotics classes are designed to help you discover the
                 potential of this exciting field with the guidance of our
                 experienced instructors.
@@ -101,6 +101,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
           {/* Right Image Carousel */}
           <div className="flex-1 animate__animated animate__fadeInRight flex justify-center md:justify-end">
             <Slider
@@ -116,6 +117,7 @@ const HeroSection = () => {
                     src={image}
                     alt={`Slide ${index}`}
                     className="rounded-lg"
+                    loading="lazy" // Lazy load images for better performance
                   />
                   <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-md text-sm animate__animated animate__zoomIn">
                     Otomatiks
