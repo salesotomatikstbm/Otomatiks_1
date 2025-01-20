@@ -1,140 +1,75 @@
-import React, { useState, useEffect, useRef } from "react";
-import "animate.css/animate.min.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import boy_img_1 from "@/assets/images/banner/hero1.png";
-import boy_img_2 from "@/assets/images/banner/hero2.png";
-import boy_img_3 from "@/assets/images/banner/hero3.png";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import Title from "@/components/ui/title";
-import ThreeLine from "@/assets/icons/threeLine";
-import bgImage from "@/assets/images/banner/hero.png";
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import boy_img_1 from "@/assets/images/banner/boy_img_1.png"
+import boy_img_2 from "@/assets/images/banner/boy_img_2.png"
+import painting from "@/assets/images/banner/painting.png"
+import left_circle_1 from "@/assets/images/banner/left-circle-1.png"
+import left_circle_2 from "@/assets/images/banner/left-circle-2.png"
+import right_circle from "@/assets/images/banner/right-circle.png"
+import shap from "@/assets/images/shapes/shap.png"
+import { Link } from 'react-router-dom'
+import ThreeLine from '@/assets/icons/threeLine'
+import Title from '@/components/ui/title'
+import bgImage from "@/assets/images/banner/hero.png"  // Make sure to import the background image
 
 const HeroSection = () => {
-  const images = [boy_img_1, boy_img_2, boy_img_3];
-  const sliderRef = useRef(null); // Creating a reference for the slider
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    arrows: false,
-  };
-
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (event) => {
-    setCursorPosition({ x: event.clientX, y: event.clientY });
-  };
-
-  useEffect(() => {
-    // Reinitialize the slider when the component mounts
-    if (sliderRef.current) {
-      sliderRef.current.slickGoTo(0); // Ensure the slider starts from the first slide
-    }
-
-    const heroSection = document.querySelector(".hero-section");
-    if (heroSection) {
-      heroSection.addEventListener("mousemove", handleMouseMove);
-      heroSection.addEventListener("mouseenter", () => setIsHovered(true));
-      heroSection.addEventListener("mouseleave", () => setIsHovered(false));
-      return () => {
-        heroSection.removeEventListener("mousemove", handleMouseMove);
-        heroSection.removeEventListener("mouseenter", () => setIsHovered(true));
-        heroSection.removeEventListener("mouseleave", () => setIsHovered(false));
-      };
-    }
-  }, []);
-
   return (
-    <div
-      className="hero-section h-screen bg-cover bg-center flex items-center justify-center relative overflow-x-hidden"
-      style={{ backgroundImage: `url(${bgImage})` }}
+    <section
+      className="pt-[78px] lg:mb-15 mb-10 relative"
+      style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      {/* Custom Cursor */}
-      <div
-        className={`fixed pointer-events-none z-50 transition-transform duration-150 ${
-          isHovered ? "scale-150" : "scale-100"
-        }`}
-        style={{
-          left: `${cursorPosition.x}px`,
-          top: `${cursorPosition.y}px`,
-        }}
-      >
-        <div className="w-5 h-5 bg-white bg-opacity-80 border-2 border-[#0a6375] rounded-full mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"></div>
-      </div>
+      <div className="container relative py-16">
+        <div className="flex flex-col items-center text-center relative z-10">
+          <Title size={"7.5xl"} className={"font-normal max-w-[776px]"}>
+            <span className="relative text-white">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
+            <span className="font-bold text-white">Child’s </span> <span className="font-bold text-white">Future.</span>
+          </Title>
 
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Left Content */}
-          <div className="flex-1 text-center md:text-left text-white space-y-4 animate__animated animate__fadeInLeft">
-            <div className="flex flex-col items-center md:items-start relative z-20 animate__animated animate__fadeIn">
-              <Title
-                size="7.5xl" // Adjust font size for mobile
-                className="font-normal max-w-[600px] animate__animated animate__bounceIn"
-              >
-                <span className="relative text-white">
-                  Shape Your{" "}
-                  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375] animate__animated animate__fadeInRight">
-                    <ThreeLine />
-                  </span>
-                </span>
-                <span className="font-bold text-white">Child’s </span>
-                <span className="font-bold text-white">Future</span>
-              </Title>
-              <p className="pt-5 text-justify max-w-[400px] text-white animate__animated animate__fadeInUp">
-                Our robotics classes are designed to help you discover the
-                potential of this exciting field with the guidance of our
-                experienced instructors.
-              </p>
-              <div className="mt-6 animate__animated animate__zoomIn">
-                <Button asChild variant="secondary">
-                  <Link to="/robotics-coding-courses" className="bg-primary">
-                    Our Courses
-                  </Link>
-                </Button>
-              </div>
-            </div>
+          <div className="flex absolute right-[87px] top-14 animate-skw">
+            {/* <img src={shap} alt="shap-2" className="w-7.5 h-12.5 relative top-9" />
+            <img src={shap} alt="shap-1" />
+            <img src={shap} alt="shap-2" className="w-5 h-8 -mt-7" /> */}
           </div>
 
-          {/* Right Image Carousel */}
-          <div className="flex-1 animate__animated animate__fadeInRight flex justify-center md:justify-end">
-            <Slider
-              {...settings}
-              ref={sliderRef} // Assigning the ref to the slider
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow-xl z-20"
-            >
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="relative animate__animated animate__fadeIn z-20"
-                >
-                  <img
-                    src={image}
-                    alt={`Slide ${index}`}
-                    className="rounded-lg"
-                    loading="lazy" // Lazy load images for better performance
-                  />
-                  <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-md text-sm animate__animated animate__zoomIn">
-                    Otomatiks
-                  </div>
-                </div>
-              ))}
-            </Slider>
+          <p className="pt-5 max-w-[431px] text-white">
+            Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
+          </p>
+          <div className="mt-6">
+            <Button asChild variant={"secondary"}>
+              <Link to="/robotics-coding-courses" className='bg-primary'>Our Courses</Link>
+            </Button>
           </div>
         </div>
+        <div className="absolute left-2.5 lg:top-0 top-10 lg:max-w-full max-w-[200px] sm:block hidden animate-up-down">
+          <img src={boy_img_1} alt="banner-img-1" />
+          <span className="absolute -left-2.5 top-[9px] border-2 border-primary rounded-[125px] w-full h-full"></span>
+        </div>
+
+        <div className="absolute right-0 bottom-0 pb-[71px] lg:block hidden animate-up-down">
+          <img src={boy_img_2} alt="banner-img-2" />
+          <span className="absolute -left-2.5 top-[9px] border-2 border-primary rounded-[125px] max-h-[369px] w-full h-full"></span>
+        </div>
+
+        <div className="block lg:hidden lg:pt-[72px] pt-10">
+  <img src={painting} alt="painting" />
+</div>
+
       </div>
-    </div>
-  );
-};
+      {/* <!-- circle shap --> */}
+      <div className="lg:block hidden">
+        <div className="absolute left-0 top-[60px] animate-left-right-2">
+          <img src={left_circle_1} alt="img" />
+        </div>
+        <div className="absolute left-[37px] top-[186px] animate-left-right-2">
+          <img src={left_circle_2} alt="img" />
+        </div>
+        <div className="absolute right-0 bottom-[165px] animate-up-down">
+          <img src={right_circle} alt="img" />
+        </div>
+      </div>
+      {/* <!-- circle shap --> */}
+    </section>
+  )
+}
 
 export default HeroSection;
