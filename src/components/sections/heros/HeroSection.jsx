@@ -31,7 +31,7 @@ const HeroSection = () => {
     <div className="h-screen bg-cover bg-center flex items-center justify-center relative overflow-x-hidden animate-spin-slow"
       style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center md:text-left text-white space-y-4 animate__animated animate__fadeInLeft">
@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <span className="font-bold text-white">Child’s </span>
                 <span className="font-bold text-white">Future</span>
               </Title>
-              <p className="pt-5 max-w-[431px] text-white animate__animated animate__fadeInUp">
+              <p className="pt-5 text-justify max-w-[431px] text-white animate__animated animate__fadeInUp">
                 Our robotics classes are designed to help you discover the potential
                 of this exciting field with the guidance of our experienced instructors.
               </p>
