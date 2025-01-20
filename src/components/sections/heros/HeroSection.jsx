@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "animate.css/animate.min.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -14,6 +14,7 @@ import bgImage from "@/assets/images/banner/hero.png";
 
 const HeroSection = () => {
   const images = [boy_img_1, boy_img_2, boy_img_3];
+  const sliderRef = useRef(null); // Creating a reference for the slider
 
   const settings = {
     dots: true,
@@ -35,6 +36,11 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
+    // Reinitialize the slider when the component mounts
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0); // Ensure the slider starts from the first slide
+    }
+
     const heroSection = document.querySelector(".hero-section");
     if (heroSection) {
       heroSection.addEventListener("mousemove", handleMouseMove);
@@ -43,9 +49,7 @@ const HeroSection = () => {
       return () => {
         heroSection.removeEventListener("mousemove", handleMouseMove);
         heroSection.removeEventListener("mouseenter", () => setIsHovered(true));
-        heroSection.removeEventListener("mouseleave", () =>
-          setIsHovered(false)
-        );
+        heroSection.removeEventListener("mouseleave", () => setIsHovered(false));
       };
     }
   }, []);
@@ -106,6 +110,7 @@ const HeroSection = () => {
           <div className="flex-1 animate__animated animate__fadeInRight flex justify-center md:justify-end">
             <Slider
               {...settings}
+              ref={sliderRef} // Assigning the ref to the slider
               className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow-xl z-20"
             >
               {images.map((image, index) => (
