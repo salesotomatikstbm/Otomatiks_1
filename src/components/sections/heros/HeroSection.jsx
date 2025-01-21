@@ -26,9 +26,7 @@ const HeroSection = () => {
           </Title>
 
           <div className="flex absolute right-[87px] top-14 animate-skw">
-            {/* <img src={shap} alt="shap-2" className="w-7.5 h-12.5 relative top-9" />
-            <img src={shap} alt="shap-1" />
-            <img src={shap} alt="shap-2" className="w-5 h-8 -mt-7" /> */}
+            {/* Shapes here */}
           </div>
 
           <p className="pt-5 max-w-[431px] text-white">
@@ -40,36 +38,45 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="absolute left-2.5 lg:top-0 top-10 lg:max-w-full max-w-[200px] sm:block hidden animate-up-down">
+
+        {/* Left Side (More Opacity) */}
+        <div
+          className="absolute left-2.5 lg:top-0 top-10 lg:max-w-full max-w-[200px] sm:block hidden animate-up-down"
+          style={{ opacity: 0.5 }} // More opacity
+        >
           <img src={boy_img_1} alt="banner-img-1" />
           <span className="absolute -left-2.5 top-[9px] border-2 border-primary rounded-[125px] w-full h-full"></span>
         </div>
 
-        <div className="absolute right-0 bottom-0 pb-[71px] lg:block hidden animate-up-down">
+        {/* Right Side (Reduce Opacity) */}
+        <div
+          className="absolute right-0 bottom-0 pb-[71px] lg:block hidden animate-up-down"
+          style={{ opacity: 0.9 }} // Reduced opacity
+        >
           <img src={boy_img_2} alt="banner-img-2" />
           <span className="absolute -left-2.5 top-[9px] border-2 border-primary rounded-[125px] max-h-[369px] w-full h-full"></span>
         </div>
 
+        {/* Mobile View Painting */}
         <div className="block lg:hidden lg:pt-[72px] pt-10">
-  <img src={painting} alt="painting" />
-</div>
-
+          <img src={painting} alt="painting" />
+        </div>
       </div>
-      {/* <!-- circle shap --> */}
+
+      {/* Circle Shapes */}
       <div className="lg:block hidden">
         <div className="absolute left-0 top-[60px] animate-left-right-2">
-          <img src={left_circle_1} alt="img" />
+          <img src={left_circle_1} alt="img" style={{ opacity: 0.8 }} />
         </div>
         <div className="absolute left-[37px] top-[186px] animate-left-right-2">
-          <img src={left_circle_2} alt="img" />
+          <img src={left_circle_2} alt="img" style={{ opacity: 0.8 }} />
         </div>
         <div className="absolute right-0 bottom-[165px] animate-up-down">
-          <img src={right_circle} alt="img" />
+          <img src={right_circle} alt="img" style={{ opacity: 0.5 }} />
         </div>
       </div>
-      {/* <!-- circle shap --> */}
     </section>
-  )
-}
+  );
+};
 
 export default HeroSection;
