@@ -44,12 +44,19 @@ export default function HeroThree() {
               </Button>
 
               {/* Play Icon Button */}
-              <button
-                onClick={openModal}
-                className="inline-flex items-center justify-center tracking-wide text-base text-white bg-teal-500 rounded-full h-10 w-10 hover:bg-teal-600 ms-4"
-              >
-                <Icon icon={playIcon} className="text-xl" />
-              </button>
+             {/* Play Icon Button */}
+             <div className="relative flex items-center justify-center">
+  <div className="absolute h-24 w-24 rounded-full bg-teal-500/30 animate-ping"></div>
+  
+  {/* Inner Button */}
+  <button
+    onClick={openModal}
+    className="inline-flex items-center justify-center tracking-wide text-base text-white bg-teal-500 rounded-full h-16 w-16 hover:bg-teal-600 ms-4 hover:scale-110 transition-all duration-300 shadow-lg z-10"
+  >
+    <Icon icon={playIcon} className="text-3xl" />
+  </button>
+</div>
+
 
               <small className="text-sm font-medium uppercase align-middle ms-2"></small>
             </div>
