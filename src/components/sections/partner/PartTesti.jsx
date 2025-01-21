@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import testi1 from "@/assets/images/partner/testi1.png";
-import testi2 from "@/assets/images/partner/testi2.png";
+import testi2 from "@/assets/images/logo2.png";
 import testi3 from "@/assets/images/partner/testi3.png";
 import TestiHome from '../TestiHome';
 import PopupPartner from './PopupPartner';
@@ -115,23 +115,23 @@ const PartTesti = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {videos.map((video, index) => (
         <div
-          key={index}
-          className="relative flex flex-col items-center justify-center animate-fade-in"
-        >
-          <div className="relative bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[610px] mx-auto group/branch w-full flex justify-center items-center h-72 sm:h-80 md:h-[450px]">
-            <iframe
-              width="90%"
-              height="90%"
-              src={video.src}
-              title={`YouTube video player ${index + 1}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-[10px] shadow-lg hover:shadow-xl transition-shadow duration-300"
-            ></iframe>
-          </div>
+        key={index}
+        className="relative flex flex-col items-center justify-center animate-fade-in"
+      >
+        <div className="relative bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[610px] mx-auto group/branch w-full flex justify-center items-center h-72 sm:h-80 md:h-[450px]">
+          <iframe
+            width="100%" /* Ensure full width */
+            height="100%" /* Ensure full height */
+            src={video.src}
+            title={`YouTube video player ${index + 1}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="rounded-[10px] shadow-lg hover:shadow-xl transition-shadow duration-300 sm:w-[90%] sm:h-[90%] md:w-[85%] md:h-[85%]" /* Adjust size for larger screens */
+          ></iframe>
         </div>
+      </div>
       ))}
     </div>
   </div>
