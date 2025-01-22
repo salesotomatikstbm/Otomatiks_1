@@ -29,10 +29,10 @@ export default function HeroThree() {
       <div className="container relative">
         <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-6 gap-6 relative">
           <div className="lg:col-span-7 md:me-6">
-            <h4 className="font-semibold lg:leading-normal leading-normal text-white tracking-wide text-4xl lg:text-5xl mb-5">
-              Shape Your<span className="text-secondary font-bold"> Child’s Future,</span> Explore Possibilities
+            <h4 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
+              Shape Your<span className="text-primary font-bold"> Child’s Future,</span> Explore Possibilities
             </h4>
-            <p className="text-white text-lg max-w-xl">
+            <p className="text-lg text-black max-w-xl">
               Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
             </p>
             <div className="relative mt-6 space-x-3 flex items-center">
