@@ -151,57 +151,57 @@
 
 
 /* service swiper pagination */
+/* Swiper Pagination */
 .services .swiper-pagination-bullets.swiper-pagination-horizontal {
   left: 0;
   top: 0;
   width: auto;
   display: flex;
-  gap: 10px;
+  gap: 8px; /* Reduced gap */
 }
 
 .services .swiper-pagination-bullet {
-  height: 5px;
-  width: 15px;
+  height: 4px; /* Reduced height */
+  width: 12px; /* Reduced width */
   border-radius: 10px;
   display: block;
   background-color: #F2F2F2;
 }
 
 .services .swiper-pagination-bullet-active {
-  width: 33px;
+  width: 25px; /* Reduced active bullet width */
   background-color: var(--secondary);
 }
 
-/* service swiper pagination */
-
+/* Custom Cursor Styles */
 .cursor-main {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 12px; /* Further reduced size */
+  height: 12px; /* Further reduced size */
   border-radius: 50%;
   background-color: #1CBBB4;
   pointer-events: none;
   z-index: 1000;
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.7);
+  box-shadow: 0 0 6px rgba(249, 115, 22, 0.7); /* Slightly reduced shadow */
   transition: transform 0.05s linear;
 }
 
 .cursor-trail {
   position: fixed;
-  width: 30px;
-  height: 30px;
+  width: 20px; /* Further reduced size */
+  height: 20px; /* Further reduced size */
   border-radius: 50%;
   border: 2px solid #066aab;
   pointer-events: none;
   z-index: 999;
-  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5); /* Slightly reduced shadow */
   transition: transform 0.1s ease-out;
 }
 
 .cursor-glow {
   position: fixed;
-  width: 50px;
-  height: 50px;
+  width: 30px; /* Further reduced size */
+  height: 30px; /* Further reduced size */
   border-radius: 50%;
   background-color: #1CBBB4;
   pointer-events: none;
