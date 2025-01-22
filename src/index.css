@@ -37,11 +37,13 @@
     --default-font-size: 16px;
     --default-line-height: 160%;
   }
-body {
+
+  body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -171,3 +173,39 @@ body {
 }
 
 /* service swiper pagination */
+
+.cursor-main {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #1CBBB4;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.7);
+  transition: transform 0.05s linear;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #066aab;
+  pointer-events: none;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+  transition: transform 0.1s ease-out;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1CBBB4;
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0.3;
+  transition: transform 0.2s ease-out;
+}
