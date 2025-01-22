@@ -209,3 +209,6 @@
   opacity: 0.3;
   transition: transform 0.2s ease-out;
 }
+.slick-prev:before, .slick-next:before {
+  color: #1CBBB4; /* Tailwind CSS blue-800 color */
+}
