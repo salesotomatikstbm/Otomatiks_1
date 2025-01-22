@@ -74,10 +74,10 @@ const ContactAddress = () => {
                         </div>
                         <h3 className="text-lg font-semibold text-primary mb-2">Email Us</h3>
                         <a
-                            href="mailto:support@otomatiks.in"
+                            href="mailto:uae@otomatiks.com"
                             className="hover:underline"
                         >
-                            support@otomatiks.in
+                            uae@otomatiks.com
                         </a>
                     </div>
                     <div className="flex flex-col items-center group transform transition-all duration-300 hover:scale-105 hover:rotate-3d bg-background shadow-3xl border-2 border-transparent hover:border-green transition-all duration-500 flex flex-col justify-center p-7 rounded-tl-[50px] rounded-br-[50px] rounded-tr-[10px] rounded-bl-[10px] max-w-[410px] mx-auto group/branch">
@@ -95,10 +95,10 @@ const ContactAddress = () => {
                         </div>
                         <h3 className="text-lg font-semibold text-primary mb-2">Call Us</h3>
                         <a
-                            href="tel:+971 562118618"
+                            href="tel:+971562118618"
                             className="hover:underline"
                         >
-                            +971 562118618
+                            +971562118618
                         </a>
                     </div>
 

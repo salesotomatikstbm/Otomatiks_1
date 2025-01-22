@@ -39,6 +39,28 @@ import Img35 from "../../../assets/images/patrons/35.png";
 import Img36 from "../../../assets/images/patrons/36.png";
 import Img37 from "../../../assets/images/patrons/37.png";
 import Img38 from "../../../assets/images/patrons/38.png";
+import Img39 from "../../../assets/images/patrons/39.png";
+import Img40 from "../../../assets/images/patrons/40.png";
+import Img41 from "../../../assets/images/patrons/41.png";
+import Img42 from "../../../assets/images/patrons/42.png";
+import Img43 from "../../../assets/images/patrons/43.png";
+import Img44 from "../../../assets/images/patrons/44.png";
+import Img45 from "../../../assets/images/patrons/45.png";
+import Img46 from "../../../assets/images/patrons/46.png";
+import Img47 from "../../../assets/images/patrons/47.png";
+import Img48 from "../../../assets/images/patrons/48.png";
+import Img49 from "../../../assets/images/patrons/49.png";
+import Img50 from "../../../assets/images/patrons/50.png";
+import Img51 from "../../../assets/images/patrons/51.png";
+import Img52 from "../../../assets/images/patrons/52.png";
+import Img53 from "../../../assets/images/patrons/53.png";
+import Img54 from "../../../assets/images/patrons/54.png";
+import Img55 from "../../../assets/images/patrons/55.png";
+import Img56 from "../../../assets/images/patrons/56.png";
+import Img57 from "../../../assets/images/patrons/57.png";
+import Img58 from "../../../assets/images/patrons/58.png";
+
+
 const images = [
   Img1,
   Img2,
@@ -78,6 +100,26 @@ const images = [
   Img36,
   Img37,
   Img38,
+  Img39,
+Img40,
+Img41,
+Img42,
+Img43,
+Img44,
+Img45,
+Img46,
+Img47,
+Img48,
+Img49,
+Img50,
+Img51,
+Img52,
+Img53,
+Img54,
+Img55,
+Img56,
+Img57,
+Img58,
 ];
 
 const Our_Patrons = () => {

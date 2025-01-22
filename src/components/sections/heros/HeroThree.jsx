@@ -25,14 +25,14 @@ export default function HeroThree() {
       className="relative flex items-center md:h-screen lg:py-80 py-16 lg:pb-55 bg-no-repeat bg-center bg-cover"
       id="home"
       style={{ backgroundImage: `url(${bg})` }}>
-    
+
       <div className="container relative">
         <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-6 gap-6 relative">
           <div className="lg:col-span-7 md:me-6">
-            <h4 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
-              Shape Your<span className="text-teal-500 font-bold"> Child’s Future,</span> Explore Possibilities
+            <h4 className="font-semibold lg:leading-normal leading-normal text-white tracking-wide text-4xl lg:text-5xl mb-5">
+              Shape Your<span className="text-secondary font-bold"> Child’s Future,</span> Explore Possibilities
             </h4>
-            <p className="text-slate-800 text-lg max-w-xl">
+            <p className="text-white text-lg max-w-xl">
               Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
             </p>
             <div className="relative mt-6 space-x-3 flex items-center">
@@ -44,18 +44,18 @@ export default function HeroThree() {
               </Button>
 
               {/* Play Icon Button */}
-             {/* Play Icon Button */}
-             <div className="relative flex items-center justify-center">
-  <div className="absolute h-24 w-24 rounded-full bg-teal-500/30 animate-ping"></div>
-  
-  {/* Inner Button */}
-  <button
-    onClick={openModal}
-    className="inline-flex items-center justify-center tracking-wide text-base text-white bg-teal-500 rounded-full h-16 w-16 hover:bg-teal-600 ms-4 hover:scale-110 transition-all duration-300 shadow-lg z-10"
-  >
-    <Icon icon={playIcon} className="text-3xl" />
-  </button>
-</div>
+              {/* Play Icon Button */}
+              <div className="relative flex items-center justify-center">
+                <div className="absolute h-24 w-24 rounded-full bg-teal-500/30 animate-ping"></div>
+
+                {/* Inner Button */}
+                <button
+                  onClick={openModal}
+                  className="inline-flex items-center justify-center tracking-wide text-base text-white bg-teal-500 rounded-full h-16 w-16 hover:bg-teal-600 ms-4 hover:scale-110 transition-all duration-300 shadow-lg z-10"
+                >
+                  <Icon icon={playIcon} className="text-3xl" />
+                </button>
+              </div>
 
 
               <small className="text-sm font-medium uppercase align-middle ms-2"></small>
