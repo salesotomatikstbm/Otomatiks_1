@@ -22,12 +22,12 @@ export default function HeroThree() {
 
   return (
     <section
-      className="relative flex items-center md:h-screen lg:py-80 py-16 lg:pb-55 bg-no-repeat bg-center bg-cover"
+      className="relative flex items-center py-16  bg-no-repeat bg-center bg-cover"
       id="home"
       style={{ backgroundImage: `url(${bg})` }}>
 
       <div className="container relative">
-        <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-6 gap-6 relative">
+        <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center gap-6 relative">
           <div className="lg:col-span-7 md:me-6">
             <h4 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
               Shape Your<span className="font-bold"> Child’s Future</span> 
@@ -74,7 +74,7 @@ export default function HeroThree() {
             <div className="relative">
               <img
                 src={bgImage}
-                style={{ width: "80%", height: "auto" }}
+                style={{ width: "50%", height: "10%" }}
                 className="mx-auto rounded-[150px] rounded-br-2xl shadow dark:shadow-gray-700 w-[90%]"
                 alt="Business"
               />
