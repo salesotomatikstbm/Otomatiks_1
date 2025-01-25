@@ -29,8 +29,8 @@ export default function HeroThree() {
       <div className="container relative">
         <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center mt-6 gap-6 relative">
           <div className="lg:col-span-7 md:me-6">
-            <h4 className="font-semibold lg:leading-normal text-primary leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
-              Shape Your<span className="text-primary font-bold"> Child’s Future</span> 
+            <h4 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
+              Shape Your<span className="font-bold"> Child’s Future</span> 
             </h4>
             <p className="text-lg text-black max-w-xl">
               Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
