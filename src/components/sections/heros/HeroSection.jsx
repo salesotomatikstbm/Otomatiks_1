@@ -21,7 +21,7 @@ const HeroSection = () => {
       <div className="container relative py-16">
         <div className="flex flex-col items-center text-center relative z-10">
           <Title size={"7.5xl"} className={"font-normal max-w-[776px]"}>
-            <span className="relative text-white">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
+            <span className="relative text-[#0A6375]">Shape Your  <span className="absolute -left-6 top-1 text-3xl text-[#0A6375]"><ThreeLine /></span></span>
             <span className="font-bold text-white">Child’s </span> <span className="font-bold text-white">Future.</span>
           </Title>
 
