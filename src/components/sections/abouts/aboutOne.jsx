@@ -18,7 +18,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
             <div className="container" >
             <div className={cn("grid lg:grid-cols-[50%_50%] grid-cols-1 items-center ml-4 md:gap-6", gridClass)}>
 
-                    <div className="relative">
+                    <div className="relative sm:block hidden">
                         <div className="flex sm:flex-row flex-col sm:items-end gap-6">
                             <SlideUp>
                                 <div className="relative">
