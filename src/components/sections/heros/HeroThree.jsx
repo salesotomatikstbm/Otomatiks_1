@@ -27,7 +27,7 @@ export default function HeroThree() {
       style={{ backgroundImage: `url(${bg})` }}>
 
       <div className="container relative">
-        <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center gap-6 relative">
+        <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center gap-6 relative ml-3">
           <div className="lg:col-span-7 md:me-6">
             <h4 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
               Shape Your<span className="font-bold"> Child’s Future</span> 

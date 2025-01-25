@@ -157,51 +157,63 @@
   top: 0;
   width: auto;
   display: flex;
-  gap: 8px; /* Reduced gap */
+  gap: 8px;
+  /* Reduced gap */
 }
 
 .services .swiper-pagination-bullet {
-  height: 4px; /* Reduced height */
-  width: 12px; /* Reduced width */
+  height: 4px;
+  /* Reduced height */
+  width: 12px;
+  /* Reduced width */
   border-radius: 10px;
   display: block;
   background-color: #F2F2F2;
 }
 
 .services .swiper-pagination-bullet-active {
-  width: 25px; /* Reduced active bullet width */
+  width: 25px;
+  /* Reduced active bullet width */
   background-color: var(--secondary);
 }
 
 /* Custom Cursor Styles */
 .cursor-main {
   position: fixed;
-  width: 12px; /* Further reduced size */
-  height: 12px; /* Further reduced size */
+  width: 12px;
+  /* Further reduced size */
+  height: 12px;
+  /* Further reduced size */
   border-radius: 50%;
   background-color: #1CBBB4;
   pointer-events: none;
   z-index: 1000;
-  box-shadow: 0 0 6px rgba(249, 115, 22, 0.7); /* Slightly reduced shadow */
+  box-shadow: 0 0 6px rgba(249, 115, 22, 0.7);
+  /* Slightly reduced shadow */
   transition: transform 0.05s linear;
 }
 
 .cursor-trail {
   position: fixed;
-  width: 20px; /* Further reduced size */
-  height: 20px; /* Further reduced size */
+  width: 20px;
+  /* Further reduced size */
+  height: 20px;
+  /* Further reduced size */
   border-radius: 50%;
   border: 2px solid #066aab;
   pointer-events: none;
   z-index: 999;
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5); /* Slightly reduced shadow */
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+  /* Slightly reduced shadow */
   transition: transform 0.1s ease-out;
 }
 
 .cursor-glow {
   position: fixed;
-  width: 30px; /* Further reduced size */
-  height: 30px; /* Further reduced size */
+  width: 30px;
+  /* Further reduced size */
+  height: 30px;
+  /* Further reduced size */
   border-radius: 50%;
   background-color: #1CBBB4;
   pointer-events: none;
@@ -209,6 +221,9 @@
   opacity: 0.3;
   transition: transform 0.2s ease-out;
 }
-.slick-prev:before, .slick-next:before {
-  color: #1CBBB4; /* Tailwind CSS blue-800 color */
+
+.slick-prev:before,
+.slick-next:before {
+  color: #1CBBB4;
+  /* Tailwind CSS blue-800 color */
 }

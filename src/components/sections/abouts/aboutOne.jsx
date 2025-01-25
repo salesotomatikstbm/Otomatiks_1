@@ -13,10 +13,10 @@ import SectionDescription from '@/components/ui/sectionDescription';
 import bg from "@/assets/images/shape.png";
 const AboutOne = ({ gridClass, isAboutpage }) => {
     return (
-        // style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        
         <section className="lg:pt-0 pt-0 lg:pb-15 pb-10" >
             <div className="container" >
-            <div className={cn("grid lg:grid-cols-[50%_50%] grid-cols-1 items-center ml-4 md:gap-6", gridClass)}>
+            <div className={cn("grid lg:grid-cols-[50%_50%] grid-cols-1 items-center lg:ml-4 md:gap-6", gridClass)}>
 
                     <div className="relative sm:block hidden">
                         <div className="flex sm:flex-row flex-col sm:items-end gap-6">
