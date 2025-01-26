@@ -95,10 +95,10 @@ const ContactAddress = () => {
                         </div>
                         <h3 className="text-lg font-semibold text-primary mb-2">Call Us</h3>
                         <a
-                            href="tel:+971562118618"
+                            href="tel:+971 56 211 8618"
                             className="hover:underline"
                         >
-                            +971562118618
+                            +971 56 211 8618
                         </a>
                     </div>
 
