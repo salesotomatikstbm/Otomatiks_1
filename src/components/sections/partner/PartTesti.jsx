@@ -22,24 +22,24 @@ const videos = [
 ];
 const testimonials = [
   {
-    name: "Name 1",
+    name: "Mrs. Gomathi A",
     rating: 5,
     review: "Through our new RobotLAB partnership, we’re looking forward to sharing revolutionary robotics solutions with other Dallas-Fort Worth business owners because we have experienced how automation solves those problems, and pays dividends.",
-    location: "Tambaram",
+    location: "Branch Manager, Tambaram",
     profilePicture: testi2
   },
   {
-    name: "Name 2",
+    name: "Sai Charin N",
     rating: 5,
     review: "Knowledgeable instructors, renowned competition awards, and an extensive course offering set us aside from other similar programs. All of our curricula are made in-house by our experienced and passionate staff.",
-    location: "Annanagar",
+    location: "Branch Head, Annanagar",
     profilePicture: testi2
   },
   {
-    name: "Name 3",
+    name: "Vishal Jegadeesan",
     rating: 5,
     review: "The free LMS portal and application provided for franchise partners and students have been instrumental in managing classes and day-to-day activities efficiently.",
-    location: "Salem",
+    location: "Dindigul",
     profilePicture: testi2
   }
 ];
