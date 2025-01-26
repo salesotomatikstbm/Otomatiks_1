@@ -21,27 +21,31 @@ const videos = [
 
 ];
 const testimonials = [
-  {
-    name: "Mrs. Gomathi A",
-    rating: 5,
-    review: "Through our new RobotLAB partnership, we’re looking forward to sharing revolutionary robotics solutions with other Dallas-Fort Worth business owners because we have experienced how automation solves those problems, and pays dividends.",
-    location: "Branch Manager, Tambaram",
-    profilePicture: testi2
-  },
+  
   {
     name: "Sai Charin N",
     rating: 5,
-    review: "Knowledgeable instructors, renowned competition awards, and an extensive course offering set us aside from other similar programs. All of our curricula are made in-house by our experienced and passionate staff.",
+    review:
+      "This franchise is a step ahead in the robotics education industry. From state-of-the-art courses to well-structured guidance, it has given us the tools to create a meaningful impact in our community. A truly rewarding experience.",
     location: "Branch Head, Annanagar",
-    profilePicture: testi2
+    profilePicture: testi2,
   },
   {
     name: "Vishal Jegadeesan",
     rating: 5,
-    review: "The free LMS portal and application provided for franchise partners and students have been instrumental in managing classes and day-to-day activities efficiently.",
-    location: "Dindigul",
-    profilePicture: testi2
-  }
+    review:
+      "Being a part of this franchise has been a remarkable journey. The support, resources, and vision provided have helped us deliver top-notch robotics education. It's a perfect choice for those seeking to lead in this growing field.",
+    location: "Branch Head, Dindigul",
+    profilePicture: testi2,
+  },
+  {
+    name: "Mrs. Gomathi A",
+    rating: 5,
+    review:
+      "Joining this robotics franchise has been a game-changer for us. The advanced technology and innovative solutions have not only enhanced our offerings but also provided immense value to our students. It's a partnership that inspires growth and excellence.",
+    location: "Branch Manager, Tambaram",
+    profilePicture: testi2,
+  },
 ];
 
 
