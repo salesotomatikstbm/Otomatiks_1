@@ -23,7 +23,7 @@ const videos = [
 const testimonials = [
   
   {
-    name: "Sai Charin N",
+    name: "Sai Charan N",
     rating: 5,
     review:
       "This franchise is a step ahead in the robotics education industry. From state-of-the-art courses to well-structured guidance, it has given us the tools to create a meaningful impact in our community. A truly rewarding experience.",
@@ -31,11 +31,11 @@ const testimonials = [
     profilePicture: testi2,
   },
   {
-    name: "Vishal Jegadeesan",
+    name: "Aiswarya S",
     rating: 5,
     review:
       "Being a part of this franchise has been a remarkable journey. The support, resources, and vision provided have helped us deliver top-notch robotics education. It's a perfect choice for those seeking to lead in this growing field.",
-    location: "Branch Head, Dindigul",
+    location: "Branch Head, Attur",
     profilePicture: testi2,
   },
   {
