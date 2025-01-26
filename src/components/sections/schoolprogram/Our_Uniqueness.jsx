@@ -34,7 +34,7 @@ const Our_Uniqueness = () => {
                 <p className="text-3xl font-bold pb-2">1 Lakh+</p> Lives Upskilled
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
-                <p className="text-3xl font-bold pb-2">150+</p> Mentors
+                <p className="text-3xl font-bold pb-2">80+</p> Mentors
               </div>
               <div className="bg-white p-3 md:p-5 text-xl flex flex-col rounded-md border border-gray-300">
                 <p className="text-3xl font-bold pb-2">16</p> Hubs

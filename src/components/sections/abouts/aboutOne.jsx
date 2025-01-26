@@ -82,20 +82,20 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
 
                         {/* New Sections with Borders and Styling */}
                         <div className="flex flex-col sm:flex-row gap-2 sm:gap-10 mt-10">
-                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-secondary  transition duration-300">
-                            <SectionName className="text-center hover:text-white">Our Vision</SectionName>
+                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg   transition duration-300">
+                            <SectionName className="text-center hover:bg-white">Our Vision</SectionName>
                                 <SectionDescription className="text-center mt-4">
-                                    <p className="hover:text-white">
+                                    <p className="hover:text-primary">
                                         To make students globally recognized by changing the way they think.
                                     </p>
                                 </SectionDescription>
                                 
                             </div>
 
-                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg hover:bg-secondary transition duration-300">
-                            <SectionName className="text-center hover:text-white">Our Mission</SectionName>
+                            <div className="flex-1 border-2 border-[#066aab] rounded-lg p-6 bg-background drop-shadow-lg transition duration-300">
+                            <SectionName className="text-center hover:text-primary">Our Mission</SectionName>
                                 <SectionDescription className="text-center mt-4">
-                                    <p className="hover:text-white">
+                                    <p className="hover:text-primary">
                                         To bridge the gap between academics and real-time environments.
                                     </p>
                                 </SectionDescription>
