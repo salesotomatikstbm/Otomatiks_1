@@ -12,7 +12,9 @@ const App = () => {
     <>
       <RouterProvider router={router} />
       <WhatsAppButton />
-  <NeonCursor />
+  <div className="hidden md:block"> 
+        <NeonCursor />
+      </div>
     </>
   )
 }

@@ -14,10 +14,15 @@ const PreviousYearWorkshop = () => {
           </Title>
         </div>
         <div className="lg:pt-15 pt-10">
-          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7.5">
-            {teamData.map(({id, name, position, src}) => <TeamCard key={id} name={name} position={position} src={src} />)}
-          </div>
-        </div>
+  <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7.5 justify-center">
+    {teamData.map(({ id, name, position, src }) => (
+      <div key={id} className="flex justify-center"> {/* Center items in mobile */}
+        <TeamCard name={name} position={position} src={src} />
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </section>
   )

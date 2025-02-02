@@ -91,7 +91,7 @@ Our robotics classes are designed to help you discover the potential of this exc
             <ScrollUp />
             <div>
                 <div className="absolute right-[68px] top-[40%] animate-up-down lg:hidden">
-                    <img src={apple} alt="img" />
+                    {/* <img src={apple} alt="img" /> */}
                 </div>
                 <div className="absolute left-[45%] lg:top-1/2 top-[40%]">
                     {/* <img src={scissors} alt="img" /> */}
