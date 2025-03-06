@@ -76,10 +76,10 @@ Our robotics classes are designed to help you discover the potential of this exc
                                <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">uae@otomatiks.com</Link>
                            </li>
                            <li className="text-cream-foreground flex gap-4">
-                               <FaPhone className='mt-1.5' /> <Link to="/contact-us">+971 56 211 8618                               </Link>
+                               <FaPhone className='mt-1.5' /> <Link to="/contact-us"> +971 52 989 2285                                </Link>
                            </li>
                            <li className="text-cream-foreground flex gap-4">
-                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster N, Jumeirah Lake Towers (JLT), Dubai.</span>
+                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster T, Jumeirah Lake Towers (JLT), Dubai.</span>
                            </li>
                        </ul>
                         </div>
