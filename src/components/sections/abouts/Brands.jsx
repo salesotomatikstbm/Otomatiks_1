@@ -21,7 +21,11 @@ const districts = [
   { name: "Mumbai", contact: "+91 9043209448", email: "vellore@otomatiks.in", location: "Mumbai" },
   { name: "United Kingdom (UK)", contact: "+91 7985783392", email: "otomatiksuk@gmail.com", location: "United Kingdom" },
     { name: "Thirunelveli", contact: "+91 9043337564", email: "thirunelveli@otomatiks.in", location: "Thirunelveli" },
-  { name: "Bangalore", contact: "+91 8792076264", email: "otomatikselectroniccity@gmail.com", location: "Bangalore" }
+  { name: "Bangalore", contact: "+91 8792076264", email: "otomatikselectroniccity@gmail.com", location: "Bangalore" },
+  { name: "Karur", contact: "+91 7708109144", email: "innovateacademykrr@gmail.com", location: "Karur" },
+  { name: "Pondicherry", contact: "+91 9789915069", email: "otomatikspondicherry@gmail.com", location: "Pondicherry" },
+  { name: "Kovilambakkam ", contact: "+91 75400 76940", email: "otomatikskovilambakkam@gmail.com", location: "Kovilambakkam " },
+  { name: "Omalur", contact: "+91 7845367575", email: "Otomatiks.omalur@gmail.com", location: "Omalur" }
 ];
 
 

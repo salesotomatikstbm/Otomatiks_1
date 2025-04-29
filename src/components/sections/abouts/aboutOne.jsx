@@ -50,7 +50,7 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
                                     <p className="text-cream-foreground">Years Of Exp</p>
                                 </div>
                                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                                    <h6 className="text-cream-foreground text-[32px] font-bold ">16</h6>
+                                    <h6 className="text-cream-foreground text-[32px] font-bold ">20</h6>
                                     <p className="text-cream-foreground">Our Hubs</p>
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import mapImage from "@/assets/images/partner/assest-map.png"; 
+import mapImage from "@/assets/images/partner/assest-map.jpg"; 
 import SectionName from '../../ui/sectionName';
 import Title from '../../ui/title';
 import Counter from './Counter';

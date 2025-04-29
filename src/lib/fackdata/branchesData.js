@@ -111,4 +111,28 @@ export const branchesData = [
         email: 'otomatikselectroniccity@gmail.com',
         mapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.140640295073!2d77.69341639999999!3d12.834187100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6d8d9ca622eb%3A0xb9455ce78b4b2b09!2sOtomatiks%20ElectronicCity!5e0!3m2!1sen!2sin!4v1736235553378!5m2!1sen!2sin" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
     },
+    {
+        id: 15,
+        name: 'Karur',
+        location: 'No. 76/1, Sengunthapuram, 5th cross, Karur 639002',
+        contact: '+91 7708109144',
+        email: 'innovateacademykrr@gmail.com',
+        mapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497704.2943343382!2d79.140626!3d12.951697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad476fc12aeecb%3A0x7d065169d6a536ca!2sOtomatiks!5e0!3m2!1sen!2sus!4v1730186047404!5m2!1sen!2sus" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    },
+      {
+        id: 16,
+        name: 'Pondicherry',
+        location: 'No 5, First floor, Gangai amman kovil street, Krishna Nagar Main Road, Puducherry 605008',
+        contact: '+91 9789915069',
+        email: 'otomatikspondicherry@gmail.com',
+        mapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497704.2943343382!2d79.140626!3d12.951697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad476fc12aeecb%3A0x7d065169d6a536ca!2sOtomatiks!5e0!3m2!1sen!2sus!4v1730186047404!5m2!1sen!2sus" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+    },
+      {
+        id: 17,
+        name: 'Kovilambakkam',
+        location: 'Kovilambakkam, Tamil Nadu',
+        contact: '+91 7540076940',
+        email: 'otomatikskovilambakkam@gmail.com',
+        mapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d497704.2943343382!2d79.140626!3d12.951697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad476fc12aeecb%3A0x7d065169d6a536ca!2sOtomatiks!5e0!3m2!1sen!2sus!4v1730186047404!5m2!1sen!2sus" width="350" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      }
 ];
