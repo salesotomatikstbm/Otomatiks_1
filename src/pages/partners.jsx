@@ -36,7 +36,7 @@ const Partners = () => {
           content="Join our growing network of partners and explore lucrative opportunities to expand your business. Learn about franchise applicants and benefits."
         />
         <meta property="og:image" content="/path/to/og-image-partners.jpg" />
-        <meta property="og:url" content="https://www.otomatiks.com/partners" />
+        <meta property="og:url" content="https://www.otomatiks.com/franchise" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -49,7 +49,7 @@ const Partners = () => {
         />
         <meta name="twitter:image" content="/path/to/twitter-image-partners.jpg" />
 
-        <link rel="canonical" href="https://www.otomatiks.com/partners" />
+        <link rel="canonical" href="https://www.otomatiks.com/franchise" />
       </Helmet>
 
       <main>

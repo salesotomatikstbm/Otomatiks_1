@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/root";
 import Partners from "../pages/partners";
 import Blog from "../pages/blog";
-import SchoolProgram  from "../pages/school-program";
+import SchoolProgram from "../pages/school-program";
 import ContactUs from "@/pages/contact-us";
 import AboutUs from "@/pages/about-us";
 import Courses from "@/pages/courses";
@@ -31,6 +31,10 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <HomeOne />
             },
+            {
+                path: "home",
+                element: <HomeOne />
+            }
         ]
     },
     {
@@ -59,13 +63,13 @@ export const router = createBrowserRouter([
                 path: "/blog-details/:id",  // Use :id for dynamic routing
                 element: <BlogDetails />
             },
-                        {
+            {
                 path: "/shop",
                 element: <Shop />
             },
             {
                 path: "/robotics-coding-school-curriculum",
-                element: <SchoolProgram  />
+                element: <SchoolProgram />
             },
             {
                 path: "/robotics-coding-courses",
@@ -88,7 +92,7 @@ export const router = createBrowserRouter([
                 path: "/workshop",
                 element: <Workshop />
             },
-          
+
             {
                 path: "/csr",
                 element: <Csr />
