@@ -1,59 +1,102 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { ScrollRestoration } from 'react-router-dom'
-import PageTitle from '@/components/sections/pageTitle'
-import CallToActionSection from '@/components/sections/partner/CallToActionSection'
-import FranchiseApplicants from '@/components/sections/partner/FranchiseApplicants'
-import UniqueSellingPoints from '@/components/sections/partner/UniqueSellingPoints'
-import FAQs from '@/components/sections/partner/FAQs'
-import Contact_Form_Partners from '@/components/sections/partner/Contact_Form_Partners'
-import BranchesMap from '@/components/sections/partner/BranchesMap'
-import TopUp from '@/components/sections/footers/TopUp'
-import PartTesti from '@/components/sections/partner/PartTesti'
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamically import components with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const CallToActionSection = dynamic(() => import('@/components/sections/partner/CallToActionSection'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const UniqueSellingPoints = dynamic(() => import('@/components/sections/partner/UniqueSellingPoints'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const FranchiseApplicants = dynamic(() => import('@/components/sections/partner/FranchiseApplicants'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const BranchesMap = dynamic(() => import('@/components/sections/partner/BranchesMap'), {
+  loading: () => <div className="py-12 bg-gray-50 h-[400px]" /> // Set approximate height
+});
+
+const FAQs = dynamic(() => import('@/components/sections/partner/FAQs'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const PartTesti = dynamic(() => import('@/components/sections/partner/PartTesti'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_Form_Partners = dynamic(() => import('@/components/sections/partner/Contact_Form_Partners'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Partners = () => {
   return (
     <>
-      <Helmet>
-        <title>Franchise</title>
+      <Head>
+        <title>Robotics Franchise Opportunity | Partner with Otomatiks</title>
         <meta
           name="description"
-          content="Join hands with Otomatiks to bring quality robotics education to your area. Explore our franchise model designed for dedicated entrepreneurs and institutions.."
+          content="Start a profitable STEM education franchise with Otomatiks. Low investment, proven business model, and full support to launch your robotics academy."
         />
         <meta
           name="keywords"
-          content="Start a Robotics Franchise, Franchise Opportunities in STEM Education, Robotics Academy Partnerships, Become a STEM Franchise Partner, Expand with AI and Robotics, business partnership, franchise opportunities, unique selling points, partner with us, grow your business, become a partner, franchise applicants, partner testimonials, franchise business, business growth, partnership benefits, collaborative business, franchise programs, business opportunities, partner collaboration, franchise network, partner success stories, franchise benefits, strategic partnership, partner programs, franchise application process, franchise development, business expansion, franchise success, partnership opportunities, franchise investment, partner rewards, partnership growth, franchise solutions, franchise model, partner innovation, partnership support, business collaboration, profitable partnerships, franchise opportunities for entrepreneurs, expand your business, franchise training, partner advantages, franchise locations, franchise map, franchise consultancy, franchise ideas, franchise investment opportunities, partnership strategies, partner marketing support, franchise potential, franchise partnerships, partner ecosystem, franchise opportunities for small businesses, franchise marketing"
+          content="robotics franchise, STEM education business, kids coding franchise, edu-tech franchise, partner program"
         />
 
-        <meta name="author" content="Otomatiks Partner Program" />
+        {/* Structured Data for Local Business Opportunity */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BusinessOpportunity",
+            "name": "Otomatiks Franchise Program",
+            "description": "Start your own robotics education center with our turnkey franchise model",
+            "url": "https://www.otomatiks.com/franchise",
+            "feesAndCommissionsSpecification": "https://www.otomatiks.com/franchise-terms",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Franchise Packages",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Standard Franchise",
+                    "description": "Complete setup for one robotics education center"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
 
-        <meta
-          property="og:title"
-          content="Become a Partner with Us | Grow Your Business Together"
-        />
-        <meta
-          property="og:description"
-          content="Join our growing network of partners and explore lucrative opportunities to expand your business. Learn about franchise applicants and benefits."
-        />
-        <meta property="og:image" content="/path/to/og-image-partners.jpg" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Robotics Franchise Opportunity | Otomatiks Partner Program" />
+        <meta property="og:description" content="Own a profitable STEM education business with our robotics franchise. Comprehensive training and marketing support included." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/franchise-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/franchise" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Become a Partner with Us | Grow Your Business Together"
-        />
-        <meta
-          name="twitter:description"
-          content="Discover the benefits of becoming a partner. Explore franchise opportunities, unique selling points, and testimonials from our successful partners."
-        />
-        <meta name="twitter:image" content="/path/to/twitter-image-partners.jpg" />
 
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Start a Robotics Education Franchise with Otomatiks" />
+        <meta name="twitter:description" content="Proven business model with 60%+ margins. Perfect for educators and entrepreneurs passionate about STEM." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/franchise-twitter.jpg" />
+
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/franchise" />
-      </Helmet>
+      </Head>
 
       <main>
-        <PageTitle pageName={"Franchise"} breadcrumbCurrent={"Franchise"} />
+        <PageTitle pageName="Franchise" breadcrumbCurrent="Franchise" />
         <CallToActionSection />
         <UniqueSellingPoints />
         <FranchiseApplicants />
@@ -63,8 +106,6 @@ const Partners = () => {
         <Contact_Form_Partners />
         <TopUp />
       </main>
-
-      <ScrollRestoration />
     </>
   );
 };

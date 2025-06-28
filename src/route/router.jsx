@@ -10,7 +10,7 @@ import ServiceDetails from "@/pages/service-details";
 import Ai from "@/pages/ai-lab";
 import LayoutTwo from "@/layout/layoutTwo";
 import HomeTwo from "@/pages/home-2";
-import HomeOne from "@/pages/home-1";
+import Home from "@/pages/home";
 import LayoutThree from "@/layout/layoutThree";
 import Shop from "../pages/shop"
 import Event from "../pages/event"
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <HomeOne />
+                element: <Home />
             },
             {
                 path: "/home",

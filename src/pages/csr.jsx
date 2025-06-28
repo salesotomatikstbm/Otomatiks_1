@@ -1,60 +1,94 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { ScrollRestoration } from "react-router-dom";
-import PageTitle from "@/components/sections/pageTitle";
-import TopUp from "@/components/sections/footers/TopUp";
-import CSRQuotesSection from "@/components/sections/csr/CSRQuotesSection";
-import Our_Uniqueness from "@/components/sections/schoolprogram/Our_Uniqueness";
-import PartnershipSection from "@/components/sections/csr/PartnershipSection";
-import WhatWeOffer from "@/components/sections/csr/WhatWeOffer";
-import Contact_Form_Csr from "@/components/sections/csr/Contact_Form_Csr";
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const CSRQuotesSection = dynamic(() => import('@/components/sections/csr/CSRQuotesSection'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Our_Uniqueness = dynamic(() => import('@/components/sections/schoolprogram/Our_Uniqueness'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const WhatWeOffer = dynamic(() => import('@/components/sections/csr/WhatWeOffer'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const PartnershipSection = dynamic(() => import('@/components/sections/csr/PartnershipSection'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_Form_Csr = dynamic(() => import('@/components/sections/csr/Contact_Form_Csr'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Csr = () => {
   return (
     <>
-      <Helmet>
-        <title>CSR Initiatives</title>
+      <Head>
+        <title>CSR Initiatives in STEM Education | Otomatiks Social Impact</title>
         <meta
           name="description"
-          content="Discover how Otomatiks contributes to the community by promoting STEM education and providing opportunities for underprivileged students."
+          content="Otomatiks CSR programs bring robotics & STEM education to underserved communities. Partner with us to empower 10,000+ students annually through technology."
         />
         <meta
           name="keywords"
-          content="CSR Projects in STEM Education, Partner with Us for CSR in AI, Empower Students with Robotics, CSR Initiatives for Schools, Technology for a Better Future, CSR initiatives, Otomatiks community programs, corporate social responsibility, educational outreach, community development, technology for good, social impact programs, STEM education for kids, robotics for rural areas, sustainable development, educational equity, tech-driven social impact, STEM outreach projects, robotics workshops for schools, empowering rural students, corporate responsibility, digital literacy programs, technology education initiatives, rural education support, tech education for underprivileged, Otomatiks educational CSR, AI learning for students, school outreach programs, community partnerships, STEM skill development, AI workshops for kids, community technology empowerment, inclusive education programs, hands-on STEM training, robotics innovation for schools, rural development initiatives, school innovation programs, sustainable technology programs, CSR in education, Otomatiks rural outreach, coding for rural students, innovative learning solutions, educational technology support, robotics for social good, STEM in underserved areas, empowering education through technology, technology-driven outreach, social innovation education, CSR engagement projects, corporate-community partnerships, impactful STEM education, rural school programs, empowering students with technology, CSR robotics initiatives, Otomatiks educational outreach, AI and robotics for schools"
+          content="STEM CSR programs, robotics education initiatives, corporate social responsibility in tech, underserved student empowerment, CSR partnerships"
         />
 
-        <meta name="author" content="Otomatiks Team" />
-        <meta
-          property="og:title"
-          content="CSR Initiatives | Otomatiks - Community Engagement"
-        />
-        <meta
-          property="og:description"
-          content="Explore Otomatiks' impactful CSR programs aimed at education, technology empowerment, and community development. Join us in building a brighter future."
-        />
-        <meta
-          property="og:image"
-          content="/path/to/og-csr-image.jpg"
-        />
+        {/* Structured Data for Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Otomatiks CSR Initiatives",
+            "description": "Providing STEM education to underserved communities through corporate partnerships",
+            "url": "https://www.otomatiks.com/csr",
+            "funder": {
+              "@type": "Organization",
+              "name": "Otomatiks"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "India"
+            },
+            "sameAs": [
+              "https://facebook.com/otomatiks",
+              "https://linkedin.com/company/otomatiks"
+            ]
+          })}
+        </script>
+
+        {/* Open Graph */}
+        <meta property="og:title" content="CSR in STEM Education | Empowering Underserved Students" />
+        <meta property="og:description" content="Join Otomatiks in bringing robotics & coding education to 10,000+ underserved students annually through CSR partnerships" />
+        <meta property="og:image" content="https://www.otomatiks.com/images/csr-impact-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/csr" />
         <meta property="og:type" content="website" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="CSR Initiatives | Otomatiks - Community Engagement"
-        />
-        <meta
-          name="twitter:description"
-          content="Learn about Otomatiks' CSR initiatives, from educational outreach to community engagement. Making a difference through technology and innovation."
-        />
-        <meta
-          name="twitter:image"
-          content="/path/to/twitter-csr-image.jpg"
-        />
+        <meta name="twitter:title" content="STEM Education CSR Programs | Otomatiks" />
+        <meta name="twitter:description" content="Corporate partnerships bringing robotics labs to rural schools - impacting 10,000+ students yearly" />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/csr-twitter-card.jpg" />
+
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/csr" />
-      </Helmet>
+      </Head>
+
       <main>
-        <PageTitle pageName={"CSR"} breadcrumbCurrent={"CSR"} />
+        <PageTitle 
+          pageName="CSR Initiatives" 
+          breadcrumbCurrent="CSR" 
+        />
         <CSRQuotesSection />
         <Our_Uniqueness />
         <WhatWeOffer />
@@ -62,7 +96,6 @@ const Csr = () => {
         <Contact_Form_Csr />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };

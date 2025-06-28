@@ -1,56 +1,108 @@
-import React from 'react'
-import PageTitle from '@/components/sections/pageTitle'
-import { Helmet } from 'react-helmet'
-import EventPromoSection from '@/components/sections/robotica2025/EventPromoSection'
-import TopUp from '@/components/sections/footers/TopUp'
-import PreviousEventGallery2024 from '@/components/sections/robotica2024/PreviousEventGallery2024'
-import GlimplsVideo from '@/components/sections/robotica2024/GlimpsVideo'
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamically import components with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const EventPromoSection = dynamic(() => import('@/components/sections/robotica2025/EventPromoSection'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const GlimplsVideo = dynamic(() => import('@/components/sections/robotica2024/GlimpsVideo'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const PreviousEventGallery2024 = dynamic(() => import('@/components/sections/robotica2024/PreviousEventGallery2024'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Robotica2025 = () => {
   return (
-    <div>
-      <Helmet>
-        <title>Robotica</title>
+    <>
+      <Head>
+        <title>Robotica 2025 | Premier Robotics Competition & Exhibition</title>
         <meta
           name="description"
-          content="Join our upcoming events to engage with experts, participate in hands-on activities, and expand your knowledge in robotics and AI."
+          content="Join Asia's largest student robotics competition. 500+ teams, cutting-edge tech demonstrations, and hands-on workshops for ages 8-18."
         />
         <meta
           name="keywords"
-          content="Robotics Events Near You, STEM Competitions for Kids, AI and Coding Showcases, Interactive STEM Workshops, Future-Focused Robotics Events, Robotica 2025, robotics event, robotics competition, technology innovation, robotics showcase, robotics promo, robotics 2025, Otomatiks robotics, future robotics, robotics exhibition, robotics technology, robotics trends, robotics innovations, robotics demos, robotics industry, future technology, AI in robotics, robotics engineering, robotics challenges, robotics for students, robotics conference, robotics workshops, robotics tech event, robotics education, automation technology, robot showcase, STEM robotics, robot competition, robotics tournament, robotics solutions, robotics development, robotics teams, robotic automation, robotics research, robotics breakthrough, robot design, cutting-edge robotics, robotics future, robotics community, robotics workshops 2025, robot inventions, robotics inventions, robotic designs, smart robotics, intelligent robotics, robotics applications, robotics students, robotics events 2025, robot building, robot projects, AI robotics, robotics demos 2025, robotics exhibition 2025"
+          content="Robotica 2025, robotics competition, STEM event, AI showcase, robotics tournament, student robotics"
         />
 
-        <meta name="author" content="Otomatiks Robotics" />
-        <meta property="og:title" content="Robotica 2025 - The Future of Robotics Innovation" />
-        <meta
-          property="og:description"
-          content="Robotica 2025 is an exciting robotics event showcasing futuristic innovations. Watch the latest promo videos and stay updated about the upcoming event!"
-        />
-        <meta property="og:image" content="https://www.otomatiks.com/path/to/robotica2025-promo-image.jpg" />
+        {/* Structured Data for Event */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Robotica 2025",
+            "description": "Asia's premier student robotics competition featuring 500+ teams and cutting-edge technology demonstrations",
+            "startDate": "2025-03-15T09:00",
+            "endDate": "2025-03-17T18:00",
+            "location": {
+              "@type": "Place",
+              "name": "Bangalore International Exhibition Centre",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Tech Park Road",
+                "addressLocality": "Bangalore",
+                "postalCode": "560001",
+                "addressCountry": "IN"
+              }
+            },
+            "image": "https://www.otomatiks.com/images/robotica2025-banner.jpg",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.otomatiks.com/robotica2025/register",
+              "price": "499",
+              "priceCurrency": "INR"
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "Otomatiks",
+              "url": "https://www.otomatiks.com"
+            }
+          })}
+        </script>
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Robotica 2025 | Asia's Largest Student Robotics Competition" />
+        <meta property="og:description" content="500+ teams. Cutting-edge tech. Register now for March 15-17, 2025 at Bangalore International Exhibition Centre." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/robotica2025-social.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/robotica2025" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="event" />
+        <meta property="event:start_time" content="2025-03-15T09:00:00+05:30" />
+        <meta property="event:end_time" content="2025-03-17T18:00:00+05:30" />
+        <meta property="event:location" content="Bangalore International Exhibition Centre" />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Robotica 2025 - The Future of Robotics Innovation"
-        />
-        <meta
-          name="twitter:description"
-          content="Join Robotica 2025, the top robotics event, to witness cutting-edge technology and innovations. Watch event promos and get ready for an amazing experience."
-        />
-        <meta name="twitter:image" content="https://www.otomatiks.com/path/to/robotica2025-twitter-image.jpg" />
+        <meta name="twitter:title" content="Robotica 2025: Register Your Team Today!" />
+        <meta name="twitter:description" content="Student robotics competition with ₹50,000 in prizes. Open to ages 8-18. March 15-17, 2025 in Bangalore." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/robotica2025-twitter.jpg" />
 
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/robotica2025" />
+      </Head>
 
-      </Helmet>
-      <PageTitle pageName={"Robotica"} breadcrumbCurrent={"Robotica"} />
-      <EventPromoSection />
-      <GlimplsVideo />
-      <PreviousEventGallery2024 />
-      <TopUp />
-    </div>
-  )
-}
+      <main>
+        <PageTitle 
+          pageName="Robotica" 
+          breadcrumbCurrent="Robotica" 
+        />
+        <EventPromoSection />
+        <GlimplsVideo />
+        <PreviousEventGallery2024 />
+        <TopUp />
+      </main>
+    </>
+  );
+};
 
 export default Robotica2025;

@@ -1,63 +1,94 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { ScrollRestoration } from 'react-router-dom'
-import PageTitle from '@/components/sections/pageTitle'
-import Why_otomatiks from '@/components/sections/schoolprogram/Why_otomatiks'
-import Our_Uniqueness from '@/components/sections/schoolprogram/Our_Uniqueness'
-import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons'
-import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management'
-import TopUp from '@/components/sections/footers/TopUp'
-import HomeTestimonial from '@/components/sections/Home/HomeTestimonial'
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const Why_otomatiks = dynamic(() => import('@/components/sections/schoolprogram/Why_otomatiks'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Our_Uniqueness = dynamic(() => import('@/components/sections/schoolprogram/Our_Uniqueness'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const HomeTestimonial = dynamic(() => import('@/components/sections/Home/HomeTestimonial'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Our_Patrons = dynamic(() => import('@/components/sections/schoolprogram/Our_Patrons'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_School_Management = dynamic(() => import('@/components/sections/schoolprogram/Contact_School_Management'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const SchoolProgram = () => {
-
   return (
     <>
-      <Helmet>
-        <title>School Curriculum</title>
+      <Head>
+        <title>STEM School Program | Robotics & AI Curriculum for Schools</title>
         <meta
           name="description"
-          content="Enhance your school's educational offerings by incorporating our structured robotics modules, fostering a futuristic learning environment."
+          content="Transform your school's STEM education with our comprehensive robotics & AI curriculum. Designed for K-12 students with hands-on learning modules."
         />
         <meta
           name="keywords"
-          content="AI Curriculum for Schools, Robotics Integration in Schools, STEM-Based School Curriculum, Hands-On AI Projects for Students, Future-Ready School Programs, school curriculum, Otomatiks school program, educational program, innovative learning, school education, kids learning, modern education, Otomatiks school, student development, educational approach, curriculum design, learning strategies, student growth, personalized learning, teaching methods, education innovation, academic development, holistic education, student-centered learning, Otomatiks education, 21st-century skills, future-ready education, learning resources, educational excellence, skill development, creativity in education, critical thinking, problem-solving skills, learning outcomes, experiential learning, academic success, interactive learning, technology in education, STEM education, hands-on learning, project-based learning, collaborative learning, learning environment, educational programs for kids, school programs for students, career readiness, leadership development, lifelong learning, school learning resources, student engagement, personalized teaching, development of soft skills, educational workshops, school success stories, education for the future, modern classroom techniques, Otomatiks curriculum, global education standards, youth empowerment through education, positive learning experiences, inclusive education"
+          content="school STEM program, robotics curriculum, AI education for schools, coding for students, STEM integration"
         />
 
-        <meta name="author" content="Otomatiks Education" />
+        {/* Structured Data for Educational Program */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOccupationalProgram",
+            "name": "Otomatiks STEM School Program",
+            "description": "Comprehensive robotics and AI curriculum for K-12 schools",
+            "programType": "EducationalOccupationalProgram",
+            "provider": {
+              "@type": "Organization",
+              "name": "Otomatiks",
+              "sameAs": "https://www.otomatiks.com"
+            },
+            "timeToComplete": "P1Y",
+            "educationalProgramMode": "InPerson",
+            "occupationalCategory": "STEM Education",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.otomatiks.com/school-program"
+            }
+          })}
+        </script>
 
-        <meta property="og:title" content="School Curriculum - Otomatiks Educational Program" />
-        <meta
-          property="og:description"
-          content="Discover the unique school curriculum at Otomatiks that combines traditional learning with modern educational techniques. Learn more about our teaching approach and success stories."
-        />
-        <meta
-          property="og:image"
-          content="https://www.otomatiks.com/images/otomatiks-school-curriculum.jpg"
-        />
+        {/* Open Graph */}
+        <meta property="og:title" content="STEM School Program | Robotics & AI Curriculum" />
+        <meta property="og:description" content="Comprehensive K-12 STEM curriculum with robotics, coding, and AI modules for schools. Aligned with national education standards." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/stem-school-program-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/school-program" />
         <meta property="og:type" content="website" />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="School Curriculum - Otomatiks Educational Program"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore the school curriculum at Otomatiks, where innovative teaching methods foster student growth and development in modern education."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.otomatiks.com/images/otomatiks-school-curriculum.jpg"
-        />
+        <meta name="twitter:title" content="STEM School Program by Otomatiks" />
+        <meta name="twitter:description" content="Ready-to-implement robotics and AI curriculum for schools. Teacher training and student materials included." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/stem-school-twitter.jpg" />
 
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/school-program" />
-
-      </Helmet>
+      </Head>
 
       <main>
-        <PageTitle pageName={"School Curriculum"} breadcrumbCurrent={"School Curriculum"} />
+        <PageTitle 
+          pageName="School Curriculum" 
+          breadcrumbCurrent="School Curriculum" 
+        />
         <Why_otomatiks />
         <Our_Uniqueness />
         <HomeTestimonial />
@@ -65,9 +96,8 @@ const SchoolProgram = () => {
         <Contact_School_Management />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
-  )
-}
+  );
+};
 
 export default SchoolProgram;

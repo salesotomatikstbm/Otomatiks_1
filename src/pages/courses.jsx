@@ -1,63 +1,113 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { ScrollRestoration } from "react-router-dom";
-import PageTitle from "@/components/sections/pageTitle";
-import FaqComp from "@/components/sections/faqComp";
-import Platform from "@/components/sections/course/Platform";
-import Students_Talk from "@/components/sections/course/Students_Talk";
-import Brands1 from "@/components/sections/abouts/Brands";
-import Robotics_Course from "@/components/sections/course/Robotics_Course";
-import Contact_Form_Course from "@/components/sections/course/Contact_Form_Course";
-import Software_Course from "@/components/sections/course/Software_Course";
-import TopUp from "@/components/sections/footers/TopUp";
-import FaqCompCourse from "@/components/sections/faqCompCourse";
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const Robotics_Course = dynamic(() => import('@/components/sections/course/Robotics_Course'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Software_Course = dynamic(() => import('@/components/sections/course/Software_Course'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Platform = dynamic(() => import('@/components/sections/course/Platform'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Students_Talk = dynamic(() => import('@/components/sections/course/Students_Talk'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Brands1 = dynamic(() => import('@/components/sections/abouts/Brands'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const FaqCompCourse = dynamic(() => import('@/components/sections/faqCompCourse'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_Form_Course = dynamic(() => import('@/components/sections/course/Contact_Form_Course'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Courses = () => {
   return (
     <>
-      <Helmet>
-        <title>Robotics and Coding Courses</title>
+      <Head>
+        <title>Robotics & Coding Courses for Kids | Otomatiks STEM Academy</title>
         <meta
           name="description"
-          content="Explore our comprehensive robotics curriculum tailored for all skill levels, designed to provide hands-on experience and foster innovation."
+          content="Hands-on robotics & coding courses for kids aged 6-16. Build real projects with expert instructors at Otomatiks. Beginner to advanced STEM programs available."
         />
         <meta
           name="keywords"
-          content="Robotics and AI Courses for Kids, Learn Coding with Fun Projects, Online STEM Classes for Children, AI and Robotics Curriculum, Advanced Robotics for Teens, robotics courses, coding for kids, Otomatiks robotics programs, AI and robotics education, hands-on STEM learning, educational coding platform, robotics for students, software coding courses, advanced robotics programs, AI programming for kids, STEM robotics education, beginner coding classes, robot building workshops, AI and STEM skill development, online robotics courses, Otomatiks coding academy, software development for students, coding bootcamps for kids, AI and machine learning basics, interactive coding lessons, robotics innovation programs, STEM project-based learning, advanced software coding for kids, kids robotics coding tutorials, AI problem-solving for students, tech learning platform, STEM coding projects, online coding for beginners, robotics engineering fundamentals, software coding skill enhancement, STEM AI challenges, innovative robotics learning, Otomatiks AI coding platform, introductory STEM courses, software programming basics, robotics STEM workshops, hands-on coding education, AI innovation courses, Otomatiks STEM academy, kids coding challenges, interactive robotics labs, robotics programming for beginners, advanced coding and robotics education, Otomatiks student coding programs, AI and robotics practical learning, STEM coding competitions, online tech courses, robotics STEM curriculum, software skills for kids, STEM innovation programs, robotics and coding for beginners"
+          content="robotics courses, coding for kids, STEM education, AI for children, programming classes, young engineers, tech education"
         />
 
-        <meta name="author" content="Otomatiks Team" />
-        <meta
-          property="og:title"
-          content="Robotics and Coding Courses | Otomatiks"
-        />
-        <meta
-          property="og:description"
-          content="Join Otomatiks' robotics and coding courses to empower students with practical STEM skills. Discover our unique programs in robotics, AI, and software coding."
-        />
-        <meta
-          property="og:image"
-          content="/path/to/og-courses-image.jpg"
-        />
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Robotics & Coding Programs",
+            "description": "Hands-on STEM courses for children aged 6-16",
+            "provider": {
+              "@type": "Organization",
+              "name": "Otomatiks",
+              "sameAs": "https://www.otomatiks.com"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "lowPrice": "99",
+              "priceCurrency": "USD",
+              "offerCount": "5"
+            }
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+              "@type": "Question",
+              "name": "What age groups are your courses for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our courses are designed for children aged 6-16, with programs tailored for different skill levels."
+              }
+            }]
+          })}
+        </script>
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Kids Robotics & Coding Courses | Otomatiks STEM Academy" />
+        <meta property="og:description" content="Hands-on STEM courses where kids build real robotics projects and learn coding from expert instructors." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/courses-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/courses" />
         <meta property="og:type" content="website" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Robotics and Coding Courses | Otomatiks"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore robotics, coding, and software courses at Otomatiks. Engage in hands-on learning and skill-building for the future."
-        />
-        <meta
-          name="twitter:image"
-          content="/path/to/twitter-courses-image.jpg"
-        />
+        <meta name="twitter:title" content="Kids Robotics & Coding Courses | Otomatiks" />
+        <meta name="twitter:description" content="Transform your child's future with our hands-on STEM programs. Beginner to advanced courses available." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/courses-twitter.jpg" />
+
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/courses" />
-      </Helmet>
+      </Head>
+
       <main>
-        <PageTitle pageName={"Our Courses"} breadcrumbCurrent={"Our Courses"} />
+        <PageTitle pageName="Our Courses" breadcrumbCurrent="Our Courses" />
         <Robotics_Course />
         <Software_Course />
         <Platform />
@@ -67,7 +117,6 @@ const Courses = () => {
         <Contact_Form_Course />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };

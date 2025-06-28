@@ -1,61 +1,86 @@
-import React from 'react';
-import { Helmet } from 'react-helmet'
-import { ScrollRestoration } from 'react-router-dom'
-import PageTitle from '@/components/sections/pageTitle'
-import ShopComingSoon from '@/components/sections/shop/ShopComingSoon';
-import TopUp from '@/components/sections/footers/TopUp';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const ShopComingSoon = dynamic(() => import('@/components/sections/shop/ShopComingSoon'), {
+  loading: () => (
+    <div className="min-h-[300px] flex items-center justify-center">
+      <div className="text-center">
+        <div className="h-8 w-3/4 mx-auto bg-gray-200 rounded mb-4 animate-pulse"></div>
+        <div className="h-4 w-1/2 mx-auto bg-gray-200 rounded mb-2 animate-pulse"></div>
+        <div className="h-4 w-1/3 mx-auto bg-gray-200 rounded animate-pulse"></div>
+      </div>
+    </div>
+  )
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Shop = () => {
   return (
     <>
-      <Helmet>
-        <title>Otomatiks Shop</title>
+      <Head>
+        <title>Otomatiks Shop | Educational Robotics Kits & STEM Toys</title>
         <meta
           name="description"
-          content="Browse our selection of robotics kits and accessories designed to complement our courses and enhance your learning experience."
+          content="Coming soon! Premium robotics kits, STEM toys, and coding tools for young innovators. Sign up for early access and exclusive offers."
         />
         <meta
           name="keywords"
-          content="Robotics Kits for Kids, Buy AI Learning Tools, STEM Education Products, Coding Starter Kits, AI and Robotics Supplies, Otomatiks shop, kids products, educational toys, learning tools, kids learning shop, coming soon, shop for children, children's educational toys, learning resources, educational products, kids learning store, online toy store, toys for kids, kids development tools, learning materials, educational games, creative toys, interactive learning tools, STEM toys, educational fun, children's learning aids, toy store, toys for toddlers, toys for preschoolers, early learning toys, educational activities for kids, innovative toys, educational kits, activity sets for kids, children's books, educational apps, hands-on learning toys, toys for skills development, imaginative play, kids learning games, children's puzzles, kids art supplies, toys for cognitive development, social-emotional learning toys, motor skills toys, educational subscription boxes, creative play kits, learning through play, kids learning gadgets, children's learning toys online, kids educational products, developmental toys, educational toys for school, educational products for parents, kids educational kits, sustainable kids toys, eco-friendly educational toys, child development products, educational gifts for kids, learning toys for all ages, kids study tools, educational shopping experience"
+          content="robotics kits, STEM toys, coding for kids, educational toys, coming soon"
         />
 
-        <meta name="author" content="Otomatiks Education" />
+        {/* Structured Data for Local Business */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Store",
+            "name": "Otomatiks Shop",
+            "description": "Educational robotics kits and STEM learning tools for children",
+            "url": "https://www.otomatiks.com/shop",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "opens": "Coming Soon",
+              "closes": "Stay Tuned"
+            },
+            "image": "https://www.otomatiks.com/images/shop-preview.jpg"
+          })}
+        </script>
 
-        <meta property="og:title" content="Otomatiks Shop | Coming Soon" />
-        <meta
-          property="og:description"
-          content="Stay tuned for Otomatiks Shop! Our upcoming store will feature educational toys, kids' learning tools, and exclusive products for children."
-        />
-        <meta
-          property="og:image"
-          content="https://www.otomatiks.com/images/coming-soon-shop.jpg"
-        />
+        {/* Open Graph */}
+        <meta property="og:title" content="Otomatiks Shop | STEM Toys Coming Soon" />
+        <meta property="og:description" content="Premium educational robotics kits and coding tools for young innovators - launching soon!" />
+        <meta property="og:image" content="https://www.otomatiks.com/images/shop-og-image.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/shop" />
         <meta property="og:type" content="website" />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Otomatiks Shop | Coming Soon"
-        />
-        <meta
-          name="twitter:description"
-          content="Exciting products for kids are coming soon to Otomatiks Shop. Stay tuned for exclusive offers on educational toys and learning resources."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.otomatiks.com/images/coming-soon-shop.jpg"
-        />
+        <meta name="twitter:title" content="Otomatiks STEM Shop Launching Soon" />
+        <meta name="twitter:description" content="Be the first to know when our educational robotics kits and coding tools become available!" />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/shop-twitter-preview.jpg" />
 
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/shop" />
-      </Helmet>
+
+        {/* Preload */}
+        <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </Head>
 
       <main>
-        <PageTitle pageName={"Shop"} breadcrumbCurrent={"Shop"} />
+        <PageTitle 
+          pageName="Our Shop" 
+          breadcrumbCurrent="Coming Soon" 
+        />
         <ShopComingSoon />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };

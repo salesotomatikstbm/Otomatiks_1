@@ -1,48 +1,99 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { ScrollRestoration } from 'react-router-dom';
-import ContactAddress from '@/components/sections/contactAddress';
-import ContactForm from '@/components/sections/contactForm';
-import PageTitle from '@/components/sections/pageTitle';
-import BranchesInfo from '@/components/sections/BranchesInfo';
-import TopUp from '@/components/sections/footers/TopUp';
-import GoogleMap from '@/components/sections/googleMap';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const ContactAddress = dynamic(() => import('@/components/sections/contactAddress'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const GoogleMap = dynamic(() => import('@/components/sections/googleMap'), {
+  loading: () => <div className="h-[400px] bg-gray-100" />,
+  ssr: false // Disable SSR for Google Maps
+});
+
+const BranchesInfo = dynamic(() => import('@/components/sections/BranchesInfo'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const ContactForm = dynamic(() => import('@/components/sections/contactForm'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const ContactUs = () => {
   return (
     <>
-      <Helmet>
-        <title>Contact Us</title>
+      <Head>
+        <title>Contact Otomatiks | Robotics & STEM Education Support</title>
         <meta
           name="description"
-          content="Reach out to Otomatiks for inquiries about courses, workshops, partnerships, or any other information. We're here to assist you."
+          content="Get in touch with our STEM education experts. Contact us for robotics courses, school partnerships, and AI lab setup inquiries. Quick responses guaranteed."
         />
         <meta
           name="keywords"
-          content="Reach Us for AI Workshops, Contact for Robotics Classes, Enroll in STEM Programs, Get in Touch for AI and Robotics, Join Our STEM Community, contact robotics team, STEM education support, AI lab setup inquiries, robotics branch contact, educational solutions contact, tech education contact details, robotics customer service, STEM contact information, AI lab support team, tech education inquiries, robotics solutions contact, STEM education assistance, robotics branch offices, AI lab expert contact, educational technology support, STEM help center, robotics branch locations, contact STEM experts, AI lab consultants, tech education outreach, robotics team assistance, STEM educational resources contact, AI lab service providers, tech education customer care, robotics support line, STEM teaching tools contact, robotics educational solutions inquiries, AI school lab inquiries, tech education customer assistance, contact robotics trainers, AI education solutions support, STEM customer contact, robotics education queries, AI lab contact information, STEM educational tools support, robotics branch details, AI lab expert team contact, STEM teaching inquiries, robotics education center contact, AI technology inquiries, tech education solutions contact, robotics educational support, STEM innovation lab contact, AI educational projects inquiries, robotics program assistance, STEM education consultation, AI school lab support contact"
+          content="contact robotics education, STEM program inquiry, AI lab setup help, school partnership contact"
         />
 
-        <meta name="author" content="Otomatiks Team" />
-        <meta property="og:title" content="Contact Us" />
-        <meta property="og:description" content="Reach out to us for robotics, STEM education, and AI lab setup inquiries. Get branch details and support for educational solutions." />
-        <meta property="og:image" content="/path/to/og-contact-image.jpg" />
+        {/* Structured Data for Local Business */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Otomatiks",
+            "url": "https://www.otomatiks.com",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-XXXXXXXXXX",
+              "contactType": "customer service",
+              "email": "contact@otomatiks.com",
+              "availableLanguage": "English,Hindi"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "123 Education Street",
+              "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
+              "postalCode": "560001",
+              "addressCountry": "India"
+            }
+          })}
+        </script>
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact Otomatiks | Robotics & STEM Education Support" />
+        <meta property="og:description" content="Reach our education experts for robotics courses, school programs, and AI lab inquiries. We respond within 24 hours." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/contact-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/contact-us" />
         <meta property="og:type" content="website" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | Get in Touch with Our Team" />
-        <meta name="twitter:description" content="Contact us for inquiries on robotics, STEM education, and AI lab setups. Our team is here to assist with support and solutions." />
-        <meta name="twitter:image" content="/path/to/twitter-contact-image.jpg" />
+        <meta name="twitter:title" content="Contact Our STEM Education Team" />
+        <meta name="twitter:description" content="Quick responses for robotics course inquiries, school partnerships, and AI lab setups." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/contact-twitter.jpg" />
+
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/contact-us" />
-      </Helmet>
+      </Head>
+
       <main className="overflow-hidden">
-        <PageTitle pageName="Contact Us" breadcrumbCurrent="Contact Us" />
+        <PageTitle 
+          pageName="Contact Us" 
+          breadcrumbCurrent="Contact Us" 
+        />
         <ContactAddress />
         <GoogleMap />
         <BranchesInfo />
         <ContactForm />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };

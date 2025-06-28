@@ -1,61 +1,97 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { ScrollRestoration } from "react-router-dom";
-import PageTitle from "@/components/sections/pageTitle";
-import AboutTwo from "@/components/sections/abouts/aboutTwo";
-import TopUp from "@/components/sections/footers/TopUp";
-import FaqWorkshop from "@/components/sections/workshop/FaqWorkshop";
-import PreviousYearWorkshop from "@/components/sections/workshop/PreviousYearWorkshop";
-import Contact_School_Management from "@/components/sections/schoolprogram/Contact_School_Management";
-import OurWorkshop from "@/components/sections/workshop/WhatWeOffer";
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+
+// Dynamic imports with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const AboutTwo = dynamic(() => import('@/components/sections/abouts/aboutTwo'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const OurWorkshop = dynamic(() => import('@/components/sections/workshop/WhatWeOffer'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const PreviousYearWorkshop = dynamic(() => import('@/components/sections/workshop/PreviousYearWorkshop'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const FaqWorkshop = dynamic(() => import('@/components/sections/workshop/FaqWorkshop'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_School_Management = dynamic(() => import('@/components/sections/schoolprogram/Contact_School_Management'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const Workshop = () => {
   return (
     <>
-      <Helmet>
-        <title>Workshop</title>
+      <Head>
+        <title>STEM Workshops for Kids | Robotics & Coding Camps | Otomatiks</title>
         <meta
           name="description"
-          content="Participate in our interactive workshops designed to kickstart students' robotics journey through hands-on learning and real-world applications."
+          content="Interactive STEM workshops for ages 6-16. Hands-on robotics, coding & AI projects. School holidays & weekend programs available."
         />
         <meta
           name="keywords"
-          content="Robotics and AI Workshop for Kids, Weekend AI Coding Workshops, Interactive Robotics Camps, STEM Learning Sessions, Hands-On Robotics Training, Otomatiks workshop, kids learning workshop, educational events, children workshop, interactive learning, creative workshops, upcoming workshops for kids, kids creativity workshop, hands-on learning workshops, educational activities for children, learning through play, STEM workshops for kids, robotics workshops, coding workshops for kids, arts and crafts workshops for kids, educational games for kids, science experiments for kids, kids workshops near me, fun learning activities, workshops for creativity, children's educational events, online workshops for kids, summer workshops for kids, winter workshops for kids, interactive kids workshops, fun and educational workshops, learning activities for kids, school workshops, creative learning for kids, problem-solving workshops, kids development workshops, team-building workshops for kids, teamwork workshops for children, tech workshops for kids, future skills workshops, kids learning camps, kids programming workshops, kids tech activities, coding classes for kids, kids design workshops, workshops for child development, creative arts workshops for kids, robotics for kids, future-ready workshops, math workshops for kids, kids music workshops, theatre workshops for kids, kids storytelling workshops, learning fun for kids, educational workshops for all ages, extracurricular learning for kids, kids engagement workshops, kids self-expression workshops, brain development workshops, mind-challenging workshops, educational events for students, problem-solving for children, kids science clubs, kids engineering workshops"
+          content="kids STEM workshops, robotics camps, coding workshops, AI for children, holiday programs"
         />
 
-        <meta name="author" content="Otomatiks Education" />
+        {/* Structured Data for Workshop */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EventSeries",
+            "name": "Otomatiks STEM Workshops",
+            "description": "Interactive robotics and coding workshops for children",
+            "url": "https://www.otomatiks.com/workshop",
+            "startDate": "2023-11-01",
+            "endDate": "2024-12-31",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "organizer": {
+              "@type": "Organization",
+              "name": "Otomatiks",
+              "url": "https://www.otomatiks.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.otomatiks.com/workshop#register",
+              "price": "1499",
+              "priceCurrency": "INR"
+            }
+          })}
+        </script>
 
-        <meta property="og:title" content="Otomatiks Workshop | Educational & Fun Learning Events for Kids" />
-        <meta
-          property="og:description"
-          content="Explore Otomatiks Workshops for children! Our workshops feature fun, educational activities designed to spark creativity and learning in young minds."
-        />
-        <meta
-          property="og:image"
-          content="https://www.otomatiks.com/images/workshop.jpg"
-        />
+        {/* Open Graph */}
+        <meta property="og:title" content="Kids STEM Workshops | Robotics & Coding Camps" />
+        <meta property="og:description" content="Book our holiday workshops - robotics, coding & AI projects for ages 6-16. Limited seats available!" />
+        <meta property="og:image" content="https://www.otomatiks.com/images/workshop-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/workshop" />
         <meta property="og:type" content="website" />
 
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Otomatiks Workshop | Educational & Fun Learning Events for Kids"
-        />
-        <meta
-          name="twitter:description"
-          content="Join Otomatiks Workshops! Exciting educational events for kids focused on creativity and learning. Don't miss out on our upcoming workshops."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.otomatiks.com/images/workshop.jpg"
-        />
+        <meta name="twitter:title" content="Book Kids STEM Workshops | Otomatiks" />
+        <meta name="twitter:description" content="Hands-on robotics & coding camps this holiday. Ages 6-16. Early bird discounts available!" />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/workshop-twitter.jpg" />
 
+        {/* Canonical */}
         <link rel="canonical" href="https://www.otomatiks.com/workshop" />
-      </Helmet>
+      </Head>
 
       <main>
-        <PageTitle pageName={"Workshop"} breadcrumbCurrent={"Workshop"} />
+        <PageTitle 
+          pageName="Workshops" 
+          breadcrumbCurrent="Workshops" 
+        />
         <AboutTwo />
         <OurWorkshop />
         <PreviousYearWorkshop />
@@ -63,7 +99,6 @@ const Workshop = () => {
         <Contact_School_Management />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };

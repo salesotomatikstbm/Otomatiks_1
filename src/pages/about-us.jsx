@@ -1,63 +1,96 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { ScrollRestoration } from 'react-router-dom';
-import AboutOne from '@/components/sections/abouts/aboutOne';
-import PageTitle from '@/components/sections/pageTitle';
-import Testimonial from '@/components/sections/testimonial';
-import Teams from '@/components/sections/teams/teams';
-import OurJourney from '@/components/sections/abouts/OurJourney';
-import Brands1 from '@/components/sections/abouts/Brands';
-import Our_Patrons from '@/components/sections/schoolprogram/Our_Patrons';
-import TopUp from '@/components/sections/footers/TopUp';
-import Contact_About from '@/components/sections/abouts/Contact_About';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
+// Dynamically import components with loading states
+const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
+  loading: () => <div className="h-24 bg-gray-100" />
+});
+
+const AboutOne = dynamic(() => import('@/components/sections/abouts/aboutOne'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Testimonial = dynamic(() => import('@/components/sections/testimonial'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const OurJourney = dynamic(() => import('@/components/sections/abouts/OurJourney'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Teams = dynamic(() => import('@/components/sections/teams/teams'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Brands1 = dynamic(() => import('@/components/sections/abouts/Brands'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const Our_Patrons = dynamic(() => import('@/components/sections/schoolprogram/Our_Patrons'), {
+  loading: () => <div className="py-12 bg-gray-50" />
+});
+
+const Contact_About = dynamic(() => import('@/components/sections/abouts/Contact_About'), {
+  loading: () => <div className="py-12 bg-white" />
+});
+
+const TopUp = dynamic(() => import('@/components/sections/footers/TopUp'), {
+  loading: () => <div className="bg-gray-800 h-20" />
+});
 
 const AboutUs = () => {
   return (
     <>
-      <Helmet>
-        <title>About Us</title>
+      <Head>
+        <title>About Otomatiks | Robotics & STEM Education for Kids</title>
         <meta
           name="description"
-          content="Learn about Otomatiks' mission to bridge the gap between academics and real-world applications, empowering students with essential robotics skills."
+          content="Otomatiks bridges academics & real-world applications with hands-on robotics programs. We empower students aged 6-16 with future-ready STEM skills through innovative teaching."
         />
-        <meta
-          name="keywords"
-          content="About Robotics and AI Academy, Our Mission in STEM Education, Pioneers in Robotics for Kids, Trusted AI Learning Center, STEM Learning Experts, robotics for kids, coding for kids, STEM education for children, kids robotics classes, AI for kids, Otomatiks, fun learning robotics, children's coding workshops, robotics programs for children, kids STEM programs, children's robotics clubs, robot building for kids, coding workshops for kids, AI classes for children, hands-on robotics learning, innovative STEM programs, technology education for kids, future tech for children, STEM curriculum for schools, robotics competitions for kids, child-friendly AI learning, robotics engineering for kids, STEM for young minds, programming for beginners, child-centric coding, creative robotics for kids, robot programming for children, educational robots for schools, beginner coding classes for kids, interactive AI learning, kids' coding apps, robotics tutorials for kids, coding games for children, junior robotics programs, AI and robotics integration, STEM-based activities for children, engaging STEM challenges, STEM labs for schools, advanced robotics for kids, problem-solving with robotics, team-building through STEM, educational robotics kits, future-focused kids' programs, introducing AI to children, STEM partnerships for schools, coding and AI bootcamps, early robotics education, inspiring young innovators, building creativity through robotics, STEM robotics camps for children"
+        <meta 
+          name="keywords" 
+          content="robotics for kids, STEM education, coding classes, AI for children, hands-on learning, future skills, Otomatiks programs"
         />
 
-        <meta name="author" content="Otomatiks Team" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Otomatiks",
+            "url": "https://www.otomatiks.com",
+            "logo": "https://www.otomatiks.com/logo.png",
+            "description": "Leading provider of robotics and STEM education for children",
+            "founder": "Otomatiks Team",
+            "foundingDate": "2018",
+            "sameAs": [
+              "https://facebook.com/otomatiks",
+              "https://instagram.com/otomatiks",
+              "https://linkedin.com/company/otomatiks"
+            ]
+          })}
+        </script>
 
-        <meta property="og:title" content="About Us | Otomatiks - Inspiring Future Innovators" />
-        <meta
-          property="og:description"
-          content="At Otomatiks, we provide kids with the best robotics and STEM education, offering hands-on, interactive experiences to foster creativity, problem-solving, and technical skills."
-        />
-        <meta property="og:image" content="https://www.otomatiks.com/images/social-preview.jpg" />
+
+        <meta property="og:title" content="About Otomatiks | Inspiring Young Minds Through Robotics" />
+        <meta property="og:description" content="Discover our mission to make STEM education accessible and engaging for children through hands-on robotics programs." />
+        <meta property="og:image" content="https://www.otomatiks.com/images/og-about.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/about-us" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Otomatiks" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="About Us | Otomatiks - Inspiring Kids Through Robotics and STEM"
-        />
-        <meta
-          name="twitter:description"
-          content="Join Otomatiks for engaging robotics, coding, and AI learning experiences. Discover how our innovative programs help children become the innovators of tomorrow."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.otomatiks.com/images/twitter-preview.jpg"
-        />
+        <meta name="twitter:title" content="About Otomatiks | Robotics Education Leaders" />
+        <meta name="twitter:description" content="Empowering the next generation with practical STEM skills through innovative robotics programs." />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/twitter-about.jpg" />
 
-      
+   
         <link rel="canonical" href="https://www.otomatiks.com/about-us" />
+      </Head>
 
-      </Helmet>
       <main>
-        <PageTitle pageName="About Us" breadcrumbCurrent="About Us" />
+        <PageTitle 
+          pageName="About Us" 
+          breadcrumbCurrent="About Us" 
+        />
         <AboutOne isAboutpage={true} />
         <Testimonial />
         <OurJourney />
@@ -67,7 +100,6 @@ const AboutUs = () => {
         <Contact_About />
         <TopUp />
       </main>
-      <ScrollRestoration />
     </>
   );
 };
