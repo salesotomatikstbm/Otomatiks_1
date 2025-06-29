@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/home",
-                element: <Navigate to="/" replace />
+                element: <Home />
             }
         ]
     },
