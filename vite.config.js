@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 
 const routes = [
   '/',
+  '/home',
   '/about-us',
   '/robotics-coding-courses',
   '/robotics-coding-school-curriculum',
