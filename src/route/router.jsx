@@ -22,6 +22,7 @@ import Msme from "@/pages/msme";
 import Csr from "@/pages/csr";
 import BlogDetails from "@/pages/blog-details";
 import { Navigate } from 'react-router-dom';
+import HomeOne from "@/pages/home1";
 
 
 export const router = createBrowserRouter([
@@ -33,9 +34,17 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Home />
             },
+           
+        ]
+    },
+     {
+        path: "/",
+        element: <RootLayout />,
+        children: [
+           
             {
                 path: "/home",
-                element: <Home />
+                element: <HomeOne />
             }
         ]
     },
