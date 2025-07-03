@@ -31,14 +31,14 @@ const ContactUs = () => {
   return (
     <>
       <Head>
-        <title>Contact Otomatiks | Robotics & STEM Education Support</title>
+        <title>Contact Otomatiks | Robotics, AI & STEM Education Experts</title>
         <meta
           name="description"
-          content="Get in touch with our STEM education experts. Contact us for robotics courses, school partnerships, and AI lab setup inquiries. Quick responses guaranteed."
+          content="Connect with Otomatiks for robotics courses, AI lab setup, STEM education partnerships, franchise opportunities, and general inquiries. We’re here to help!"
         />
         <meta
           name="keywords"
-          content="contact robotics education, STEM program inquiry, AI lab setup help, school partnership contact"
+          content="Contact Otomatiks, robotics education support, STEM learning support, AI lab consultancy, school robotics lab contact, robotics courses, franchise, partnership inquiry, Otomatiks address, Otomatiks email, Otomatiks phone number"
         />
 
         {/* Structured Data for Local Business */}
@@ -48,38 +48,53 @@ const ContactUs = () => {
             "@type": "EducationalOrganization",
             "name": "Otomatiks",
             "url": "https://www.otomatiks.com",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+91-XXXXXXXXXX",
-              "contactType": "customer service",
-              "email": "contact@otomatiks.com",
-              "availableLanguage": "English,Hindi"
-            },
+            "logo": "https://www.otomatiks.com/logo.png",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 90432 09448",
+                "contactType": "Customer Service",
+                "email": "support@otomatiks.in",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Tamil"]
+              }
+            ],
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Education Street",
-              "addressLocality": "Bangalore",
-              "addressRegion": "Karnataka",
-              "postalCode": "560001",
+              "streetAddress": "Ponvizha Nagar, Gandhi Nagar",
+              "addressLocality": "Vellore",
+              "addressRegion": "Tamilnadu",
+              "postalCode": "632006",
               "addressCountry": "India"
-            }
+            },
+            "sameAs": [
+              "https://facebook.com/otomatiks",
+              "https://instagram.com/otomatiks",
+              "https://linkedin.com/company/otomatiks"
+            ]
           })}
         </script>
 
         {/* Open Graph */}
-        <meta property="og:title" content="Contact Otomatiks | Robotics & STEM Education Support" />
-        <meta property="og:description" content="Reach our education experts for robotics courses, school programs, and AI lab inquiries. We respond within 24 hours." />
+        <meta property="og:title" content="Contact Otomatiks | Robotics, AI & STEM Education Support" />
+        <meta
+          property="og:description"
+          content="Have questions about our robotics courses, AI lab setups, or school STEM programs? Contact the Otomatiks team for prompt support and guidance."
+        />
         <meta property="og:image" content="https://www.otomatiks.com/images/contact-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/contact-us" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Our STEM Education Team" />
-        <meta name="twitter:description" content="Quick responses for robotics course inquiries, school partnerships, and AI lab setups." />
+        <meta name="twitter:title" content="Contact Otomatiks | Reach Our STEM Education Experts" />
+        <meta
+          name="twitter:description"
+          content="Contact our team for robotics course details, AI lab solutions, STEM partnerships, and more. We respond within 24 hours!"
+        />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/contact-twitter.jpg" />
 
-        {/* Canonical */}
+        {/* Canonical URL */}
         <link rel="canonical" href="https://www.otomatiks.com/contact-us" />
       </Head>
 

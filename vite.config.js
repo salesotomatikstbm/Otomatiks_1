@@ -18,7 +18,6 @@ const routes = [
   '/contact-us'
 ];
 
-// Sitemap generator that works in both dev and production
 function sitemapPlugin() {
   let config;
   const virtualModuleId = 'virtual:sitemap';
@@ -42,7 +41,7 @@ function sitemapPlugin() {
     },
     configureServer(server) {
       server.middlewares.use('/sitemap.xml', (_, res) => {
-        res.setHeader('Content-Type', 'application/xml');
+        res.setHeader('Content-Type', 'text/xml; charset=utf-8');
         res.end(generateSitemapContent());
       });
     },
@@ -51,7 +50,7 @@ function sitemapPlugin() {
         const fs = await import('fs');
         const sitemap = generateSitemapContent();
         fs.writeFileSync(
-          path.resolve(config.build.outDir, 'sitemap.xml'), 
+          path.resolve(config.build.outDir, 'sitemap.xml'),
           sitemap
         );
       }
@@ -59,17 +58,17 @@ function sitemapPlugin() {
   };
 
   function generateSitemapContent() {
-    return `<?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        ${routes.map(route => `
-          <url>
-            <loc>https://www.otomatiks.com${route}</loc>
-            <lastmod>${new Date().toISOString()}</lastmod>
-            <changefreq>${route === '/' ? 'daily' : 'weekly'}</changefreq>
-            <priority>${route === '/' ? 1.0 : 0.8}</priority>
-          </url>
-        `).join('')}
-      </urlset>`;
+    const lastmod = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+    return `<?xml version="1.0" encoding="UTF-8"?>\n` +
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+      routes.map(route => `
+  <url>
+    <loc>https://www.otomatiks.com${route}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${route === '/' ? 'daily' : 'weekly'}</changefreq>
+    <priority>${route === '/' ? '1.0' : '0.8'}</priority>
+  </url>`).join('\n') +
+      `\n</urlset>`;
   }
 }
 

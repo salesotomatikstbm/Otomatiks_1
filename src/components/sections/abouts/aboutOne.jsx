@@ -11,45 +11,62 @@ import SectionDescription from '@/components/ui/sectionDescription';
 
 const AboutOne = ({ gridClass, isAboutpage }) => {
   return (
-    <section className="lg:pt-0 pt-0 lg:pb-15 pb-10">
+    <section
+      aria-labelledby="about-us-title"
+      className="lg:pt-0 pt-0 lg:pb-15 pb-10"
+    >
       <div className="container">
-        <div className={cn("grid lg:grid-cols-[50%_50%] grid-cols-1 items-center lg:ml-4 md:gap-6", gridClass)}>
-
+        <div
+          className={cn(
+            "grid lg:grid-cols-[50%_50%] grid-cols-1 items-center lg:ml-4 md:gap-6",
+            gridClass
+          )}
+        >
           {/* Left side image and statistics */}
           <div className="relative sm:block hidden">
             <div className="flex sm:flex-row flex-col sm:items-end gap-6">
               <SlideUp>
-                <div className="relative">
-                  <div>
-                    <img src={shap_1} alt="shape" />
-                  </div>
+                <figure className="relative">
+                  <img src={shap_1} alt="Decorative shape element" />
                   <div className="ml-9">
-                    <img src={about_img_1} alt="Robotics Education" className="w-full" />
+                    <img
+                      src={about_img_1}
+                      alt="Students building a robotics project"
+                      className="w-full"
+                    />
                   </div>
-                  <div className="absolute -bottom-12.5 left-0 bg-[#066aab] rounded-[10px] py-4 px-[22px] flex items-center gap-3">
+                  <figcaption className="absolute -bottom-12.5 left-0 bg-[#066aab] rounded-[10px] py-4 px-[22px] flex items-center gap-3">
                     <div className="bg-background w-11 h-11 rounded-full flex justify-center items-center">
-                      <img src={customer} alt="Students Trained Icon" />
+                      <img src={customer} alt="Icon representing students trained" />
                     </div>
                     <div>
-                      <h6 className="text-cream-foreground font-bold text-2xl">1,00,000+</h6>
+                      <h6 className="text-cream-foreground font-bold text-2xl">
+                        1,00,000+
+                      </h6>
                       <p className="text-cream-foreground">Students Trained</p>
                     </div>
-                  </div>
-                </div>
+                  </figcaption>
+                </figure>
               </SlideUp>
 
               <div className="flex sm:flex-col gap-8">
                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col items-center justify-center text-center hidden sm:flex">
-                  <img src={icreement} alt="Otomatiks Logo" />
-                  <h6 className="text-cream-foreground text-xl font-bold">Otomatiks</h6>
+                  <img src={icreement} alt="Otomatiks Robotics Academy logo" />
+                  <h6 className="text-cream-foreground text-xl font-bold">
+                    Otomatiks
+                  </h6>
                   <p className="text-cream-foreground">Robotics Academy</p>
                 </div>
                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                  <h6 className=" text-cream-foreground text-[32px] font-bold ">14+</h6>
-                  <p className="text-cream-foreground">Years Of Exp</p>
+                  <h6 className="text-cream-foreground text-[32px] font-bold">
+                    14+
+                  </h6>
+                  <p className="text-cream-foreground">Years Of Experience</p>
                 </div>
                 <div className="bg-[#066aab] max-w-[212px] rounded-[11px] px-5 pt-[22px] pb-6 flex flex-col justify-center hidden sm:flex drop-shadow-[0px_4.8px_24.4px_rgba(19,16,34,0.10)]">
-                  <h6 className="text-cream-foreground text-[32px] font-bold ">20</h6>
+                  <h6 className="text-cream-foreground text-[32px] font-bold">
+                    20
+                  </h6>
                   <p className="text-cream-foreground">Our Hubs</p>
                 </div>
               </div>
@@ -58,28 +75,26 @@ const AboutOne = ({ gridClass, isAboutpage }) => {
 
           {/* Right side content */}
           <div className={`${isAboutpage ? "" : "lg:max-w-[839px]"} pt-7.5`}>
-            <SectionName>Our Story</SectionName>
+            <SectionName id="about-us-title">Our Story</SectionName>
             <Title size={"3.5xl"}>
               Empowering Young Innovators Through Creativity and Technology
             </Title>
             <SectionDescription>
-              <div className="flex items-start mt-4 mb-4 text-justify">
-                <p>
-                  At Otomatiks, we believe in the power of curiosity and innovation to shape the future.
-                  Our journey began with a passion for robotics and a vision to make cutting-edge technology
-                  accessible to young minds. Founded by a team of educators and tech enthusiasts, Otomatiks
-                  has grown into a leading provider of Robotics & AI education, empowering students to
-                  become tomorrow's innovators.
-                </p>
-              </div>
-              <div className="flex items-start mb-4 text-justify">
-                <p>
-                  We started with a simple idea: to create hands-on learning experiences that ignite a love
-                  for science, technology, engineering, and mathematics (STEM). From our first classroom
-                  workshop to partnering with schools nationwide, we've been committed to nurturing
-                  creativity and critical thinking in students of all ages.
-                </p>
-              </div>
+              <p className="mt-4 mb-4 text-justify">
+                At Otomatiks, we believe in the power of curiosity and innovation to
+                shape the future. Our journey began with a passion for robotics and a
+                vision to make cutting-edge technology accessible to young minds.
+                Founded by a team of educators and tech enthusiasts, Otomatiks has
+                grown into a leading provider of Robotics & AI education, empowering
+                students to become tomorrow's innovators.
+              </p>
+              <p className="mb-4 text-justify">
+                We started with a simple idea: to create hands-on learning experiences
+                that ignite a love for science, technology, engineering, and
+                mathematics (STEM). From our first classroom workshop to partnering
+                with schools nationwide, we've been committed to nurturing creativity
+                and critical thinking in students of all ages.
+              </p>
             </SectionDescription>
 
             {/* Vision and Mission */}

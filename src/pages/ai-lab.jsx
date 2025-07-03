@@ -1,48 +1,61 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { ScrollRestoration } from 'react-router-dom';
+
 import PageTitle from '@/components/sections/pageTitle';
 import Products from '@/components/sections/products';
 import ValueSection from '@/components/sections/lab/ValueSection';
-import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup '
-import TopUp from '@/components/sections/footers/TopUp';
+
 import FaqLab from '@/components/sections/lab/FaqLab';
-import Contact_School_Management from '@/components/sections/schoolprogram/Contact_School_Management';
+import ContactSchoolManagement from '@/components/sections/schoolprogram/Contact_School_Management';
+import TopUp from '@/components/sections/footers/TopUp';
+import RoboticsAiLabSetup from '@/components/sections/lab/RoboticsAiLabSetup ';
 
 const Ai = () => {
   return (
     <>
       <Helmet>
-        <title>Robotics & AI Lab</title>
+        <title>Otomatiks</title>
         <meta
           name="description"
-          content="Equip your institution with state-of-the-art robotics laboratories, complete with essential tools for the development and research of robotics technology."
+          content="Launch your Robotics & AI Lab with Otomatiks. We provide state-of-the-art robotics and AI lab setup for schools, empowering students with future-ready STEM skills."
         />
         <meta
           name="keywords"
-          content="Build Your Own Robotics Lab, AI Labs for Schools, Robotics Lab Setup for Students, STEM Labs for Advanced Learning, Future-Focused AI Lab Design, robotics lab setup, AI lab for schools, robotics for kids, artificial intelligence lab setup, STEM education, robotics infrastructure, school AI lab, robotics and AI kits, STEM learning, advanced technology labs, school robotics lab design, AI integration in schools, hands-on STEM activities, coding and robotics for students, AI projects for kids, educational AI tools, robotics curriculum for schools, advanced STEM labs, modern AI labs, school technology programs, robotics lab equipment, AI-powered learning, smart classrooms, future-ready schools, AI and robotics innovation, STEM teaching tools, interactive STEM learning, robotics competitions, school AI lab funding, AI training for students, AI lab requirements, AI and robotics in education, innovative school labs, tech-enabled classrooms, coding and AI workshops, robotics hardware for schools, intelligent lab solutions, robotics training programs, school AI lab consultancy, AI coding programs, building robotics skills, next-gen school labs, robotics programming for beginners, educational robotics kits, future tech for students, STEM engagement programs, robotics innovation labs, AI-powered education, technology-driven schools, classroom robotics, STEM labs with AI focus, collaborative STEM projects"
+          content="Robotics Lab Setup, AI Lab for Schools, STEM Education, Robotics for Kids, Build Robotics Lab, School AI Lab, Robotics Kits, AI Training, Hands-on STEM Learning"
         />
         <meta name="author" content="Otomatiks Team" />
-        <meta property="og:title" content="Robotics & AI Lab Setup" />
-        <meta property="og:description" content="Transform your school into a hub of innovation with our Robotics & AI Lab solutions. Hands-on robotics, artificial intelligence training, and modern STEM tools for students." />
-        <meta property="og:image" content="/path/to/your-social-image.jpg" />
+
+        <meta property="og:title" content="Robotics & AI Lab | Future-Ready STEM Labs" />
+        <meta
+          property="og:description"
+          content="Transform your institution into a hub of innovation with Otomatiks Robotics & AI Labs. Hands-on STEM tools, robotics training, and AI curriculum for students."
+        />
+        <meta property="og:image" content="https://www.otomatiks.com/images/og-robotics-ai-lab.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/robotics-ai-lab" />
         <meta property="og:type" content="website" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Robotics & AI Lab Setup | Advanced STEM Education for Schools" />
-        <meta name="twitter:description" content="Launch a Robotics & AI Lab for schools with cutting-edge tools and infrastructure. Inspire young minds with interactive learning experiences." />
-        <meta name="twitter:image" content="/path/to/your-twitter-image.jpg" />
+        <meta name="twitter:title" content="Robotics & AI Lab Setup | Otomatiks STEM Solutions" />
+        <meta
+          name="twitter:description"
+          content="Set up a Robotics & AI Lab for your school with Otomatiks. Inspire young minds with hands-on robotics, coding, and AI learning."
+        />
+        <meta name="twitter:image" content="https://www.otomatiks.com/images/twitter-robotics-ai-lab.jpg" />
+
         <link rel="canonical" href="https://www.otomatiks.com/robotics-ai-lab" />
       </Helmet>
+
       <main>
         <PageTitle pageName="Robotics & AI Lab" breadcrumbCurrent="Robotics & AI Lab" />
         <Products />
-        <RoboticsAiLabSetup />
+  <RoboticsAiLabSetup />
         <ValueSection />
         <FaqLab />
-        <Contact_School_Management />
+        <ContactSchoolManagement />
         <TopUp />
       </main>
+
       <ScrollRestoration />
     </>
   );

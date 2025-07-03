@@ -34,53 +34,55 @@ const Workshop = () => {
   return (
     <>
       <Head>
-        <title>STEM Workshops for Kids | Robotics & Coding Camps | Otomatiks</title>
+        <title>Kids STEM Workshops | Robotics & Coding Holiday Camps | Otomatiks</title>
         <meta
           name="description"
-          content="Interactive STEM workshops for ages 6-16. Hands-on robotics, coding & AI projects. School holidays & weekend programs available."
+          content="Join fun and interactive STEM workshops for kids aged 6-16. Robotics, coding & AI holiday camps and weekend programs. Hands-on projects, expert trainers."
         />
         <meta
           name="keywords"
-          content="kids STEM workshops, robotics camps, coding workshops, AI for children, holiday programs"
+          content="kids STEM workshops, robotics camps for kids, coding classes, AI workshops, holiday camps for students, kids technology workshops"
         />
 
-        {/* Structured Data for Workshop */}
+        {/* Structured Data: Educational Events */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "EventSeries",
-            "name": "Otomatiks STEM Workshops",
-            "description": "Interactive robotics and coding workshops for children",
-            "url": "https://www.otomatiks.com/workshop",
-            "startDate": "2023-11-01",
-            "endDate": "2024-12-31",
+            "@type": "Event",
+            "name": "Otomatiks STEM Holiday Workshop",
+            "description": "Interactive robotics and coding workshops for kids ages 6-16 during school holidays and weekends.",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
+            "location": {
+              "@type": "Place",
+              "name": "Otomatiks STEM Centers",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "India",
+                "addressCountry": "IN"
+              }
+            },
             "organizer": {
               "@type": "Organization",
               "name": "Otomatiks",
               "url": "https://www.otomatiks.com"
             },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://www.otomatiks.com/workshop#register",
-              "price": "1499",
-              "priceCurrency": "INR"
-            }
+            "startDate": "2025-12-01",
+            "endDate": "2025-12-30"
           })}
         </script>
 
         {/* Open Graph */}
-        <meta property="og:title" content="Kids STEM Workshops | Robotics & Coding Camps" />
-        <meta property="og:description" content="Book our holiday workshops - robotics, coding & AI projects for ages 6-16. Limited seats available!" />
+        <meta property="og:title" content="Book Kids STEM Workshops | Robotics & Coding Camps" />
+        <meta property="og:description" content="Join our STEM holiday workshops: robotics, coding & AI projects for kids aged 6-16. Limited seats — enroll early!" />
         <meta property="og:image" content="https://www.otomatiks.com/images/workshop-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/workshop" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Book Kids STEM Workshops | Otomatiks" />
-        <meta name="twitter:description" content="Hands-on robotics & coding camps this holiday. Ages 6-16. Early bird discounts available!" />
+        <meta name="twitter:title" content="Robotics & Coding Holiday Camps | Otomatiks Workshops" />
+        <meta name="twitter:description" content="Hands-on robotics & coding holiday workshops for kids 6-16. Book now for early bird discounts!" />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/workshop-twitter.jpg" />
 
         {/* Canonical */}

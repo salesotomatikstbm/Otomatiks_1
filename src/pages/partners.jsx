@@ -42,53 +42,56 @@ const Partners = () => {
   return (
     <>
       <Head>
-        <title>Robotics Franchise Opportunity | Partner with Otomatiks</title>
+        <title>Start a Robotics & STEM Education Franchise | Partner with Otomatiks</title>
         <meta
           name="description"
-          content="Start a profitable STEM education franchise with Otomatiks. Low investment, proven business model, and full support to launch your robotics academy."
+          content="Launch a profitable robotics and STEM learning franchise with Otomatiks. Low investment, high ROI, full training & marketing support to build your own robotics academy for kids."
         />
         <meta
           name="keywords"
-          content="robotics franchise, STEM education business, kids coding franchise, edu-tech franchise, partner program"
+          content="robotics franchise India, STEM education franchise, coding franchise for kids, robotics business partner, edu-tech franchise opportunities, Otomatiks franchise"
         />
 
-        {/* Structured Data for Local Business Opportunity */}
+        {/* Structured Data for Franchise Opportunity */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BusinessOpportunity",
+            "@type": "EducationalOrganization",
             "name": "Otomatiks Franchise Program",
-            "description": "Start your own robotics education center with our turnkey franchise model",
             "url": "https://www.otomatiks.com/franchise",
-            "feesAndCommissionsSpecification": "https://www.otomatiks.com/franchise-terms",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Franchise Packages",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Standard Franchise",
-                    "description": "Complete setup for one robotics education center"
-                  }
-                }
-              ]
+            "description": "Turnkey robotics & STEM education franchise model for entrepreneurs and educators. Proven curriculum, complete training, and marketing support.",
+            "sameAs": [
+              "https://www.facebook.com/otomatiks",
+              "https://www.linkedin.com/company/otomatiks"
+            ],
+            "makesOffer": {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Robotics & STEM Franchise",
+                "description": "Full setup, curriculum, teacher training & business support for your own robotics academy."
+              }
             }
           })}
         </script>
 
         {/* Open Graph */}
-        <meta property="og:title" content="Robotics Franchise Opportunity | Otomatiks Partner Program" />
-        <meta property="og:description" content="Own a profitable STEM education business with our robotics franchise. Comprehensive training and marketing support included." />
+        <meta property="og:title" content="Launch a Robotics Franchise | STEM Education Partner Program | Otomatiks" />
+        <meta
+          property="og:description"
+          content="Start your own robotics academy with Otomatiks. Proven franchise system, complete support, and scalable STEM learning solutions for kids."
+        />
         <meta property="og:image" content="https://www.otomatiks.com/images/franchise-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/franchise" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Start a Robotics Education Franchise with Otomatiks" />
-        <meta name="twitter:description" content="Proven business model with 60%+ margins. Perfect for educators and entrepreneurs passionate about STEM." />
+        <meta name="twitter:title" content="Start Your Own Robotics & STEM Education Franchise | Otomatiks" />
+        <meta
+          name="twitter:description"
+          content="Low investment, high ROI robotics & coding franchise for kids. Partner with Otomatiks and run your own successful STEM academy."
+        />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/franchise-twitter.jpg" />
 
         {/* Canonical */}

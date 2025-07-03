@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-// Dynamically import components with loading states
+// Dynamically import sections with fallback skeletons
 const PageTitle = dynamic(() => import('@/components/sections/pageTitle'), {
   loading: () => <div className="h-24 bg-gray-100" />
 });
@@ -26,11 +26,11 @@ const Brands1 = dynamic(() => import('@/components/sections/abouts/Brands'), {
   loading: () => <div className="py-12 bg-white" />
 });
 
-const Our_Patrons = dynamic(() => import('@/components/sections/schoolprogram/Our_Patrons'), {
+const OurPatrons = dynamic(() => import('@/components/sections/schoolprogram/Our_Patrons'), {
   loading: () => <div className="py-12 bg-gray-50" />
 });
 
-const Contact_About = dynamic(() => import('@/components/sections/abouts/Contact_About'), {
+const ContactAbout = dynamic(() => import('@/components/sections/abouts/Contact_About'), {
   loading: () => <div className="py-12 bg-white" />
 });
 
@@ -45,59 +45,62 @@ const AboutUs = () => {
         <title>About Otomatiks | Robotics & STEM Education for Kids</title>
         <meta
           name="description"
-          content="Otomatiks bridges academics & real-world applications with hands-on robotics programs. We empower students aged 6-16 with future-ready STEM skills through innovative teaching."
+          content="Learn about Otomatiks — India’s trusted robotics and STEM education company for kids aged 6–16. We empower young minds through hands-on, future-ready programs."
         />
-        <meta 
-          name="keywords" 
-          content="robotics for kids, STEM education, coding classes, AI for children, hands-on learning, future skills, Otomatiks programs"
+        <meta
+          name="keywords"
+          content="Otomatiks, robotics for kids, STEM education India, coding classes for kids, AI learning, hands-on STEM, kids robotics programs"
         />
 
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Otomatiks",
-            "url": "https://www.otomatiks.com",
-            "logo": "https://www.otomatiks.com/logo.png",
-            "description": "Leading provider of robotics and STEM education for children",
-            "founder": "Otomatiks Team",
-            "foundingDate": "2018",
-            "sameAs": [
-              "https://facebook.com/otomatiks",
-              "https://instagram.com/otomatiks",
-              "https://linkedin.com/company/otomatiks"
-            ]
-          })}
-        </script>
-
-
-        <meta property="og:title" content="About Otomatiks | Inspiring Young Minds Through Robotics" />
-        <meta property="og:description" content="Discover our mission to make STEM education accessible and engaging for children through hands-on robotics programs." />
+        <meta property="og:title" content="About Otomatiks | Inspiring Young Minds with Robotics & STEM" />
+        <meta property="og:description" content="Discover our mission to make STEM education fun, practical, and accessible for children. See how we prepare them for tomorrow’s skills." />
         <meta property="og:image" content="https://www.otomatiks.com/images/og-about.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/about-us" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Otomatiks | Robotics Education Leaders" />
-        <meta name="twitter:description" content="Empowering the next generation with practical STEM skills through innovative robotics programs." />
+        <meta name="twitter:title" content="About Otomatiks | Robotics & STEM Education for Kids" />
+        <meta name="twitter:description" content="Empowering the next generation through hands-on robotics and STEM learning. Learn about Otomatiks and our mission." />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/twitter-about.jpg" />
 
-   
         <link rel="canonical" href="https://www.otomatiks.com/about-us" />
+
+        {/* Structured data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Otomatiks",
+              "url": "https://www.otomatiks.com",
+              "logo": "https://www.otomatiks.com/logo.png",
+              "description": "Leading provider of robotics and STEM education for children aged 6–16.",
+              "founder": {
+                "@type": "Person",
+                "name": "Otomatiks Team"
+              },
+              "foundingDate": "2018",
+              "sameAs": [
+                "https://www.facebook.com/otomatiks",
+                "https://www.instagram.com/otomatiks",
+                "https://www.linkedin.com/company/otomatiks"
+              ]
+            })
+          }}
+        />
+
       </Head>
 
       <main>
-        <PageTitle 
-          pageName="About Us" 
-          breadcrumbCurrent="About Us" 
-        />
-        <AboutOne isAboutpage={true} />
+        <PageTitle pageName="About Us" breadcrumbCurrent="About Us" />
+        <AboutOne isAboutpage />
         <Testimonial />
         <OurJourney />
         <Teams />
         <Brands1 />
-        <Our_Patrons />
-        <Contact_About />
+        <OurPatrons />
+        <ContactAbout />
         <TopUp />
       </main>
     </>

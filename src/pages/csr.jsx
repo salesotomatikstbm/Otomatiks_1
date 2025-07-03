@@ -34,31 +34,36 @@ const Csr = () => {
   return (
     <>
       <Head>
-        <title>CSR Initiatives in STEM Education | Otomatiks Social Impact</title>
+        <title>CSR in STEM Education | Robotics & Coding for Underserved Students | Otomatiks</title>
         <meta
           name="description"
-          content="Otomatiks CSR programs bring robotics & STEM education to underserved communities. Partner with us to empower 10,000+ students annually through technology."
+          content="Partner with Otomatiks to drive social impact through STEM CSR initiatives. Bring robotics labs & coding education to 10,000+ underserved students across India every year."
         />
         <meta
           name="keywords"
-          content="STEM CSR programs, robotics education initiatives, corporate social responsibility in tech, underserved student empowerment, CSR partnerships"
+          content="STEM CSR programs, robotics CSR initiatives, corporate social responsibility education, underserved students STEM, CSR for schools, Otomatiks CSR partnerships, robotics labs CSR"
         />
 
-        {/* Structured Data for Organization */}
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "NGO",
             "name": "Otomatiks CSR Initiatives",
-            "description": "Providing STEM education to underserved communities through corporate partnerships",
+            "description": "Empowering underserved communities with robotics & STEM education through corporate partnerships.",
             "url": "https://www.otomatiks.com/csr",
-            "funder": {
+            "founder": {
               "@type": "Organization",
               "name": "Otomatiks"
             },
             "areaServed": {
-              "@type": "AdministrativeArea",
+              "@type": "Country",
               "name": "India"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "email": "support@otomatiks.in"
             },
             "sameAs": [
               "https://facebook.com/otomatiks",
@@ -68,16 +73,22 @@ const Csr = () => {
         </script>
 
         {/* Open Graph */}
-        <meta property="og:title" content="CSR in STEM Education | Empowering Underserved Students" />
-        <meta property="og:description" content="Join Otomatiks in bringing robotics & coding education to 10,000+ underserved students annually through CSR partnerships" />
+        <meta property="og:title" content="CSR in STEM Education | Robotics & Coding for Schools | Otomatiks" />
+        <meta
+          property="og:description"
+          content="Join Otomatiks in transforming rural & underserved schools with robotics labs & STEM learning. Partner with us for impactful CSR projects."
+        />
         <meta property="og:image" content="https://www.otomatiks.com/images/csr-impact-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/csr" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="STEM Education CSR Programs | Otomatiks" />
-        <meta name="twitter:description" content="Corporate partnerships bringing robotics labs to rural schools - impacting 10,000+ students yearly" />
+        <meta name="twitter:title" content="CSR STEM Programs | Robotics & Coding for Underserved Students | Otomatiks" />
+        <meta
+          name="twitter:description"
+          content="Bring robotics & coding education to 10,000+ underserved students annually through Otomatiks CSR partnerships."
+        />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/csr-twitter-card.jpg" />
 
         {/* Canonical */}
@@ -85,10 +96,7 @@ const Csr = () => {
       </Head>
 
       <main>
-        <PageTitle 
-          pageName="CSR Initiatives" 
-          breadcrumbCurrent="CSR" 
-        />
+        <PageTitle pageName="CSR Initiatives" breadcrumbCurrent="CSR" />
         <CSRQuotesSection />
         <Our_Uniqueness />
         <WhatWeOffer />

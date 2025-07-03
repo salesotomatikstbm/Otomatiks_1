@@ -36,40 +36,7 @@ const Robotica2025 = () => {
           content="Robotica 2025, robotics competition, STEM event, AI showcase, robotics tournament, student robotics"
         />
 
-        {/* Structured Data for Event */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Robotica 2025",
-            "description": "Asia's premier student robotics competition featuring 500+ teams and cutting-edge technology demonstrations",
-            "startDate": "2025-03-15T09:00",
-            "endDate": "2025-03-17T18:00",
-            "location": {
-              "@type": "Place",
-              "name": "Bangalore International Exhibition Centre",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "123 Tech Park Road",
-                "addressLocality": "Bangalore",
-                "postalCode": "560001",
-                "addressCountry": "IN"
-              }
-            },
-            "image": "https://www.otomatiks.com/images/robotica2025-banner.jpg",
-            "offers": {
-              "@type": "Offer",
-              "url": "https://www.otomatiks.com/robotica2025/register",
-              "price": "499",
-              "priceCurrency": "INR"
-            },
-            "organizer": {
-              "@type": "Organization",
-              "name": "Otomatiks",
-              "url": "https://www.otomatiks.com"
-            }
-          })}
-        </script>
+      
 
         {/* Open Graph */}
         <meta property="og:title" content="Robotica 2025 | Asia's Largest Student Robotics Competition" />

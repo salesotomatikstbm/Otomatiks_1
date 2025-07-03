@@ -46,7 +46,7 @@ export default function Home() {
         <title>Otomatiks | Robotics & Coding Courses for Kids | STEM Education</title>
         <meta
           name="description"
-          content="Join Otomatiks for the best robotics and coding courses for kids. Hands-on STEM education to build creativity, problem-solving and technical skills in children aged 6-16."
+          content="Otomatiks offers top robotics & coding courses for kids. Hands-on STEM learning builds creativity, problem-solving, and tech skills for ages 6–16."
         />
         <meta
           name="keywords"
@@ -55,7 +55,8 @@ export default function Home() {
         <meta name="author" content="Otomatiks Team" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        
+        <meta property="og:locale" content="en_IN" />
+
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.otomatiks.com/" />
@@ -87,14 +88,14 @@ export default function Home() {
             "description": "Leading provider of robotics and coding education for children aged 6-16",
             "url": "https://www.otomatiks.com",
             "logo": "https://www.otomatiks.com/logo.png",
-            "telephone": "+1234567890",
-            "address": {
+            "telephone": "+91 90432 09448",
+           "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Education St",
-              "addressLocality": "City",
-              "addressRegion": "State",
-              "postalCode": "12345",
-              "addressCountry": "Country"
+              "streetAddress": "Ponvizha Nagar, Gandhi Nagar",
+              "addressLocality": "Vellore",
+              "addressRegion": "Tamilnadu",
+              "postalCode": "632006",
+              "addressCountry": "India"
             },
             "sameAs": [
               "https://facebook.com/otomatiks",
@@ -124,44 +125,7 @@ export default function Home() {
           })}
         </script>
 
-        {/* Additional Schema for Local Business */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Otomatiks",
-            "image": "https://www.otomatiks.com/logo.png",
-            "@id": "",
-            "url": "https://www.otomatiks.com",
-            "telephone": "+1234567890",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "123 Education St",
-              "addressLocality": "City",
-              "addressRegion": "State",
-              "postalCode": "12345",
-              "addressCountry": "Country"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 40.7128,
-              "longitude": -74.0060
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday"
-              ],
-              "opens": "09:00",
-              "closes": "18:00"
-            }
-          })}
-        </script>
+     
       </Head>
 
       <main>

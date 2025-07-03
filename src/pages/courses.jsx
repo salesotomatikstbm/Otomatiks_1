@@ -45,11 +45,11 @@ const Courses = () => {
         <title>Robotics & Coding Courses for Kids | Otomatiks STEM Academy</title>
         <meta
           name="description"
-          content="Hands-on robotics & coding courses for kids aged 6-16. Build real projects with expert instructors at Otomatiks. Beginner to advanced STEM programs available."
+          content="Discover fun, hands-on robotics & coding courses for kids aged 6–16. Learn STEM skills, build real projects, and become future-ready with Otomatiks."
         />
         <meta
           name="keywords"
-          content="robotics courses, coding for kids, STEM education, AI for children, programming classes, young engineers, tech education"
+          content="robotics courses for kids, coding classes for children, STEM education programs, kids programming, learn robotics, AI for kids, beginner coding, advanced robotics projects, Otomatiks STEM courses"
         />
 
         {/* Structured Data */}
@@ -57,18 +57,21 @@ const Courses = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Course",
-            "name": "Robotics & Coding Programs",
-            "description": "Hands-on STEM courses for children aged 6-16",
+            "name": "Robotics & Coding Courses for Kids",
+            "description": "Fun, hands-on STEM courses for kids aged 6–16. Learn robotics, coding, and AI skills.",
             "provider": {
               "@type": "Organization",
-              "name": "Otomatiks",
-              "sameAs": "https://www.otomatiks.com"
+              "name": "Otomatiks STEM Academy",
+              "url": "https://www.otomatiks.com"
             },
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": "99",
-              "priceCurrency": "USD",
-              "offerCount": "5"
+            "educationalCredentialAwarded": "STEM Certificate",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "Online & Offline",
+              "instructor": {
+                "@type": "Person",
+                "name": "Certified Otomatiks Instructor"
+              }
             }
           })}
         </script>
@@ -78,28 +81,44 @@ const Courses = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [{
-              "@type": "Question",
-              "name": "What age groups are your courses for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Our courses are designed for children aged 6-16, with programs tailored for different skill levels."
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What age groups are your courses for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our STEM courses are designed for children aged 6–16, from beginners to advanced learners."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer online courses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we offer both online and offline classes to suit your child's learning needs."
+                }
               }
-            }]
+            ]
           })}
         </script>
 
         {/* Open Graph */}
-        <meta property="og:title" content="Kids Robotics & Coding Courses | Otomatiks STEM Academy" />
-        <meta property="og:description" content="Hands-on STEM courses where kids build real robotics projects and learn coding from expert instructors." />
+        <meta property="og:title" content="Robotics & Coding Courses for Kids | Otomatiks STEM Academy" />
+        <meta
+          property="og:description"
+          content="Enroll your child in our hands-on robotics and coding courses. Build projects, learn STEM skills, and prepare for the future with Otomatiks."
+        />
         <meta property="og:image" content="https://www.otomatiks.com/images/courses-og.jpg" />
         <meta property="og:url" content="https://www.otomatiks.com/courses" />
         <meta property="og:type" content="website" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Kids Robotics & Coding Courses | Otomatiks" />
-        <meta name="twitter:description" content="Transform your child's future with our hands-on STEM programs. Beginner to advanced courses available." />
+        <meta name="twitter:title" content="Robotics & Coding Courses for Kids | Otomatiks" />
+        <meta
+          name="twitter:description"
+          content="Hands-on robotics and coding courses for kids aged 6–16. Beginner to advanced STEM programs to build skills for tomorrow."
+        />
         <meta name="twitter:image" content="https://www.otomatiks.com/images/courses-twitter.jpg" />
 
         {/* Canonical */}
