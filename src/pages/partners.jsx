@@ -1,3 +1,4 @@
+import PopupPartner from '@/components/sections/partner/PopupPartner';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
@@ -108,6 +109,10 @@ const Partners = () => {
         <PartTesti />
         <Contact_Form_Partners />
         <TopUp />
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+          <PopupPartner />
+        </div>
+
       </main>
     </>
   );
