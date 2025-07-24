@@ -109,9 +109,15 @@ const Partners = () => {
         <PartTesti />
         <Contact_Form_Partners />
         <TopUp />
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-          <PopupPartner />
-        </div>
+
+
+     <div className="fixed bottom-6 w-full flex justify-center px-4 z-50">
+  <div className="w-full max-w-md p-4">
+    <PopupPartner />
+  </div>
+</div>
+
+
 
       </main>
     </>
