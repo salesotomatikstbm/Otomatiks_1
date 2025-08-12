@@ -1,20 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from "@/assets/images/logo.svg"     // Desktop logo
-import logomobile from "@/assets/images/logo.png" // Mobile logo
+import logo from "@/assets/images/logo.svg"
+import logomobile from "@/assets/images/logo.png"
 import { cn } from '@/lib/utils'
 
 const Logo = ({ className }) => {
   return (
     <Link 
       to="/" 
-      className={cn("flex items-center gap-1 shrink-0", className)}
+      className={cn(
+        "flex items-center gap-3 md:gap-4 lg:gap-5 xl:gap-6 shrink-0", 
+        className
+      )}
     >
       {/* Mobile Logo */}
       <img 
         src={logomobile} 
         alt="Otomatiks Logo Mobile" 
-        className="block md:hidden h-14 w-44 object-contain"
+        className="block md:hidden h-16 w-auto object-contain"
       />
 
       {/* Desktop Logo */}
