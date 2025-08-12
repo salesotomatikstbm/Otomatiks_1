@@ -5,7 +5,7 @@ const WhatsAppButton = () => {
   return (
     <div className="fixed bottom-0 right-0 p-3">
       <a
-        href="https://wa.me/919043209448"
+        href="https://wa.me/+971528834358"
         target="_blank"
         rel="noopener noreferrer" 
         className="flex justify-end"
