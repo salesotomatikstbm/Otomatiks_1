@@ -15,53 +15,47 @@ const HeaderOne = () => {
 
     return (
         <StickyHeader>
-            <header id="header " className="sticky top-0 transition-[top] duration-300 z-40">
+            {/* Removed trailing space from id */}
+            <header id="header" className="sticky top-0 transition-[top] duration-300 z-40">
                 <div id="header-container">
                     <TopHeader />
                     <div className="[.header-pinned_&]:shadow-md bg-background transition-all duration-300">
-                        <div className="container py-5">
-                            <div className="flex justify-between items-center">
-                                {/* Logo */}
-                                <Logo className="flex-shrink-0" />
 
-                                {/* Menu + Buttons */}
-                                <div className="flex items-center">
-                                    {/* Mobile Menu Trigger */}
-                                    <div 
-                                        className="flex lg:hidden flex-col items-end cursor-pointer transition-all duration-500" 
-                                        onClick={() => setIsMobleMenuActive(true)}
-                                    >
-                                        <span className="block h-[3px] w-5 bg-muted"></span>
-                                        <span className="block h-[3px] w-7.5 bg-muted mt-2"></span>
-                                        <span className="block h-[3px] w-5 bg-muted mt-2"></span>
-                                    </div>
 
-                                    {/* Mobile Menu */}
-                                    <MobileMenu 
-                                        isMobleMenuActive={isMobleMenuActive} 
-                                        setIsMobleMenuActive={setIsMobleMenuActive} 
-                                    />
 
-                                    {/* Desktop Menu */}
-                                    <div className="hidden lg:flex items-center gap-6">
-                                        <DesktopMenu />
-                                        <Button 
-                                            asChild 
-                                            variant="secondary" 
-                                            className="bg-primary hover:bg-secondary"
-                                        >
-                                            <Link to="/contact-us">Contact Us <FaArrowRight /></Link>
-                                        </Button>
-                                    </div>
+                   <div className="w-full px-4 md:px-6 lg:px-8">
+    <div className="flex justify-between items-center max-w-[1400px] mx-auto">
+        {/* Logo */}
+        <Logo className="flex-shrink-0" />
 
-                                    {/* Search Form */}
-                                    <SearchForm 
-                                        isSerchActive={isSerchActive} 
-                                        setIsSerchActive={setIsSerchActive} 
-                                    />
-                                </div>
-                            </div>
-                        </div>
+        {/* Menu + Buttons */}
+        <div className="flex items-center gap-4">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-6">
+                <DesktopMenu />
+                <Button 
+                    asChild 
+                    variant="secondary" 
+                    className="bg-primary hover:bg-secondary flex items-center gap-2"
+                >
+                    <Link to="/contact-us">
+                        Contact Us <FaArrowRight />
+                    </Link>
+                </Button>
+            </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu 
+                isMobleMenuActive={isMobleMenuActive} 
+                setIsMobleMenuActive={setIsMobleMenuActive} 
+            />
+        </div>
+    </div>
+</div>
+
+
+
+
                     </div>
                 </div>
             </header>

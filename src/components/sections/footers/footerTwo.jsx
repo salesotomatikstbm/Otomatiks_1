@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaEnvelope, FaLocationDot, FaPhone } from 'react-icons/fa6'
-import Logo from '@/components/ui/logo'
+import Logo from '@/components/ui/logofooter'
 import SocalIcons from '@/components/ui/socalIcons'
 import CopyRight from './copyRight'
 import apple from "@/assets/images/shapes/bot.png"
@@ -19,9 +19,9 @@ const FooterTwo = () => {
                     <SlideUp delay={2}>
                         <Logo className="text-cream-foreground" />
                         <div className="mt-10">
-                            <p className=" text-cream-foreground ">Shape Your Child’s Future. 
-Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
-</p>
+                            <p className=" text-cream-foreground ">Shape Your Child’s Future.
+                                Our robotics classes are designed to help you discover the potential of this exciting field with the guidance of our experienced instructors.
+                            </p>
                             <SocalIcons prentClass={"gap-5 lg:pt-7.5 pt-5"} className={"w-9 h-9 bg-primary border-none hover:bg-secondary"} />
                         </div>
                     </SlideUp>
@@ -49,7 +49,7 @@ Our robotics classes are designed to help you discover the potential of this exc
                         </div>
 
                         <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5">
-                           
+
                             <li className="text-cream-foreground flex gap-4">
                                 <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">support@otomatiks.in</Link>
                             </li>
@@ -58,8 +58,8 @@ Our robotics classes are designed to help you discover the potential of this exc
                             </li>
                             <li className="text-cream-foreground flex gap-4">
                                 <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">
-                                A2, 36, 12th cross road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
-</span>
+                                    A2, 36, 12th cross road, Suthanthira Ponvizha Nagar, Gandhi Nagar, Vellore, Tamil Nadu 632006
+                                </span>
                             </li>
                         </ul>
                     </SlideUp>
@@ -70,18 +70,18 @@ Our robotics classes are designed to help you discover the potential of this exc
                             <span className="block w-[100%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
                         </div>
                         <div className="lg:pt-7.5 pt-5">
-                        <ul className="flex flex-col lg:gap-[15px] gap-2.5 ">
-                           
-                           <li className="text-cream-foreground flex gap-4">
-                               <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">uae@otomatiks.com</Link>
-                           </li>
-                           <li className="text-cream-foreground flex gap-4">
-                               <FaPhone className='mt-1.5' /> <Link to="/contact-us"> +971 52 989 2285                                </Link>
-                           </li>
-                           <li className="text-cream-foreground flex gap-4">
-                               <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster T, Jumeirah Lake Towers (JLT), Dubai.</span>
-                           </li>
-                       </ul>
+                            <ul className="flex flex-col lg:gap-[15px] gap-2.5 ">
+
+                                <li className="text-cream-foreground flex gap-4">
+                                    <FaEnvelope className='mt-1.5' /> <Link to="/contact-us">uae@otomatiks.com</Link>
+                                </li>
+                                <li className="text-cream-foreground flex gap-4">
+                                    <FaPhone className='mt-1.5' /> <Link to="/contact-us"> +971 52 989 2285                                </Link>
+                                </li>
+                                <li className="text-cream-foreground flex gap-4">
+                                    <FaLocationDot className='mt-1.5' /> <span className="max-w-[168px]">Otomatiks Training Centre, #608, Fortune Executive Tower, Cluster T, Jumeirah Lake Towers (JLT), Dubai.</span>
+                                </li>
+                            </ul>
                         </div>
                     </SlideUp>
                     {/* <!-- Newsletter end --> */}
