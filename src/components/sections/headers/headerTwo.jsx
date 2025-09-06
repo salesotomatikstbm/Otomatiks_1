@@ -24,10 +24,10 @@ const HeaderTwo = () => {
                             <div>
                                 {/* <!-- search, toggle and contact btn start --> */}
                                 <div className="flex items-center gap-6 ">
-                                    <div className="ml-10 cursor-pointer" onClick={() => setIsSerchActive(true)}>
+                                    {/* <div className="ml-10 cursor-pointer" onClick={() => setIsSerchActive(true)}>
                                         <FaMagnifyingGlass className='text-xl' />
-                                    </div>
-                                    <p className="h-11 w-[1px] bg-muted xl:block hidden"></p>
+                                    </div> */}
+                                    {/* <p className="h-11 w-[1px] bg-muted xl:block hidden"></p> */}
                                     <div>
                                         {/* <!-- for desktop --> */}
                                         

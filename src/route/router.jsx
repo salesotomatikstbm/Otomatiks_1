@@ -29,13 +29,14 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> }, 
       { path: "home", element: <HomeOne /> },
+      { path: "in", element: <HomeOne /> },
     ],
   },
   {
     path: "/",
     element: <LayoutTwo />,
     children: [
-      { path: "home-2", element: <HomeTwo /> },
+      { path: "ae", element: <HomeTwo /> },
     ],
   },
   {
@@ -56,6 +57,7 @@ export const router = createBrowserRouter([
       { path: "contact-us", element: <ContactUs /> },
       { path: "robotica", element: <Robotica2025 /> },
        { path: "privacy-policy", element: <Privacy />},
+       
     ],
   },
 ]);

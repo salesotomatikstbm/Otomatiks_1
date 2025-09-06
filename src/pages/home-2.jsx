@@ -54,7 +54,7 @@ const HomeTwo = () => {
       </Helmet>
       <main>
         <HeroTwo />
-        <AboutTwo />
+        {/* <AboutTwo />
         <SuccessProjectTwo />
         <ExtraCurricular />
         <Partner />
@@ -62,7 +62,7 @@ const HomeTwo = () => {
         <Pricing />
         <AgeTwo />
         <BlogsTwo />
-        <NewsletterTwo />
+        <NewsletterTwo /> */}
       </main>
       <ScrollRestoration />
     </>
