@@ -19,7 +19,7 @@ const Logo = ({ className }) => {
       <img 
         src={logo} 
         alt="Otomatiks Logo Desktop" 
-        className="hidden md:block h-24 w-auto object-contain"
+        className="hidden md:block h-30 w-48 object-contain"
       />
 
       {/* Mobile Logo */}

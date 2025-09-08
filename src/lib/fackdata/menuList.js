@@ -88,7 +88,7 @@ export const menuList = [
         path: "/shop",
         label: "Shop",
         dropDownMenu: false
-         // path: "/shop",
+      
     },
     // {
     //     id: 9,
