@@ -53,7 +53,7 @@ const HeroTwo = () => {
 
               <div className="mt-10 flex items-center gap-6">
                 <Button asChild size="lg" variant="pill" className="bg-primary border-primary hover:text-primary-foreground">
-                  <Link to="/book">Book a Class</Link>
+                  <Link to="#booking">Book a Class</Link>
                 </Button>
                 <img src={arrow} alt="arrow" className="hidden sm:block" />
               </div>

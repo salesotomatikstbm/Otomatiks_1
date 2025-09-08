@@ -84,9 +84,9 @@ const WhyOtomatiksAe = () => {
       </div>
 
       {/* Popup */}
-      <div className="lg:mt-12 mt-8">
+      {/* <div className="lg:mt-12 mt-8">
         <PopupSchool />
-      </div>
+      </div> */}
     </div>
   );
 };
