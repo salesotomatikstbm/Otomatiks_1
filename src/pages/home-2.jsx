@@ -12,6 +12,13 @@ import Pricing from '@/components/sections/pricing';
 import Products from '@/components/sections/products';
 import AgeTwo from '@/components/sections/studentsAge/ageTwo';
 import SuccessProjectTwo from '@/components/sections/successProjects/successProjectTwo';
+import WhyOtomatiksAe from '@/components/sections/ae/whyotomatiksae';
+import Programs from '@/components/sections/ae/program';
+import OtomatiksTeamSlide from '@/components/sections/ae/teamsae';
+import ClientTestimonials from '@/components/sections/ae/testiae';
+import FaqComp from '@/components/sections/ae/faqae';
+import BookingForm from '@/components/sections/ae/formae';
+
 
 const HomeTwo = () => {
   return (
@@ -53,17 +60,29 @@ const HomeTwo = () => {
         <link rel="canonical" href="https://www.otomatiks.com/" />
       </Helmet>
       <main>
-        <HeroTwo />
-        {/* <AboutTwo />
-        <SuccessProjectTwo />
-        <ExtraCurricular />
-        <Partner />
-        <Products />
-        <Pricing />
-        <AgeTwo />
-        <BlogsTwo />
-        <NewsletterTwo /> */}
-      </main>
+  <section id="home">
+    <HeroTwo />
+  </section>
+  <section id="why-otomatiks">
+    <WhyOtomatiksAe />
+  </section>
+  <section id="programs">
+    <Programs />
+  </section>
+  <section id="team">
+    <OtomatiksTeamSlide />
+  </section>
+  <section id="testimonials">
+    <ClientTestimonials />
+  </section>
+  <section id="booking">
+    <BookingForm />
+  </section>
+  <section id="faq">
+    <FaqComp />
+  </section>
+</main>
+
       <ScrollRestoration />
     </>
   );

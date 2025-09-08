@@ -2,10 +2,10 @@ import Logo from '@/components/ui/logo'
 import React, { useState } from 'react'
 import SearchForm from './searchForm'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
-import DesktopMenu from './desktopMenu'
-import MobileMenu from './mobileMenu'
+import DesktopMenu from './desktopMenuAe'
+import MobileMenu from './mobileMenuAe'
 import StickyHeader from '@/components/ui/stickyHeader'
-import DesktopSidebar from './desktopSidebar'
+import DesktopSidebar from './desktopSidebarAe'
 
 const HeaderTwo = () => {
     const [isSerchActive, setIsSerchActive] = useState(false)

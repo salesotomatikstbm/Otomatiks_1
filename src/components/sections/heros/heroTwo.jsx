@@ -25,11 +25,11 @@ const HeroTwo = () => {
   return (
     <section className="lg:pb-15 pb-10 relative overflow-hidden">
       {/* Background image (child + robotics) */}
-      <img
+      {/* <img
         src={bgUrl}
         alt="Child with robotic gadgets"
         className="pointer-events-none absolute inset-0 -z-[2] h-full w-full object-cover opacity-25"
-      />
+      /> */}
 
       <div className="bg-warm min-[1800px]:pt-[291px] pt-48 min-[1800px]:pb-[179px] lg:pb-32 pb-20 relative z-[1] overflow-hidden after:absolute after:bottom-0 after:left-0 after:bg-[linear-gradient(180deg,_rgba(255,255,255,0)_0%,_#FFF_100%)] after:w-full after:h-full after:max-h-[257px]">
         <div className="container">
@@ -40,7 +40,7 @@ const HeroTwo = () => {
               <Title size={"7.5xl"}>Future Innovators Start Here!</Title>
 
               <SectionDescription className={"mt-5 xl:text-inherit text-muted-foreground"}>
-                Our robotics classes are designed to help you discover the potential of this exciting field with the
+                Our robotics classes are designed to help you discover the potential <br></br> of this exciting field with the
                 guidance of our experienced instructors.
               </SectionDescription>
 
@@ -99,7 +99,7 @@ const HeroTwo = () => {
                     </select>
                   </div>
 
-                  <Button type="submit" className="w-full rounded-2xl">Confirm Booking</Button>
+                  <Button type="submit" className="w-full rounded-2xl text-white">Confirm Booking</Button>
 
                   <p className="pt-2 text-xs text-muted-foreground">
                     Note: Classes are conducted by reputed teachers.

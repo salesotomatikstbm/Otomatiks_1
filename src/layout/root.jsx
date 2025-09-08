@@ -6,7 +6,7 @@ import FooterTwo from '@/components/sections/footers/footerTwo';
 const RootLayout = () => {
   return (
     <>
- 
+
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only absolute top-0 left-0 bg-primary text-white p-3 z-50"
@@ -17,12 +17,12 @@ const RootLayout = () => {
 
       <HeaderOne />
 
-    
+
       <main id="main-content" role="main">
         <Outlet />
       </main>
 
-    
+
       <FooterTwo />
     </>
   );
