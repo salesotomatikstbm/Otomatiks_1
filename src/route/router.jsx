@@ -21,6 +21,7 @@ import Csr from "@/pages/csr";
 import ContactUs from "@/pages/contact-us";
 import Robotica2025 from "@/pages/robotica2025";
 import Privacy from "@/pages/privacy-policy";
+import NotFound from "@/pages/404Page";
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,7 @@ export const router = createBrowserRouter([
       { path: "contact-us", element: <ContactUs /> },
       { path: "robotica", element: <Robotica2025 /> },
        { path: "privacy-policy", element: <Privacy />},
+       {path: "*" , element: <NotFound />}
        
     ],
   },
